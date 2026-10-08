@@ -3,7 +3,7 @@ import { passportDemo } from '~/data/demo'
 
 useSeoMeta({
   title: 'Alquilar piso sin aval y ahorrar para tu casa',
-  description: 'Entra en tu piso sin aval y, en los pisos con hucha, con mucho menos dinero. Tu garantía se convierte en una hucha que te devolvemos con premio y tu historial de pagos te acompaña al siguiente piso.',
+  description: 'Entra en tu piso sin aval y con menos dinero. Tu garantía va siempre a una hucha a tu nombre que te devolvemos con premio y tu historial de pagos te acompaña al siguiente piso.',
 })
 
 const faqs = [
@@ -25,10 +25,10 @@ const faqs = [
         <div>
           <span class="eyebrow">Para inquilinos</span>
           <h1>Paga tu alquiler a tiempo y ahorra para tu casa.</h1>
-          <p class="lead">Entra en tu piso sin aval y, en los pisos con hucha, con mucho menos dinero. Tu garantía se convierte en una hucha que te devolvemos con premio.</p>
+          <p class="lead">Entra en tu piso sin aval y con menos dinero. Tu garantía va siempre a una hucha a tu nombre que te devolvemos con premio.</p>
           <ul class="check-list">
             <li><AppIcon name="check" :size="18" /> Sin aval si tu perfil lo permite</li>
-            <li><AppIcon name="check" :size="18" /> En pisos con hucha, entras con el primer mes y la fianza</li>
+            <li><AppIcon name="check" :size="18" /> Con la hucha mes a mes, entras con el primer mes y la fianza</li>
             <li><AppIcon name="check" :size="18" /> Hucha + bonus por buen pagador</li>
             <li><AppIcon name="check" :size="18" /> Tu historial te acompaña al siguiente piso</li>
           </ul>
@@ -49,7 +49,7 @@ const faqs = [
     <section class="section section-alt">
       <div class="container">
         <div class="section-head">
-          <span class="eyebrow">En los pisos con hucha</span>
+          <span class="eyebrow">Con la hucha mes a mes</span>
           <h2>Deja de inmovilizar cuatro meses de renta</h2>
           <p class="lead">Las garantías adicionales que te piden al entrar son dinero que no trabaja. Con nosotros, esa garantía se forma poco a poco y es tuya.</p>
         </div>

@@ -32,9 +32,9 @@ const faqs = [
       audience="Inquilinos"
       title="Paga tu alquiler a tiempo y"
       highlight="ahorra para tu casa."
-      lead="Entra en tu piso sin aval y, en los pisos con hucha, con mucho menos dinero. Tu garantía se convierte en una hucha que te devolvemos con premio."
+      lead="Entra en tu piso sin aval y con menos dinero. Tu garantía va siempre a una hucha a tu nombre que te devolvemos con premio."
       :stats="[
-        { value: formatEuro(entry.traditional.total - entry.ours.total), label: `menos al entrar en un piso con hucha de ${formatEuro(RENT)}.` },
+        { value: formatEuro(entry.traditional.total - entry.ours.total), label: `menos al entrar en un piso de ${formatEuro(RENT)} con hucha mes a mes.` },
         { value: formatEuro(hucha.payout), label: 'de vuelta tras 3 años pagando a tiempo.' },
         { value: '0 €', label: 'de comisión para ti. Nunca.' },
       ]"
@@ -43,7 +43,7 @@ const faqs = [
     <!-- 02 · Entrar con menos dinero -->
     <DossierPage :label="label" :n="2">
       <div class="d-section">
-        <span class="eyebrow">En los pisos con hucha</span>
+        <span class="eyebrow">Con la hucha mes a mes</span>
         <h2>Deja de inmovilizar cuatro meses de renta</h2>
         <p class="d-lead">Las garantías adicionales que te piden al entrar son dinero que no trabaja. Con nosotros, esa garantía se forma poco a poco y es tuya.</p>
         <div class="d-grid d-2">
@@ -58,7 +58,7 @@ const faqs = [
             <div class="total"><span>Al entrar</span><strong>{{ formatEuro(entry.traditional.total) }}</strong></div>
           </div>
           <div class="d-card ink">
-            <span class="badge lime-badge">Piso con hucha</span>
+            <span class="badge lime-badge">Hucha mes a mes</span>
             <ul class="rows">
               <li><span>Primer mes</span><span>{{ formatEuro(entry.ours.firstMonth) }}</span></li>
               <li><span>Fianza legal</span><span>{{ formatEuro(entry.ours.deposit) }}</span></li>
@@ -81,6 +81,7 @@ const faqs = [
           </ul>
           <ul class="d-list">
             <li>Si terminas sin deudas ni desperfectos, te la devolvemos entera con un bonus del {{ HUCHA.bonusPct }} % por buen pagador.</li>
+            <li>Si el propietario pide la garantía al firmar, ese dinero también va a tu hucha: es tuyo y lo recuperas con bonus.</li>
             <li>Si te mudas a otro piso de la red, te la llevas y sigues ahorrando.</li>
             <li>Si hay un impago, la hucha cubre primero. Por eso los propietarios confían en ti.</li>
           </ul>

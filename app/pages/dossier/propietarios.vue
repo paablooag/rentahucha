@@ -183,8 +183,8 @@ const impagoTotal = impago.reduce((s, i) => s + i.value, 0)
 
       <div class="d-section">
         <span class="eyebrow">Garantías</span>
-        <h2>Tú eliges cómo se garantiza el alquiler</h2>
-        <p class="d-lead">Te proponemos la hucha porque atrae a mejores inquilinos, pero si prefieres la garantía al firmar, también puedes pedirla.</p>
+        <h2>{{ GUARANTEE_HEAD.title }}</h2>
+        <p class="d-lead">{{ GUARANTEE_HEAD.lead }}</p>
         <div class="d-grid d-3 options">
           <div v-for="(o, i) in GUARANTEE_OPTIONS" :key="o.title" class="d-card soft">
             <div class="opt-top">
@@ -198,7 +198,7 @@ const impagoTotal = impago.reduce((s, i) => s + i.value, 0)
       </div>
 
       <div class="d-note">
-        <strong>Siempre dentro de la ley</strong>
+        <strong>Siempre en la hucha del inquilino</strong>
         <p>{{ GUARANTEE_NOTE }} Te recomendamos el contrato y la garantía que encajan con lo que quieres, y lo dejamos bien redactado desde el primer día.</p>
       </div>
     </DossierPage>

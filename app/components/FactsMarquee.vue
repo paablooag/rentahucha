@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const facts = [
-  'Garantía que se forma mes a mes',
+  'Tu garantía, siempre en tu hucha',
   'Sin comisiones para el inquilino',
   'Renta garantizada con aseguradora',
   'Hucha + bonus por buen pagador',

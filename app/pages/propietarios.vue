@@ -96,10 +96,10 @@ const faqs = [
 
         <div class="section-head second">
           <span class="eyebrow">Garantías</span>
-          <h2>Tú eliges cómo se garantiza el alquiler</h2>
-          <p class="lead">Te proponemos la hucha porque atrae a mejores inquilinos, pero si prefieres la garantía al firmar, también puedes pedirla.</p>
+          <h2>{{ GUARANTEE_HEAD.title }}</h2>
+          <p class="lead">{{ GUARANTEE_HEAD.lead }}</p>
         </div>
-        <OptionCards :items="GUARANTEE_OPTIONS" note-title="Siempre dentro de la ley" :note-text="GUARANTEE_NOTE" />
+        <OptionCards :items="GUARANTEE_OPTIONS" note-title="Siempre en la hucha del inquilino" :note-text="GUARANTEE_NOTE" />
       </div>
     </section>
 

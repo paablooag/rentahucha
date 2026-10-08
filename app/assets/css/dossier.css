@@ -150,3 +150,4 @@
 .d-table td { padding-top: 2.1mm; padding-bottom: 2.1mm; }
 .d-chart { height: 38mm; }
 .d-table { border-collapse: separate; border-spacing: 0; }
+.d-list { align-content: start; }

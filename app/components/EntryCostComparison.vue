@@ -27,7 +27,7 @@ const saved = computed(() => cost.value.traditional.total - cost.value.ours.tota
         <div class="total"><span>Al entrar</span><strong>{{ formatEuro(cost.traditional.total) }}</strong></div>
       </div>
       <div class="card col ours">
-        <span class="badge">Piso con hucha</span>
+        <span class="badge">Hucha mes a mes</span>
         <ul>
           <li><span>Primer mes</span><span>{{ formatEuro(cost.ours.firstMonth) }}</span></li>
           <li><span>Fianza legal</span><span>{{ formatEuro(cost.ours.deposit) }}</span></li>
@@ -39,8 +39,8 @@ const saved = computed(() => cost.value.traditional.total - cost.value.ours.tota
     </div>
 
     <p class="saving">
-      En un piso con hucha entras con <strong>{{ formatEuro(saved) }}</strong> menos, y lo que aportas cada mes es tuyo: te lo devolvemos con premio.
-      <span class="who-decides">Cada propietario elige cómo quiere la garantía; lo verás indicado en cada piso.</span>
+      Con la hucha mes a mes entras con <strong>{{ formatEuro(saved) }}</strong> menos, y lo que aportas cada mes es tuyo: te lo devolvemos con premio.
+      <span class="who-decides">Si el propietario pide la garantía al firmar, ese dinero también va a tu hucha y lo recuperas con bonus. Lo verás indicado en cada piso.</span>
     </p>
   </div>
 </template>
