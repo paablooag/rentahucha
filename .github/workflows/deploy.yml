@@ -23,7 +23,8 @@ jobs:
         with:
           node-version: 22
           cache: npm
-      - run: npm ci
+      # `npm install` y no `npm ci`: el lockfile se genera con un npm local más antiguo que el de GitHub.
+      - run: npm install --no-audit --no-fund
       # Web estática completa. Los PDF ya están en public/dossier (se generan en local con `npm run pdf`).
       - run: npx nuxt generate
         env:
