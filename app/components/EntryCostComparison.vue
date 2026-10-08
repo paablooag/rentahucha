@@ -27,11 +27,11 @@ const saved = computed(() => cost.value.traditional.total - cost.value.ours.tota
         <div class="total"><span>Al entrar</span><strong>{{ formatEuro(cost.traditional.total) }}</strong></div>
       </div>
       <div class="card col ours">
-        <span class="badge">Hucha mes a mes</span>
+        <span class="badge">Sin garantía extra al firmar</span>
         <ul>
           <li><span>Primer mes</span><span>{{ formatEuro(cost.ours.firstMonth) }}</span></li>
           <li><span>Fianza legal</span><span>{{ formatEuro(cost.ours.deposit) }}</span></li>
-          <li><span>Garantía adicional</span><span class="green">0 € (se forma en tu hucha)</span></li>
+          <li><span>Garantía adicional</span><span class="green">0 € (ahorras en tu hucha)</span></li>
           <li><span>Aval</span><span class="green">No, si tu perfil lo permite</span></li>
         </ul>
         <div class="total"><span>Al entrar</span><strong class="green">{{ formatEuro(cost.ours.total) }}</strong></div>
@@ -39,8 +39,8 @@ const saved = computed(() => cost.value.traditional.total - cost.value.ours.tota
     </div>
 
     <p class="saving">
-      Con la hucha mes a mes entras con <strong>{{ formatEuro(saved) }}</strong> menos, y lo que aportas cada mes es tuyo: te lo devolvemos con premio.
-      <span class="who-decides">Si el propietario pide la garantía al firmar, ese dinero también va a tu hucha y lo recuperas con bonus. Lo verás indicado en cada piso.</span>
+      Si el propietario no pide garantía extra al firmar, entras con <strong>{{ formatEuro(saved) }}</strong> menos, y lo que aportas cada mes a tu hucha es tuyo: te lo devolvemos con premio.
+      <span class="who-decides">Algunos propietarios piden una garantía adicional al firmar, como en cualquier alquiler; lo verás indicado en cada piso. Tu hucha se llena igualmente mes a mes.</span>
     </p>
   </div>
 </template>

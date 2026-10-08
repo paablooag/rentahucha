@@ -3,7 +3,7 @@ import { passportDemo } from '~/data/demo'
 
 useSeoMeta({
   title: 'Alquilar piso sin aval y ahorrar para tu casa',
-  description: 'Entra en tu piso sin aval y con menos dinero. Tu garantía va siempre a una hucha a tu nombre que te devolvemos con premio y tu historial de pagos te acompaña al siguiente piso.',
+  description: 'Entra en tu piso sin aval y ahorra cada mes en una hucha a tu nombre que te devolvemos con premio y tu historial de pagos te acompaña al siguiente piso.',
 })
 
 const faqs = [
@@ -25,10 +25,10 @@ const faqs = [
         <div>
           <span class="eyebrow">Para inquilinos</span>
           <h1>Paga tu alquiler a tiempo y ahorra para tu casa.</h1>
-          <p class="lead">Entra en tu piso sin aval y con menos dinero. Tu garantía va siempre a una hucha a tu nombre que te devolvemos con premio.</p>
+          <p class="lead">Entra en tu piso sin aval y ahorra cada mes en una hucha a tu nombre que te devolvemos con premio.</p>
           <ul class="check-list">
             <li><AppIcon name="check" :size="18" /> Sin aval si tu perfil lo permite</li>
-            <li><AppIcon name="check" :size="18" /> Con la hucha mes a mes, entras con el primer mes y la fianza</li>
+            <li><AppIcon name="check" :size="18" /> Si no te piden garantía extra, entras con el primer mes y la fianza</li>
             <li><AppIcon name="check" :size="18" /> Hucha + bonus por buen pagador</li>
             <li><AppIcon name="check" :size="18" /> Tu historial te acompaña al siguiente piso</li>
           </ul>
@@ -49,9 +49,9 @@ const faqs = [
     <section class="section section-alt">
       <div class="container">
         <div class="section-head">
-          <span class="eyebrow">Con la hucha mes a mes</span>
+          <span class="eyebrow">Sin garantía extra al firmar</span>
           <h2>Deja de adelantar dos meses de garantía extra</h2>
-          <p class="lead">Las garantías adicionales que te piden al entrar son dinero que no trabaja. Con nosotros, esa garantía se forma poco a poco y es tuya.</p>
+          <p class="lead">Las garantías adicionales que te piden al entrar son dinero que no trabaja. Si el propietario no te las pide, entras con mucho menos y vas ahorrando poco a poco en tu propia hucha.</p>
         </div>
         <EntryCostComparison />
       </div>

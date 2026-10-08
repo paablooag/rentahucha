@@ -1,39 +1,42 @@
 // Garantías al entrar: textos compartidos por la web y los dossieres.
-// La garantía adicional va SIEMPRE a la hucha del inquilino; el propietario solo elige cuándo se llena.
-// LAU art. 36: fianza legal obligatoria (un mes en vivienda habitual, dos en uso distinto/temporada), que se
-// deposita en el organismo autonómico y no va a la hucha. En vivienda habitual, garantía adicional de hasta dos
-// mensualidades (tres en total con la fianza); en temporada la ley no fija tope, pero la hucha mantiene el de dos.
-// Art. 17: no se puede EXIGIR más de un mes de renta por adelantado (sí es legal si el inquilino lo ofrece).
+// Fianza y garantía adicional funcionan como en cualquier alquiler y son del propietario (la fianza se deposita en
+// el organismo autonómico). La hucha va SIEMPRE aparte y se llena SIEMPRE mes a mes; el propietario no decide sobre ella.
+// LAU art. 36: fianza de un mes en vivienda habitual (dos en temporada) y garantía adicional de hasta dos mensualidades
+// en vivienda habitual. Como la hucha está bloqueada a favor del contrato, garantía al firmar + hucha no pueden pasar
+// de dos mensualidades; lo que exceda es ahorro del inquilino, no garantía. Art. 17: no exigir más de un mes de renta.
 export const GUARANTEE_HEAD = {
-  title: 'Tú eliges cómo se llena la hucha',
-  lead: 'La garantía adicional va siempre a la hucha del inquilino. Lo que decides es si se llena poco a poco o desde el primer día.',
+  title: 'Fianza y garantías, como siempre. La hucha, además',
+  lead: 'Cobras la fianza legal y, si quieres, una garantía adicional al firmar, igual que en cualquier alquiler. La hucha del inquilino va aparte: se llena mes a mes y es un colchón más para ti.',
 }
 
 export const GUARANTEE_OPTIONS = [
   {
-    title: 'Mes a mes',
-    tag: 'Recomendada',
-    text: 'La hucha empieza vacía y el inquilino aporta un poco cada mes hasta el tope. Entra con menos dinero, así que atrae a más y mejores candidatos.',
+    title: 'Fianza legal',
+    text: 'Obligatoria: un mes en vivienda habitual y dos en alquiler de temporada. Se deposita en el organismo de tu comunidad autónoma, como siempre.',
   },
   {
-    title: 'Llena desde el primer día',
-    text: 'El inquilino ingresa al firmar la garantía adicional, hasta dos mensualidades, directamente en su hucha. Tú estás cubierto desde el día 1.',
+    title: 'Garantía adicional',
+    tag: 'Opcional',
+    text: 'Si quieres, pides al firmar hasta dos mensualidades más, en depósito o con aval bancario. Es para ti mientras dure el contrato.',
   },
   {
-    title: 'Una parte al firmar',
-    text: 'La hucha arranca con una parte de la garantía y el resto se completa mes a mes, hasta el tope de dos mensualidades.',
+    title: 'Hucha del inquilino',
+    tag: 'Siempre incluida',
+    text: 'Se llena mes a mes a nombre del inquilino y cubre los primeros impagos antes que el seguro. Si al terminar no debe nada, la recupera con bonus.',
   },
 ]
 
-export const GUARANTEE_NOTE = 'Elijas lo que elijas, la garantía adicional está en una cuenta a nombre del inquilino, bloqueada a favor del contrato, y se le devuelve con bonus si cumple. La fianza legal va aparte (un mes en vivienda habitual, dos en alquiler de temporada), porque por ley se deposita en el organismo de la comunidad autónoma. Y no se puede exigir más de un mes de renta por adelantado.'
+export const GUARANTEE_NOTE_TITLE = 'Dentro de la ley'
+
+export const GUARANTEE_NOTE = 'En vivienda habitual, la garantía adicional (la que pidas al firmar más la hucha) no puede pasar de dos mensualidades: si ya pides las dos al firmar, la hucha sigue llenándose, pero como ahorro del inquilino. En total, fianza y garantías suman como máximo tres mensualidades, y no se puede exigir más de un mes de renta por adelantado.'
 
 export const GUARANTEE_FAQ = {
   owner: {
-    q: '¿Puedo pedir la garantía por adelantado?',
-    a: 'Sí. Puedes pedir que el inquilino ingrese al firmar hasta dos mensualidades de garantía adicional. Ese dinero va directo a su hucha: a ti te protege igual y para él sigue siendo ahorro que recupera con bonus. La fianza legal va siempre aparte: en vivienda habitual, entre fianza y garantías el máximo son tres mensualidades.',
+    q: '¿Puedo pedir fianza y garantía adicional?',
+    a: 'Sí, como en cualquier alquiler: la fianza legal (un mes en vivienda habitual) y, si quieres, hasta dos mensualidades de garantía adicional al firmar, en depósito o con aval. Eso es tuyo durante el contrato. La hucha del inquilino va aparte y se llena mes a mes; en vivienda habitual, entre la garantía al firmar y la hucha no se pueden superar las dos mensualidades que permite la ley.',
   },
   tenant: {
-    q: '¿Siempre entro pagando solo el primer mes y la fianza?',
-    a: 'Depende del piso. En la mayoría la hucha se llena mes a mes y entras con el primer mes y la fianza legal. Algunos propietarios piden que la garantía adicional (hasta dos mensualidades) se ingrese al firmar, pero ese dinero no se pierde: va directo a tu hucha, es tuyo y lo recuperas con bonus al salir. Lo verás indicado en cada piso.',
+    q: '¿Me pueden pedir garantía extra al entrar?',
+    a: 'Depende del piso. Siempre pagas el primer mes y la fianza legal. Algunos propietarios piden además una garantía adicional al firmar (hasta dos mensualidades), como en cualquier alquiler; lo verás indicado en cada piso. Tu hucha va aparte: se llena mes a mes y la recuperas con bonus si terminas sin deudas.',
   },
 }

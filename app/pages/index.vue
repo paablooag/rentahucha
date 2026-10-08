@@ -7,7 +7,7 @@ useSeoMeta({
 })
 
 const faqs = [
-  { q: '¿Qué es la hucha de garantía-ahorro?', a: 'Es donde va la garantía adicional del alquiler: una cuenta a nombre del inquilino, bloqueada a favor del contrato. Normalmente se llena poco a poco (por ejemplo, con el 4 % de la renta cada mes) y, si el propietario lo prefiere, se ingresa al firmar. Protege al propietario y, si el inquilino termina el contrato sin deudas, la recupera entera con un bonus por buen pagador.' },
+  { q: '¿Qué es la hucha de garantía-ahorro?', a: 'Es una cuenta a nombre del inquilino que se llena poco a poco, con una pequeña parte de la renta cada mes (por ejemplo, el 4 %), y queda bloqueada a favor del contrato. Cubre los primeros impagos y, si el inquilino termina el contrato sin deudas, la recupera entera con un bonus por buen pagador. La fianza legal va aparte, como en cualquier alquiler.' },
   { q: '¿El dinero de la hucha lo tenéis vosotros?', a: 'No. La hucha está en una cuenta a nombre del inquilino en una entidad regulada, bloqueada a favor del contrato. Nunca pasa por nuestras cuentas.' },
   { q: '¿Qué pasa si el inquilino deja de pagar?', a: 'Le avisamos el mismo día y, si es un bache puntual, proponemos un plan corto. Si no se resuelve, la hucha cubre primero y la aseguradora socia paga la renta según la póliza. El proceso legal arranca ese mismo día con el expediente preparado.' },
   { q: '¿Garantizáis que el inquilino saldrá en pocos días?', a: 'No, y desconfía de quien lo prometa. Los plazos de desahucio los decide un juzgado. Lo que sí garantizamos es que tú sigues cobrando según la póliza y que no se pierde ni un día en arrancar el proceso.' },
@@ -92,7 +92,7 @@ const faqs = [
           <div class="card">
             <span class="icon-chip chip-amber"><AppIcon name="piggy" /></span>
             <h3>Hucha de garantía-ahorro</h3>
-            <p class="muted">La garantía adicional deja de ser dinero muerto: va a una cuenta a nombre del inquilino, normalmente mes a mes, y se le devuelve con premio.</p>
+            <p class="muted">Cada mes, una pequeña parte va a una cuenta a nombre del inquilino. Protege al propietario y, si el inquilino cumple, se le devuelve con premio.</p>
           </div>
           <div class="card">
             <span class="icon-chip chip-green"><AppIcon name="id" /></span>

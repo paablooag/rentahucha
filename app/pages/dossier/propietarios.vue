@@ -198,7 +198,7 @@ const impagoTotal = impago.reduce((s, i) => s + i.value, 0)
       </div>
 
       <div class="d-note">
-        <strong>Siempre en la hucha del inquilino</strong>
+        <strong>{{ GUARANTEE_NOTE_TITLE }}</strong>
         <p>{{ GUARANTEE_NOTE }} Te recomendamos el contrato y la garantía que encajan con lo que quieres, y lo dejamos bien redactado desde el primer día.</p>
       </div>
     </DossierPage>

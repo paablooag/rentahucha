@@ -32,9 +32,9 @@ const faqs = [
       audience="Inquilinos"
       title="Paga tu alquiler a tiempo y"
       highlight="ahorra para tu casa."
-      lead="Entra en tu piso sin aval y con menos dinero. Tu garantía va siempre a una hucha a tu nombre que te devolvemos con premio."
+      lead="Entra en tu piso sin aval y ahorra cada mes en una hucha a tu nombre que te devolvemos con premio."
       :stats="[
-        { value: formatEuro(entry.traditional.total - entry.ours.total), label: `menos al entrar en un piso de ${formatEuro(RENT)} con hucha mes a mes.` },
+        { value: formatEuro(entry.traditional.total - entry.ours.total), label: `menos al entrar en un piso de ${formatEuro(RENT)} sin garantía extra al firmar.` },
         { value: formatEuro(hucha.payout), label: 'de vuelta tras 3 años pagando a tiempo.' },
         { value: '0 €', label: 'de comisión para ti. Nunca.' },
       ]"
@@ -43,9 +43,9 @@ const faqs = [
     <!-- 02 · Entrar con menos dinero -->
     <DossierPage :label="label" :n="2">
       <div class="d-section">
-        <span class="eyebrow">Con la hucha mes a mes</span>
+        <span class="eyebrow">Sin garantía extra al firmar</span>
         <h2>Deja de adelantar dos meses de garantía extra</h2>
-        <p class="d-lead">Las garantías adicionales que te piden al entrar son dinero que no trabaja. Con nosotros, esa garantía se forma poco a poco y es tuya.</p>
+        <p class="d-lead">Las garantías adicionales que te piden al entrar son dinero que no trabaja. Si el propietario no te las pide, entras con mucho menos y vas ahorrando poco a poco en tu propia hucha.</p>
         <div class="d-grid d-2">
           <div class="d-card">
             <span class="badge badge-muted">Alquiler tradicional (máximo legal)</span>
@@ -58,11 +58,11 @@ const faqs = [
             <div class="total"><span>Al entrar</span><strong>{{ formatEuro(entry.traditional.total) }}</strong></div>
           </div>
           <div class="d-card ink">
-            <span class="badge lime-badge">Hucha mes a mes</span>
+            <span class="badge lime-badge">Sin garantía extra</span>
             <ul class="rows">
               <li><span>Primer mes</span><span>{{ formatEuro(entry.ours.firstMonth) }}</span></li>
               <li><span>Fianza legal</span><span>{{ formatEuro(entry.ours.deposit) }}</span></li>
-              <li><span>Garantía adicional</span><span class="hl">0 € (se forma en tu hucha)</span></li>
+              <li><span>Garantía adicional</span><span class="hl">0 € (ahorras en tu hucha)</span></li>
               <li><span>Aval</span><span class="hl">No, si tu perfil lo permite</span></li>
             </ul>
             <div class="total"><span>Al entrar</span><strong class="hl">{{ formatEuro(entry.ours.total) }}</strong></div>
@@ -81,7 +81,7 @@ const faqs = [
           </ul>
           <ul class="d-list">
             <li>Si terminas sin deudas ni desperfectos, te la devolvemos entera con un bonus del {{ HUCHA.bonusPct }} % por buen pagador.</li>
-            <li>Si el propietario pide la garantía al firmar, ese dinero también va a tu hucha: es tuyo y lo recuperas con bonus.</li>
+            <li>La fianza legal va aparte, como en cualquier alquiler. Algunos propietarios piden además garantía adicional al firmar; lo verás en cada piso.</li>
             <li>Si te mudas a otro piso de la red, te la llevas y sigues ahorrando.</li>
             <li>Si hay un impago, la hucha cubre primero. Por eso los propietarios confían en ti.</li>
           </ul>

@@ -99,7 +99,7 @@ const faqs = [
           <h2>{{ GUARANTEE_HEAD.title }}</h2>
           <p class="lead">{{ GUARANTEE_HEAD.lead }}</p>
         </div>
-        <OptionCards :items="GUARANTEE_OPTIONS" note-title="Siempre en la hucha del inquilino" :note-text="GUARANTEE_NOTE" />
+        <OptionCards :items="GUARANTEE_OPTIONS" :note-title="GUARANTEE_NOTE_TITLE" :note-text="GUARANTEE_NOTE" />
       </div>
     </section>
 
