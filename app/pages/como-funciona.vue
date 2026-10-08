@@ -9,7 +9,7 @@ useSeoMeta({
 const legal = [
   { topic: 'Impago', yes: 'Requerir el pago, intentar el acuerdo y demandar con el expediente preparado.', no: 'Cambiar cerraduras, cortar suministros o presionar. Solo un juez decide un desalojo.' },
   { topic: 'Renta garantizada', yes: 'A través de una aseguradora autorizada y según su póliza.', no: 'Que la plataforma garantice rentas con su propio dinero.' },
-  { topic: 'Garantías', yes: 'Fianza legal de un mes y garantía adicional de hasta dos mensualidades.', no: 'Pedir más de lo que permite la ley.' },
+  { topic: 'Garantías', yes: 'En vivienda habitual, fianza legal de un mes y hasta dos mensualidades de garantía adicional (tres en total). En alquiler de temporada, fianza de dos mensualidades.', no: 'Pedir más de lo que permite la ley o exigir más de un mes de renta por adelantado.' },
   { topic: 'Gastos de gestión', yes: 'Los paga el propietario.', no: 'Repercutirlos al inquilino.' },
   { topic: 'Dinero de terceros', yes: 'Lo gestiona una entidad de pago autorizada en cuentas segregadas.', no: 'Que pase por cuentas de la plataforma.' },
 ]

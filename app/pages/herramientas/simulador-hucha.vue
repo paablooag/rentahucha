@@ -28,7 +28,7 @@ useSeoMeta({
         <ul class="check-list">
           <li><AppIcon name="check" :size="18" /> Aportas un porcentaje pequeño de la renta cada mes, junto con el pago del alquiler.</li>
           <li><AppIcon name="check" :size="18" /> El dinero está en una cuenta a tu nombre en una entidad regulada, bloqueada a favor del contrato.</li>
-          <li><AppIcon name="check" :size="18" /> Tiene un tope de dos mensualidades, el máximo de garantía adicional que permite la ley. Al llegar, dejas de aportar.</li>
+          <li><AppIcon name="check" :size="18" /> Tiene un tope de dos mensualidades, el máximo de garantía adicional que permite la ley en vivienda habitual. Al llegar, dejas de aportar.</li>
           <li><AppIcon name="check" :size="18" /> Si terminas sin deudas ni desperfectos, te la devolvemos con un bonus por buen pagador.</li>
           <li><AppIcon name="check" :size="18" /> Si te mudas a otro piso de la red, puedes llevártela y seguir ahorrando.</li>
         </ul>

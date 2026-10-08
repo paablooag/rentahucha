@@ -50,7 +50,7 @@ const faqs = [
       <div class="container">
         <div class="section-head">
           <span class="eyebrow">Con la hucha mes a mes</span>
-          <h2>Deja de inmovilizar cuatro meses de renta</h2>
+          <h2>Deja de adelantar dos meses de garantía extra</h2>
           <p class="lead">Las garantías adicionales que te piden al entrar son dinero que no trabaja. Con nosotros, esa garantía se forma poco a poco y es tuya.</p>
         </div>
         <EntryCostComparison />

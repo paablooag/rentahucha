@@ -71,7 +71,7 @@ const faqs = [
             <span class="icon-chip chip-navy"><AppIcon name="users" /></span>
             <h3>El inquilino joven</h3>
             <ul class="check-list muted">
-              <li>Para entrar le piden tres o cuatro meses de renta por adelantado.</li>
+              <li>Para entrar le piden hasta cuatro meses de dinero: primer mes, fianza y dos meses de garantía extra.</li>
               <li>Le exigen aval de sus padres aunque siempre haya pagado bien.</li>
               <li>Años pagando religiosamente que no le sirven ni para el siguiente piso ni para la hipoteca.</li>
             </ul>

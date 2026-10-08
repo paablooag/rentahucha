@@ -11,7 +11,7 @@ export const DURATION_OPTIONS = [
   },
   {
     title: 'Alquiler de temporada',
-    text: 'Si el inquilino viene por estudios, trabajo u otro motivo temporal, alquilas por meses o por un año. El motivo tiene que ser real y constar en el contrato.',
+    text: 'Si el inquilino viene por estudios, trabajo u otro motivo temporal, alquilas por meses o por un año. El motivo tiene que ser real y constar en el contrato, y la fianza legal es de dos mensualidades.',
   },
 ]
 

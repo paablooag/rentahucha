@@ -44,11 +44,11 @@ const faqs = [
     <DossierPage :label="label" :n="2">
       <div class="d-section">
         <span class="eyebrow">Con la hucha mes a mes</span>
-        <h2>Deja de inmovilizar cuatro meses de renta</h2>
+        <h2>Deja de adelantar dos meses de garantía extra</h2>
         <p class="d-lead">Las garantías adicionales que te piden al entrar son dinero que no trabaja. Con nosotros, esa garantía se forma poco a poco y es tuya.</p>
         <div class="d-grid d-2">
           <div class="d-card">
-            <span class="badge badge-muted">Alquiler tradicional (caso exigente)</span>
+            <span class="badge badge-muted">Alquiler tradicional (máximo legal)</span>
             <ul class="rows">
               <li><span>Primer mes</span><span>{{ formatEuro(entry.traditional.firstMonth) }}</span></li>
               <li><span>Fianza legal</span><span>{{ formatEuro(entry.traditional.deposit) }}</span></li>
@@ -77,7 +77,7 @@ const faqs = [
           <ul class="d-list">
             <li>Aportas un {{ formatPercent(HUCHA.defaultPct) }} de la renta cada mes, junto con el pago del alquiler: {{ formatEuro(hucha.monthly) }} en un piso de {{ formatEuro(RENT) }}.</li>
             <li>El dinero está en una cuenta a tu nombre en una entidad regulada, bloqueada a favor del contrato. No es nuestro.</li>
-            <li>Tiene un tope de dos mensualidades, el máximo de garantía adicional que permite la ley.</li>
+            <li>Tiene un tope de dos mensualidades, el máximo de garantía adicional que permite la ley en vivienda habitual.</li>
           </ul>
           <ul class="d-list">
             <li>Si terminas sin deudas ni desperfectos, te la devolvemos entera con un bonus del {{ HUCHA.bonusPct }} % por buen pagador.</li>

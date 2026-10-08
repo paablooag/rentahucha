@@ -17,7 +17,7 @@ const saved = computed(() => cost.value.traditional.total - cost.value.ours.tota
 
     <div class="cols">
       <div class="card col">
-        <span class="badge badge-muted">Alquiler tradicional (caso exigente)</span>
+        <span class="badge badge-muted">Alquiler tradicional (máximo legal)</span>
         <ul>
           <li><span>Primer mes</span><span>{{ formatEuro(cost.traditional.firstMonth) }}</span></li>
           <li><span>Fianza legal</span><span>{{ formatEuro(cost.traditional.deposit) }}</span></li>
