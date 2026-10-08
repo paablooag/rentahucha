@@ -1,4 +1,6 @@
-# RentaHucha · web (frontend)
+﻿# RentaHucha · web (frontend)
+
+**Web publicada:** https://paablooag.github.io/rentahucha/ (se actualiza sola con cada push a `main`).
 
 Frontend en Nuxt 4 del plan de negocio: renta garantizada para propietarios + hucha de garantía-ahorro y pasaporte para inquilinos.
 
