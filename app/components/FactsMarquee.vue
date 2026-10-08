@@ -1,7 +1,6 @@
 <script setup lang="ts">
 const facts = [
-  'Entra con primer mes + fianza legal',
-  'Sin garantías extra por adelantado',
+  'Garantía que se forma mes a mes',
   'Sin comisiones para el inquilino',
   'Renta garantizada con aseguradora',
   'Hucha + bonus por buen pagador',

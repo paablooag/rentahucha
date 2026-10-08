@@ -3,8 +3,8 @@ const { brand, downloads } = useAppConfig()
 const year = new Date().getFullYear()
 
 const dossiers = [
-  { href: withBase(downloads.propietarios), who: 'Para propietarios', title: 'Renta garantizada, precios y cómo te protegemos' },
-  { href: withBase(downloads.inquilinos), who: 'Para inquilinos', title: 'La hucha, el pasaporte y cuánto ahorras' },
+  { href: withBase(downloads.propietarios), who: 'Para propietarios', title: 'Renta garantizada, precios y cómo te protegemos', pages: 5 },
+  { href: withBase(downloads.inquilinos), who: 'Para inquilinos', title: 'La hucha, el pasaporte y cuánto ahorras', pages: 4 },
 ]
 </script>
 
@@ -21,7 +21,7 @@ const dossiers = [
         <span class="dl-text">
           <span class="dl-who">{{ d.who }}</span>
           <strong>{{ d.title }}</strong>
-          <span class="dl-meta">Dossier · PDF · 4 páginas</span>
+          <span class="dl-meta">Dossier · PDF · {{ d.pages }} páginas</span>
         </span>
         <span class="dl-go" aria-hidden="true"><AppIcon name="arrow" :size="18" /></span>
       </a>

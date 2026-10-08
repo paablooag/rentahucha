@@ -166,8 +166,45 @@ const impagoTotal = impago.reduce((s, i) => s + i.value, 0)
       </div>
     </DossierPage>
 
-    <!-- 04 · Precios y siguiente paso -->
+    <!-- 04 · Condiciones: duración y garantías -->
     <DossierPage :label="label" :n="4">
+      <div class="d-section">
+        <span class="eyebrow">Duración del alquiler</span>
+        <h2>Alquila el tiempo que te encaje</h2>
+        <p class="d-lead">¿Solo quieres alquilar un año? ¿Vas a necesitar el piso más adelante? Hay una fórmula legal para cada caso.</p>
+        <div class="d-grid d-3 options">
+          <div v-for="(o, i) in DURATION_OPTIONS" :key="o.title" class="d-card soft">
+            <div class="d-chip" :class="{ ink: i === DURATION_OPTIONS.length - 1 }">{{ i + 1 }}</div>
+            <h3>{{ o.title }}</h3>
+            <p class="d-small">{{ o.text }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-section">
+        <span class="eyebrow">Garantías</span>
+        <h2>Tú eliges cómo se garantiza el alquiler</h2>
+        <p class="d-lead">Te proponemos la hucha porque atrae a mejores inquilinos, pero si prefieres la garantía al firmar, también puedes pedirla.</p>
+        <div class="d-grid d-3 options">
+          <div v-for="(o, i) in GUARANTEE_OPTIONS" :key="o.title" class="d-card soft">
+            <div class="opt-top">
+              <div class="d-chip" :class="{ ink: i === GUARANTEE_OPTIONS.length - 1 }">{{ i + 1 }}</div>
+              <span v-if="o.tag" class="badge">{{ o.tag }}</span>
+            </div>
+            <h3>{{ o.title }}</h3>
+            <p class="d-small">{{ o.text }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-note">
+        <strong>Siempre dentro de la ley</strong>
+        <p>{{ GUARANTEE_NOTE }} Te recomendamos el contrato y la garantía que encajan con lo que quieres, y lo dejamos bien redactado desde el primer día.</p>
+      </div>
+    </DossierPage>
+
+    <!-- 05 · Precios y siguiente paso -->
+    <DossierPage :label="label" :n="5">
       <div class="d-section">
         <span class="eyebrow">Precios</span>
         <h2>Pagas un porcentaje de lo que cobras</h2>
@@ -205,18 +242,6 @@ const impagoTotal = impago.reduce((s, i) => s + i.value, 0)
             <li>Cobrar gastos de gestión al inquilino</li>
             <li>Custodiar rentas en nuestras cuentas</li>
           </ul>
-        </div>
-      </div>
-
-      <div class="d-section">
-        <span class="eyebrow">Duración del alquiler</span>
-        <h2>Alquila el tiempo que te encaje</h2>
-        <div class="d-grid d-3 duration">
-          <div v-for="(o, i) in DURATION_OPTIONS" :key="o.title" class="d-card soft">
-            <div class="d-chip" :class="{ ink: i === DURATION_OPTIONS.length - 1 }">{{ i + 1 }}</div>
-            <h3>{{ o.title }}</h3>
-            <p class="d-small">{{ o.text }}</p>
-          </div>
         </div>
       </div>
 
@@ -258,10 +283,11 @@ const impagoTotal = impago.reduce((s, i) => s + i.value, 0)
 .cost { grid-template-columns: 1.4fr 1fr; align-items: stretch; }
 .vs { margin-top: 4mm; }
 .note-after { margin-top: 2.5mm; }
-.duration .d-card { padding: 4mm; }
-.duration .d-chip { width: 7mm; height: 7mm; font-size: 8.5pt; margin-bottom: 2.5mm; }
-.duration h3 { font-size: 10.5pt; }
-.duration .d-small { margin: 0; line-height: 1.45; }
+.options .d-card { padding: 5mm; }
+.options h3 { font-size: 11pt; }
+.options .d-small { margin: 0; font-size: 9pt; line-height: 1.5; }
+.opt-top { display: flex; justify-content: space-between; align-items: flex-start; }
+.opt-top .badge { font-size: 7pt; }
 .cta { display: grid; grid-template-columns: 1.5fr 1fr; gap: 6mm; align-items: end; padding: 8mm; }
 .cta h2 { margin-bottom: 2mm; }
 .cta p { margin: 0; color: #2f2f2f; }

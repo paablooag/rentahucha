@@ -16,6 +16,7 @@ const faqs = [
   { q: '¿Quién paga la renta si el inquilino no paga?', a: 'Primero se usa la hucha de garantía del inquilino. Si el impago continúa, la aseguradora socia te paga la renta según las condiciones de la póliza (meses cubiertos, carencia y límites te los enseñamos antes de firmar).' },
   { q: '¿Puedo elegir al inquilino?', a: 'Sí. Te presentamos candidatos verificados y tú decides.' },
   DURATION_FAQ.owner,
+  GUARANTEE_FAQ.owner,
   { q: '¿Qué incluye el 5 %?', a: 'Selección del inquilino, contrato, cobros, avisos, gestión de incidencias, protocolo de impago y coordinación con la aseguradora. Con varios pisos, la cuota baja hasta el 3,5 %.' },
   { q: '¿Tengo que cambiar de inquilino si ya tengo uno?', a: 'No necesariamente. Podemos estudiar incorporar contratos en vigor; la cobertura del seguro dependerá de la verificación del inquilino actual.' },
   { q: '¿El inquilino tiene que pagar algo a la plataforma?', a: 'No. La ley atribuye los gastos de gestión al arrendador y nosotros no cobramos nada al inquilino. Eso también hace que lleguen más y mejores candidatos.' },
@@ -87,7 +88,18 @@ const faqs = [
           <h2>Alquila el tiempo que te encaje</h2>
           <p class="lead">¿Solo quieres alquilar un año? ¿Vas a necesitar el piso más adelante? Hay una fórmula legal para cada caso.</p>
         </div>
-        <ContractDuration />
+        <OptionCards
+          :items="DURATION_OPTIONS"
+          note-title="Tú nos dices cuánto tiempo quieres alquilar"
+          note-text="Te recomendamos el contrato que encaja y lo dejamos bien redactado desde el primer día, para que no haya sorpresas al final."
+        />
+
+        <div class="section-head second">
+          <span class="eyebrow">Garantías</span>
+          <h2>Tú eliges cómo se garantiza el alquiler</h2>
+          <p class="lead">Te proponemos la hucha porque atrae a mejores inquilinos, pero si prefieres la garantía al firmar, también puedes pedirla.</p>
+        </div>
+        <OptionCards :items="GUARANTEE_OPTIONS" note-title="Siempre dentro de la ley" :note-text="GUARANTEE_NOTE" />
       </div>
     </section>
 
@@ -158,6 +170,7 @@ const faqs = [
 .steps li:last-child .n { background: var(--ink); color: var(--lime); }
 .steps h3 { font-size: 1.1rem; margin-bottom: 6px; }
 .steps p { font-size: 0.92rem; margin: 0; }
+.second { margin-top: 88px; }
 .signup { display: grid; gap: 48px; align-items: start; }
 @media (min-width: 900px) { .signup { grid-template-columns: 1fr 1fr; } }
 </style>

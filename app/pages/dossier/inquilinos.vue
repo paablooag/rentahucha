@@ -21,6 +21,7 @@ const faqs = [
   { q: '¿Quién ve mis nóminas y extractos?', a: 'Nadie más que el sistema de verificación. Al propietario solo le llega un resumen, y solo si tú compartes tu pasaporte.' },
   { q: '¿Puedo llevarme la hucha a otro piso?', a: 'Sí. Si te mudas a otro piso de la red, la trasladas y sigues ahorrando.' },
   { q: '¿Me cobráis algo?', a: 'No. Los gastos de gestión los paga el propietario, como marca la ley.' },
+  GUARANTEE_FAQ.tenant,
   DURATION_FAQ.tenant,
 ]
 </script>
@@ -31,18 +32,18 @@ const faqs = [
       audience="Inquilinos"
       title="Paga tu alquiler a tiempo y"
       highlight="ahorra para tu casa."
-      lead="Entra en tu piso sin aval y con menos dinero. Tu garantía se convierte en una hucha que te devolvemos con premio."
+      lead="Entra en tu piso sin aval y, en los pisos con hucha, con mucho menos dinero. Tu garantía se convierte en una hucha que te devolvemos con premio."
       :stats="[
-        { value: formatEuro(entry.traditional.total - entry.ours.total), label: `menos al entrar en un piso de ${formatEuro(RENT)}.` },
+        { value: formatEuro(entry.traditional.total - entry.ours.total), label: `menos al entrar en un piso con hucha de ${formatEuro(RENT)}.` },
         { value: formatEuro(hucha.payout), label: 'de vuelta tras 3 años pagando a tiempo.' },
         { value: '0 €', label: 'de comisión para ti. Nunca.' },
       ]"
     />
 
-    <!-- 02 · Entrar cuesta la mitad -->
+    <!-- 02 · Entrar con menos dinero -->
     <DossierPage :label="label" :n="2">
       <div class="d-section">
-        <span class="eyebrow">Entrar cuesta la mitad</span>
+        <span class="eyebrow">En los pisos con hucha</span>
         <h2>Deja de inmovilizar cuatro meses de renta</h2>
         <p class="d-lead">Las garantías adicionales que te piden al entrar son dinero que no trabaja. Con nosotros, esa garantía se forma poco a poco y es tuya.</p>
         <div class="d-grid d-2">
@@ -57,7 +58,7 @@ const faqs = [
             <div class="total"><span>Al entrar</span><strong>{{ formatEuro(entry.traditional.total) }}</strong></div>
           </div>
           <div class="d-card ink">
-            <span class="badge lime-badge">Con nosotros</span>
+            <span class="badge lime-badge">Piso con hucha</span>
             <ul class="rows">
               <li><span>Primer mes</span><span>{{ formatEuro(entry.ours.firstMonth) }}</span></li>
               <li><span>Fianza legal</span><span>{{ formatEuro(entry.ours.deposit) }}</span></li>

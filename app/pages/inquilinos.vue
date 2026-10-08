@@ -3,13 +3,14 @@ import { passportDemo } from '~/data/demo'
 
 useSeoMeta({
   title: 'Alquilar piso sin aval y ahorrar para tu casa',
-  description: 'Entra en tu piso sin aval y con menos dinero. Tu garantía se convierte en una hucha que te devolvemos con premio y tu historial de pagos te acompaña al siguiente piso.',
+  description: 'Entra en tu piso sin aval y, en los pisos con hucha, con mucho menos dinero. Tu garantía se convierte en una hucha que te devolvemos con premio y tu historial de pagos te acompaña al siguiente piso.',
 })
 
 const faqs = [
   { q: '¿De verdad no necesito aval?', a: 'Si tus ingresos verificados encajan con la renta del piso, no. Si estás en el límite, un aval puede ayudar, pero no es obligatorio por defecto.' },
   { q: '¿Cuánto aporto a la hucha?', a: 'Un porcentaje pequeño de la renta, en torno al 4 %. Con un piso de 850 € son 34 € al mes. La hucha tiene un tope de dos mensualidades: al llegar, dejas de aportar.' },
   { q: '¿Cuándo recupero la hucha?', a: 'Al terminar el contrato sin deudas ni desperfectos, te la devolvemos entera más un bonus por buen pagador. Si te mudas a otro piso de la red, puedes trasladarla y seguir ahorrando.' },
+  GUARANTEE_FAQ.tenant,
   DURATION_FAQ.tenant,
   { q: '¿Qué pasa si un mes me retraso?', a: 'Te avisamos antes del cobro y, si falla, te contactamos el mismo día para buscar una solución. Si es un bache puntual, se puede pactar un plan de pago corto.' },
   { q: '¿Quién ve mis nóminas y extractos?', a: 'Nadie más que el sistema de verificación. Al propietario solo le mostramos un resumen («ingresos suficientes para X €/mes») y solo si tú decides compartir tu pasaporte.' },
@@ -24,10 +25,10 @@ const faqs = [
         <div>
           <span class="eyebrow">Para inquilinos</span>
           <h1>Paga tu alquiler a tiempo y ahorra para tu casa.</h1>
-          <p class="lead">Entra en tu piso sin aval y con menos dinero. Tu garantía se convierte en una hucha que te devolvemos con premio.</p>
+          <p class="lead">Entra en tu piso sin aval y, en los pisos con hucha, con mucho menos dinero. Tu garantía se convierte en una hucha que te devolvemos con premio.</p>
           <ul class="check-list">
             <li><AppIcon name="check" :size="18" /> Sin aval si tu perfil lo permite</li>
-            <li><AppIcon name="check" :size="18" /> Entras pagando primer mes y fianza, nada más</li>
+            <li><AppIcon name="check" :size="18" /> En pisos con hucha, entras con el primer mes y la fianza</li>
             <li><AppIcon name="check" :size="18" /> Hucha + bonus por buen pagador</li>
             <li><AppIcon name="check" :size="18" /> Tu historial te acompaña al siguiente piso</li>
           </ul>
@@ -48,7 +49,7 @@ const faqs = [
     <section class="section section-alt">
       <div class="container">
         <div class="section-head">
-          <span class="eyebrow">Entrar cuesta la mitad</span>
+          <span class="eyebrow">En los pisos con hucha</span>
           <h2>Deja de inmovilizar cuatro meses de renta</h2>
           <p class="lead">Las garantías adicionales que te piden al entrar son dinero que no trabaja. Con nosotros, esa garantía se forma poco a poco y es tuya.</p>
         </div>

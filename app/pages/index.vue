@@ -7,7 +7,7 @@ useSeoMeta({
 })
 
 const faqs = [
-  { q: '¿Qué es la hucha de garantía-ahorro?', a: 'En lugar de pagar dos meses de garantía adicional al entrar, el inquilino aporta una pequeña cantidad cada mes (por ejemplo, el 4 % de la renta) a una cuenta a su nombre. Protege al propietario y, si el inquilino termina el contrato sin deudas, la recupera entera con un bonus por buen pagador.' },
+  { q: '¿Qué es la hucha de garantía-ahorro?', a: 'Es la forma de garantía que proponemos a los propietarios: en lugar de pagar la garantía adicional al entrar, el inquilino aporta una pequeña cantidad cada mes (por ejemplo, el 4 % de la renta) a una cuenta a su nombre. Protege al propietario y, si el inquilino termina el contrato sin deudas, la recupera entera con un bonus por buen pagador.' },
   { q: '¿El dinero de la hucha lo tenéis vosotros?', a: 'No. La hucha está en una cuenta a nombre del inquilino en una entidad regulada, bloqueada a favor del contrato. Nunca pasa por nuestras cuentas.' },
   { q: '¿Qué pasa si el inquilino deja de pagar?', a: 'Le avisamos el mismo día y, si es un bache puntual, proponemos un plan corto. Si no se resuelve, la hucha cubre primero y la aseguradora socia paga la renta según la póliza. El proceso legal arranca ese mismo día con el expediente preparado.' },
   { q: '¿Garantizáis que el inquilino saldrá en pocos días?', a: 'No, y desconfía de quien lo prometa. Los plazos de desahucio los decide un juzgado. Lo que sí garantizamos es que tú sigues cobrando según la póliza y que no se pierde ni un día en arrancar el proceso.' },
