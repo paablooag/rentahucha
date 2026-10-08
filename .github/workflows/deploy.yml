@@ -30,6 +30,8 @@ jobs:
         env:
           NITRO_PRESET: github_pages
           NUXT_APP_BASE_URL: /${{ github.event.repository.name }}/
+          # Variable del repositorio (Settings → Secrets and variables → Actions → Variables).
+          NUXT_PUBLIC_FORMS_ENDPOINT: ${{ vars.FORMS_ENDPOINT }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: .output/public

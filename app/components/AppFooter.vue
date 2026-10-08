@@ -50,6 +50,7 @@ const dossiers = [
         <NuxtLink to="/como-funciona">Cómo funciona</NuxtLink>
         <NuxtLink to="/legal/aviso-legal">Aviso legal</NuxtLink>
         <NuxtLink to="/legal/privacidad">Privacidad</NuxtLink>
+        <NuxtLink to="/legal/cookies">Cookies</NuxtLink>
       </div>
     </div>
 
@@ -61,8 +62,8 @@ const dossiers = [
 
     <div class="container fine">
       <p>
-        © {{ year }} {{ brand.name }}. La renta garantizada se presta a través de una aseguradora autorizada y según las condiciones de su póliza.
-        Los cobros y la hucha los gestiona una entidad de pago autorizada; {{ brand.name }} no custodia fondos de terceros.
+        © {{ year }} {{ brand.name }}. Proyecto en fase previa al lanzamiento. Desde el lanzamiento, la renta garantizada se prestará a través de una aseguradora autorizada y según las condiciones de su póliza,
+        y los cobros y la hucha los gestionará una entidad de pago autorizada; {{ brand.name }} no custodiará fondos de terceros.
       </p>
     </div>
   </footer>

@@ -1,8 +1,5 @@
-const STORAGE_KEY = 'rh-newsletter'
-
-// Sin backend todavía: igual que la lista de espera, las altas se guardan en el navegador.
-// Para conectarlo, sustituir el cuerpo de `subscribe` por un $fetch('/api/newsletter', { method: 'POST', body }).
 export function useNewsletter() {
+  const { send } = useFormSender()
   const pending = ref(false)
   const error = ref<string | null>(null)
 
@@ -10,20 +7,11 @@ export function useNewsletter() {
     pending.value = true
     error.value = null
     try {
-      await new Promise(resolve => setTimeout(resolve, 400))
-      try {
-        const current = JSON.parse(localStorage.getItem(STORAGE_KEY) ?? '[]') as { email: string; createdAt: string }[]
-        if (!current.some(e => e.email === email)) {
-          localStorage.setItem(STORAGE_KEY, JSON.stringify([...current, { email, createdAt: new Date().toISOString() }]))
-        }
-      }
-      catch {
-        // Almacenamiento no disponible (modo privado): el alta se da por buena igualmente.
-      }
+      await send('newsletter', { email, consentimiento: true })
       return true
     }
     catch {
-      error.value = 'No hemos podido apuntarte. Inténtalo de nuevo.'
+      error.value = 'No hemos podido apuntarte. Inténtalo de nuevo en unos minutos.'
       return false
     }
     finally {

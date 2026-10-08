@@ -95,7 +95,7 @@ const faqs = [
       <div class="container">
         <div class="section-head">
           <span class="eyebrow">Protección</span>
-          <h2>Cinco capas antes de que notes nada</h2>
+          <h2>Cinco capas de protección</h2>
         </div>
         <AntiImpagoLayers />
       </div>

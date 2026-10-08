@@ -3,7 +3,7 @@ const layers = [
   { icon: 'filter', tone: 'green', title: 'Filtro exigente', text: 'Ingresos verificados por open banking, contrato, vida laboral y ahorros. Ratio renta/ingresos prudente y revisión humana en casos límite.' },
   { icon: 'gift', tone: 'amber', title: 'Incentivo a pagar', text: 'El inquilino tiene algo que ganar y algo que perder: su hucha, su bonus y su historial.' },
   { icon: 'bell', tone: 'green', title: 'Aviso el día 1', text: 'Recordatorio antes del cobro y alerta inmediata si falla. Plan de pago corto si es un bache puntual.' },
-  { icon: 'piggy', tone: 'amber', title: 'La hucha cubre', text: 'El primer impago se cubre con la hucha mientras se intenta resolver. El propietario no lo nota.' },
+  { icon: 'piggy', tone: 'amber', title: 'La hucha cubre', text: 'La hucha del inquilino cubre el primer impago mientras se resuelve.' },
   { icon: 'shield', tone: 'violet', title: 'Seguro y abogado', text: 'Si persiste, la aseguradora paga la renta según la póliza y el protocolo legal arranca ese mismo día.' },
 ]
 </script>

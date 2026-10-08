@@ -4,7 +4,14 @@ const baseURL = process.env.NUXT_APP_BASE_URL || '/'
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  css: ['~/assets/css/main.css'],
+  // Tipografía servida desde la propia web: sin peticiones a Google ni cookies de terceros.
+  css: ['@fontsource-variable/inter-tight', '~/assets/css/main.css'],
+  runtimeConfig: {
+    public: {
+      // URL que recibe los formularios (p. ej. https://formspree.io/f/xxxx). Se fija con NUXT_PUBLIC_FORMS_ENDPOINT.
+      formsEndpoint: '',
+    },
+  },
   app: {
     head: {
       htmlAttrs: { lang: 'es' },
@@ -14,12 +21,6 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: 'icon', type: 'image/svg+xml', href: `${baseURL.replace(/\/$/, '')}/favicon.svg` },
-        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
-        {
-          rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700&display=swap',
-        },
       ],
     },
   },

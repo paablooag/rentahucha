@@ -30,7 +30,7 @@ const maxBar = computed(() => Math.max(...bars.value.map(b => b.value), 1))
       <div class="field">
         <label for="sim-rent">Renta mensual</label>
         <div class="input-group">
-          <input id="sim-rent" v-model.number="rent" class="input" type="number" min="200" max="5000" step="10" inputmode="numeric">
+          <input id="sim-rent" v-model.number="rent" class="input" type="number" min="200" max="5000" step="10" inputmode="numeric" :placeholder="String(props.initialRent)">
           <span class="suffix">€/mes</span>
         </div>
       </div>
@@ -42,7 +42,8 @@ const maxBar = computed(() => Math.max(...bars.value.map(b => b.value), 1))
       <div class="field">
         <label for="sim-months">Tiempo en el piso: <strong>{{ months }} meses</strong></label>
         <input id="sim-months" v-model.number="months" class="range" type="range" min="6" max="60" step="6">
-        <span class="hint">Tope de la hucha: {{ formatEuro(result.cap) }} (dos mensualidades), alcanzado en el mes {{ result.monthsToCap }}</span>
+        <span v-if="months >= result.monthsToCap" class="hint">Llegas al tope de {{ formatEuro(result.cap) }} (dos mensualidades) en el mes {{ result.monthsToCap }}; a partir de ahí dejas de aportar.</span>
+        <span v-else class="hint">La hucha tiene un tope de {{ formatEuro(result.cap) }} (dos mensualidades).</span>
       </div>
     </div>
 

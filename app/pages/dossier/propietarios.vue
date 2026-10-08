@@ -21,7 +21,7 @@ const layers = [
   { title: 'Filtro exigente', text: 'Ingresos verificados por open banking, contrato, vida laboral y ahorros. Ratio renta/ingresos prudente y revisión humana en casos límite.' },
   { title: 'Incentivo a pagar', text: 'El inquilino tiene algo que ganar y algo que perder: su hucha, su bonus y su historial.' },
   { title: 'Aviso el día 1', text: 'Recordatorio antes del cobro y alerta inmediata si falla. Plan de pago corto si es un bache puntual.' },
-  { title: 'La hucha cubre', text: 'El primer impago se cubre con la hucha del inquilino mientras se intenta resolver. Tú no lo notas.' },
+  { title: 'La hucha cubre', text: 'La hucha del inquilino cubre el primer impago mientras se resuelve.' },
   { title: 'Seguro y abogado', text: 'Si persiste, la aseguradora paga la renta según la póliza y el protocolo legal arranca ese mismo día.' },
 ]
 
@@ -126,7 +126,7 @@ const impagoTotal = impago.reduce((s, i) => s + i.value, 0)
     <DossierPage :label="label" :n="3">
       <div class="d-section">
         <span class="eyebrow">Protección</span>
-        <h2>Cinco capas antes de que notes nada</h2>
+        <h2>Cinco capas de protección</h2>
         <p class="d-lead">Cada capa hace menos probable que se llegue a la siguiente.</p>
         <div class="layers">
           <div v-for="(l, i) in layers" :key="l.title" class="layer">
@@ -233,7 +233,7 @@ const impagoTotal = impago.reduce((s, i) => s + i.value, 0)
         </div>
       </div>
       <p class="d-small legal">
-        La renta garantizada se presta a través de una aseguradora autorizada y según las condiciones de su póliza. Los cobros los gestiona una entidad de pago autorizada.
+        Desde el lanzamiento, la renta garantizada se prestará a través de una aseguradora autorizada y según las condiciones de su póliza, y los cobros los gestionará una entidad de pago autorizada.
         Documento informativo; no constituye una oferta vinculante.
       </p>
     </DossierPage>
