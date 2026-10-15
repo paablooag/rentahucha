@@ -12,16 +12,6 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 422, statusMessage: 'Revisa el formulario', data: { errors: result.errors } })
   }
 
-  const storage = db()
-  const existing = (await listByPrefix<StoredLead>('leads:')).find(l => l.email === result.data.email && l.role === result.data.role)
-  const lead: StoredLead = {
-    ...result.data,
-    id: existing?.id ?? newId(),
-    createdAt: existing?.createdAt ?? new Date().toISOString(),
-    updatedAt: new Date().toISOString(),
-    consentAt: new Date().toISOString(),
-    consentText: CONSENT_TEXT,
-  }
-  await storage.setItem(`leads:${lead.id}`, lead)
-  return { ok: true, updated: Boolean(existing) }
+  const { updated } = await upsertLead(result.data)
+  return { ok: true, updated }
 })

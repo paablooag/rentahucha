@@ -14,7 +14,7 @@ export DEBIAN_FRONTEND=noninteractive
 echo "==> Sistema al día y paquetes básicos"
 apt-get update -y
 apt-get upgrade -y
-apt-get install -y curl ca-certificates gnupg ufw nginx certbot python3-certbot-nginx unattended-upgrades rsync
+apt-get install -y curl ca-certificates gnupg ufw nginx certbot python3-certbot-nginx unattended-upgrades rsync postgresql
 
 echo "==> Actualizaciones de seguridad automáticas"
 dpkg-reconfigure -f noninteractive unattended-upgrades
@@ -60,17 +60,32 @@ EOF
   echo "    Contraseña del panel guardada en /root/rentahucha-admin-password.txt"
 fi
 
+echo "==> PostgreSQL (solo accesible desde el propio servidor)"
+systemctl enable --now postgresql >/dev/null
+if ! grep -q '^NUXT_DATABASE_URL=' $BASE/shared/.env; then
+  DB_PASS="$(openssl rand -hex 24)"
+  sudo -u postgres psql -v ON_ERROR_STOP=1 -q <<SQL
+DO \$\$ BEGIN
+  IF NOT EXISTS (SELECT FROM pg_roles WHERE rolname = '$APP') THEN CREATE ROLE $APP LOGIN; END IF;
+END \$\$;
+ALTER ROLE $APP PASSWORD '$DB_PASS';
+SQL
+  sudo -u postgres psql -tAc "SELECT 1 FROM pg_database WHERE datname = '$APP'" | grep -q 1 || sudo -u postgres createdb -O $APP $APP
+  echo "NUXT_DATABASE_URL=postgres://$APP:$DB_PASS@127.0.0.1:5432/$APP" >> $BASE/shared/.env
+fi
+
 echo "==> Servicio systemd"
 cat > /etc/systemd/system/$APP.service <<EOF
 [Unit]
 Description=RentaHucha (Nuxt)
-After=network.target
+After=network.target postgresql.service
+Requires=postgresql.service
 
 [Service]
 Type=simple
 User=$APP
 Group=$APP
-# Los datos (.data/db) quedan en shared/ y sobreviven a cada despliegue.
+# Directorio de trabajo fuera de las versiones; los datos viven en PostgreSQL.
 WorkingDirectory=$BASE/shared
 EnvironmentFile=$BASE/shared/.env
 ExecStart=/usr/bin/node $BASE/current/server/index.mjs
@@ -91,6 +106,10 @@ systemctl daemon-reload
 systemctl enable $APP >/dev/null
 
 echo "==> Nginx como proxy inverso"
+# Si Certbot ya añadió el HTTPS, no se reescribe la configuración (se perdería el certificado).
+if grep -q "managed by Certbot" /etc/nginx/sites-available/$APP 2>/dev/null; then
+  echo "    Configuración con HTTPS ya presente: se mantiene"
+else
 cat > /etc/nginx/sites-available/$APP <<EOF
 server {
   listen 80;
@@ -123,6 +142,7 @@ server {
   }
 }
 EOF
+fi
 ln -sf /etc/nginx/sites-available/$APP /etc/nginx/sites-enabled/$APP
 rm -f /etc/nginx/sites-enabled/default
 nginx -t
@@ -134,11 +154,13 @@ ufw allow 'Nginx Full' >/dev/null
 ufw --force enable >/dev/null
 ufw status | head -5
 
-echo "==> Copia diaria de los datos (se guardan 30 días)"
+echo "==> Copia diaria de la base de datos (se guardan 30 días)"
+chown postgres:postgres $BASE/backups
 cat > /etc/cron.daily/$APP-backup <<EOF
 #!/bin/sh
-tar -czf $BASE/backups/data-\$(date +%F).tar.gz -C $BASE/shared .data 2>/dev/null
-find $BASE/backups -name 'data-*.tar.gz' -mtime +30 -delete
+sudo -u postgres pg_dump -Fc $APP > $BASE/backups/db-\$(date +%F).dump
+find $BASE/backups -name 'db-*.dump' -mtime +30 -delete
+find $BASE/backups -name 'data-*.tar.gz' -delete
 EOF
 chmod +x /etc/cron.daily/$APP-backup
 

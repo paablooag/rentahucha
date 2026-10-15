@@ -13,13 +13,8 @@ export default defineNuxtConfig({
     sessionPassword: '',
     // Solo para probar en local con una contraseña corta (NUXT_ALLOW_WEAK_PASSWORD=true). Nunca en producción.
     allowWeakPassword: false,
-  },
-  nitro: {
-    storage: {
-      // Interesados, suscriptores y blog. En local: ficheros en .data/db. En producción, cambiar el driver
-      // (p. ej. Netlify Blobs, Vercel KV, Redis) o usar un disco persistente.
-      db: { driver: 'fs', base: './.data/db' },
-    },
+    // PostgreSQL (NUXT_DATABASE_URL=postgres://usuario:clave@host:5432/bd). En desarrollo, sin URL se usa PGlite.
+    databaseUrl: '',
   },
   app: {
     head: {

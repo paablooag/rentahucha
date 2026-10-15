@@ -6,12 +6,6 @@ export default defineEventHandler(async (event) => {
   const result = validateNewsletter(body ?? {})
   if (!result.ok) throw createError({ statusCode: 422, statusMessage: result.error })
 
-  const storage = db()
-  const subscribers = await listByPrefix<StoredSubscriber>('newsletter:')
-  if (!subscribers.some(s => s.email === result.email)) {
-    const now = new Date().toISOString()
-    const id = newId()
-    await storage.setItem(`newsletter:${id}`, { id, email: result.email, createdAt: now, consentAt: now } satisfies StoredSubscriber)
-  }
+  await query('INSERT INTO newsletter_subscribers (email) VALUES ($1) ON CONFLICT (email) DO NOTHING', [result.email])
   return { ok: true }
 })

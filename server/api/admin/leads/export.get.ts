@@ -1,7 +1,7 @@
 // Exportación CSV (separador «;» y BOM para que Excel en español la abra bien).
 export default defineEventHandler(async (event) => {
   await requireAdmin(event)
-  const leads = (await listByPrefix<StoredLead>('leads:')).sort((a, b) => a.createdAt.localeCompare(b.createdAt))
+  const leads = (await listLeads()).reverse()
 
   const columns: [string, (l: StoredLead) => unknown][] = [
     ['Fecha', l => l.createdAt.slice(0, 10)],

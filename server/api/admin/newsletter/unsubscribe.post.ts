@@ -6,14 +6,7 @@ export default defineEventHandler(async (event) => {
   const target = String(email ?? '').trim().toLowerCase()
   if (!target) throw createError({ statusCode: 400, statusMessage: 'Falta el correo' })
 
-  const storage = db()
-  const [subscribers, leads] = await Promise.all([
-    listByPrefix<StoredSubscriber>('newsletter:'),
-    listByPrefix<StoredLead>('leads:'),
-  ])
-  await Promise.all([
-    ...subscribers.filter(s => s.email === target).map(s => storage.removeItem(`newsletter:${s.id}`)),
-    ...leads.filter(l => l.email === target && l.consentNews).map(l => storage.setItem(`leads:${l.id}`, { ...l, consentNews: false, updatedAt: new Date().toISOString() })),
-  ])
+  await query('DELETE FROM newsletter_subscribers WHERE email = $1', [target])
+  await query('UPDATE leads SET consent_news = false, updated_at = now() WHERE email = $1 AND consent_news', [target])
   return { ok: true }
 })

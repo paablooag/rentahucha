@@ -47,10 +47,6 @@ const isActive = (l: { to: string; exact?: boolean }) => (l.exact ? route.path =
         <button type="button" class="menu" aria-label="Menú" :aria-expanded="open" @click="open = !open"><AppIcon :name="open ? 'close' : 'menu'" :size="22" /></button>
         <span class="crumb">{{ links.find(isActive)?.label ?? 'Panel' }}</span>
       </header>
-      <div v-if="me?.weakPassword" class="warn" role="alert">
-        <AppIcon name="alert" :size="18" />
-        <span>Estás usando una contraseña débil. Vale para probar en local, pero en producción el acceso se bloqueará hasta que pongas una de al menos 12 caracteres en <code>NUXT_ADMIN_PASSWORD</code>.</span>
-      </div>
       <main class="content">
         <slot />
       </main>

@@ -29,12 +29,16 @@ node .output/server/index.mjs   # arrancar el build (necesita las variables de e
 | `NUXT_ADMIN_USER` / `NUXT_ADMIN_PASSWORD` | Acceso al panel `/admin`. En producción la contraseña debe tener 12 caracteres o más. |
 | `NUXT_SESSION_PASSWORD` | Clave de cifrado de la cookie de sesión (32+ caracteres aleatorios). |
 | `NUXT_ALLOW_WEAK_PASSWORD` | Solo en local: `true` permite una contraseña corta. Nunca en producción. |
+| `NUXT_DATABASE_URL` | PostgreSQL (`postgres://usuario:clave@host:5432/bd`). En local es opcional (PGlite). |
 
 ## Backend y datos
 
 - **Servidor:** rutas en `server/api/` (TypeScript sobre Nitro, el servidor de Nuxt). Validación compartida con la web en `shared/utils/`.
-- **Datos:** almacenamiento clave-valor de Nitro (montaje `db` en `nuxt.config.ts`). En local son ficheros JSON en `.data/db/`.
-  En producción se cambia el driver (Redis, Vercel KV, Netlify Blobs, Cloudflare KV…) o se usa un disco persistente, sin tocar el código.
+- **Base de datos:** PostgreSQL 16 (driver `postgres`). Tablas `leads`, `newsletter_subscribers` y `blog_posts`.
+  El esquema está en `server/db/migrations.ts` y se aplica solo al arrancar: para cambiarlo, añade una migración nueva al final.
+- **En local:** sin `NUXT_DATABASE_URL`, `npm run dev` usa PGlite (Postgres embebido) y guarda en `.data/pglite`. Para usar un
+  Postgres real, pon la URL en `.env` (por ejemplo, con `docker run -p 5432:5432 -e POSTGRES_PASSWORD=dev postgres:16`).
+- **En producción:** Postgres en el propio VPS, solo accesible desde el servidor, con copia diaria (`pg_dump`) en `/opt/rentahucha/backups`.
 - **Seguridad:** sesión en cookie cifrada `httpOnly` + `SameSite=Strict`, límite de intentos de login y de envíos de formularios,
   campo trampa contra bots, no se guarda la IP y se registra la prueba del consentimiento de cada alta.
 
