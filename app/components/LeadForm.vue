@@ -524,11 +524,13 @@ legend { font-weight: 600; font-size: 1.05rem; color: var(--ink); margin-bottom:
 .input[aria-invalid="true"],
 .select[aria-invalid="true"] { border-color: var(--danger); }
 
-.switch { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; padding: 6px; background: var(--grey-01); border-radius: 999px; }
+.switch { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; padding: 4px; background: var(--grey-01); border-radius: 999px; }
 .switch button {
-  display: inline-flex; align-items: center; justify-content: center; gap: 8px; font: inherit; font-weight: 500;
-  border: 0; border-radius: 999px; padding: 12px; cursor: pointer; background: transparent; color: var(--muted); transition: all 0.2s;
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px; font: inherit; font-size: 0.92rem; font-weight: 500;
+  white-space: nowrap; border: 0; border-radius: 999px; padding: 9px 10px; cursor: pointer; background: transparent; color: var(--muted); transition: all 0.2s;
 }
+.switch button svg { flex: none; width: 16px; height: 16px; }
+@media (max-width: 380px) { .switch button { font-size: 0.85rem; gap: 4px; padding: 8px 6px; } }
 .switch button.on { background: var(--ink); color: #fff; box-shadow: var(--shadow); }
 .switch button.on svg { color: var(--lime); }
 

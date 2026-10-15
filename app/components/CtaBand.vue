@@ -7,8 +7,8 @@
           <p>Apúntate antes de que abramos: los primeros propietarios e inquilinos de la lista entran con condiciones de lanzamiento.</p>
         </div>
         <div class="actions">
-          <NuxtLink to="/apuntate?tipo=propietario" class="btn btn-dark">Soy propietario <AppIcon name="arrow" :size="18" /></NuxtLink>
-          <NuxtLink to="/apuntate?tipo=inquilino" class="btn btn-white">Busco piso <AppIcon name="arrow" :size="18" /></NuxtLink>
+          <NuxtLink to="/apuntate?tipo=propietario#formulario" class="btn btn-dark">Soy propietario <AppIcon name="arrow" :size="18" /></NuxtLink>
+          <NuxtLink to="/apuntate?tipo=inquilino#formulario" class="btn btn-white">Busco piso <AppIcon name="arrow" :size="18" /></NuxtLink>
         </div>
       </div>
     </div>

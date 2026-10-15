@@ -32,8 +32,8 @@ const links = [
       <nav class="nav" :class="{ open }" aria-label="Principal">
         <NuxtLink v-for="l in links" :key="l.to" :to="l.to" class="nav-link">{{ l.label }}</NuxtLink>
         <div class="nav-cta">
-          <NuxtLink to="/apuntate?tipo=inquilino" class="btn btn-sm cta-ghost">Busco piso</NuxtLink>
-          <NuxtLink to="/apuntate?tipo=propietario" class="btn btn-sm btn-primary">Soy propietario <AppIcon name="arrow" :size="16" /></NuxtLink>
+          <NuxtLink to="/apuntate?tipo=inquilino#formulario" class="btn btn-sm cta-ghost">Busco piso</NuxtLink>
+          <NuxtLink to="/apuntate?tipo=propietario#formulario" class="btn btn-sm btn-primary">Soy propietario <AppIcon name="arrow" :size="16" /></NuxtLink>
         </div>
       </nav>
 

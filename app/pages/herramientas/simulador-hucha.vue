@@ -33,7 +33,7 @@ useSeoMeta({
           <li><AppIcon name="check" :size="18" /> Si te mudas a otro piso de la red, puedes llevártela y seguir ahorrando.</li>
         </ul>
         <div class="cta">
-          <NuxtLink to="/apuntate?tipo=inquilino" class="btn btn-amber">Quiero mi hucha</NuxtLink>
+          <NuxtLink to="/apuntate?tipo=inquilino#formulario" class="btn btn-amber">Quiero mi hucha</NuxtLink>
         </div>
       </div>
     </section>

@@ -5,7 +5,12 @@ const route = useRoute()
 const router = useRouter()
 
 const role = ref<LeadRole>(route.query.tipo === 'inquilino' ? 'inquilino' : 'propietario')
-watch(role, (r) => { router.replace({ query: { ...route.query, tipo: r } }) })
+watch(role, (r) => { router.replace({ query: { ...route.query, tipo: r }, hash: route.hash }) })
+
+// Si se llega desde un botón (?tipo=…) sin el ancla, se baja igualmente al formulario.
+onMounted(() => {
+  if (route.query.tipo && !route.hash) router.replace({ query: route.query, hash: '#formulario' })
+})
 watch(() => route.query.tipo, (t) => { role.value = t === 'inquilino' ? 'inquilino' : 'propietario' })
 
 const isOwner = computed(() => role.value === 'propietario')
@@ -42,7 +47,7 @@ const steps = computed(() => (isOwner.value
     </section>
 
     <section class="section">
-      <div class="container layout">
+      <div id="formulario" class="container layout form-anchor">
         <LeadForm v-model:role="role" switchable />
 
         <aside class="side">
@@ -77,6 +82,8 @@ const steps = computed(() => (isOwner.value
 
 <style scoped>
 .hero { padding-bottom: 72px; }
+/* Al entrar con #formulario, el hueco para la cabecera fija lo pone scroll-padding-top (main.css). */
+.form-anchor { scroll-margin-top: 8px; }
 .head { max-width: 820px; }
 .layout { display: grid; gap: 32px; align-items: start; }
 @media (min-width: 980px) { .layout { grid-template-columns: 1.6fr 1fr; } }

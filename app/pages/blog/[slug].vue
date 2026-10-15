@@ -11,30 +11,23 @@ if (error.value || !post.value) {
 
 const date = (d: string) => new Intl.DateTimeFormat('es-ES', { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(`${d}T12:00:00`))
 
-// CTA flotante en móvil: aparece al avanzar en el artículo, se oculta al llegar al CTA final y se puede cerrar.
+// CTA flotante en móvil: visible siempre en el artículo; se puede cerrar y no vuelve en la visita.
 const floating = useState('blog-cta-floating', () => true)
 const showFloat = ref(false)
-const endCta = ref<HTMLElement | null>(null)
-let observer: IntersectionObserver | null = null
-let endVisible = false
-function onScroll() {
-  showFloat.value = floating.value && !endVisible && window.scrollY > window.innerHeight * 0.8
-}
 onMounted(() => {
   try { if (sessionStorage.getItem('rh-cta-closed')) floating.value = false } catch {}
-  observer = new IntersectionObserver(([e]) => { endVisible = !!e?.isIntersecting; onScroll() })
-  if (endCta.value) observer.observe(endCta.value)
-  window.addEventListener('scroll', onScroll, { passive: true })
+  showFloat.value = floating.value
 })
-onBeforeUnmount(() => { observer?.disconnect(); window.removeEventListener('scroll', onScroll) })
+useHead({ bodyAttrs: { class: computed(() => (showFloat.value ? 'has-float-cta' : '')) } })
+
 function closeFloat() {
   floating.value = false
   showFloat.value = false
   try { sessionStorage.setItem('rh-cta-closed', '1') } catch {}
 }
 const floatCopy = computed(() => (post.value?.audience === 'propietarios'
-  ? { text: 'Cobra tu alquiler cada mes, pase lo que pase', to: '/apuntate?tipo=propietario' }
-  : { text: 'Alquila sin aval y ahorra con tu hucha', to: '/apuntate?tipo=inquilino' }))
+  ? { text: 'Cobra tu alquiler cada mes, pase lo que pase', to: '/apuntate?tipo=propietario#formulario' }
+  : { text: 'Alquila sin aval y ahorra con tu hucha', to: '/apuntate?tipo=inquilino#formulario' }))
 
 useSeoMeta({
   title: () => post.value?.title ?? '',
@@ -63,7 +56,7 @@ useSeoMeta({
         </aside>
       </div>
 
-      <div ref="endCta" class="container end">
+      <div class="container end">
         <BlogCta :audience="post.audience" />
       </div>
 
@@ -160,4 +153,9 @@ useSeoMeta({
 .float-enter-from,
 .float-leave-to { transform: translateY(16px); opacity: 0; }
 @media (prefers-reduced-motion: reduce) { .float-enter-active, .float-leave-active { transition: none; } }
+</style>
+
+<style>
+/* Hueco al final de la página para que la barra flotante no tape el pie en móvil. */
+@media (max-width: 999px) { body.has-float-cta .footer { padding-bottom: calc(96px + env(safe-area-inset-bottom)); } }
 </style>

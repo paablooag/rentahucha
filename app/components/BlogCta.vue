@@ -8,13 +8,13 @@ const copy = computed(() => (props.audience === 'propietarios'
       title: 'Alquila tu piso y cobra cada mes, pase lo que pase',
       text: 'Inquilinos verificados, renta garantizada con aseguradora y proceso legal desde el día 1. Apúntate y te avisamos antes del lanzamiento.',
       button: 'Apuntarme como propietario',
-      to: '/apuntate?tipo=propietario',
+      to: '/apuntate?tipo=propietario#formulario',
     }
   : {
       title: 'Alquila sin aval y ahorra para tu casa',
       text: 'Una hucha a tu nombre que crece cada mes y te devolvemos con premio. Apúntate y crea tu pasaporte de inquilino antes que nadie.',
       button: 'Apuntarme como inquilino',
-      to: '/apuntate?tipo=inquilino',
+      to: '/apuntate?tipo=inquilino#formulario',
     }))
 </script>
 
