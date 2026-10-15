@@ -146,7 +146,7 @@ const faqs = [
             <li><AppIcon name="check" :size="18" /> Bolsa de inquilinos verificados en tu zona</li>
           </ul>
         </div>
-        <WaitlistForm role="propietario" />
+        <LeadForm role="propietario" />
       </div>
     </section>
   </div>

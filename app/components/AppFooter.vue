@@ -48,6 +48,8 @@ const dossiers = [
       <div>
         <h4>Empresa</h4>
         <NuxtLink to="/como-funciona">Cómo funciona</NuxtLink>
+        <NuxtLink to="/blog">Blog</NuxtLink>
+        <NuxtLink to="/apuntate">Lista de espera</NuxtLink>
         <NuxtLink to="/legal/aviso-legal">Aviso legal</NuxtLink>
         <NuxtLink to="/legal/privacidad">Privacidad</NuxtLink>
         <NuxtLink to="/legal/cookies">Cookies</NuxtLink>

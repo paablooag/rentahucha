@@ -1,8 +1,8 @@
 name: Publicar en GitHub Pages
 
+# DESACTIVADO EN AUTOMÁTICO: la web ya tiene servidor (formularios, blog editable y panel /admin)
+# y GitHub Pages solo sirve ficheros estáticos. Se mantiene solo para lanzarlo a mano si hiciera falta.
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:

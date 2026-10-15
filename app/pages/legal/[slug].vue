@@ -56,8 +56,12 @@ const pages: Record<string, { title: string; updated: string; blocks: Block[] }>
       {
         h: 'Qué datos tratamos y para qué',
         p: [
-          'Lista de espera: nombre, correo, ciudad y, según el caso, número de pisos y renta aproximada (propietarios) o renta máxima y situación laboral (inquilinos). Los usamos para avisarte del lanzamiento y darte prioridad para dar de alta tu piso o crear tu pasaporte de inquilino.',
-          'Newsletter: tu correo electrónico, para enviarte novedades del servicio y consejos sobre alquiler.',
+          'Lista de espera, propietarios: nombre, correo, ciudad, teléfono si lo das, número de pisos, renta aproximada, situación y características del piso (tipo, habitaciones, baños, estado, superficie, mobiliario y extras) y cuándo quieres empezar.',
+          'Lista de espera, inquilinos: nombre, correo, ciudad, teléfono si lo das, renta máxima, habitaciones y baños que buscas, tu rango de edad, cuántas personas viviréis y cuándo te mudarías. Si quieres, también con quién vivirás, tu situación laboral, si tienes mascota, el tipo de estancia y lo que consideras imprescindible.',
+          'En ambos casos, opcionalmente, qué te interesa del servicio y tus comentarios. No pedimos DNI, ingresos, nóminas ni documentos.',
+          'Los usamos para avisarte del lanzamiento, darte prioridad para dar de alta tu piso o crear tu pasaporte de inquilino, y analizar de forma agregada el interés en el servicio (cuánta gente lo quiere, en qué ciudades y qué le importa).',
+          'Newsletter: tu correo electrónico, para enviarte novedades del servicio y consejos sobre alquiler. Solo si marcas esa casilla.',
+          'Guardamos la fecha y el texto del consentimiento que diste, para poder demostrarlo. No guardamos tu dirección IP.',
         ],
       },
       {
@@ -67,7 +71,8 @@ const pages: Record<string, { title: string; updated: string; blocks: Block[] }>
       {
         h: 'Quién más accede a tus datos',
         p: [
-          `Los formularios se reciben a través de ${legal.formsProvider}, que actúa como encargado del tratamiento con un contrato que garantiza la protección de tus datos. Si el proveedor está fuera del Espacio Económico Europeo, la transferencia se ampara en las cláusulas contractuales tipo de la Comisión Europea o en el Marco de Privacidad de Datos UE-EE. UU.`,
+          `Los datos se guardan en nuestros propios sistemas, alojados por ${legal.hostingProvider}, que actúa como encargado del tratamiento con un contrato que garantiza la protección de tus datos. Si el proveedor está fuera del Espacio Económico Europeo, la transferencia se ampara en las cláusulas contractuales tipo de la Comisión Europea o en el Marco de Privacidad de Datos UE-EE. UU.`,
+          'Solo las personas autorizadas del equipo acceden a ellos, con usuario y contraseña.',
           'No vendemos ni cedemos tus datos a terceros, salvo obligación legal.',
         ],
       },
@@ -86,12 +91,12 @@ const pages: Record<string, { title: string; updated: string; blocks: Block[] }>
     updated: 'octubre de 2026',
     blocks: [
       {
-        h: 'Esta web no usa cookies',
-        p: ['No instalamos cookies propias ni de terceros: ni de análisis, ni de publicidad, ni de redes sociales. Por eso no te mostramos un aviso de cookies.'],
+        h: 'Esta web no usa cookies de seguimiento',
+        p: ['No instalamos cookies de análisis, de publicidad ni de redes sociales, ni propias ni de terceros. Por eso no te mostramos un aviso de cookies.'],
       },
       {
-        h: 'Almacenamiento local',
-        p: ['Mientras el envío de formularios no está activo, la web puede guardar en tu propio navegador (almacenamiento local) los datos que envías, para que la demo funcione. Esa información no sale de tu dispositivo y puedes borrarla desde los ajustes del navegador.'],
+        h: 'Cookie técnica del panel interno',
+        p: ['Solo el panel de administración, que usa el equipo, instala una cookie técnica de sesión («rh-admin») para mantener iniciada la sesión durante 8 horas. Es imprescindible para ese servicio y no requiere consentimiento (LSSI, art. 22.2). Si solo visitas la web, no se instala.'],
       },
       {
         h: 'Recursos de terceros',

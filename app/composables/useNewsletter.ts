@@ -1,5 +1,4 @@
 export function useNewsletter() {
-  const { send } = useFormSender()
   const pending = ref(false)
   const error = ref<string | null>(null)
 
@@ -7,11 +6,12 @@ export function useNewsletter() {
     pending.value = true
     error.value = null
     try {
-      await send('newsletter', { email, consentimiento: true })
+      await $fetch('/api/newsletter', { method: 'POST', body: { email, consent: true } })
       return true
     }
-    catch {
-      error.value = 'No hemos podido apuntarte. Inténtalo de nuevo en unos minutos.'
+    catch (e: unknown) {
+      const err = e as { statusCode?: number; statusMessage?: string }
+      error.value = err.statusCode === 422 && err.statusMessage ? err.statusMessage : 'No hemos podido apuntarte. Inténtalo de nuevo en unos minutos.'
       return false
     }
     finally {

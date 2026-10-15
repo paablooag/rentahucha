@@ -129,7 +129,7 @@ const faqs = [
           <h2>Crea tu pasaporte de inquilino</h2>
           <p class="lead">Apúntate y serás de los primeros candidatos verificados cuando abramos. Los propietarios verán que estás listo para entrar.</p>
         </div>
-        <WaitlistForm role="inquilino" />
+        <LeadForm role="inquilino" />
       </div>
     </section>
   </div>

@@ -14,7 +14,7 @@ export default defineAppConfig({
     nif: '',
     address: '', // Domicilio completo
     registry: '', // Solo si es sociedad: datos del Registro Mercantil
-    formsProvider: 'Formspree', // Servicio que recibe los formularios (encargado del tratamiento)
+    hostingProvider: 'el proveedor que aloja la web', // Encargado del tratamiento (nombre real al elegir hosting)
   },
   // PDFs generados con `npm run pdf` en public/dossier (nombres fijados en scripts/generate-pdfs.mjs).
   downloads: {

@@ -34,7 +34,7 @@ useSeoMeta({
           <p>Avisamos el día 1, la hucha cubre el primer mes, la aseguradora paga la renta según la póliza y el abogado tiene el expediente listo.</p>
         </div>
         <div class="cta">
-          <NuxtLink to="/propietarios#alta" class="btn btn-primary">Protege tu alquiler</NuxtLink>
+          <NuxtLink to="/apuntate?tipo=propietario" class="btn btn-primary">Protege tu alquiler</NuxtLink>
         </div>
       </div>
     </section>
