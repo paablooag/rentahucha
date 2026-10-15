@@ -5,7 +5,7 @@
 set -euo pipefail
 
 DOMAIN="${1:?Uso: setup-server.sh dominio email}"
-EMAIL="${2:?Uso: setup-server.sh dominio email}"
+EMAIL="${2:-}"  # Correo para avisos de Let's Encrypt; sin él no se pide el certificado
 APP=rentahucha
 BASE=/opt/$APP
 
@@ -145,7 +145,9 @@ chmod +x /etc/cron.daily/$APP-backup
 echo "==> HTTPS con Let's Encrypt (si el dominio ya apunta aquí)"
 SERVER_IP="$(curl -s4 https://ifconfig.me || true)"
 DNS_IP="$(getent ahostsv4 $DOMAIN | awk 'NR==1{print $1}' || true)"
-if [[ -n "$SERVER_IP" && "$SERVER_IP" == "$DNS_IP" ]]; then
+if [[ -z "$EMAIL" ]]; then
+  echo "    Sin correo: HTTPS pendiente. Repite el script con el correo cuando el DNS apunte aquí."
+elif [[ -n "$SERVER_IP" && "$SERVER_IP" == "$DNS_IP" ]]; then
   certbot --nginx -d $DOMAIN -d www.$DOMAIN --non-interactive --agree-tos -m "$EMAIL" --redirect
 else
   echo "    El dominio ($DNS_IP) aún no apunta a este servidor ($SERVER_IP). Repite este script cuando el DNS esté listo."
