@@ -14,7 +14,7 @@ export default defineAppConfig({
     nif: '',
     address: '', // Domicilio completo
     registry: '', // Solo si es sociedad: datos del Registro Mercantil
-    hostingProvider: 'el proveedor que aloja la web', // Encargado del tratamiento (nombre real al elegir hosting)
+    hostingProvider: 'IONOS SE (servidores en la Unión Europea)', // Encargado del tratamiento: firmar su contrato en el panel de IONOS
   },
   // PDFs generados con `npm run pdf` en public/dossier (nombres fijados en scripts/generate-pdfs.mjs).
   downloads: {
