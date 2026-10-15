@@ -18,7 +18,7 @@ export async function listPosts(opts: { includeDrafts?: boolean; audience?: stri
     where.push(`audience = $${params.length}`)
   }
   const rows = await query<BlogPost>(
-    `SELECT ${COLS} FROM blog_posts ${where.length ? `WHERE ${where.join(' AND ')}` : ''} ORDER BY published_at DESC, updated_at DESC`,
+    `SELECT ${COLS} FROM blog_posts ${where.length ? `WHERE ${where.join(' AND ')}` : ''} ORDER BY published_at DESC, created_at DESC`,
     params,
   )
   return rows.map(toSummary)

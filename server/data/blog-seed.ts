@@ -13,7 +13,7 @@ export const BLOG_SEED: Seed[] = [
     excerpt: 'Del primer día de retraso a la demanda: qué hacer, en qué orden y qué no hacer nunca si tu inquilino deja de pagar el alquiler.',
     audience: 'propietarios',
     category: 'Impagos',
-    publishedAt: '2026-10-01',
+    publishedAt: '2026-10-15',
     body: `Un retraso no es lo mismo que un impago. La mayoría de los problemas de pago empiezan como un bache puntual y se resuelven si se actúa pronto y con orden. Esta es la secuencia que recomendamos.
 
 ## 1. Día 1: habla con el inquilino
@@ -60,7 +60,7 @@ Con renta garantizada, el aviso sale el día 1, la hucha del inquilino cubre el 
     excerpt: 'Rentas perdidas, abogado, reparaciones y meses vacío: calculamos el coste real de un impago para pisos de 600, 850 y 1.200 €.',
     audience: 'propietarios',
     category: 'Impagos',
-    publishedAt: '2026-10-02',
+    publishedAt: '2026-10-15',
     body: `Cuando se habla de impagos se piensa en las rentas que no cobras. Pero el coste real es mayor: hay que sumar el proceso legal, el estado en que te devuelven el piso y el tiempo que tarda en volver a alquilarse.
 
 ## Supuestos del cálculo
@@ -103,7 +103,7 @@ Puedes hacer tu propio cálculo con nuestra [calculadora del coste de un impago]
     excerpt: 'Los límites exactos de la Ley de Arrendamientos Urbanos: cuántos meses puedes pedir, cuáles no y qué pasa con el pago adelantado.',
     audience: 'propietarios',
     category: 'Legal',
-    publishedAt: '2026-10-03',
+    publishedAt: '2026-10-15',
     body: `Pedir garantías es legítimo y recomendable, pero la ley pone límites claros. Superarlos puede hacer que una cláusula sea nula.
 
 ## Vivienda habitual
@@ -149,7 +149,7 @@ La hucha del inquilino está bloqueada a favor del contrato, así que en viviend
     excerpt: 'Qué ingresos debería tener tu inquilino según la renta, qué documentos pedir y cómo verificarlos sin quedarte con papeles que no necesitas.',
     audience: 'propietarios',
     category: 'Selección',
-    publishedAt: '2026-10-05',
+    publishedAt: '2026-10-15',
     body: `La mejor protección contra el impago es elegir bien. Y elegir bien no es pedir más papeles, sino comprobar lo que importa: que la renta sea asumible con margen.
 
 ## La regla del esfuerzo
@@ -191,7 +191,7 @@ Verificamos identidad, ingresos y estabilidad y te enseñamos un resumen claro d
     excerpt: '¿Puedes alquilar solo un año? Explicamos las prórrogas de 5 y 7 años, cómo recuperar el piso para ti y cuándo encaja un contrato de temporada.',
     audience: 'propietarios',
     category: 'Legal',
-    publishedAt: '2026-10-07',
+    publishedAt: '2026-10-15',
     body: `Una de las dudas más frecuentes de los propietarios es si pueden alquilar solo por un tiempo. La respuesta depende del tipo de contrato.
 
 ## Vivienda habitual
@@ -238,7 +238,7 @@ En vivienda habitual, a partir del **sexto mes**, avisando con **30 días**. Se 
     excerpt: 'Carencias, meses cubiertos, defensa jurídica y quién gestiona el día a día: lo que tienes que comparar antes de proteger tu alquiler.',
     audience: 'propietarios',
     category: 'Protección',
-    publishedAt: '2026-10-08',
+    publishedAt: '2026-10-15',
     body: `Las dos opciones buscan lo mismo, que cobres aunque el inquilino falle, pero funcionan de forma distinta.
 
 ## Seguro de impago por tu cuenta
@@ -279,7 +279,7 @@ Desconfía de quien prometa que el inquilino estará «fuera en 24 horas». Los 
     excerpt: 'Primer mes, fianza y garantías: tabla con lo que te pueden pedir legalmente según la renta y cómo entrar con menos dinero.',
     audience: 'inquilinos',
     category: 'Entrar a vivir',
-    publishedAt: '2026-10-02',
+    publishedAt: '2026-10-15',
     body: `Antes de buscar piso conviene saber cuánto dinero vas a necesitar el día de la firma. En vivienda habitual, lo máximo que te pueden pedir es esto:
 
 | Concepto | Cuánto |
@@ -319,7 +319,7 @@ Calcula cuánto ahorrarías con el [simulador de la hucha](/herramientas/simulad
     excerpt: 'Por qué piden aval, qué alternativas existen y cómo demostrar que eres buen inquilino aunque no tengas contrato indefinido.',
     audience: 'inquilinos',
     category: 'Entrar a vivir',
-    publishedAt: '2026-10-04',
+    publishedAt: '2026-10-15',
     body: `El aval de los padres o el aval bancario es la forma que tiene el propietario de protegerse cuando no está seguro de que puedas pagar. Si le das esa seguridad de otra forma, el aval deja de ser necesario.
 
 ## Por qué te lo piden
@@ -359,7 +359,7 @@ Pagar a tiempo durante años debería servirte para algo. Por eso creamos el **p
     excerpt: 'Cuánto necesitas realmente para comprar, cuánto puedes ahorrar al mes y qué papel puede jugar tu hucha de alquiler.',
     audience: 'inquilinos',
     category: 'Ahorro',
-    publishedAt: '2026-10-06',
+    publishedAt: '2026-10-15',
     body: `Ahorrar para comprar mientras pagas alquiler es difícil, pero tener claros los números ayuda a hacer un plan realista.
 
 ## Cuánto necesitas para comprar
@@ -406,7 +406,7 @@ Seamos claros: **la hucha no te da la entrada entera**, pero es dinero que en un
     excerpt: 'Honorarios de agencia, meses adelantados y garantías excesivas: lo que la ley prohíbe cobrar al inquilino y qué hacer si te lo piden.',
     audience: 'inquilinos',
     category: 'Derechos',
-    publishedAt: '2026-10-09',
+    publishedAt: '2026-10-15',
     body: `Saber qué no te pueden cobrar te ahorra dinero y discusiones. Estos son los límites principales en un alquiler de vivienda habitual.
 
 ## Lo que no te pueden cobrar
@@ -446,7 +446,7 @@ La plataforma es **gratis para el inquilino**: no hay comisiones ni gastos de ge
     excerpt: 'Cuándo puedes dejar el piso, con cuánto preaviso y cuánto te puede costar si el contrato prevé una indemnización.',
     audience: 'inquilinos',
     category: 'Derechos',
-    publishedAt: '2026-10-11',
+    publishedAt: '2026-10-15',
     body: `Cambiar de trabajo, de ciudad o de situación es normal. La ley lo tiene en cuenta y te permite marcharte antes de tiempo, con algunas condiciones.
 
 ## En vivienda habitual

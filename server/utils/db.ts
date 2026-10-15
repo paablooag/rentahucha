@@ -1,6 +1,10 @@
 import postgres from 'postgres'
 import { MIGRATIONS } from '../db/migrations'
-import { BLOG_SEED } from '../data/blog-seed'
+import { BLOG_SEED as BLOG_SEED_V1 } from '../data/blog-seed'
+import { BLOG_SEED_V2 } from '../data/blog-seed-v2'
+
+// Los nuevos primero: al insertar en orden inverso, el primero de la lista queda como el más reciente.
+const BLOG_SEED = [...BLOG_SEED_V2, ...BLOG_SEED_V1]
 
 // Acceso a PostgreSQL. Producción: NUXT_DATABASE_URL (postgres://…). Desarrollo sin URL: PGlite, un Postgres
 // real embebido que guarda en .data/pglite, para trabajar sin instalar nada.
@@ -49,18 +53,34 @@ async function migrate(d: Driver) {
   }
 }
 
-// Los artículos iniciales se cargan una sola vez; después mandan los cambios hechos en /admin.
+// Artículos iniciales por versiones. Cada versión nueva añade los que falten (sin tocar los ya editados en
+// /admin) y puede aplicar un ajuste puntual. Sube BLOG_SEED_VERSION al añadir artículos a BLOG_SEED.
+const BLOG_SEED_VERSION = 2
+const SEED_DATE_V2 = '2026-10-15'
+
 async function seed(d: Driver) {
-  const done = await d.query(`SELECT 1 FROM app_meta WHERE key = 'blog_seeded'`)
-  if (done.length) return
-  for (const p of BLOG_SEED) {
+  const [meta] = await d.query(`SELECT value FROM app_meta WHERE key = 'blog_seed_version'`)
+  const legacy = await d.query(`SELECT 1 FROM app_meta WHERE key = 'blog_seeded'`)
+  const current = meta ? Number(meta.value) : legacy.length ? 1 : 0
+  if (current >= BLOG_SEED_VERSION) return
+
+  // Se insertan al revés para que el primero de la lista quede como el más reciente.
+  for (const p of [...BLOG_SEED].reverse()) {
     await d.query(
       `INSERT INTO blog_posts (slug, title, excerpt, audience, category, body, published, published_at)
        VALUES ($1, $2, $3, $4, $5, $6, true, $7) ON CONFLICT (slug) DO NOTHING`,
       [p.slug, p.title, p.excerpt, p.audience, p.category, p.body, p.publishedAt],
     )
   }
-  await d.query(`INSERT INTO app_meta (key, value) VALUES ('blog_seeded', now()::text)`)
+  // v2: todos los artículos iniciales con fecha de publicación del 15 de octubre de 2026.
+  if (current < 2) {
+    await d.query('UPDATE blog_posts SET published_at = $1::date WHERE slug = ANY($2::text[])', [SEED_DATE_V2, BLOG_SEED.map(p => p.slug)])
+  }
+  await d.query(
+    `INSERT INTO app_meta (key, value) VALUES ('blog_seed_version', $1)
+     ON CONFLICT (key) DO UPDATE SET value = EXCLUDED.value`,
+    [String(BLOG_SEED_VERSION)],
+  )
 }
 
 async function init(): Promise<Driver> {

@@ -52,26 +52,75 @@ const touched = ref(false)
 const done = ref<'nuevo' | 'actualizado' | null>(null)
 const formEl = ref<HTMLFormElement | null>(null)
 
+// Formulario por pasos: cada paso valida solo sus campos.
+const TOTAL_STEPS = 3
+const step = ref(1)
+const STEP_FIELDS: Record<LeadRole, (keyof LeadErrors)[][]> = {
+  propietario: [['name', 'email', 'phone', 'city'], ['units', 'rentRange', 'flatStatus', 'propertyType', 'bedrooms', 'bathrooms', 'sizeM2', 'condition'], ['timing', 'consentContact', 'adult']],
+  inquilino: [['name', 'email', 'phone', 'city'], ['maxRent', 'wantedBedrooms', 'wantedBathrooms', 'ageRange', 'people'], ['timing', 'consentContact', 'adult']],
+}
+const stepTitles = computed(() => (isOwner.value
+  ? ['Tus datos', 'Tu piso', 'Cuándo y confirmar']
+  : ['Tus datos', 'Lo que buscas', 'Cuándo y confirmar']))
+
 const interestOptions = computed(() => (isOwner.value ? LEAD_OPTIONS.ownerInterest : LEAD_OPTIONS.tenantInterest))
 const timingOptions = computed(() => (isOwner.value ? LEAD_OPTIONS.ownerTiming : LEAD_OPTIONS.tenantTiming))
 
-// Al cambiar de tipo se vacían los campos que no aplican y los intereses.
+// Al cambiar de tipo se vacían los campos que no aplican y se vuelve al primer paso.
 watch(role, () => {
   form.interests = []
   form.timing = ''
   errors.value = {}
   touched.value = false
+  step.value = 1
 })
 
 const payload = () => ({ role: role.value, ...form, maxRent: form.maxRent ?? undefined, sizeM2: form.sizeM2 ?? undefined })
 
-function validate() {
+function allErrors(): LeadErrors {
   const result = validateLead(payload())
-  errors.value = result.ok ? {} : result.errors
-  return result.ok
+  return result.ok ? {} : result.errors
 }
 
-// Tras el primer intento de envío, los errores se recalculan mientras el usuario corrige.
+const errorsOfStep = (all: LeadErrors, n: number): LeadErrors =>
+  Object.fromEntries(Object.entries(all).filter(([k]) => STEP_FIELDS[role.value][n - 1]!.includes(k as keyof LeadErrors)))
+
+function validate() {
+  errors.value = errorsOfStep(allErrors(), step.value)
+  return !Object.keys(errors.value).length
+}
+
+async function scrollToForm() {
+  await nextTick()
+  const top = (formEl.value?.getBoundingClientRect().top ?? 0) + window.scrollY - 110
+  window.scrollTo({ top, behavior: 'smooth' })
+}
+
+function goTo(n: number) {
+  step.value = n
+  errors.value = {}
+  touched.value = false
+  scrollToForm()
+}
+
+async function next() {
+  touched.value = true
+  if (!validate()) return focusFirstError()
+  goTo(step.value + 1)
+}
+
+// Si hay errores en un paso anterior (o los devuelve el servidor), se vuelve a ese paso.
+function jumpToErrors(all: LeadErrors) {
+  const bad = STEP_FIELDS[role.value].findIndex(fields => fields.some(k => all[k]))
+  if (bad === -1) return false
+  step.value = bad + 1
+  touched.value = true
+  errors.value = errorsOfStep(all, step.value)
+  focusFirstError()
+  return true
+}
+
+// Tras el primer intento en un paso, los errores se recalculan mientras el usuario corrige.
 watch(form, () => { if (touched.value) validate() }, { deep: true })
 
 async function focusFirstError() {
@@ -80,16 +129,15 @@ async function focusFirstError() {
 }
 
 async function onSubmit() {
-  touched.value = true
-  if (!validate()) return focusFirstError()
+  if (step.value < TOTAL_STEPS) return next()
+  if (jumpToErrors(allErrors())) return
   const res = await submit(payload())
   if (res.ok) {
     done.value = 'nuevo'
-    formEl.value?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    scrollToForm()
   }
   else if (res.errors) {
-    errors.value = res.errors
-    focusFirstError()
+    jumpToErrors(res.errors)
   }
 }
 
@@ -113,7 +161,17 @@ const holder = computed(() => legal.holder || `${brand.name} (titular pendiente 
     </div>
 
     <form v-else ref="formEl" class="form" novalidate @submit.prevent="onSubmit">
-      <div v-if="switchable" class="switch" role="radiogroup" aria-label="¿Quién eres?">
+      <div class="progress">
+        <div class="progress-head" aria-live="polite">
+          <span class="step-label">Paso {{ step }} de {{ TOTAL_STEPS }}</span>
+          <strong>{{ stepTitles[step - 1] }}</strong>
+        </div>
+        <div class="bar" role="progressbar" :aria-valuenow="step" aria-valuemin="1" :aria-valuemax="TOTAL_STEPS" :aria-label="`Paso ${step} de ${TOTAL_STEPS}`">
+          <span :style="{ width: `${(step / TOTAL_STEPS) * 100}%` }" />
+        </div>
+      </div>
+
+      <div v-if="switchable && step === 1" class="switch" role="radiogroup" aria-label="¿Quién eres?">
         <button type="button" role="radio" :aria-checked="isOwner" :class="{ on: isOwner }" @click="role = 'propietario'">
           <AppIcon name="key" :size="18" /> Soy propietario
         </button>
@@ -122,8 +180,8 @@ const holder = computed(() => legal.holder || `${brand.name} (titular pendiente 
         </button>
       </div>
 
-      <fieldset>
-        <legend>Tus datos</legend>
+      <fieldset v-show="step === 1">
+        <legend class="sr-only">Tus datos</legend>
         <div class="row">
           <div class="field">
             <label for="lf-name">Nombre</label>
@@ -150,8 +208,8 @@ const holder = computed(() => legal.holder || `${brand.name} (titular pendiente 
         </div>
       </fieldset>
 
-      <fieldset v-if="isOwner">
-        <legend>Tu piso</legend>
+      <fieldset v-if="isOwner" v-show="step === 2">
+        <legend>Situación</legend>
         <div class="row three">
           <div class="field">
             <label for="lf-units">Pisos en alquiler</label>
@@ -180,8 +238,8 @@ const holder = computed(() => legal.holder || `${brand.name} (titular pendiente 
         </div>
       </fieldset>
 
-      <fieldset v-if="isOwner">
-        <legend>Cómo es el piso <span class="opt">(si tienes varios, el que quieras alquilar primero)</span></legend>
+      <fieldset v-if="isOwner" v-show="step === 2">
+        <legend>Cómo es <span class="opt">(si tienes varios, el que quieras alquilar primero)</span></legend>
         <div class="row four">
           <div class="field">
             <label for="lf-ptype">Tipo</label>
@@ -257,8 +315,8 @@ const holder = computed(() => legal.holder || `${brand.name} (titular pendiente 
       </fieldset>
 
       <template v-else>
-        <fieldset>
-          <legend>Lo que buscas</legend>
+        <fieldset v-show="step === 2">
+          <legend>El piso</legend>
           <div class="row three">
             <div class="field">
               <label for="lf-maxrent">Renta máxima</label>
@@ -307,7 +365,7 @@ const holder = computed(() => legal.holder || `${brand.name} (titular pendiente 
           </div>
         </fieldset>
 
-        <fieldset>
+        <fieldset v-show="step === 2">
           <legend>Quién vivirá</legend>
           <div class="row three">
             <div class="field">
@@ -353,6 +411,7 @@ const holder = computed(() => legal.holder || `${brand.name} (titular pendiente 
         </fieldset>
       </template>
 
+      <div v-show="step === 3" class="stepwrap">
       <fieldset>
         <legend>{{ isOwner ? '¿Cuándo te gustaría empezar?' : '¿Cuándo te mudarías?' }}</legend>
         <div class="chips" role="radiogroup" :aria-invalid="errors.timing ? 'true' : undefined" :aria-describedby="errors.timing ? 'lf-timing-err' : undefined">
@@ -378,11 +437,32 @@ const holder = computed(() => legal.holder || `${brand.name} (titular pendiente 
         <label for="lf-comments">¿Algo que quieras contarnos? <span class="opt">(opcional)</span></label>
         <textarea id="lf-comments" v-model="form.comments" class="textarea" rows="3" maxlength="500" placeholder="Dudas, lo que más te preocupa de alquilar…" />
       </div>
+      </div>
 
       <!-- Campo trampa para bots: oculto a personas y lectores de pantalla. -->
       <div class="hp" aria-hidden="true">
         <label for="lf-website">No rellenar</label>
         <input id="lf-website" v-model="form.website" tabindex="-1" autocomplete="off">
+      </div>
+
+      <div v-show="step === TOTAL_STEPS" class="stepwrap">
+      <div class="summary">
+        <dl>
+          <dt>Contacto</dt>
+          <dd>{{ form.name }} · {{ form.email }}{{ form.phone ? ` · ${form.phone}` : '' }} <button type="button" class="edit" @click="goTo(1)">Editar</button></dd>
+          <template v-if="isOwner">
+            <dt>Alquiler</dt>
+            <dd>{{ form.units }} · {{ form.rentRange }} · {{ form.flatStatus }} <button type="button" class="edit" @click="goTo(2)">Editar</button></dd>
+            <dt>Piso</dt>
+            <dd>{{ form.propertyType }} en {{ form.city }} · {{ form.bedrooms }} hab. · {{ form.bathrooms }} baños{{ form.sizeM2 ? ` · ${form.sizeM2} m²` : '' }} · {{ form.condition }} <button type="button" class="edit" @click="goTo(2)">Editar</button></dd>
+          </template>
+          <template v-else>
+            <dt>Buscas</dt>
+            <dd>En {{ form.city }} · hasta {{ formatEuro(form.maxRent ?? 0) }} · {{ form.wantedBedrooms }} hab. · {{ form.wantedBathrooms }} baños <button type="button" class="edit" @click="goTo(2)">Editar</button></dd>
+            <dt>Hogar</dt>
+            <dd>{{ form.people }} {{ form.people === '1' ? 'persona' : 'personas' }} · {{ form.ageRange }} años{{ form.pets && form.pets !== 'No' ? ` · con ${form.pets.toLowerCase()}` : '' }} <button type="button" class="edit" @click="goTo(2)">Editar</button></dd>
+          </template>
+        </dl>
       </div>
 
       <div class="consents">
@@ -413,12 +493,17 @@ const holder = computed(() => legal.holder || `${brand.name} (titular pendiente 
           <dt>Derechos</dt><dd>Acceso, rectificación, supresión, oposición, limitación y portabilidad en {{ brand.email }}. <NuxtLink to="/legal/privacidad">Más información</NuxtLink>.</dd>
         </dl>
       </details>
+      </div>
 
       <p v-if="serverError" class="error server" role="alert">{{ serverError }}</p>
 
-      <button class="btn btn-primary btn-block" type="submit" :disabled="pending">
-        {{ pending ? 'Enviando…' : isOwner ? 'Quiero que me aviséis' : 'Quiero mi pasaporte de inquilino' }}
-      </button>
+      <div class="nav">
+        <button v-if="step > 1" type="button" class="btn btn-ghost" @click="goTo(step - 1)">← Atrás</button>
+        <button v-if="step < TOTAL_STEPS" type="submit" class="btn btn-primary next-btn">Siguiente <AppIcon name="arrow" :size="18" /></button>
+        <button v-else type="submit" class="btn btn-primary next-btn" :disabled="pending">
+          {{ pending ? 'Enviando…' : isOwner ? 'Quiero que me aviséis' : 'Quiero mi pasaporte de inquilino' }}
+        </button>
+      </div>
       <p class="small muted reassure">Es una lista de espera: no te comprometes a nada y no te pedimos documentos.</p>
     </form>
   </div>
@@ -468,6 +553,24 @@ legend { font-weight: 600; font-size: 1.05rem; color: var(--ink); margin-bottom:
 .first-layer dd { margin: 0; }
 @media (max-width: 520px) { .first-layer dl { grid-template-columns: 1fr; } .first-layer dd { margin-bottom: 6px; } }
 
+.progress { display: grid; gap: 10px; }
+.progress-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.step-label { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+.progress-head strong { font-size: 1.25rem; font-weight: 500; letter-spacing: -0.02em; }
+.bar { height: 6px; background: var(--grey-01); border-radius: 99px; overflow: hidden; }
+.bar span { display: block; height: 100%; background: var(--ink); border-radius: 99px; transition: width 0.3s ease; }
+.stepwrap { display: grid; gap: 22px; }
+.sub-legend { font-size: 0.9rem; font-weight: 400; color: var(--muted); }
+.nav { display: flex; gap: 10px; justify-content: space-between; }
+.nav .next-btn { margin-left: auto; min-width: 200px; }
+@media (max-width: 520px) { .nav .next-btn { min-width: 0; flex: 1; } }
+.summary { background: var(--off); border-radius: 14px; padding: 16px 18px; }
+.summary dl { display: grid; grid-template-columns: max-content 1fr; gap: 10px 16px; margin: 0; font-size: 0.92rem; }
+.summary dt { font-weight: 600; }
+.summary dd { margin: 0; }
+.edit { font: inherit; font-size: 0.82rem; background: none; border: 0; padding: 0; margin-left: 6px; text-decoration: underline; cursor: pointer; color: var(--muted); }
+.edit:hover { color: var(--ink); }
+@media (max-width: 520px) { .summary dl { grid-template-columns: 1fr; gap: 2px; } .summary dd { margin-bottom: 8px; } }
 .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 .server { margin: 0; }
 .reassure { margin: -8px 0 0; text-align: center; }
