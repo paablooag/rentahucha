@@ -2,9 +2,20 @@ import postgres from 'postgres'
 import { MIGRATIONS } from '../db/migrations'
 import { BLOG_SEED as BLOG_SEED_V1 } from '../data/blog-seed'
 import { BLOG_SEED_V2 } from '../data/blog-seed-v2'
+import { BLOG_SEED_V3_ELECCIONES } from '../data/blog-seed-v3-elecciones'
+import { BLOG_SEED_V3_REFORMAS } from '../data/blog-seed-v3-reformas'
+import { BLOG_SEED_V3_ALQUILAR } from '../data/blog-seed-v3-alquilar'
+import { BLOG_SEED_V3_INQUILINOS } from '../data/blog-seed-v3-inquilinos'
 
 // Los nuevos primero: al insertar en orden inverso, el primero de la lista queda como el más reciente.
-const BLOG_SEED = [...BLOG_SEED_V2, ...BLOG_SEED_V1]
+const BLOG_SEED = [
+  ...BLOG_SEED_V3_ELECCIONES,
+  ...BLOG_SEED_V3_ALQUILAR,
+  ...BLOG_SEED_V3_REFORMAS,
+  ...BLOG_SEED_V3_INQUILINOS,
+  ...BLOG_SEED_V2,
+  ...BLOG_SEED_V1,
+]
 
 // Acceso a PostgreSQL. Producción: NUXT_DATABASE_URL (postgres://…). Desarrollo sin URL: PGlite, un Postgres
 // real embebido que guarda en .data/pglite, para trabajar sin instalar nada.
@@ -55,7 +66,7 @@ async function migrate(d: Driver) {
 
 // Artículos iniciales por versiones. Cada versión nueva añade los que falten (sin tocar los ya editados en
 // /admin) y puede aplicar un ajuste puntual. Sube BLOG_SEED_VERSION al añadir artículos a BLOG_SEED.
-const BLOG_SEED_VERSION = 2
+const BLOG_SEED_VERSION = 3
 const SEED_DATE_V2 = '2026-10-15'
 
 async function seed(d: Driver) {
