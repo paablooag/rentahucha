@@ -53,5 +53,22 @@ export async function deletePost(slug: string) {
 }
 
 export function renderMarkdown(md: string): string {
-  return marked.parse(md, { async: false, gfm: true }) as string
+  return adaptTables(marked.parse(md, { async: false, gfm: true }) as string)
+}
+
+const attr = (s: string) => s.replace(/<[^>]*>/g, '').replace(/&/g, '&amp;').replace(/"/g, '&quot;').trim()
+
+// Tablas legibles en móvil: cada celda lleva el título de su columna (data-label) para mostrarse como ficha
+// apilada, y las de 3 o más columnas se marcan para ello. Todas van envueltas para poder desplazarse si no caben.
+function adaptTables(html: string): string {
+  return html.replace(/<table>([\s\S]*?)<\/table>/g, (_, inner: string) => {
+    const head = /<thead>([\s\S]*?)<\/thead>/.exec(inner)?.[1] ?? ''
+    const labels = [...head.matchAll(/<th[^>]*>([\s\S]*?)<\/th>/g)].map(m => attr(m[1] ?? ''))
+    const body = inner.replace(/<tbody>([\s\S]*?)<\/tbody>/, (__, rows: string) =>
+      `<tbody>${rows.replace(/<tr>([\s\S]*?)<\/tr>/g, (___, cells: string) => {
+        let i = 0
+        return `<tr>${cells.replace(/<td([^>]*)>/g, (____, a: string) => `<td${a} data-label="${labels[i++] ?? ''}">`)}</tr>`
+      })}</tbody>`)
+    return `<div class="table-scroll"><table${labels.length >= 3 ? ' class="stack"' : ''}>${body}</table></div>`
+  })
 }

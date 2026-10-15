@@ -65,15 +65,20 @@ git push -u origin feature/mi-cambio   # y abrir el pull request hacia develop
 ## Publicar (VPS de IONOS, Ubuntu 24.04)
 
 El servidor ya está preparado con `deploy/setup-server.sh` (Node 22, Nginx, HTTPS, cortafuegos, copias diarias).
-Para publicar una versión nueva desde `main`:
+
+**Automático:** cada push a `main` se publica solo en https://rentahucha.es con el workflow
+`.github/workflows/deploy-vps.yml` (pestaña Actions de GitHub). Usa los secretos del repositorio `DEPLOY_HOST`,
+`DEPLOY_SSH_KEY` (una clave solo para GitHub, revocable quitándola de `~/.ssh/authorized_keys` del servidor) y
+`DEPLOY_KNOWN_HOSTS` (huella del servidor). Si cambian los dossieres, hay que regenerarlos antes con `npm run pdf`.
+
+**A mano** (por ejemplo, si GitHub Actions no está disponible):
 
 ```bash
 git checkout main && git pull
-npm run pdf                                   # solo si cambiaron los dossieres
 DEPLOY_HOST=31.70.158.20 bash scripts/deploy.sh
 ```
 
-Compila en local, sube el build y cambia de versión sin tocar los datos (`/opt/rentahucha/shared/.data`).
+Compila, sube el build y cambia de versión sin tocar los datos (`/opt/rentahucha/shared/.data`).
 Se guardan las 5 últimas versiones en `/opt/rentahucha/releases` por si hay que volver atrás. Las variables de
 entorno de producción están en `/opt/rentahucha/shared/.env` del servidor (nunca en git).
 

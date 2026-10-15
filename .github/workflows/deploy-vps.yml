@@ -1,0 +1,45 @@
+name: Desplegar en producción
+
+# Cada push a main compila la web y la publica en el VPS (rentahucha.es) con scripts/deploy.sh.
+# Secretos del repositorio: DEPLOY_HOST, DEPLOY_SSH_KEY (clave solo para GitHub) y DEPLOY_KNOWN_HOSTS
+# (huella del servidor, para no aceptar uno suplantado). También se puede lanzar a mano desde Actions.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# Un despliegue cada vez; si llega otro push, espera a que termine el actual.
+concurrency:
+  group: produccion
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment:
+      name: produccion
+      url: https://rentahucha.es
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      # `npm install` y no `npm ci`: el lockfile se genera con un npm local más antiguo que el de GitHub.
+      - run: npm install --no-audit --no-fund
+      - name: Preparar acceso SSH
+        run: |
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "${{ secrets.DEPLOY_SSH_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          printf '%s\n' "${{ secrets.DEPLOY_KNOWN_HOSTS }}" > ~/.ssh/known_hosts
+      - name: Desplegar
+        run: DEPLOY_KEY="$HOME/.ssh/deploy_key" bash scripts/deploy.sh
+        env:
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+      - name: Comprobar la web
+        run: curl -fsS -o /dev/null -w "rentahucha.es responde %{http_code}\n" https://rentahucha.es/
