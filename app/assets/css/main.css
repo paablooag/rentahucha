@@ -339,3 +339,6 @@ svg { display: block; max-width: 100%; }
   .table th,
   .table td { padding: 12px 14px; }
 }
+
+/* Campo trampa antispam de los formularios: invisible para personas y lectores de pantalla; los bots lo rellenan. */
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }

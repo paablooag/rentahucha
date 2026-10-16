@@ -573,7 +573,6 @@ legend { font-weight: 600; font-size: 1.05rem; color: var(--ink); margin-bottom:
 .edit { font: inherit; font-size: 0.82rem; background: none; border: 0; padding: 0; margin-left: 6px; text-decoration: underline; cursor: pointer; color: var(--muted); }
 .edit:hover { color: var(--ink); }
 @media (max-width: 520px) { .summary dl { grid-template-columns: 1fr; gap: 2px; } .summary dd { margin-bottom: 8px; } }
-.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 .server { margin: 0; }
 .reassure { margin: -8px 0 0; text-align: center; }
 
