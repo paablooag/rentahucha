@@ -78,7 +78,7 @@ Las posiciones van desde mantener y ampliar la regulación actual hasta derogar 
 
 ## En la práctica
 
-Si vas a firmar ahora, hazlo con un contrato bien redactado y conforme a la normativa vigente ese día. Asegurar el cobro con una garantía de renta te protege con cualquier marco legal.`,
+Si vas a firmar ahora, hazlo con un contrato bien redactado y conforme a la normativa vigente ese día. Elegir bien al inquilino y tener una protección frente a impagos te ayuda con cualquier marco legal.`,
   },
   {
     slug: 'decretos-de-vivienda-octubre-2026-explicados',
@@ -412,7 +412,7 @@ No hay suspensión si el propietario acredita que **también es vulnerable** y t
 ## Cómo protegerte como propietario
 
 - Analiza la solvencia del inquilino antes de firmar.
-- Contrata una **garantía de renta o un seguro de impago**: cobras aunque haya un procedimiento judicial.
+- Valora un **seguro de impago**: según su póliza, cobras aunque haya un procedimiento judicial.
 - Documenta todos los pagos y las comunicaciones.
 
 Más información en [qué hacer si tu inquilino no paga](/blog/que-hacer-si-tu-inquilino-no-paga).`,
@@ -727,7 +727,7 @@ Un piso de 900 € vacío dos meses supone **1.800 €** que no se recuperan. M�
 
 - Un contrato bien redactado y conforme a la normativa del día de la firma.
 - Un buen análisis del inquilino.
-- Una **garantía de cobro**, que protege tus ingresos con cualquier marco legal.`,
+- Una **protección frente a impagos**, útil con cualquier marco legal.`,
   },
   {
     slug: 'vivienda-turistica-iva-ibi-decreto',
@@ -794,7 +794,7 @@ Un piso vacío también te cuesta IBI, comunidad, seguro y suministros mínimos.
 
 ## Si quieres alquilarlo con tranquilidad
 
-Con una **renta garantizada** cobras cada mes aunque el inquilino se retrase, y te beneficias de las reducciones del IRPF del alquiler de vivienda.`,
+Con RentaHucha alquilas a inquilinos verificados, la hucha del inquilino pasa a ti si hay un impago y te beneficias de las reducciones del IRPF del alquiler de vivienda.`,
   },
   {
     slug: 'glosario-de-vivienda-para-entender-la-campana',

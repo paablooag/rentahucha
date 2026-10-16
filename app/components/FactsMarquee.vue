@@ -2,9 +2,9 @@
 const facts = [
   'Hucha de ahorro mes a mes',
   'Sin comisiones para el inquilino',
-  'Renta garantizada con aseguradora',
+  'Si hay impago, la hucha pasa al propietario',
   'Hucha + bonus por buen pagador',
-  'Proceso legal desde el día 1',
+  'Aviso de impago el día 1',
   'Sin aval si tu perfil lo permite',
   'Pasaporte de inquilino portable',
 ]

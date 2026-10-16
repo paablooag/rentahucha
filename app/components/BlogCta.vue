@@ -5,8 +5,8 @@ const props = withDefaults(defineProps<{ audience: Audience; compact?: boolean }
 
 const copy = computed(() => (props.audience === 'propietarios'
   ? {
-      title: 'Alquila tu piso y cobra cada mes, pase lo que pase',
-      text: 'Inquilinos verificados, renta garantizada con aseguradora y proceso legal desde el día 1. Apúntate y te avisamos antes del lanzamiento.',
+      title: 'Alquila tu piso a inquilinos que pagan',
+      text: 'Inquilinos verificados y una hucha que crece cada mes: si hay un impago, su saldo pasa a ti. Apúntate y te avisamos antes del lanzamiento.',
       button: 'Apuntarme como propietario',
       to: '/apuntate?tipo=propietario#formulario',
     }

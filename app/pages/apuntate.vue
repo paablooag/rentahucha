@@ -17,14 +17,14 @@ const isOwner = computed(() => role.value === 'propietario')
 
 useSeoMeta({
   title: 'Apúntate a la lista de espera',
-  description: 'Déjanos tus datos y te avisamos antes del lanzamiento: renta garantizada para propietarios y hucha de ahorro para inquilinos. Sin compromiso.',
+  description: 'Déjanos tus datos y te avisamos antes del lanzamiento: inquilinos verificados y hucha anti-impago para propietarios, y hucha de ahorro para inquilinos. Sin compromiso.',
 })
 
 const steps = computed(() => (isOwner.value
   ? [
-      { t: 'Te escribimos antes del lanzamiento', d: 'Con las condiciones de lanzamiento y la póliza de la aseguradora para que la revises.' },
+      { t: 'Te escribimos antes del lanzamiento', d: 'Con las condiciones de lanzamiento y cómo funciona la hucha, antes de que decidas nada.' },
       { t: 'Das de alta tu piso con prioridad', d: 'Los primeros de la lista eligen antes entre los candidatos verificados de su zona.' },
-      { t: 'Empiezas a cobrar con tranquilidad', d: 'Renta garantizada, avisos de cada pago y la hucha del inquilino como colchón.' },
+      { t: 'Alquilas con tranquilidad', d: 'Avisos de cada pago y la hucha del inquilino, que pasa a ti si hay un impago.' },
     ]
   : [
       { t: 'Te escribimos antes del lanzamiento', d: 'Para crear tu pasaporte de inquilino antes que nadie.' },

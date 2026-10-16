@@ -1,24 +1,25 @@
 <script setup lang="ts">
 useSeoMeta({
-  title: 'Renta garantizada para propietarios',
-  description: 'Alquila tu piso y cobra cada mes, pase lo que pase. Inquilinos verificados con incentivo real para pagar, seguro de impago y proceso legal desde el primer día. Desde el 3,5 %.',
+  title: 'Alquila tu piso a inquilinos verificados',
+  description: 'Inquilinos verificados con un incentivo real para pagar y una hucha que, si hay impago, pasa a ti. Contrato, cobros e incidencias en un panel. Desde el 3,5 %.',
 })
 
 const steps = [
   { title: 'Das de alta tu piso', text: 'Renta, fecha de entrada y tus condiciones: si aceptas estudiantes, autónomos, mascotas…' },
   { title: 'Recibes candidatos verificados', text: 'Solo perfiles que encajan con tus condiciones económicas, con un resumen claro y nuestra recomendación.' },
-  { title: 'Firmas online', text: 'Contrato conforme a la LAU, con firma electrónica y la renta garantizada incluida.' },
-  { title: 'Cobras cada mes', text: 'Te avisamos de cada pago. Las incidencias del piso llegan con fotos a tu panel, no a tu WhatsApp.' },
-  { title: 'Si algo falla, cobras igual', text: 'La hucha cubre primero, la aseguradora después, y el proceso legal arranca ese mismo día.' },
+  { title: 'Firmas online', text: 'Contrato conforme a la LAU, con firma electrónica y la hucha del inquilino vinculada al contrato.' },
+  { title: 'Controlas cada pago', text: 'Te avisamos de cada pago. Las incidencias del piso llegan con fotos a tu panel, no a tu WhatsApp.' },
+  { title: 'Si algo falla, la hucha responde', text: 'El saldo de la hucha del inquilino pasa a ti y te damos el expediente listo para reclamar.' },
 ]
 
 const faqs = [
-  { q: '¿Quién paga la renta si el inquilino no paga?', a: 'Primero se usa la hucha de garantía del inquilino. Si el impago continúa, la aseguradora socia te paga la renta según las condiciones de la póliza (meses cubiertos, carencia y límites te los enseñamos antes de firmar).' },
+  { q: '¿Qué pasa si el inquilino no paga?', a: 'Le avisamos el mismo día y buscamos una solución si es un bache puntual. Si no se resuelve, el saldo de la hucha del inquilino pasa a ti y te entregamos el expediente completo para que reclames. No pagamos rentas de nuestro bolsillo: la hucha cubre hasta lo que haya ahorrado el inquilino, y crece cada mes de contrato.' },
+  { q: '¿Tenéis un seguro de impago?', a: 'No. RentaHucha no es una aseguradora ni vende seguros. Nuestra protección es la selección del inquilino y su hucha, que pasa a ti si hay un impago. Si quieres un seguro de impago, puedes contratarlo con la compañía que elijas y combinarlo con nosotros.' },
   { q: '¿Puedo elegir al inquilino?', a: 'Sí. Te presentamos candidatos verificados y tú decides.' },
   DURATION_FAQ.owner,
   GUARANTEE_FAQ.owner,
-  { q: '¿Qué incluye el 5 %?', a: 'Selección del inquilino, contrato, cobros, avisos, gestión de incidencias, protocolo de impago y coordinación con la aseguradora. Con varios pisos, la cuota baja hasta el 3,5 %.' },
-  { q: '¿Tengo que cambiar de inquilino si ya tengo uno?', a: 'No necesariamente. Podemos estudiar incorporar contratos en vigor; la cobertura del seguro dependerá de la verificación del inquilino actual.' },
+  { q: '¿Qué incluye el 5 %?', a: 'Selección y verificación del inquilino, contrato, cobros, avisos, gestión de incidencias, la hucha y el protocolo de impago. No incluye ningún seguro. Con varios pisos, la cuota baja hasta el 3,5 %.' },
+  { q: '¿Tengo que cambiar de inquilino si ya tengo uno?', a: 'No necesariamente. Podemos estudiar incorporar contratos en vigor, verificando antes al inquilino actual.' },
   { q: '¿El inquilino tiene que pagar algo a la plataforma?', a: 'No. La ley atribuye los gastos de gestión al arrendador y nosotros no cobramos nada al inquilino. Eso también hace que lleguen más y mejores candidatos.' },
 ]
 </script>
@@ -29,13 +30,13 @@ const faqs = [
       <div class="container hero-grid">
         <div>
           <span class="eyebrow">Para propietarios</span>
-          <h1>Alquila tu piso y cobra cada mes, pase lo que pase.</h1>
+          <h1>Alquila tu piso a inquilinos que pagan.</h1>
           <p class="lead">
-            Inquilinos verificados a fondo que además tienen un incentivo real para pagar a tiempo.
-            Si algo falla, tú cobras y nosotros activamos el proceso legal el primer día.
+            Inquilinos verificados a fondo que además tienen un incentivo real para pagar a tiempo: su hucha.
+            Si algo falla, su saldo pasa a ti y tienes el expediente listo para reclamar desde el primer día.
           </p>
           <ul class="pills">
-            <li><AppIcon name="shield" :size="16" /> Renta garantizada</li>
+            <li><AppIcon name="piggy" :size="16" /> Hucha anti-impago</li>
             <li><AppIcon name="id" :size="16" /> Inquilinos con historial demostrado</li>
             <li><AppIcon name="bell" :size="16" /> Aviso de cada pago</li>
             <li><AppIcon name="wrench" :size="16" /> Incidencias en una app</li>
@@ -139,10 +140,10 @@ const faqs = [
         <div>
           <span class="eyebrow">Lista de espera</span>
           <h2>Da de alta tu piso con prioridad</h2>
-          <p class="lead">Estamos cerrando los acuerdos con la aseguradora y la entidad de pago. Los primeros pisos de la lista entran con condiciones de lanzamiento.</p>
+          <p class="lead">Estamos cerrando el acuerdo con la entidad de pago que gestionará cobros y huchas. Los primeros pisos de la lista entran con condiciones de lanzamiento.</p>
           <ul class="check-list">
             <li><AppIcon name="check" :size="18" /> Sin compromiso ni coste hasta que firmes</li>
-            <li><AppIcon name="check" :size="18" /> Te enseñamos la póliza antes de nada</li>
+            <li><AppIcon name="check" :size="18" /> Te explicamos cómo funciona la hucha antes de nada</li>
             <li><AppIcon name="check" :size="18" /> Bolsa de inquilinos verificados en tu zona</li>
           </ul>
         </div>

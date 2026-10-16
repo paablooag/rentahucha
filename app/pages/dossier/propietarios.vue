@@ -12,17 +12,17 @@ const huchaMonthly = (RENT * HUCHA.defaultPct) / 100
 const steps = [
   { title: 'Das de alta tu piso', text: 'Renta, fecha de entrada y tus condiciones.' },
   { title: 'Recibes candidatos verificados', text: 'Solo perfiles que encajan económicamente, con nuestra recomendación.' },
-  { title: 'Firmas online', text: 'Contrato conforme a la LAU, firma electrónica y renta garantizada incluida.' },
-  { title: 'Cobras cada mes', text: 'Aviso de cada pago. Incidencias con fotos en tu panel.' },
-  { title: 'Si algo falla, cobras igual', text: 'Hucha primero, aseguradora después y proceso legal ese mismo día.' },
+  { title: 'Firmas online', text: 'Contrato conforme a la LAU, firma electrónica y la hucha vinculada al contrato.' },
+  { title: 'Controlas cada pago', text: 'Aviso de cada pago. Incidencias con fotos en tu panel.' },
+  { title: 'Si algo falla, la hucha responde', text: 'El saldo de la hucha pasa a ti y el expediente para reclamar está listo.' },
 ]
 
 const layers = [
   { title: 'Filtro exigente', text: 'Ingresos verificados por open banking, contrato, vida laboral y ahorros. Ratio renta/ingresos prudente y revisión humana en casos límite.' },
   { title: 'Incentivo a pagar', text: 'El inquilino tiene algo que ganar y algo que perder: su hucha, su bonus y su historial.' },
   { title: 'Aviso el día 1', text: 'Recordatorio antes del cobro y alerta inmediata si falla. Plan de pago corto si es un bache puntual.' },
-  { title: 'La hucha cubre', text: 'La hucha del inquilino cubre el primer impago mientras se resuelve.' },
-  { title: 'Seguro y abogado', text: 'Si persiste, la aseguradora paga la renta según la póliza y el protocolo legal arranca ese mismo día.' },
+  { title: 'La hucha responde', text: 'Si hay impago, el saldo de la hucha del inquilino pasa al propietario. Cuanto más dura el contrato, más cubre.' },
+  { title: 'Expediente listo', text: 'Requerimiento fehaciente y toda la documentación preparada para reclamar sin perder un día. Si quieres un seguro de impago, lo contratas tú.' },
 ]
 
 // Ejemplo de impago sin protección, con los mismos valores por defecto que la calculadora de la web.
@@ -39,12 +39,12 @@ const impagoTotal = impago.reduce((s, i) => s + i.value, 0)
   <div>
     <DossierCover
       audience="Propietarios"
-      title="Alquila tu piso y cobra cada mes,"
-      highlight="pase lo que pase."
-      lead="Inquilinos verificados a fondo que además tienen un incentivo real para pagar a tiempo. Si algo falla, tú cobras y activamos el proceso legal el primer día."
+      title="Alquila tu piso a inquilinos"
+      highlight="que pagan."
+      lead="Inquilinos verificados a fondo con un incentivo real para pagar a tiempo: su hucha. Si algo falla, su saldo pasa a ti y el expediente para reclamar está listo desde el primer día."
       :stats="[
         { value: formatPercent(fee.rate), label: 'de la renta, todo incluido. Menos con varios pisos.' },
-        { value: 'Día 1', label: 'en que arranca el protocolo legal si hay impago.' },
+        { value: 'Día 1', label: 'en que te avisamos y preparamos la reclamación si hay impago.' },
         { value: '0 €', label: 'de coste de entrada. Pagas solo cuando cobras.' },
       ]"
     />
@@ -67,7 +67,7 @@ const impagoTotal = impago.reduce((s, i) => s + i.value, 0)
             <h3>Lo que hacemos por ti</h3>
             <ul class="d-list">
               <li>Te presentamos solo inquilinos verificados.</li>
-              <li>Cobras cada mes, también si el inquilino falla, según la póliza.</li>
+              <li>Si hay impago, el saldo de la hucha del inquilino pasa a ti.</li>
               <li>Pagos, avisos e incidencias en un solo panel.</li>
             </ul>
           </div>
@@ -142,7 +142,7 @@ const impagoTotal = impago.reduce((s, i) => s + i.value, 0)
       <div class="d-section">
         <div class="d-note">
           <strong>Nuestra promesa, sin letra pequeña</strong>
-          <p>«Si tu inquilino no paga, tú cobras igualmente y el proceso legal empieza el primer día.» Nunca te diremos «estará en la calle mañana»: eso lo decide un juez.</p>
+          <p>«Si tu inquilino no paga, el saldo de su hucha pasa a ti y tienes el expediente listo para reclamar desde el primer día.» Y no somos una aseguradora. Nunca te diremos «estará en la calle mañana»: eso lo decide un juez.</p>
         </div>
       </div>
 
@@ -159,7 +159,7 @@ const impagoTotal = impago.reduce((s, i) => s + i.value, 0)
           </table>
           <div class="d-card ink">
             <div class="d-num">{{ formatEuro(fee.yearlyTotal) }}</div>
-            <div class="d-label">al año cuesta nuestro servicio para ese mismo piso, con renta garantizada incluida.</div>
+            <div class="d-label">al año cuesta nuestro servicio para ese mismo piso, con selección, gestión y hucha incluidas.</div>
             <p class="d-small vs">Estimación orientativa. Los plazos judiciales varían mucho entre juzgados.</p>
           </div>
         </div>
@@ -250,7 +250,7 @@ const impagoTotal = impago.reduce((s, i) => s + i.value, 0)
       <div class="d-card lime cta">
         <div>
           <h2>Da de alta tu piso con prioridad</h2>
-          <p>Los primeros pisos de la lista entran con condiciones de lanzamiento. Te enseñamos la póliza antes de nada.</p>
+          <p>Los primeros pisos de la lista entran con condiciones de lanzamiento. Te explicamos cómo funciona la hucha antes de nada.</p>
         </div>
         <div class="cta-links">
           <strong>{{ brand.domain }}/propietarios</strong>
@@ -258,7 +258,7 @@ const impagoTotal = impago.reduce((s, i) => s + i.value, 0)
         </div>
       </div>
       <p class="d-small legal">
-        Desde el lanzamiento, la renta garantizada se prestará a través de una aseguradora autorizada y según las condiciones de su póliza, y los cobros los gestionará una entidad de pago autorizada.
+        {{ brand.name }} no es una aseguradora ni comercializa seguros. Desde el lanzamiento, los cobros y la hucha los gestionará una entidad de pago autorizada.
         Documento informativo; no constituye una oferta vinculante.
       </p>
     </DossierPage>

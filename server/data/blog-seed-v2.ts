@@ -326,7 +326,7 @@ La Ley 12/2023 permite a los ayuntamientos aplicar un **recargo en el IBI** a la
 
 ## Por qué muchos no alquilan
 
-El motivo más común es el miedo al impago. Por eso proponemos inquilinos verificados, la hucha como primer colchón y renta garantizada con aseguradora: para que el piso vacío deje de ser la opción «segura».`,
+El motivo más común es el miedo al impago. Por eso proponemos inquilinos verificados y una hucha que, si hay un impago, pasa al propietario: para que el piso vacío deje de ser la opción «segura».`,
   },
   {
     slug: 'clausulas-clave-del-contrato-de-alquiler',

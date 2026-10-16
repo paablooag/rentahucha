@@ -22,7 +22,7 @@ export const GUARANTEE_OPTIONS = [
   {
     title: 'Hucha del inquilino',
     tag: 'Siempre incluida',
-    text: 'Se llena mes a mes a nombre del inquilino y cubre los primeros impagos antes que el seguro. Si al terminar no debe nada, la recupera con bonus.',
+    text: 'Se llena mes a mes a nombre del inquilino. Si hay un impago, su saldo pasa al propietario; si al terminar no debe nada, la recupera con bonus.',
   },
 ]
 

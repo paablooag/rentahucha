@@ -64,9 +64,10 @@ async function migrate(d: Driver) {
   }
 }
 
-// Artículos iniciales por versiones. Cada versión nueva añade los que falten (sin tocar los ya editados en
-// /admin) y puede aplicar un ajuste puntual. Sube BLOG_SEED_VERSION al añadir artículos a BLOG_SEED.
-const BLOG_SEED_VERSION = 3
+// Artículos iniciales por versiones. Cada versión nueva añade los que falten, actualiza el texto de los que nadie
+// ha editado en /admin y puede aplicar un ajuste puntual. Sube BLOG_SEED_VERSION al añadir o corregir artículos.
+// v4: RentaHucha no es una aseguradora; la protección es la hucha del inquilino, que pasa al propietario si hay impago.
+const BLOG_SEED_VERSION = 4
 const SEED_DATE_V2 = '2026-10-15'
 
 async function seed(d: Driver) {
@@ -81,6 +82,16 @@ async function seed(d: Driver) {
       `INSERT INTO blog_posts (slug, title, excerpt, audience, category, body, published, published_at)
        VALUES ($1, $2, $3, $4, $5, $6, true, $7) ON CONFLICT (slug) DO NOTHING`,
       [p.slug, p.title, p.excerpt, p.audience, p.category, p.body, p.publishedAt],
+    )
+  }
+  // Los artículos iniciales sin editar (updated_at igual a created_at) toman el texto actual del código.
+  // No se toca updated_at, así siguen contando como «sin editar» en futuras correcciones.
+  for (const p of BLOG_SEED) {
+    await d.query(
+      `UPDATE blog_posts SET title = $2, excerpt = $3, body = $4
+       WHERE slug = $1 AND updated_at <= created_at + interval '1 second'
+         AND (title, excerpt, body) IS DISTINCT FROM ($2::text, $3::text, $4::text)`,
+      [p.slug, p.title, p.excerpt, p.body],
     )
   }
   // v2: todos los artículos iniciales con fecha de publicación del 15 de octubre de 2026.

@@ -41,7 +41,7 @@ const fee = computed(() => calcFees(props.rent, 1).perUnit)
 
     <div class="insurer">
       <AppIcon name="shield" :size="18" />
-      <span><strong>Si hay impago:</strong> la hucha cubre primero y la aseguradora socia paga el resto según la póliza.</span>
+      <span><strong>Si hay impago:</strong> el saldo de la hucha del inquilino pasa al propietario.</span>
     </div>
   </div>
 </template>

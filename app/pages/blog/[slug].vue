@@ -26,7 +26,7 @@ function closeFloat() {
   try { sessionStorage.setItem('rh-cta-closed', '1') } catch {}
 }
 const floatCopy = computed(() => (post.value?.audience === 'propietarios'
-  ? { text: 'Cobra tu alquiler cada mes, pase lo que pase', to: '/apuntate?tipo=propietario#formulario' }
+  ? { text: 'Inquilinos verificados y hucha anti-impago', to: '/apuntate?tipo=propietario#formulario' }
   : { text: 'Alquila sin aval y ahorra con tu hucha', to: '/apuntate?tipo=inquilino#formulario' }))
 
 useSeoMeta({

@@ -3,7 +3,7 @@ const { brand, downloads } = useAppConfig()
 const year = new Date().getFullYear()
 
 const dossiers = [
-  { href: withBase(downloads.propietarios), who: 'Para propietarios', title: 'Renta garantizada, precios y cómo te protegemos', pages: 5 },
+  { href: withBase(downloads.propietarios), who: 'Para propietarios', title: 'Inquilinos verificados, la hucha anti-impago y precios', pages: 5 },
   { href: withBase(downloads.inquilinos), who: 'Para inquilinos', title: 'La hucha, el pasaporte y cuánto ahorras', pages: 4 },
 ]
 </script>
@@ -30,12 +30,12 @@ const dossiers = [
     <div class="container cols">
       <div class="about">
         <AppLogo light />
-        <p>El alquiler donde pagar a tiempo te hace ahorrar y el propietario cobra siempre. Para pisos de {{ brand.area }}.</p>
+        <p>El alquiler donde pagar a tiempo te hace ahorrar y el propietario alquila tranquilo. Para pisos de {{ brand.area }}.</p>
         <a :href="`mailto:${brand.email}`" class="mail">{{ brand.email }}</a>
       </div>
       <div>
         <h4>Propietarios</h4>
-        <NuxtLink to="/propietarios">Renta garantizada</NuxtLink>
+        <NuxtLink to="/propietarios">Alquilar mi piso</NuxtLink>
         <NuxtLink to="/herramientas/coste-impago">Coste de un impago</NuxtLink>
         <NuxtLink to="/panel/propietario">Demo del panel</NuxtLink>
       </div>
@@ -64,8 +64,8 @@ const dossiers = [
 
     <div class="container fine">
       <p>
-        © {{ year }} {{ brand.name }}. Proyecto en fase previa al lanzamiento. Desde el lanzamiento, la renta garantizada se prestará a través de una aseguradora autorizada y según las condiciones de su póliza,
-        y los cobros y la hucha los gestionará una entidad de pago autorizada; {{ brand.name }} no custodiará fondos de terceros.
+        © {{ year }} {{ brand.name }}. Proyecto en fase previa al lanzamiento. {{ brand.name }} no es una aseguradora ni comercializa seguros.
+        Desde el lanzamiento, los cobros y la hucha los gestionará una entidad de pago autorizada; {{ brand.name }} no custodiará fondos de terceros.
       </p>
     </div>
   </footer>

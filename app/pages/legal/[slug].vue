@@ -28,7 +28,7 @@ const pages: Record<string, { title: string; updated: string; blocks: Block[] }>
         h: 'Objeto',
         p: [
           `${brand.name} es un proyecto en fase previa al lanzamiento. Esta web informa sobre el servicio y permite apuntarse a una lista de espera y a una newsletter. Todavía no se presta el servicio ni se contrata nada a través de ella.`,
-          'La renta garantizada se prestará, desde el lanzamiento, a través de una aseguradora autorizada y según las condiciones de su póliza, que se facilitarán antes de contratar. Los cobros y la hucha los gestionará una entidad de pago autorizada.',
+          `${brand.name} no es una entidad aseguradora ni comercializa, gestiona o intermedia seguros. Desde el lanzamiento, los cobros y la hucha los gestionará una entidad de pago autorizada.`,
         ],
       },
       {

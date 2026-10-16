@@ -24,7 +24,7 @@ export const LEAD_OPTIONS = {
   stayType: ['Vivienda habitual (larga duración)', 'Temporada (estudios o trabajo)'],
   mustHaves: ['Amueblado', 'Ascensor', 'Terraza o balcón', 'Garaje', 'Aire acondicionado', 'Calefacción'],
   ownerTiming: ['Cuanto antes', 'En los próximos 3 meses', 'En 6 meses o más', 'Solo quiero informarme'],
-  ownerInterest: ['Renta garantizada', 'Selección del inquilino', 'Cobros e incidencias', 'La hucha del inquilino'],
+  ownerInterest: ['Protección frente a impagos', 'Selección del inquilino', 'Cobros e incidencias', 'La hucha del inquilino'],
   tenantTiming: ['Este mes', 'En 1–3 meses', 'En 3–6 meses', 'Solo quiero informarme'],
   household: ['Solo/a', 'En pareja', 'Compartiendo piso', 'Con familia'],
   employment: ['Contrato indefinido', 'Contrato temporal', 'Autónomo/a', 'Estudiante con ingresos o beca', 'Funcionario/a', 'Otra situación'],

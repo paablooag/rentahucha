@@ -38,7 +38,7 @@ const fees = computed(() => calcFees(Math.max(Number(rent.value) || 0, 0), Math.
       </div>
     </div>
     <p class="small muted">
-      Incluye selección de inquilino, contrato, cobros, avisos, incidencias, protocolo de impago y coordinación del seguro.
+      Incluye selección de inquilino, contrato, cobros, avisos, incidencias, la hucha y el protocolo de impago. No incluye ningún seguro.
       Sin coste de entrada. Precios orientativos de lanzamiento.
     </p>
   </div>

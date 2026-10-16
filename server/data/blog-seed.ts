@@ -52,7 +52,7 @@ Aunque te deba dinero, estas acciones pueden ser **delito de coacciones** y comp
 
 ## Cómo lo hacemos nosotros
 
-Con renta garantizada, el aviso sale el día 1, la hucha del inquilino cubre el primer impago y, si persiste, la aseguradora te paga la renta según la póliza mientras el proceso legal arranca con el expediente ya preparado.`,
+El aviso sale el día 1 y, si es un bache puntual, proponemos un plan de pago corto. Si el impago no se resuelve, el saldo de la hucha del inquilino pasa a ti y te entregamos el expediente completo para que tu abogado reclame sin perder tiempo. RentaHucha no es una aseguradora: si quieres cubrir más meses, puedes contratar por tu cuenta un seguro de impago.`,
   },
   {
     slug: 'cuanto-cuesta-un-impago-de-alquiler',
@@ -271,7 +271,17 @@ Por eso la protección funciona mejor por capas: buena selección, aviso inmedia
 
 ## Una advertencia
 
-Desconfía de quien prometa que el inquilino estará «fuera en 24 horas». Los plazos de un desahucio los decide un juzgado. Lo que sí puede garantizarse es que **tú cobres según la póliza** y que el proceso arranque sin perder un día.`,
+Desconfía de quien prometa que el inquilino estará «fuera en 24 horas». Los plazos de un desahucio los decide un juzgado. Lo que sí puede exigirse a una póliza es que **pague según sus condiciones** y que el proceso arranque sin perder un día.
+
+## ¿Y RentaHucha?
+
+RentaHucha **no es una aseguradora** ni vende, gestiona o intermedia seguros. Nuestra protección es otra:
+
+- **Inquilinos verificados** antes de firmar.
+- **La hucha del inquilino**, que crece cada mes y, si hay un impago, **pasa al propietario**.
+- **Aviso el día 1** y el expediente preparado para reclamar.
+
+Si además quieres un seguro de impago, puedes contratarlo con la compañía que elijas: es compatible con RentaHucha.`,
   },
   {
     slug: 'cuanto-dinero-necesitas-para-entrar-a-un-piso-de-alquiler',

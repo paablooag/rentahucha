@@ -30,8 +30,8 @@ useSeoMeta({
           <li><strong>Nunca cambies la cerradura ni cortes suministros.</strong> Puede ser delito de coacciones, aunque el inquilino te deba dinero.</li>
         </ol>
         <div class="note note-green">
-          <strong>Con nosotros, todo esto arranca solo</strong>
-          <p>Avisamos el día 1, la hucha cubre el primer mes, la aseguradora paga la renta según la póliza y el abogado tiene el expediente listo.</p>
+          <strong>Con nosotros, empiezas con ventaja</strong>
+          <p>Avisamos el día 1, el saldo de la hucha del inquilino pasa a ti y el expediente para tu abogado está listo. Si quieres cubrir más meses, puedes sumar tu propio seguro de impago.</p>
         </div>
         <div class="cta">
           <NuxtLink to="/apuntate?tipo=propietario#formulario" class="btn btn-primary">Protege tu alquiler</NuxtLink>

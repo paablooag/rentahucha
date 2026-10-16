@@ -2,11 +2,11 @@
 const { brand } = useAppConfig()
 
 useHead({
-  titleTemplate: title => (title ? `${title} · ${brand.name}` : `${brand.name} · Alquila con renta garantizada y hucha de ahorro`),
+  titleTemplate: title => (title ? `${title} · ${brand.name}` : `${brand.name} · Inquilinos verificados y hucha anti-impago`),
 })
 
 useSeoMeta({
-  description: 'Gestión de alquiler con renta garantizada para propietarios y una hucha de garantía que el inquilino recupera con premio. En toda España.',
+  description: 'Alquiler con inquilinos verificados y una hucha que el inquilino llena cada mes: si hay impago, su saldo pasa al propietario; si cumple, la recupera con premio. En toda España.',
   ogSiteName: brand.name,
   ogType: 'website',
   ogLocale: 'es_ES',

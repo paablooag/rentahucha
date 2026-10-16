@@ -42,9 +42,9 @@ export const BLOG_SEED_V3_ALQUILAR: Seed[] = [
 - No depositar la fianza.
 - Elegir con prisa y sin comprobar ingresos.
 
-## Para cobrar tranquilo
+## Para alquilar tranquilo
 
-Con una **renta garantizada** cobras cada mes, pague o no el inquilino. Más información en [renta garantizada o seguro de impago](/blog/seguro-de-impago-o-renta-garantizada).`,
+Elige bien al inquilino y suma una protección frente a impagos: con RentaHucha, la hucha del inquilino pasa a ti si deja de pagar. Si quieres cubrir más meses, puedes contratar además un seguro de impago. Más información en [seguro de impago o renta garantizada](/blog/seguro-de-impago-o-renta-garantizada).`,
   },
   {
     slug: 'fotos-que-alquilan-guia-con-el-movil',
@@ -460,7 +460,7 @@ Asegura también el **contenido** que es tuyo: muebles y electrodomésticos.
 
 ## Diferencia con el seguro de impago
 
-El seguro de hogar **no** cubre que el inquilino deje de pagar. Para eso existen el seguro de impago y la **renta garantizada**.
+El seguro de hogar **no** cubre que el inquilino deje de pagar. Para eso existe el **seguro de impago**, que puedes contratar aparte.
 
 ## Consejo
 
@@ -536,7 +536,7 @@ Un buen inquilino que se queda años vale más que una renta algo más alta con 
   {
     slug: 'gestionar-tu-alquiler-o-delegar',
     title: '¿Gestionar tú el alquiler o delegarlo? Comparativa honesta',
-    excerpt: 'Tiempo, coste y riesgo de gestionar por tu cuenta, con agencia o con un servicio de renta garantizada.',
+    excerpt: 'Tiempo, coste y riesgo de gestionar por tu cuenta, con agencia, con gestión integral o con RentaHucha.',
     audience: 'propietarios',
     category: 'Gestión',
     publishedAt: D,
@@ -549,7 +549,8 @@ Un buen inquilino que se queda años vale más que una renta algo más alta con 
 | Gestión propia | Alto | Ninguno directo | Lo asumes tú |
 | Agencia (solo búsqueda) | Medio | Honorarios puntuales | Lo asumes tú |
 | Gestión integral | Bajo | Porcentaje mensual | Depende del contrato |
-| Renta garantizada | Bajo | Porcentaje mensual | Cubierto |
+| RentaHucha | Bajo | 5 % mensual | La hucha del inquilino pasa a ti |
+| Seguro de impago (aparte) | — | Prima anual | Según la póliza |
 
 ## Preguntas para decidir
 
@@ -562,7 +563,7 @@ Un buen inquilino que se queda años vale más que una renta algo más alta con 
 
 Desde la Ley 12/2023, los **gastos de gestión inmobiliaria** los paga el propietario, no el inquilino.
 
-En RentaHucha, por un **5 %** cobras la renta cada mes aunque el inquilino se retrase. [Más información](/propietarios).`,
+En RentaHucha, por un **5 %** seleccionamos al inquilino, gestionamos cobros e incidencias y, si hay un impago, el saldo de su hucha pasa a ti. No somos una aseguradora: el seguro de impago, si lo quieres, lo contratas tú. [Más información](/propietarios).`,
   },
   {
     slug: 'alquilar-a-nomadas-digitales-y-temporada',
@@ -816,7 +817,7 @@ La fiscalidad de herencias y ventas varía según la comunidad autónoma. Consul
 - Seguro de hogar.
 - Mantenimiento y reparaciones.
 - Meses vacíos.
-- Gestión o garantía de renta.
+- Gestión del alquiler o seguro de impago.
 - Impuestos (IRPF).
 
 ## Ejemplo
@@ -828,7 +829,7 @@ La fiscalidad de herencias y ventas varía según la comunidad autónoma. Consul
 | Comunidad | −720 € |
 | Seguro | −250 € |
 | Mantenimiento | −600 € |
-| Gestión o garantía (5 %) | −540 € |
+| Gestión (5 %) | −540 € |
 | **Neto antes de impuestos** | **8.190 €** |
 
 Con un valor de 200.000 €, la rentabilidad bruta es del 5,4 % y la neta antes de impuestos, del **4,1 %**.
@@ -863,6 +864,6 @@ Con un valor de 200.000 €, la rentabilidad bruta es del 5,4 % y la neta antes 
 
 - Un proceso ordenado: [cómo poner tu piso en alquiler paso a paso](/blog/como-poner-tu-piso-en-alquiler-paso-a-paso).
 - Buena comunicación.
-- Una garantía de cobro.`,
+- Una protección frente a impagos: la hucha del inquilino y, si quieres, un seguro de impago.`,
   },
 ]

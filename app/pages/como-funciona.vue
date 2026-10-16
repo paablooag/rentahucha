@@ -3,12 +3,12 @@ const { brand } = useAppConfig()
 
 useSeoMeta({
   title: 'Cómo funciona',
-  description: 'Cómo circula el dinero, qué cubre la hucha, qué cubre el seguro y qué dice la ley. Todo lo que hay detrás de la renta garantizada con hucha de ahorro.',
+  description: 'Cómo circula el dinero, qué pasa con la hucha si hay un impago y qué dice la ley. Todo lo que hay detrás de RentaHucha.',
 })
 
 const legal = [
   { topic: 'Impago', yes: 'Requerir el pago, intentar el acuerdo y demandar con el expediente preparado.', no: 'Cambiar cerraduras, cortar suministros o presionar. Solo un juez decide un desalojo.' },
-  { topic: 'Renta garantizada', yes: 'A través de una aseguradora autorizada y según su póliza.', no: 'Que la plataforma garantice rentas con su propio dinero.' },
+  { topic: 'Seguros', yes: 'Explicarte que puedes contratar un seguro de impago por tu cuenta, con la compañía que elijas.', no: 'Vender, gestionar ni intermediar seguros. No somos una aseguradora ni pagamos rentas con nuestro dinero.' },
   { topic: 'Garantías', yes: 'En vivienda habitual, fianza legal de un mes y hasta dos mensualidades de garantía adicional (tres en total). En alquiler de temporada, fianza de dos mensualidades.', no: 'Pedir más de lo que permite la ley o exigir más de un mes de renta por adelantado.' },
   { topic: 'Gastos de gestión', yes: 'Los paga el propietario.', no: 'Repercutirlos al inquilino.' },
   { topic: 'Dinero de terceros', yes: 'Lo gestiona una entidad de pago autorizada en cuentas segregadas.', no: 'Que pase por cuentas de la plataforma.' },
@@ -22,7 +22,7 @@ const legal = [
         <div class="section-head">
           <span class="eyebrow">Cómo funciona</span>
           <h1>Sin trucos: así funciona {{ brand.name }} por dentro</h1>
-          <p class="lead">Un modelo en el que el propietario cobra siempre y el inquilino gana por pagar bien. Esto es lo que hay detrás.</p>
+          <p class="lead">Un modelo en el que el propietario alquila con más tranquilidad y el inquilino gana por pagar bien. Esto es lo que hay detrás.</p>
         </div>
       </div>
     </section>
@@ -53,15 +53,15 @@ const legal = [
           </li>
           <li>
             <span class="when">Primer mes impagado</span>
-            <p>La hucha del inquilino cubre la renta. El propietario cobra con normalidad. Se envía requerimiento fehaciente.</p>
+            <p>Se envía requerimiento fehaciente de pago. Si no se regulariza, el saldo de la hucha del inquilino se transfiere al propietario.</p>
           </li>
           <li>
             <span class="when">Si el impago persiste</span>
-            <p>Se comunica el siniestro a la aseguradora, que paga la renta según la póliza. El abogado presenta la demanda con el expediente ya preparado.</p>
+            <p>Entregamos al propietario el expediente completo (contrato, pagos y comunicaciones) para que su abogado reclame sin perder tiempo. Si tiene un seguro de impago propio, le sirve también para su aseguradora.</p>
           </li>
           <li>
             <span class="when">Resolución</span>
-            <p>Los plazos dependen del juzgado. El propietario sigue cobrando según la póliza mientras tanto.</p>
+            <p>Los plazos dependen del juzgado. Nunca prometemos desalojos rápidos: eso lo decide un juez.</p>
           </li>
         </ol>
       </div>

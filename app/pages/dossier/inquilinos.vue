@@ -83,7 +83,7 @@ const faqs = [
             <li>Si terminas sin deudas ni desperfectos, te la devolvemos entera con un bonus del {{ HUCHA.bonusPct }} % por buen pagador.</li>
             <li>La fianza legal va aparte, como en cualquier alquiler. Algunos propietarios piden además garantía adicional al firmar; lo verás en cada piso.</li>
             <li>Si te mudas a otro piso de la red, te la llevas y sigues ahorrando.</li>
-            <li>Si hay un impago, la hucha cubre primero. Por eso los propietarios confían en ti.</li>
+            <li>Si hay un impago, el saldo de la hucha pasa al propietario. Por eso los propietarios confían en ti.</li>
           </ul>
         </div>
       </div>

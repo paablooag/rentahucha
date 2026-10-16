@@ -66,10 +66,10 @@ const serviceYear = computed(() => calcFees(n(rent.value), 1).yearlyTotal)
         </li>
       </ul>
       <div class="note note-green">
-        <strong>Con renta garantizada</strong>
+        <strong>Con RentaHucha</strong>
         <p>
           Nuestro servicio con un piso de {{ formatEuro(n(rent)) }} cuesta {{ formatEuro(serviceYear) }} al año.
-          Si el inquilino deja de pagar, sigues cobrando según la póliza y el proceso legal arranca el primer día.
+          Seleccionamos inquilinos solventes y, si hay impago, el saldo de su hucha pasa a ti. Si quieres cubrir más meses, puedes sumar un seguro de impago por tu cuenta.
         </p>
       </div>
       <p class="small muted">Estimación orientativa con los valores que introduces. No es asesoramiento jurídico.</p>
