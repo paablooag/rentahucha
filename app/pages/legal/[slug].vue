@@ -28,7 +28,7 @@ const pages: Record<string, { title: string; updated: string; blocks: Block[] }>
         h: 'Objeto',
         p: [
           `${brand.name} es un proyecto en fase previa al lanzamiento. Esta web informa sobre el servicio y permite apuntarse a una lista de espera y a una newsletter. Todavía no se presta el servicio ni se contrata nada a través de ella.`,
-          `${brand.name} no es una entidad aseguradora ni comercializa, gestiona o intermedia seguros. Desde el lanzamiento, los cobros y la hucha los gestionará una entidad de pago autorizada.`,
+          `${brand.name} no es una entidad aseguradora ni comercializa, gestiona o intermedia seguros. Desde el lanzamiento, la hucha la custodiará una entidad financiera autorizada, en una cuenta a nombre de cada inquilino; ${brand.name} solo gestiona las reglas y no custodia fondos de terceros.`,
         ],
       },
       {

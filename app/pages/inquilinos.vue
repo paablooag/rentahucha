@@ -9,7 +9,10 @@ useSeoMeta({
 const faqs = [
   { q: '¿De verdad no necesito aval?', a: 'Si tus ingresos verificados encajan con la renta del piso, no. Si estás en el límite, un aval puede ayudar, pero no es obligatorio por defecto.' },
   { q: '¿Cuánto aporto a la hucha?', a: 'Un porcentaje pequeño de la renta, en torno al 4 %. Con un piso de 850 € son 34 € al mes. La hucha tiene un tope de dos mensualidades: al llegar, dejas de aportar.' },
-  { q: '¿Cuándo recupero la hucha?', a: 'Al terminar el contrato sin deudas ni desperfectos, te la devolvemos entera más un bonus por buen pagador. Si te mudas a otro piso de la red, puedes trasladarla y seguir ahorrando.' },
+  { q: '¿Cuándo recupero la hucha?', a: 'Si el alquiler termina sin incidencias, te la devolvemos íntegra más un bonus por buen pagador. Si te mudas a otro piso de la red, puedes trasladarla y seguir ahorrando.' },
+  { q: '¿Quién guarda mi dinero?', a: 'Una entidad financiera autorizada, en una cuenta a tu nombre. El dinero es tuyo en todo momento: puedes verlo, pero queda bloqueado mientras dura el alquiler. RentaHucha nunca guarda tu dinero: nosotros gestionamos las reglas y la entidad lo custodia.' },
+  { q: '¿Cuándo se puede mover mi hucha?', a: 'Solo con las condiciones que firmáis al inicio. Si hay un impago de renta comprobado, se paga al propietario la cantidad pendiente. Si hay desperfectos o reclamaciones, solo se mueve con un acuerdo firmado por ambas partes o una resolución. Nadie decide por capricho.' },
+  { q: '¿Cómo me doy de alta?', a: 'En unos 5 minutos y desde la web: te identificas con una foto del DNI y un selfie, firmas electrónicamente y domicilias la renta con la aportación a tu hucha. Sin ir al banco y sin descargar otra app.' },
   GUARANTEE_FAQ.tenant,
   DURATION_FAQ.tenant,
   { q: '¿Qué pasa si un mes me retraso?', a: 'Te avisamos antes del cobro y, si falla, te contactamos el mismo día para buscar una solución. Si es un bache puntual, se puede pactar un plan de pago corto.' },

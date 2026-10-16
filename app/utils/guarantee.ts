@@ -22,7 +22,7 @@ export const GUARANTEE_OPTIONS = [
   {
     title: 'Hucha del inquilino',
     tag: 'Siempre incluida',
-    text: 'Se llena mes a mes a nombre del inquilino. Si hay un impago, su saldo pasa al propietario; si al terminar no debe nada, la recupera con bonus.',
+    text: 'Se llena mes a mes en una cuenta a nombre del inquilino, custodiada por una entidad financiera autorizada. Si hay un impago comprobado, se paga al propietario lo pendiente; si el alquiler termina sin incidencias, la recupera íntegra con bonus.',
   },
 ]
 

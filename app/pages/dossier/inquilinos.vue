@@ -76,14 +76,14 @@ const faqs = [
         <div class="d-grid d-2">
           <ul class="d-list">
             <li>Aportas un {{ formatPercent(HUCHA.defaultPct) }} de la renta cada mes, junto con el pago del alquiler: {{ formatEuro(hucha.monthly) }} en un piso de {{ formatEuro(RENT) }}.</li>
-            <li>El dinero está en una cuenta a tu nombre en una entidad regulada, bloqueada a favor del contrato. No es nuestro.</li>
+            <li>El dinero está en una cuenta a tu nombre, custodiada por una entidad financiera autorizada. Es tuyo y puedes verlo, pero queda bloqueado mientras dura el alquiler.</li>
             <li>Tiene un tope de dos mensualidades, el máximo de garantía adicional que permite la ley en vivienda habitual.</li>
           </ul>
           <ul class="d-list">
-            <li>Si terminas sin deudas ni desperfectos, te la devolvemos entera con un bonus del {{ HUCHA.bonusPct }} % por buen pagador.</li>
+            <li>Si el alquiler termina sin incidencias, te la devolvemos íntegra con un bonus del {{ HUCHA.bonusPct }} % por buen pagador.</li>
             <li>La fianza legal va aparte, como en cualquier alquiler. Algunos propietarios piden además garantía adicional al firmar; lo verás en cada piso.</li>
             <li>Si te mudas a otro piso de la red, te la llevas y sigues ahorrando.</li>
-            <li>Si hay un impago, el saldo de la hucha pasa al propietario. Por eso los propietarios confían en ti.</li>
+            <li>Si hay un impago comprobado, se paga al propietario lo pendiente. Los desperfectos solo con acuerdo de ambos o una resolución. Por eso los propietarios confían en ti.</li>
           </ul>
         </div>
       </div>
@@ -199,7 +199,7 @@ const faqs = [
         </div>
       </div>
       <p class="d-small legal">
-        Porcentaje de aportación y bonus en validación. La hucha la gestiona una entidad regulada a tu nombre. Documento informativo; no constituye una oferta vinculante.
+        Porcentaje de aportación y bonus en validación. La hucha la custodia una entidad financiera autorizada, a tu nombre. Documento informativo; no constituye una oferta vinculante.
       </p>
     </DossierPage>
   </div>

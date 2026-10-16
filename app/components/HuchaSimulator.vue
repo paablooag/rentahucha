@@ -72,7 +72,7 @@ const maxBar = computed(() => Math.max(...bars.value.map(b => b.value), 1))
       </div>
 
       <p v-if="!compact" class="small muted disclaimer">
-        Simulación orientativa. La hucha está a tu nombre en una entidad regulada y se devuelve al terminar el contrato sin deudas ni desperfectos.
+        Simulación orientativa. La hucha está a tu nombre, custodiada por una entidad financiera autorizada, y se devuelve al terminar el alquiler sin incidencias.
         Porcentaje de aportación y bonus en validación.
       </p>
     </div>

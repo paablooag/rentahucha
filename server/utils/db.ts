@@ -77,7 +77,8 @@ async function migrate(d: Driver) {
 // v4: RentaHucha no es una aseguradora; la protección es la hucha del inquilino, que pasa al propietario si hay impago.
 // v5: 100 artículos (40 para inmobiliarias) y tercer público del blog.
 // v6: títulos comerciales de 2026 a 2027 y tres URLs renombradas.
-const BLOG_SEED_VERSION = 6
+// v7: la hucha la custodia una entidad financiera autorizada; reglas de uso firmadas al inicio.
+const BLOG_SEED_VERSION = 7
 
 // v6: artículos «2026» como gancho pasan a «2027». Las URLs cambian; las antiguas redirigen con 301 (nuxt.config).
 const BLOG_SLUG_RENAMES: [string, string][] = [

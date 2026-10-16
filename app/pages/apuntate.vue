@@ -28,7 +28,7 @@ const steps = computed(() => (isOwner.value
     ]
   : [
       { t: 'Te escribimos antes del lanzamiento', d: 'Para crear tu pasaporte de inquilino antes que nadie.' },
-      { t: 'Verificamos tu perfil una sola vez', d: 'Y te avisamos de pisos de la red que encajan con lo que buscas.' },
+      { t: 'Te das de alta en 5 minutos', d: 'Foto del DNI, un selfie y firma electrónica, sin ir al banco. Y te avisamos de pisos de la red que encajan contigo.' },
       { t: 'Entras y empiezas a ahorrar', d: 'Cada mes, tu hucha crece y tu historial de buen pagador también.' },
     ]))
 </script>

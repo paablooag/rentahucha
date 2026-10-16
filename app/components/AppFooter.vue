@@ -66,7 +66,7 @@ const dossiers = [
     <div class="container fine">
       <p>
         © {{ year }} {{ brand.name }}. Proyecto en fase previa al lanzamiento. {{ brand.name }} no es una aseguradora ni comercializa seguros.
-        Desde el lanzamiento, los cobros y la hucha los gestionará una entidad de pago autorizada; {{ brand.name }} no custodiará fondos de terceros.
+        Desde el lanzamiento, la hucha la custodiará una entidad financiera autorizada, en una cuenta a nombre de cada inquilino; {{ brand.name }} no custodiará fondos de terceros.
       </p>
     </div>
   </footer>

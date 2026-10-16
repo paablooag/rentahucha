@@ -11,7 +11,8 @@ const legal = [
   { topic: 'Seguros', yes: 'Explicarte que puedes contratar un seguro de impago por tu cuenta, con la compañía que elijas.', no: 'Vender, gestionar ni intermediar seguros. No somos una aseguradora ni pagamos rentas con nuestro dinero.' },
   { topic: 'Garantías', yes: 'En vivienda habitual, fianza legal de un mes y hasta dos mensualidades de garantía adicional (tres en total). En alquiler de temporada, fianza de dos mensualidades.', no: 'Pedir más de lo que permite la ley o exigir más de un mes de renta por adelantado.' },
   { topic: 'Gastos de gestión', yes: 'Los paga el propietario.', no: 'Repercutirlos al inquilino.' },
-  { topic: 'Dinero de terceros', yes: 'Lo gestiona una entidad de pago autorizada en cuentas segregadas.', no: 'Que pase por cuentas de la plataforma.' },
+  { topic: 'Dinero de terceros', yes: 'Lo custodia una entidad financiera autorizada, en una cuenta a nombre de cada inquilino.', no: 'Que pase por cuentas de la plataforma.' },
+  { topic: 'Hucha', yes: 'Moverla solo con las condiciones firmadas al inicio: impago de renta comprobado, o acuerdo de ambas partes o resolución si hay desperfectos.', no: 'Decidir por nuestra cuenta qué hacer con ella.' },
 ]
 </script>
 
@@ -53,7 +54,7 @@ const legal = [
           </li>
           <li>
             <span class="when">Primer mes impagado</span>
-            <p>Se envía requerimiento fehaciente de pago. Si no se regulariza, el saldo de la hucha del inquilino se transfiere al propietario.</p>
+            <p>Se envía requerimiento fehaciente de pago. Si el impago se comprueba y no se regulariza, se paga al propietario la cantidad pendiente con el saldo de la hucha, sin esperar a un juicio.</p>
           </li>
           <li>
             <span class="when">Si el impago persiste</span>

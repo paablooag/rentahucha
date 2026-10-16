@@ -1,7 +1,7 @@
-// Genera los dossieres en PDF imprimiendo /dossier/* con Chrome o Edge en modo headless.
+// Genera los dossieres en PDF imprimiendo /dossier/* con Chrome o Edge (vía Playwright) en modo headless.
 // Requiere un build previo (`nuxt build`). Uso: `npm run pdf` (o CHROME_PATH=/ruta/al/navegador npm run pdf).
-import { spawn, execFileSync } from 'node:child_process'
-import { copyFileSync, existsSync, mkdirSync, statSync } from 'node:fs'
+import { spawn } from 'node:child_process'
+import { copyFileSync, existsSync, mkdirSync, rmSync, statSync } from 'node:fs'
 import { join, resolve } from 'node:path'
 
 const root = resolve(import.meta.dirname, '..')
@@ -56,20 +56,26 @@ try {
   const outDirs = [join(root, 'public', 'dossier'), join(root, '.output', 'public', 'dossier')]
   outDirs.forEach(d => mkdirSync(d, { recursive: true }))
 
-  for (const doc of docs) {
-    const target = join(outDirs[0], doc.file)
-    execFileSync(browser, [
-      '--headless=new',
-      '--disable-gpu',
-      '--no-pdf-header-footer',
-      '--run-all-compositor-stages-before-draw',
-      '--virtual-time-budget=10000',
-      `--print-to-pdf=${target}`,
-      `http://localhost:${PORT}${doc.route}`,
-    ], { stdio: 'ignore' })
-    if (!existsSync(target) || statSync(target).size === 0) throw new Error(`No se generó ${doc.file}`)
-    copyFileSync(target, join(outDirs[1], doc.file))
-    console.log(`✓ ${doc.file} (${Math.round(statSync(target).size / 1024)} KB)`)
+  // Se imprime con Playwright controlando el navegador: la opción --print-to-pdf de la línea de comandos
+  // dejó de escribir el archivo en algunas versiones de Edge.
+  const { chromium } = await import('playwright-core')
+  const pdfBrowser = await chromium.launch({ executablePath: browser })
+  try {
+    const page = await pdfBrowser.newPage()
+    for (const doc of docs) {
+      const target = join(outDirs[0], doc.file)
+      // Se borra antes para detectar un fallo en vez de dar por bueno el PDF anterior.
+      rmSync(target, { force: true })
+      await page.goto(`http://localhost:${PORT}${doc.route}`, { waitUntil: 'networkidle' })
+      await page.evaluate(() => document.fonts.ready)
+      await page.pdf({ path: target, preferCSSPageSize: true, printBackground: true })
+      if (!existsSync(target) || statSync(target).size === 0) throw new Error(`No se generó ${doc.file}`)
+      copyFileSync(target, join(outDirs[1], doc.file))
+      console.log(`✓ ${doc.file} (${Math.round(statSync(target).size / 1024)} KB)`)
+    }
+  }
+  finally {
+    await pdfBrowser.close()
   }
 }
 finally {

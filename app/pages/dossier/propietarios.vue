@@ -100,8 +100,8 @@ const impagoTotal = impago.reduce((s, i) => s + i.value, 0)
           </div>
           <div class="arrow">→</div>
           <div class="d-node ink">
-            <div class="who">Entidad de pago autorizada</div>
-            <div class="what">Cobra y reparte en cuentas segregadas. El dinero nunca pasa por nuestras cuentas.</div>
+            <div class="who">Entidad financiera autorizada</div>
+            <div class="what">Cobra, reparte y custodia la hucha. El dinero nunca pasa por nuestras cuentas.</div>
           </div>
           <div class="arrow">→</div>
           <div class="d-outs">
@@ -258,7 +258,7 @@ const impagoTotal = impago.reduce((s, i) => s + i.value, 0)
         </div>
       </div>
       <p class="d-small legal">
-        {{ brand.name }} no es una aseguradora ni comercializa seguros. Desde el lanzamiento, los cobros y la hucha los gestionará una entidad de pago autorizada.
+        {{ brand.name }} no es una aseguradora ni comercializa seguros. Desde el lanzamiento, la hucha la custodiará una entidad financiera autorizada, a nombre de cada inquilino.
         Documento informativo; no constituye una oferta vinculante.
       </p>
     </DossierPage>

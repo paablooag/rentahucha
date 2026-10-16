@@ -604,7 +604,7 @@ ${CTA}`,
 ## Cómo funciona la hucha
 
 1. Cada mes, el inquilino aporta un pequeño porcentaje junto con la renta.
-2. Ese dinero va a una cuenta **a su nombre**, gestionada por una entidad de pago autorizada y bloqueada a favor del contrato.
+2. Ese dinero va a una cuenta **a su nombre**, abierta y custodiada por una entidad financiera autorizada. RentaHucha nunca guarda el dinero: gestiona las reglas.
 3. Si hay un impago, el **saldo pasa al propietario**.
 4. Si el inquilino termina sin deudas, la recupera con un **bonus**.
 
@@ -680,7 +680,7 @@ Es un ejemplo orientativo. En vivienda habitual, la garantía adicional más la 
 ## Las tres objeciones habituales
 
 - **"Es poco dinero"**: crece cada mes y se suma a la fianza. Y su efecto principal es que el inquilino tiene un incentivo para pagar.
-- **"¿Quién guarda el dinero?"**: una entidad de pago autorizada, en una cuenta a nombre del inquilino.
+- **"¿Quién guarda el dinero?"**: una entidad financiera autorizada, en una cuenta a nombre del inquilino. Solo se mueve con las reglas firmadas: impago comprobado, o acuerdo de ambas partes o resolución si hay desperfectos.
 - **"¿Y si quiero más protección?"**: puede contratar un seguro de impago por su cuenta. Son compatibles.
 
 Más argumentos en [cómo ofrecer protección frente a impagos sin vender seguros](/blog/proteccion-impagos-sin-vender-seguros-inmobiliarias).

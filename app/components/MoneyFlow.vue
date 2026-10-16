@@ -15,8 +15,8 @@ const fee = computed(() => calcFees(props.rent, 1).perUnit)
     <div class="arrow" aria-hidden="true"><AppIcon name="arrow" :size="22" /></div>
 
     <div class="node hub">
-      <span class="who">Entidad de pago autorizada</span>
-      <span class="what">Cobra, separa y reparte en cuentas segregadas. El dinero nunca pasa por nuestras cuentas.</span>
+      <span class="who">Entidad financiera autorizada</span>
+      <span class="what">Cobra, reparte y custodia la hucha. El dinero nunca pasa por nuestras cuentas: nosotros gestionamos las reglas.</span>
     </div>
 
     <div class="arrow" aria-hidden="true"><AppIcon name="arrow" :size="22" /></div>
@@ -30,7 +30,7 @@ const fee = computed(() => calcFees(props.rent, 1).perUnit)
       <div class="node piggy">
         <span class="who">Hucha del inquilino</span>
         <strong>{{ formatEuro(hucha, true) }}</strong>
-        <span class="what">A su nombre, bloqueada a favor del contrato</span>
+        <span class="what">A su nombre: puede verla, pero queda bloqueada mientras dura el alquiler</span>
       </div>
       <div class="node platform">
         <span class="who">Gestión</span>
@@ -41,7 +41,7 @@ const fee = computed(() => calcFees(props.rent, 1).perUnit)
 
     <div class="insurer">
       <AppIcon name="shield" :size="18" />
-      <span><strong>Si hay impago:</strong> el saldo de la hucha del inquilino pasa al propietario.</span>
+      <span><strong>Si hay impago comprobado:</strong> se paga al propietario la cantidad pendiente con el saldo de la hucha.</span>
     </div>
   </div>
 </template>

@@ -13,7 +13,7 @@ const steps = [
 ]
 
 const faqs = [
-  { q: '¿Qué pasa si el inquilino no paga?', a: 'Le avisamos el mismo día y buscamos una solución si es un bache puntual. Si no se resuelve, el saldo de la hucha del inquilino pasa a ti y te entregamos el expediente completo para que reclames. No pagamos rentas de nuestro bolsillo: la hucha cubre hasta lo que haya ahorrado el inquilino, y crece cada mes de contrato.' },
+  { q: '¿Qué pasa si el inquilino no paga?', a: 'Le avisamos el mismo día y buscamos una solución si es un bache puntual. Si el impago se comprueba, se te paga la cantidad pendiente con el saldo de la hucha del inquilino, sin esperar a un juicio, y te entregamos el expediente completo para reclamar el resto. No pagamos rentas de nuestro bolsillo: la hucha cubre hasta lo que haya ahorrado el inquilino, y crece cada mes de contrato.' },
   { q: '¿Tenéis un seguro de impago?', a: 'No. RentaHucha no es una aseguradora ni vende seguros. Nuestra protección es la selección del inquilino y su hucha, que pasa a ti si hay un impago. Si quieres un seguro de impago, puedes contratarlo con la compañía que elijas y combinarlo con nosotros.' },
   { q: '¿Puedo elegir al inquilino?', a: 'Sí. Te presentamos candidatos verificados y tú decides.' },
   DURATION_FAQ.owner,
@@ -140,7 +140,7 @@ const faqs = [
         <div>
           <span class="eyebrow">Lista de espera</span>
           <h2>Da de alta tu piso con prioridad</h2>
-          <p class="lead">Estamos cerrando el acuerdo con la entidad de pago que gestionará cobros y huchas. Los primeros pisos de la lista entran con condiciones de lanzamiento.</p>
+          <p class="lead">Estamos cerrando el acuerdo con la entidad financiera que custodiará las huchas y gestionará los cobros. Los primeros pisos de la lista entran con condiciones de lanzamiento.</p>
           <ul class="check-list">
             <li><AppIcon name="check" :size="18" /> Sin compromiso ni coste hasta que firmes</li>
             <li><AppIcon name="check" :size="18" /> Te explicamos cómo funciona la hucha antes de nada</li>
