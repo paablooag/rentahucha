@@ -76,7 +76,15 @@ async function migrate(d: Driver) {
 // ha editado en /admin y puede aplicar un ajuste puntual. Sube BLOG_SEED_VERSION al añadir o corregir artículos.
 // v4: RentaHucha no es una aseguradora; la protección es la hucha del inquilino, que pasa al propietario si hay impago.
 // v5: 100 artículos (40 para inmobiliarias) y tercer público del blog.
-const BLOG_SEED_VERSION = 5
+// v6: títulos comerciales de 2026 a 2027 y tres URLs renombradas.
+const BLOG_SEED_VERSION = 6
+
+// v6: artículos «2026» como gancho pasan a «2027». Las URLs cambian; las antiguas redirigen con 301 (nuxt.config).
+const BLOG_SLUG_RENAMES: [string, string][] = [
+  ['como-buscar-piso-de-alquiler-en-2026', 'como-buscar-piso-de-alquiler-en-2027'],
+  ['cuanto-cuesta-reformar-un-piso-2026', 'cuanto-cuesta-reformar-un-piso-2027'],
+  ['normativa-inmobiliaria-alquiler-2026', 'normativa-inmobiliaria-alquiler-2027'],
+]
 const SEED_DATE_V2 = '2026-10-15'
 
 async function seed(d: Driver) {
@@ -84,6 +92,14 @@ async function seed(d: Driver) {
   const legacy = await d.query(`SELECT 1 FROM app_meta WHERE key = 'blog_seeded'`)
   const current = meta ? Number(meta.value) : legacy.length ? 1 : 0
   if (current >= BLOG_SEED_VERSION) return
+
+  // Antes de insertar: renombrar las URLs cambiadas, para no duplicar el artículo con la URL nueva.
+  for (const [from, to] of BLOG_SLUG_RENAMES) {
+    await d.query(
+      `UPDATE blog_posts SET slug = $2 WHERE slug = $1 AND NOT EXISTS (SELECT 1 FROM blog_posts WHERE slug = $2)`,
+      [from, to],
+    )
+  }
 
   // Se insertan al revés para que el primero de la lista quede como el más reciente.
   for (const p of [...BLOG_SEED].reverse()) {

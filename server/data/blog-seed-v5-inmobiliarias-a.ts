@@ -13,7 +13,7 @@ const CTA = `> **¿Gestionas pisos en alquiler?** Sube tu cartera a RentaHucha: 
 export const BLOG_SEED_V5_INMOBILIARIAS_A: Seed[] = [
   {
     slug: 'como-captar-propietarios-para-alquiler-guia-inmobiliarias',
-    title: 'Cómo captar propietarios para alquiler en 2026: guía completa para inmobiliarias',
+    title: 'Cómo captar propietarios para alquiler en 2027: guía completa para inmobiliarias',
     excerpt: 'Canales, mensajes y argumentos que funcionan para conseguir pisos en alquiler en un mercado con poca oferta y mucha regulación.',
     audience: A,
     category: 'Captación',
@@ -507,8 +507,8 @@ La demanda la presenta el propietario con abogado y procurador. La agencia aport
 ${CTA}`,
   },
   {
-    slug: 'normativa-inmobiliaria-alquiler-2026',
-    title: 'Normativa que toda inmobiliaria de alquiler debe conocer en 2026',
+    slug: 'normativa-inmobiliaria-alquiler-2027',
+    title: 'Normativa que toda inmobiliaria de alquiler debe conocer para 2027',
     excerpt: 'LAU, Ley de Vivienda, zonas tensionadas, registro único, prevención de blanqueo, protección de datos y decretos de octubre: el mapa completo.',
     audience: A,
     category: 'Normativa',

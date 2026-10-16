@@ -38,6 +38,10 @@ export default defineNuxtConfig({
     '/dossier/propietarios': { prerender: true },
     '/dossier/inquilinos': { prerender: true },
     // El panel solo se pinta en el navegador y nunca se indexa.
+    // URLs de artículos renombradas (2026 → 2027): redirección permanente para no perder enlaces ni posicionamiento.
+    '/blog/como-buscar-piso-de-alquiler-en-2026': { redirect: { to: '/blog/como-buscar-piso-de-alquiler-en-2027', statusCode: 301 } },
+    '/blog/cuanto-cuesta-reformar-un-piso-2026': { redirect: { to: '/blog/cuanto-cuesta-reformar-un-piso-2027', statusCode: 301 } },
+    '/blog/normativa-inmobiliaria-alquiler-2026': { redirect: { to: '/blog/normativa-inmobiliaria-alquiler-2027', statusCode: 301 } },
     '/admin/**': { ssr: false, headers: { 'X-Robots-Tag': 'noindex, nofollow' } },
     '/api/admin/**': { headers: { 'Cache-Control': 'no-store' } },
   },

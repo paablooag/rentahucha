@@ -8,7 +8,7 @@ const D = '2026-10-15'
 export const BLOG_SEED_V3_ALQUILAR: Seed[] = [
   {
     slug: 'como-poner-tu-piso-en-alquiler-paso-a-paso',
-    title: 'Cómo poner tu piso en alquiler paso a paso (guía 2026)',
+    title: 'Cómo poner tu piso en alquiler paso a paso (guía 2027)',
     excerpt: 'De preparar el piso a entregar las llaves: los 10 pasos, los documentos y los errores que debes evitar.',
     audience: 'propietarios',
     category: 'Poner en alquiler',

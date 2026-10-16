@@ -539,8 +539,8 @@ Entre semana y a mitad de mes: los fines de semana y los finales de mes tienen m
 Cambiar de dirección en el banco, el empadronamiento y los suministros.`,
   },
   {
-    slug: 'como-buscar-piso-de-alquiler-en-2026',
-    title: 'Cómo buscar piso de alquiler en 2026 (y conseguirlo antes que otros)',
+    slug: 'como-buscar-piso-de-alquiler-en-2027',
+    title: 'Cómo buscar piso de alquiler en 2027 (y conseguirlo antes que otros)',
     excerpt: 'Alertas, carpeta de documentos lista, mensajes que destacan y rapidez: el método para alquilar con tanta demanda.',
     audience: 'inquilinos',
     category: 'Buscar piso',

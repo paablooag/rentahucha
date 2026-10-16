@@ -387,8 +387,8 @@ Pagos por **hitos**: un adelanto moderado, pagos por fases terminadas y una part
 Firma un contrato con plazos, penalizaciones por retraso y garantías. Las facturas te sirven también para el IRPF.`,
   },
   {
-    slug: 'cuanto-cuesta-reformar-un-piso-2026',
-    title: 'Cuánto cuesta reformar un piso en 2026: rangos orientativos',
+    slug: 'cuanto-cuesta-reformar-un-piso-2027',
+    title: 'Cuánto cuesta reformar un piso en 2027: rangos orientativos',
     excerpt: 'Del lavado de cara a la reforma integral: precios orientativos por metro cuadrado y qué hace subir o bajar el presupuesto.',
     audience: 'propietarios',
     category: 'Reformas',

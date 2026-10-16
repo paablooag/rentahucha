@@ -11,7 +11,7 @@ const A = 'propietarios' as const
 export const BLOG_SEED_V5_PROPIETARIOS: Seed[] = [
   {
     slug: 'cuanto-tarda-un-desahucio-por-impago',
-    title: '¿Cuánto tarda un desahucio por impago en España? Plazos reales en 2026',
+    title: '¿Cuánto tarda un desahucio por impago en España? Plazos reales para 2027',
     excerpt: 'Requerimiento, intento de acuerdo, demanda, enervación, vulnerabilidad y lanzamiento: las fases de un desahucio y lo que alarga cada una.',
     audience: A,
     category: 'Impagos',
