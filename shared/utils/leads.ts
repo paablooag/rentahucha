@@ -2,7 +2,7 @@
 // y el servidor (validación real). Solo se piden datos necesarios para avisar del lanzamiento
 // y medir el interés (minimización, RGPD art. 5.1.c): nada de DNI, ingresos ni documentos.
 
-export type LeadRole = 'propietario' | 'inquilino'
+export type LeadRole = 'propietario' | 'inquilino' | 'inmobiliaria'
 
 export const LEAD_OPTIONS = {
   units: ['1 piso', '2–3 pisos', '4–9 pisos', '10 o más'],
@@ -29,6 +29,10 @@ export const LEAD_OPTIONS = {
   household: ['Solo/a', 'En pareja', 'Compartiendo piso', 'Con familia'],
   employment: ['Contrato indefinido', 'Contrato temporal', 'Autónomo/a', 'Estudiante con ingresos o beca', 'Funcionario/a', 'Otra situación'],
   tenantInterest: ['Alquilar sin aval', 'Entrar con menos dinero', 'Ahorrar con la hucha', 'Pasaporte de buen inquilino'],
+  // Inmobiliaria
+  agencyUnits: ['Menos de 20', '20–50', '50–150', 'Más de 150'],
+  agencyTiming: ['Cuanto antes', 'En los próximos 3 meses', 'Solo quiero informarme'],
+  agencyInterest: ['Inquilinos verificados para mis pisos', 'Protección frente a impagos (hucha)', 'Cobros e incidencias en un panel', 'Captar más propietarios'],
 } as const
 
 export interface LeadData {
@@ -60,7 +64,10 @@ export interface LeadData {
   mustHaves?: string[]
   household?: string
   employment?: string
-  // Ambos
+  // Inmobiliaria
+  company?: string
+  managedUnits?: string
+  // Todos
   timing: string
   interests: string[]
   comments: string
@@ -77,8 +84,8 @@ const oneOf = (v: unknown, list: readonly string[]) => (typeof v === 'string' &&
 
 export function validateLead(input: Record<string, unknown>): { ok: true; data: LeadData } | { ok: false; errors: LeadErrors } {
   const errors: LeadErrors = {}
-  const role = input.role === 'propietario' || input.role === 'inquilino' ? input.role : null
-  if (!role) return { ok: false, errors: { role: 'Elige si eres propietario o inquilino.' } }
+  const role = input.role === 'propietario' || input.role === 'inquilino' || input.role === 'inmobiliaria' ? input.role : null
+  if (!role) return { ok: false, errors: { role: 'Elige si eres propietario, inquilino o inmobiliaria.' } }
 
   const name = str(input.name, 80)
   const email = str(input.email, 120).toLowerCase()
@@ -89,14 +96,21 @@ export function validateLead(input: Record<string, unknown>): { ok: true; data: 
   if (name.length < 2) errors.name = 'Escribe tu nombre.'
   if (!EMAIL_RE.test(email)) errors.email = 'Revisa el correo: no parece válido.'
   if (phone && !PHONE_RE.test(phone)) errors.phone = 'Revisa el teléfono o déjalo en blanco.'
-  if (city.length < 2) errors.city = role === 'propietario' ? '¿En qué ciudad está el piso?' : '¿En qué ciudad buscas?'
+  if (city.length < 2) errors.city = role === 'propietario' ? '¿En qué ciudad está el piso?' : role === 'inmobiliaria' ? '¿En qué ciudad o zona trabajáis?' : '¿En qué ciudad buscas?'
 
-  const interestList: readonly string[] = role === 'propietario' ? LEAD_OPTIONS.ownerInterest : LEAD_OPTIONS.tenantInterest
+  const interestList: readonly string[] = role === 'propietario' ? LEAD_OPTIONS.ownerInterest : role === 'inmobiliaria' ? LEAD_OPTIONS.agencyInterest : LEAD_OPTIONS.tenantInterest
   const interests = Array.isArray(input.interests) ? input.interests.filter((i): i is string => typeof i === 'string' && interestList.includes(i)) : []
 
   const data: LeadData = { role, name, email, phone, city, timing: '', interests, comments, consentNews: input.consentNews === true }
 
-  if (role === 'propietario') {
+  if (role === 'inmobiliaria') {
+    data.company = str(input.company, 120)
+    data.managedUnits = oneOf(input.managedUnits, LEAD_OPTIONS.agencyUnits)
+    data.timing = oneOf(input.timing, LEAD_OPTIONS.agencyTiming)
+    if (data.company.length < 2) errors.company = 'Escribe el nombre de la inmobiliaria.'
+    if (!data.managedUnits) errors.managedUnits = '¿Cuántos pisos en alquiler gestionáis?'
+  }
+  else if (role === 'propietario') {
     data.units = oneOf(input.units, LEAD_OPTIONS.units)
     data.rentRange = oneOf(input.rentRange, LEAD_OPTIONS.ownerRent)
     data.flatStatus = oneOf(input.flatStatus, LEAD_OPTIONS.flatStatus)

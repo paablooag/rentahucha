@@ -75,4 +75,16 @@ export const MIGRATIONS: { id: number; name: string; sql: string }[] = [
       );
     `,
   },
+  {
+    id: 2,
+    name: 'inmobiliarias: interesados y público del blog',
+    sql: `
+      ALTER TABLE leads DROP CONSTRAINT IF EXISTS leads_role_check;
+      ALTER TABLE leads ADD CONSTRAINT leads_role_check CHECK (role IN ('propietario', 'inquilino', 'inmobiliaria'));
+      ALTER TABLE leads ADD COLUMN IF NOT EXISTS company text;
+      ALTER TABLE leads ADD COLUMN IF NOT EXISTS managed_units text;
+      ALTER TABLE blog_posts DROP CONSTRAINT IF EXISTS blog_posts_audience_check;
+      ALTER TABLE blog_posts ADD CONSTRAINT blog_posts_audience_check CHECK (audience IN ('propietarios', 'inquilinos', 'inmobiliarias'));
+    `,
+  },
 ]

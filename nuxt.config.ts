@@ -33,6 +33,7 @@ export default defineNuxtConfig({
     '/': { prerender: true },
     '/propietarios': { prerender: true },
     '/inquilinos': { prerender: true },
+    '/inmobiliarias': { prerender: true },
     '/herramientas/**': { prerender: true },
     '/dossier/propietarios': { prerender: true },
     '/dossier/inquilinos': { prerender: true },

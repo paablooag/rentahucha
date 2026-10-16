@@ -1,8 +1,14 @@
 <script setup lang="ts">
 const { brand } = useAppConfig()
 
+// URL canónica sin parámetros (los filtros del blog no compiten con la página principal en buscadores).
+// Las páginas que necesitan otra la sobrescriben con su propio useHead.
+const route = useRoute()
+const canonical = computed(() => `https://${brand.domain}${route.path === '/' ? '/' : route.path.replace(/\/$/, '')}`)
+
 useHead({
   titleTemplate: title => (title ? `${title} · ${brand.name}` : `${brand.name} · Inquilinos verificados y hucha anti-impago`),
+  link: [{ rel: 'canonical', href: canonical }],
 })
 
 useSeoMeta({
@@ -10,6 +16,7 @@ useSeoMeta({
   ogSiteName: brand.name,
   ogType: 'website',
   ogLocale: 'es_ES',
+  ogUrl: () => canonical.value,
 })
 </script>
 

@@ -65,7 +65,7 @@ async function unsubscribe(e: Entry) {
           <tr v-for="e in filtered" :key="e.email">
             <td>{{ e.email }}</td>
             <td>{{ e.name || '—' }}</td>
-            <td><span class="badge" :class="e.source === 'Pie de la web' ? 'badge-muted' : e.source.includes('propietario') ? 'b-owner' : 'b-tenant'">{{ e.source }}</span></td>
+            <td><span class="badge" :class="e.source === 'Pie de la web' ? 'badge-muted' : e.source.includes('propietario') ? 'b-owner' : e.source.includes('inmobiliaria') ? 'b-agency' : 'b-tenant'">{{ e.source }}</span></td>
             <td class="nowrap">{{ date(e.createdAt) }}</td>
             <td class="num"><button type="button" class="link danger" @click="unsubscribe(e)">Dar de baja</button></td>
           </tr>
@@ -86,6 +86,7 @@ h1 { font-size: 2.2rem; margin-bottom: 4px; }
 .search { max-width: 320px; }
 .nowrap { white-space: nowrap; }
 .b-owner { background: var(--ink); color: var(--lime); }
+.b-agency { background: #dfe5ff; color: var(--ink); }
 .b-tenant { background: var(--lime); color: var(--ink); }
 .link { font: inherit; background: none; border: 0; text-decoration: underline; cursor: pointer; padding: 0; }
 .danger { color: var(--danger); }

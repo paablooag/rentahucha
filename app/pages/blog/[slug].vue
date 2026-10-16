@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { BlogPostSummary } from '#shared/utils/blog'
 
-type PostPage = BlogPostSummary & { html: string; related: BlogPostSummary[] }
+type PostPage = BlogPostSummary & { html: string; related: BlogPostSummary[]; toc: { id: string; text: string }[]; faq: { q: string; a: string }[] }
 
 const route = useRoute()
 const { data: post, error } = await useFetch<PostPage>(() => `/api/blog/${route.params.slug}`)
@@ -25,14 +25,75 @@ function closeFloat() {
   showFloat.value = false
   try { sessionStorage.setItem('rh-cta-closed', '1') } catch {}
 }
-const floatCopy = computed(() => (post.value?.audience === 'propietarios'
+const floatCopy = computed(() => (post.value?.audience === 'inmobiliarias'
+  ? { text: '¿Eres inmobiliaria? Sube tus pisos', to: '/inmobiliarias#formulario' }
+  : post.value?.audience === 'propietarios'
   ? { text: 'Inquilinos verificados y hucha anti-impago', to: '/apuntate?tipo=propietario#formulario' }
   : { text: 'Alquila sin aval y ahorra con tu hucha', to: '/apuntate?tipo=inquilino#formulario' }))
+
+// SEO: URL canónica, etiquetas para redes y datos estructurados (artículo, migas de pan y preguntas frecuentes).
+const { brand } = useAppConfig()
+const site = `https://${brand.domain}`
+const url = computed(() => `${site}/blog/${post.value?.slug ?? ''}`)
 
 useSeoMeta({
   title: () => post.value?.title ?? '',
   description: () => post.value?.excerpt ?? '',
   ogType: 'article',
+  ogTitle: () => post.value?.title ?? '',
+  ogDescription: () => post.value?.excerpt ?? '',
+  ogUrl: () => url.value,
+  articlePublishedTime: () => post.value?.publishedAt ?? '',
+  articleModifiedTime: () => post.value?.updatedAt ?? '',
+  articleSection: () => post.value?.category ?? '',
+  twitterCard: 'summary',
+  twitterTitle: () => post.value?.title ?? '',
+  twitterDescription: () => post.value?.excerpt ?? '',
+})
+
+const jsonLd = computed(() => {
+  const p = post.value
+  if (!p) return []
+  const org = { '@type': 'Organization', name: brand.name, url: site, logo: { '@type': 'ImageObject', url: `${site}/favicon.svg` } }
+  const graph: Record<string, unknown>[] = [
+    {
+      '@type': 'BlogPosting',
+      headline: p.title,
+      description: p.excerpt,
+      datePublished: p.publishedAt,
+      dateModified: (p.updatedAt || p.publishedAt).slice(0, 10),
+      inLanguage: 'es-ES',
+      articleSection: p.category,
+      wordCount: p.readingMinutes * 220,
+      mainEntityOfPage: url.value,
+      url: url.value,
+      author: org,
+      publisher: org,
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Inicio', item: site },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: `${site}/blog` },
+        { '@type': 'ListItem', position: 3, name: `Blog para ${AUDIENCES[p.audience].toLowerCase()}`, item: `${site}/blog?para=${p.audience}` },
+        { '@type': 'ListItem', position: 4, name: p.title, item: url.value },
+      ],
+    },
+  ]
+  if (p.faq.length) {
+    graph.push({
+      '@type': 'FAQPage',
+      mainEntity: p.faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+    })
+  }
+  return graph
+})
+
+useHead({
+  // Los títulos largos van sin « · RentaHucha» para que Google no los corte en los resultados.
+  titleTemplate: (t?: string) => (t && t.length > 55 ? t : `${t} · ${brand.name}`),
+  link: [{ rel: 'canonical', href: url }],
+  script: [{ type: 'application/ld+json', innerHTML: computed(() => JSON.stringify({ '@context': 'https://schema.org', '@graph': jsonLd.value })) }],
 })
 </script>
 
@@ -50,7 +111,15 @@ useSeoMeta({
 
     <section class="section">
       <div class="container layout">
-        <article class="prose" v-html="post.html" />
+        <div class="main">
+          <details v-if="post.toc.length >= 4" class="toc" open>
+            <summary>En este artículo</summary>
+            <ol>
+              <li v-for="t in post.toc" :key="t.id"><a :href="`#${t.id}`">{{ t.text }}</a></li>
+            </ol>
+          </details>
+          <article class="prose" v-html="post.html" />
+        </div>
         <aside class="side">
           <BlogCta :audience="post.audience" compact />
         </aside>
@@ -91,6 +160,14 @@ useSeoMeta({
 @media (min-width: 1000px) { .layout { grid-template-columns: minmax(0, 1fr) 320px; } .side { position: sticky; top: 110px; } }
 @media (max-width: 999px) { .side { display: none; } }
 .end { margin-top: 56px; }
+.main { min-width: 0; max-width: 720px; }
+.toc { background: var(--off); border-radius: 16px; padding: 16px 20px; margin-bottom: 32px; }
+.toc summary { cursor: pointer; font-weight: 600; color: var(--ink); }
+.toc ol { margin: 12px 0 2px; padding-left: 1.3em; display: grid; gap: 6px; font-size: 0.95rem; }
+.toc a { color: var(--ink); text-decoration: none; }
+.toc a:hover { text-decoration: underline; text-decoration-color: var(--lime); text-decoration-thickness: 3px; }
+.prose :deep(h2),
+.prose :deep(h3) { scroll-margin-top: 8px; }
 .related { margin-top: 72px; }
 .related h2 { font-size: 2rem; margin-bottom: 24px; }
 

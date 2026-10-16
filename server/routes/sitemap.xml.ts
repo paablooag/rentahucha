@@ -6,6 +6,7 @@ const PAGES: { path: string; priority: string; changefreq: string }[] = [
   { path: '/', priority: '1.0', changefreq: 'weekly' },
   { path: '/propietarios', priority: '0.9', changefreq: 'monthly' },
   { path: '/inquilinos', priority: '0.9', changefreq: 'monthly' },
+  { path: '/inmobiliarias', priority: '0.9', changefreq: 'monthly' },
   { path: '/como-funciona', priority: '0.8', changefreq: 'monthly' },
   { path: '/apuntate', priority: '0.8', changefreq: 'monthly' },
   { path: '/herramientas', priority: '0.7', changefreq: 'monthly' },

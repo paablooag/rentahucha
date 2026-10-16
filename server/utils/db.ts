@@ -6,9 +6,17 @@ import { BLOG_SEED_V3_ELECCIONES } from '../data/blog-seed-v3-elecciones'
 import { BLOG_SEED_V3_REFORMAS } from '../data/blog-seed-v3-reformas'
 import { BLOG_SEED_V3_ALQUILAR } from '../data/blog-seed-v3-alquilar'
 import { BLOG_SEED_V3_INQUILINOS } from '../data/blog-seed-v3-inquilinos'
+import { BLOG_SEED_V5_INMOBILIARIAS_A } from '../data/blog-seed-v5-inmobiliarias-a'
+import { BLOG_SEED_V5_INMOBILIARIAS_B } from '../data/blog-seed-v5-inmobiliarias-b'
+import { BLOG_SEED_V5_PROPIETARIOS } from '../data/blog-seed-v5-propietarios'
+import { BLOG_SEED_V5_INQUILINOS } from '../data/blog-seed-v5-inquilinos'
 
 // Los nuevos primero: al insertar en orden inverso, el primero de la lista queda como el más reciente.
 const BLOG_SEED = [
+  ...BLOG_SEED_V5_INMOBILIARIAS_A,
+  ...BLOG_SEED_V5_PROPIETARIOS,
+  ...BLOG_SEED_V5_INQUILINOS,
+  ...BLOG_SEED_V5_INMOBILIARIAS_B,
   ...BLOG_SEED_V3_ELECCIONES,
   ...BLOG_SEED_V3_ALQUILAR,
   ...BLOG_SEED_V3_REFORMAS,
@@ -67,7 +75,8 @@ async function migrate(d: Driver) {
 // Artículos iniciales por versiones. Cada versión nueva añade los que falten, actualiza el texto de los que nadie
 // ha editado en /admin y puede aplicar un ajuste puntual. Sube BLOG_SEED_VERSION al añadir o corregir artículos.
 // v4: RentaHucha no es una aseguradora; la protección es la hucha del inquilino, que pasa al propietario si hay impago.
-const BLOG_SEED_VERSION = 4
+// v5: 100 artículos (40 para inmobiliarias) y tercer público del blog.
+const BLOG_SEED_VERSION = 5
 const SEED_DATE_V2 = '2026-10-15'
 
 async function seed(d: Driver) {

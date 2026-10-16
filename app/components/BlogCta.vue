@@ -3,7 +3,14 @@ import type { Audience } from '#shared/utils/blog'
 
 const props = withDefaults(defineProps<{ audience: Audience; compact?: boolean }>(), { compact: false })
 
-const copy = computed(() => (props.audience === 'propietarios'
+const copy = computed(() => (props.audience === 'inmobiliarias'
+  ? {
+      title: 'Sube los pisos de tu inmobiliaria a RentaHucha',
+      text: 'Inquilinos verificados para tu cartera y una hucha anti-impago que ofrecer a tus propietarios, sin vender seguros. Apunta a tu agencia y te contamos las condiciones.',
+      button: 'Apuntar mi inmobiliaria',
+      to: '/inmobiliarias#formulario',
+    }
+  : props.audience === 'propietarios'
   ? {
       title: 'Alquila tu piso a inquilinos que pagan',
       text: 'Inquilinos verificados y una hucha que crece cada mes: si hay un impago, su saldo pasa a ti. Apúntate y te avisamos antes del lanzamiento.',

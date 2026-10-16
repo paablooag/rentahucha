@@ -8,7 +8,7 @@ const date = (d: string) => new Intl.DateTimeFormat('es-ES', { day: 'numeric', m
 <template>
   <NuxtLink :to="`/blog/${post.slug}`" class="post card">
     <div class="meta">
-      <span class="badge" :class="post.audience === 'propietarios' ? 'b-owner' : 'b-tenant'">{{ AUDIENCES[post.audience] }}</span>
+      <span class="badge" :class="`b-${post.audience}`">{{ AUDIENCES[post.audience] }}</span>
       <span class="small muted">{{ post.category }}</span>
     </div>
     <h3>{{ post.title }}</h3>
@@ -24,8 +24,9 @@ const date = (d: string) => new Intl.DateTimeFormat('es-ES', { day: 'numeric', m
 .post { display: flex; flex-direction: column; gap: 10px; text-decoration: none; color: inherit; transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s; }
 .post:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); border-color: transparent; }
 .meta { display: flex; align-items: center; gap: 10px; }
-.b-owner { background: var(--ink); color: var(--lime); }
-.b-tenant { background: var(--lime); color: var(--ink); }
+.b-propietarios { background: var(--ink); color: var(--lime); }
+.b-inquilinos { background: var(--lime); color: var(--ink); }
+.b-inmobiliarias { background: #dfe5ff; color: var(--ink); }
 h3 { font-size: 1.2rem; margin: 4px 0 0; }
 p { margin: 0; }
 .foot { margin-top: auto; padding-top: 10px; display: flex; justify-content: space-between; align-items: center; }

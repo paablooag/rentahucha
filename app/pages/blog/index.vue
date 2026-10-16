@@ -6,7 +6,7 @@ const router = useRouter()
 
 const PAGE = 12
 
-const filter = computed<Audience | 'todos'>(() => (route.query.para === 'propietarios' || route.query.para === 'inquilinos' ? route.query.para : 'todos'))
+const filter = computed<Audience | 'todos'>(() => (typeof route.query.para === 'string' && route.query.para in AUDIENCES ? route.query.para as Audience : 'todos'))
 const topic = computed(() => (typeof route.query.tema === 'string' ? route.query.tema : ''))
 const { data: posts } = await useFetch<BlogPostSummary[]>('/api/blog', { default: () => [] })
 
@@ -34,8 +34,8 @@ function setTopic(t: string) {
 }
 
 useSeoMeta({
-  title: 'Blog: guías de alquiler para propietarios e inquilinos',
-  description: 'Impagos, fianzas, garantías, duración de los contratos y cómo ahorrar mientras alquilas. Guías claras, con números y con la ley en la mano.',
+  title: 'Blog: guías de alquiler para propietarios, inquilinos e inmobiliarias',
+  description: 'Impagos, fianzas, normativa, captación y cómo ahorrar mientras alquilas. Guías claras para propietarios, inquilinos e inmobiliarias, con números y con la ley en la mano.',
 })
 </script>
 
@@ -45,9 +45,9 @@ useSeoMeta({
       <div class="container head">
         <span class="eyebrow">Blog</span>
         <h1>Alquilar bien, con números y con la ley en la mano</h1>
-        <p class="lead">Guías prácticas para propietarios que quieren cobrar tranquilos e inquilinos que quieren entrar con menos y ahorrar.</p>
+        <p class="lead">Guías prácticas para propietarios que quieren alquilar tranquilos, inquilinos que quieren entrar con menos y ahorrar, e inmobiliarias que gestionan alquileres.</p>
         <div class="filters" role="tablist" aria-label="Filtrar artículos">
-          <button v-for="f in (['todos', 'propietarios', 'inquilinos'] as const)" :key="f" type="button" role="tab" :aria-selected="filter === f" :class="{ on: filter === f }" @click="setFilter(f)">
+          <button v-for="f in (['todos', 'propietarios', 'inquilinos', 'inmobiliarias'] as const)" :key="f" type="button" role="tab" :aria-selected="filter === f" :class="{ on: filter === f }" @click="setFilter(f)">
             {{ f === 'todos' ? 'Todos' : AUDIENCES[f] }}
           </button>
         </div>
@@ -67,7 +67,7 @@ useSeoMeta({
 
         <NuxtLink v-if="featured" :to="`/blog/${featured.slug}`" class="featured">
           <div>
-            <span class="badge" :class="featured.audience === 'propietarios' ? 'b-owner' : 'b-tenant'">{{ AUDIENCES[featured.audience] }} · {{ featured.category }}</span>
+            <span class="badge" :class="`b-${featured.audience}`">{{ AUDIENCES[featured.audience] }} · {{ featured.category }}</span>
             <h2>{{ featured.title }}</h2>
             <p class="lead">{{ featured.excerpt }}</p>
             <span class="read">Leer artículo · {{ featured.readingMinutes }} min <AppIcon name="arrow" :size="18" /></span>
@@ -105,8 +105,13 @@ useSeoMeta({
 .featured h2 { color: #fff; margin: 18px 0 12px; max-width: 22ch; }
 .featured .lead { color: #bdbdbd; }
 .read { display: inline-flex; gap: 6px; align-items: center; color: var(--lime); font-weight: 500; }
-.b-owner { background: var(--lime); color: var(--ink); }
-.b-tenant { background: #fff; color: var(--ink); }
+.b-propietarios { background: var(--lime); color: var(--ink); }
+.b-inquilinos { background: #fff; color: var(--ink); }
+.b-inmobiliarias { background: #cfd8ff; color: var(--ink); }
+@media (max-width: 560px) {
+  .filters { display: grid; grid-template-columns: 1fr 1fr; width: 100%; border-radius: 24px; }
+  .filters button { text-align: center; }
+}
 .list { margin-bottom: 32px; }
 .topics { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
 .chip { font: inherit; font-size: 0.9rem; border: 1px solid var(--line); background: #fff; color: var(--ink); border-radius: 999px; padding: 7px 14px; cursor: pointer; transition: all 0.15s; }

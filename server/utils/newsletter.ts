@@ -1,7 +1,7 @@
 export interface NewsletterEntry {
   email: string
   name: string
-  source: 'Pie de la web' | 'Formulario propietario' | 'Formulario inquilino'
+  source: 'Pie de la web' | 'Formulario propietario' | 'Formulario inquilino' | 'Formulario inmobiliaria'
   createdAt: string
 }
 
@@ -11,7 +11,7 @@ export function listNewsletter(): Promise<NewsletterEntry[]> {
     WITH todos AS (
       SELECT email, '' AS name, 'Pie de la web' AS source, created_at FROM newsletter_subscribers
       UNION ALL
-      SELECT email, name, CASE role WHEN 'propietario' THEN 'Formulario propietario' ELSE 'Formulario inquilino' END, consent_at
+      SELECT email, name, CASE role WHEN 'propietario' THEN 'Formulario propietario' WHEN 'inmobiliaria' THEN 'Formulario inmobiliaria' ELSE 'Formulario inquilino' END, consent_at
       FROM leads WHERE consent_news
     )
     SELECT DISTINCT ON (email)

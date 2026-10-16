@@ -4,7 +4,7 @@ import type { BlogPost, BlogPostSummary } from '#shared/utils/blog'
 definePageMeta({ layout: 'admin', middleware: 'admin' })
 
 const { data: posts, refresh } = await useFetch<BlogPostSummary[]>('/api/admin/blog', { default: () => [] })
-const filter = ref<'todos' | 'propietarios' | 'inquilinos' | 'borradores'>('todos')
+const filter = ref<'todos' | 'propietarios' | 'inquilinos' | 'inmobiliarias' | 'borradores'>('todos')
 const q = ref('')
 const busy = ref<string | null>(null)
 const showImporter = ref(false)
@@ -110,8 +110,8 @@ function onPageDragEnter(e: DragEvent) {
 
     <div class="toolbar">
       <div class="tabs" role="tablist">
-        <button v-for="t in (['todos', 'propietarios', 'inquilinos', 'borradores'] as const)" :key="t" type="button" role="tab" :aria-selected="filter === t" :class="{ on: filter === t }" @click="filter = t">
-          {{ { todos: 'Todos', propietarios: 'Propietarios', inquilinos: 'Inquilinos', borradores: 'Borradores' }[t] }}
+        <button v-for="t in (['todos', 'propietarios', 'inquilinos', 'inmobiliarias', 'borradores'] as const)" :key="t" type="button" role="tab" :aria-selected="filter === t" :class="{ on: filter === t }" @click="filter = t">
+          {{ { todos: 'Todos', propietarios: 'Propietarios', inquilinos: 'Inquilinos', inmobiliarias: 'Inmobiliarias', borradores: 'Borradores' }[t] }}
         </button>
       </div>
       <input v-model="q" class="input search" type="search" placeholder="Buscar por título o categoría…" aria-label="Buscar artículos">

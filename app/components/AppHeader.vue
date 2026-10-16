@@ -16,6 +16,7 @@ onBeforeUnmount(() => window.removeEventListener('scroll', onScroll))
 const links = [
   { to: '/propietarios', label: 'Propietarios' },
   { to: '/inquilinos', label: 'Inquilinos' },
+  { to: '/inmobiliarias', label: 'Inmobiliarias' },
   { to: '/como-funciona', label: 'Cómo funciona' },
   { to: '/herramientas', label: 'Herramientas' },
   { to: '/blog', label: 'Blog' },
@@ -60,7 +61,13 @@ const links = [
 .nav { display: flex; align-items: center; gap: 2px; }
 .nav-link {
   color: #e8e8e8; text-decoration: none; font-weight: 400; font-size: 0.95rem;
-  padding: 8px 14px; border-radius: 999px; transition: background 0.2s, color 0.2s;
+  padding: 8px 14px; border-radius: 999px; transition: background 0.2s, color 0.2s; white-space: nowrap;
+}
+/* Entre tablet y escritorio ancho el menú se compacta para caber en una línea. */
+@media (min-width: 1021px) and (max-width: 1240px) {
+  .nav-link { padding: 8px 9px; font-size: 0.9rem; }
+  .nav-cta { margin-left: 6px; }
+  .nav-cta .btn { padding: 8px 13px; }
 }
 .nav-link:hover { background: rgba(255, 255, 255, 0.08); color: #fff; }
 .nav-link.router-link-active { color: var(--lime); }
@@ -69,7 +76,7 @@ const links = [
 .cta-ghost:hover { background: rgba(255, 255, 255, 0.18); }
 .toggle { display: none; background: rgba(255, 255, 255, 0.1); border: 0; color: #fff; cursor: pointer; width: 42px; height: 42px; border-radius: 50%; place-items: center; }
 
-@media (max-width: 960px) {
+@media (max-width: 1020px) {
   .toggle { display: grid; }
   .header.scrolled { border-radius: 24px; }
   .nav {

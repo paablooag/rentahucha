@@ -1,10 +1,11 @@
 // Entradas del blog: tipo y validación compartidos por la web, el panel y el servidor.
 
-export type Audience = 'propietarios' | 'inquilinos'
+export type Audience = 'propietarios' | 'inquilinos' | 'inmobiliarias'
 
 export const AUDIENCES: Record<Audience, string> = {
   propietarios: 'Propietarios',
   inquilinos: 'Inquilinos',
+  inmobiliarias: 'Inmobiliarias',
 }
 
 export interface BlogPost {
@@ -44,7 +45,7 @@ export function validatePost(input: Record<string, unknown>): { ok: true; post: 
   const excerpt = s(input.excerpt, 300)
   const category = s(input.category, 40)
   const body = typeof input.body === 'string' ? input.body.slice(0, 60_000) : ''
-  const audience = input.audience === 'propietarios' || input.audience === 'inquilinos' ? input.audience : null
+  const audience = typeof input.audience === 'string' && input.audience in AUDIENCES ? input.audience as Audience : null
   const publishedAt = /^\d{4}-\d{2}-\d{2}$/.test(String(input.publishedAt)) ? String(input.publishedAt) : new Date().toISOString().slice(0, 10)
 
   if (title.length < 5) errors.title = 'El título es demasiado corto.'

@@ -7,7 +7,7 @@ type Lead = LeadData & { id: string; createdAt: string; consentAt: string }
 type Subscriber = { id: string; email: string; createdAt: string }
 const { data, refresh } = await useFetch<{ leads: Lead[]; subscribers: Subscriber[] }>('/api/admin/leads', { default: () => ({ leads: [], subscribers: [] }) })
 
-const tab = ref<'todos' | 'propietario' | 'inquilino'>('todos')
+const tab = ref<'todos' | 'propietario' | 'inquilino' | 'inmobiliaria'>('todos')
 const q = ref('')
 const openId = ref<string | null>(null)
 
@@ -39,8 +39,8 @@ async function remove(id: string, kind: 'leads' | 'newsletter', label: string) {
 
     <div class="toolbar">
       <div class="tabs" role="tablist">
-        <button v-for="t in (['todos', 'propietario', 'inquilino'] as const)" :key="t" type="button" role="tab" :aria-selected="tab === t" :class="{ on: tab === t }" @click="tab = t">
-          {{ { todos: 'Todos', propietario: 'Propietarios', inquilino: 'Inquilinos' }[t] }}
+        <button v-for="t in (['todos', 'propietario', 'inquilino', 'inmobiliaria'] as const)" :key="t" type="button" role="tab" :aria-selected="tab === t" :class="{ on: tab === t }" @click="tab = t">
+          {{ { todos: 'Todos', propietario: 'Propietarios', inquilino: 'Inquilinos', inmobiliaria: 'Inmobiliarias' }[t] }}
         </button>
       </div>
       <input v-model="q" class="input search" type="search" placeholder="Buscar por nombre, email, ciudad…" aria-label="Buscar">
@@ -56,18 +56,22 @@ async function remove(id: string, kind: 'leads' | 'newsletter', label: string) {
           <template v-for="l in filtered" :key="l.id">
             <tr class="row" @click="openId = openId === l.id ? null : l.id">
               <td class="nowrap">{{ date(l.createdAt) }}</td>
-              <td><span class="badge" :class="l.role === 'propietario' ? 'b-owner' : 'b-tenant'">{{ l.role }}</span></td>
+              <td><span class="badge" :class="`b-${l.role}`">{{ l.role }}</span></td>
               <td>{{ l.name }}</td>
               <td>{{ l.email }}</td>
               <td>{{ l.city }}</td>
-              <td class="small">{{ l.role === 'propietario' ? `${l.propertyType ?? 'Piso'} · ${l.bedrooms ?? '?'} hab. · ${l.rentRange}` : `${l.wantedBedrooms ?? '?'} hab. · ${l.people ?? '?'} pers. · hasta ${formatEuro(l.maxRent ?? 0)}` }} · {{ l.timing }}</td>
+              <td class="small">{{ l.role === 'inmobiliaria' ? `${l.company} · ${l.managedUnits} pisos` : l.role === 'propietario' ? `${l.propertyType ?? 'Piso'} · ${l.bedrooms ?? '?'} hab. · ${l.rentRange}` : `${l.wantedBedrooms ?? '?'} hab. · ${l.people ?? '?'} pers. · hasta ${formatEuro(l.maxRent ?? 0)}` }} · {{ l.timing }}</td>
               <td class="num"><button type="button" class="link" :aria-expanded="openId === l.id">{{ openId === l.id ? 'Cerrar' : 'Ver' }}</button></td>
             </tr>
             <tr v-if="openId === l.id" class="detail">
               <td colspan="7">
                 <dl>
                   <dt>Teléfono</dt><dd>{{ l.phone || '—' }}</dd>
-                  <template v-if="l.role === 'propietario'">
+                  <template v-if="l.role === 'inmobiliaria'">
+                    <dt>Inmobiliaria</dt><dd>{{ l.company }}</dd>
+                    <dt>Pisos gestionados</dt><dd>{{ l.managedUnits }}</dd>
+                  </template>
+                  <template v-else-if="l.role === 'propietario'">
                     <dt>Pisos</dt><dd>{{ l.units }}</dd>
                     <dt>Renta</dt><dd>{{ l.rentRange }}</dd>
                     <dt>Situación</dt><dd>{{ l.flatStatus }}</dd>
@@ -115,8 +119,9 @@ h1 { font-size: 2.2rem; margin-bottom: 4px; }
 .nowrap { white-space: nowrap; }
 .row { cursor: pointer; }
 .row:hover td { background: #f6f6f6 !important; }
-.b-owner { background: var(--ink); color: var(--lime); }
-.b-tenant { background: var(--lime); color: var(--ink); }
+.b-propietario { background: var(--ink); color: var(--lime); }
+.b-inquilino { background: var(--lime); color: var(--ink); }
+.b-inmobiliaria { background: #dfe5ff; color: var(--ink); }
 .link { font: inherit; background: none; border: 0; color: var(--ink); text-decoration: underline; cursor: pointer; padding: 0; }
 .danger { color: var(--danger); }
 .detail td { background: #fafafa !important; }

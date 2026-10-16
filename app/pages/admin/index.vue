@@ -12,6 +12,8 @@ const { data: posts } = await useFetch<BlogPostSummary[]>('/api/admin/blog', { d
 const leads = computed(() => data.value.leads)
 const owners = computed(() => leads.value.filter(l => l.role === 'propietario'))
 const tenants = computed(() => leads.value.filter(l => l.role === 'inquilino'))
+const agencies = computed(() => leads.value.filter(l => l.role === 'inmobiliaria'))
+const agencyFlats = computed(() => agencies.value.filter(l => l.managedUnits === '50–150' || l.managedUnits === 'Más de 150').length)
 const last7 = computed(() => leads.value.filter(l => Date.now() - new Date(l.createdAt).getTime() < 7 * 864e5).length)
 const ownersSoon = computed(() => owners.value.filter(l => l.timing === 'Cuanto antes' || l.timing === 'En los próximos 3 meses').length)
 const tenantsSoon = computed(() => tenants.value.filter(l => l.timing === 'Este mes' || l.timing === 'En 1–3 meses').length)
@@ -83,6 +85,11 @@ const published = computed(() => posts.value.filter(p => p.published).length)
         <span class="label">Inquilinos</span>
         <strong>{{ tenants.length }}</strong>
         <span class="sub">{{ tenantsSoon }} se mudarían en ≤ 3 meses</span>
+      </div>
+      <div class="kpi">
+        <span class="label">Inmobiliarias</span>
+        <strong>{{ agencies.length }}</strong>
+        <span class="sub">{{ agencyFlats }} gestionan 50 pisos o más</span>
       </div>
       <div class="kpi">
         <span class="label">Inquilinos por propietario</span>

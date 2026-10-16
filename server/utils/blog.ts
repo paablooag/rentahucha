@@ -53,9 +53,63 @@ export async function deletePost(slug: string) {
 }
 
 export function renderMarkdown(md: string): string {
-  return adaptTables(marked.parse(md, { async: false, gfm: true }) as string)
+  return addHeadingIds(adaptTables(marked.parse(md, { async: false, gfm: true }) as string))
 }
 
+const plain = (s: string) => s.replace(/<[^>]*>/g, '').replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>').trim()
+
+// Anclas en los h2 y h3 (enlaces al índice y a secciones concretas desde buscadores y redes).
+function addHeadingIds(html: string): string {
+  const used = new Map<string, number>()
+  return html.replace(/<h([23])>([\s\S]*?)<\/h\1>/g, (_, level: string, inner: string) => {
+    const base = slugify(plain(inner)) || 'seccion'
+    const n = used.get(base) ?? 0
+    used.set(base, n + 1)
+    return `<h${level} id="${n ? `${base}-${n + 1}` : base}">${inner}</h${level}>`
+  })
+}
+
+const mdPlain = (s: string) => s.replace(/\[([^\]]+)\]\([^)]*\)/g, '$1').replace(/[*_`>]/g, '').replace(/\s+/g, ' ').trim()
+
+export interface ArticleExtras {
+  toc: { id: string; text: string }[]
+  faq: { q: string; a: string }[]
+}
+
+// Índice (h2) y preguntas frecuentes (los ### bajo un «## Preguntas frecuentes») para el índice y los datos estructurados.
+export function articleExtras(md: string): ArticleExtras {
+  const toc: ArticleExtras['toc'] = []
+  const faq: ArticleExtras['faq'] = []
+  const used = new Map<string, number>()
+  let inFaq = false
+  let current: { q: string; a: string[] } | null = null
+  const flush = () => { if (current && current.a.length) faq.push({ q: current.q, a: mdPlain(current.a.join(' ')) }); current = null }
+  for (const line of md.split(/\r?\n/)) {
+    const h2 = /^##\s+(.+?)\s*$/.exec(line)
+    const h3 = /^###\s+(.+?)\s*$/.exec(line)
+    if (h2) {
+      flush()
+      const text = mdPlain(h2[1] ?? '')
+      const base = slugify(text) || 'seccion'
+      const n = used.get(base) ?? 0
+      used.set(base, n + 1)
+      toc.push({ id: n ? `${base}-${n + 1}` : base, text })
+      inFaq = /^preguntas frecuentes/i.test(text)
+    }
+    else if (h3) {
+      flush()
+      // Los h3 comparten el contador de anclas con los h2, igual que en addHeadingIds.
+      const base = slugify(mdPlain(h3[1] ?? '')) || 'seccion'
+      used.set(base, (used.get(base) ?? 0) + 1)
+      if (inFaq) current = { q: mdPlain(h3[1] ?? ''), a: [] }
+    }
+    else if (current && line.trim() && !line.startsWith('|')) {
+      current.a.push(line.replace(/^[-*]\s+/, ''))
+    }
+  }
+  flush()
+  return { toc, faq }
+}
 const attr = (s: string) => s.replace(/<[^>]*>/g, '').replace(/&/g, '&amp;').replace(/"/g, '&quot;').trim()
 
 // Tablas legibles en móvil: cada celda lleva el título de su columna (data-label) para mostrarse como ficha

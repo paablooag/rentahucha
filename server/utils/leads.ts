@@ -50,6 +50,8 @@ const COLUMNS: [keyof LeadData, string, 'text[]' | 'integer' | 'boolean' | 'text
   ['pets', 'pets', 'text'],
   ['stayType', 'stay_type', 'text'],
   ['mustHaves', 'must_haves', 'text[]'],
+  ['company', 'company', 'text'],
+  ['managedUnits', 'managed_units', 'text'],
 ]
 
 // Los textos vacíos se guardan como NULL (más fácil de analizar en SQL); los arrays vacíos, como '{}'.
