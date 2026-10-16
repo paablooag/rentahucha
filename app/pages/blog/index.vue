@@ -96,6 +96,7 @@ useSeoMeta({
 .filters { display: inline-flex; gap: 6px; padding: 6px; margin-top: 12px; border-radius: 999px; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.14); }
 .filters button { font: inherit; border: 0; border-radius: 999px; padding: 9px 18px; cursor: pointer; background: transparent; color: #e8e8e8; }
 .filters button.on { background: var(--lime); color: var(--ink); font-weight: 500; }
+@media (max-width: 380px) { .filters button { padding: 8px 12px; font-size: 0.92rem; } }
 .featured {
   display: block; text-decoration: none; color: #cfcfcf; background: var(--black); border-radius: 24px;
   padding: clamp(28px, 5vw, 56px); margin-bottom: 24px; transition: transform 0.2s;

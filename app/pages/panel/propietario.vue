@@ -35,7 +35,7 @@ const selected = ref<number | null>(null)
       <div class="card">
         <div class="stat-label">Garantía acumulada en huchas</div>
         <div class="stat-value">{{ formatEuro(totalHucha) }}</div>
-        <p class="small muted">Primer colchón ante un impago</p>
+        <p class="small muted">Pasa a ti si hay un impago</p>
       </div>
       <div class="card alert">
         <div class="stat-label">Requiere atención</div>
@@ -65,7 +65,7 @@ const selected = ref<number | null>(null)
       </div>
       <div class="note note-danger late">
         <strong>Retraso · Av. de la Constitución 11, 1ºA · Sevilla</strong>
-        <p>El cobro de octubre ha fallado. Plan activado: aviso al inquilino hoy; si no se resuelve en 5 días, la hucha ({{ formatEuro(547) }}) cubre la renta y se envía requerimiento. Tú cobras con normalidad.</p>
+        <p>El cobro de octubre ha fallado. Plan activado: aviso al inquilino hoy; si no se resuelve en 5 días, se envía requerimiento y el saldo de su hucha ({{ formatEuro(547) }}) pasa a ti. Te preparamos el expediente por si hay que reclamar.</p>
       </div>
     </section>
 
@@ -110,7 +110,7 @@ const selected = ref<number | null>(null)
 </template>
 
 <style scoped>
-.dash { display: grid; gap: 20px; }
+.dash { display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; }
 .hello h1 { font-size: 1.8rem; margin-bottom: 2px; }
 .hello p { margin: 0; }
 .kpis { grid-template-columns: 1fr; }

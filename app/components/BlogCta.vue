@@ -37,5 +37,6 @@ const copy = computed(() => (props.audience === 'propietarios'
 h3 { font-size: 1.6rem; font-weight: 500; letter-spacing: -0.03em; margin-bottom: 8px; }
 p { margin: 0; color: #2f2f2f; }
 .compact h3 { font-size: 1.25rem; }
-.compact .btn { width: 100%; }
+.compact .btn { width: 100%; white-space: normal; text-align: center; justify-content: center; }
+@media (max-width: 420px) { .blog-cta { padding: 22px; } }
 </style>

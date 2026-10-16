@@ -18,7 +18,7 @@ const bars = computed(() => {
   if (points.at(-1)?.label !== `Mes ${months.value}`) {
     points.push({ label: `Mes ${months.value}`, value: result.value.balance })
   }
-  points.push({ label: 'Al salir + bonus', value: result.value.payout, bonus: true })
+  points.push({ label: 'Al salir', value: result.value.payout, bonus: true })
   return points
 })
 const maxBar = computed(() => Math.max(...bars.value.map(b => b.value), 1))
@@ -82,6 +82,7 @@ const maxBar = computed(() => Math.max(...bars.value.map(b => b.value), 1))
 <style scoped>
 .sim { display: grid; gap: 28px; padding: 12px; }
 @media (min-width: 900px) { .sim { grid-template-columns: 1fr 1.45fr; gap: 24px; } }
+.sim > * { min-width: 0; }
 .controls { display: grid; gap: 24px; align-content: start; padding: 20px; }
 .output { background: var(--black); color: #cfcfcf; border-radius: 16px; padding: 28px; }
 .output .stat-label { color: #a8a8a8; }
@@ -102,6 +103,10 @@ const maxBar = computed(() => Math.max(...bars.value.map(b => b.value), 1))
 .output .disclaimer { margin: 40px 0 0; color: #8d8a8a; }
 .compact .chart { height: 180px; margin-bottom: 24px; }
 @media (max-width: 520px) {
+  .sim { padding: 4px; gap: 20px; }
+  .controls { padding: 12px 8px; }
+  .output { padding: 20px 16px; }
+  .chart { gap: 5px; }
   .totals { grid-template-columns: 1fr 1fr; }
   .payout { grid-column: span 2; margin: 0; }
   .bar-val,

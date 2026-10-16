@@ -74,15 +74,15 @@ const legal = [
           <p class="lead">Preferimos decirte lo que no hacemos antes que prometerte lo que no se puede cumplir.</p>
         </div>
         <div class="table-wrap">
-          <table class="table">
+          <table class="table stack-table">
             <thead>
               <tr><th>Tema</th><th>Lo que hacemos</th><th>Lo que nunca hacemos</th></tr>
             </thead>
             <tbody>
               <tr v-for="row in legal" :key="row.topic">
                 <td><strong>{{ row.topic }}</strong></td>
-                <td>{{ row.yes }}</td>
-                <td>{{ row.no }}</td>
+                <td data-label="Lo que hacemos">{{ row.yes }}</td>
+                <td data-label="Lo que nunca hacemos">{{ row.no }}</td>
               </tr>
             </tbody>
           </table>
@@ -101,4 +101,18 @@ const legal = [
 .timeline li:nth-child(n + 4)::before { background: var(--violet); }
 .when { font-weight: 700; color: var(--navy); }
 .timeline p { margin: 4px 0 0; color: var(--muted); }
+
+@media (max-width: 640px) {
+  .stack-table thead { display: none; }
+  .stack-table,
+  .stack-table tbody,
+  .stack-table tr,
+  .stack-table td { display: block; width: 100%; }
+  .stack-table tr { border-bottom: 1px solid var(--line); }
+  .stack-table tr:last-child { border-bottom: 0; }
+  .stack-table td { border: 0; padding: 6px 16px; }
+  .stack-table td:first-child { padding-top: 16px; font-size: 1.05rem; }
+  .stack-table td:last-child { padding-bottom: 16px; }
+  .stack-table td[data-label]::before { content: attr(data-label); display: block; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); margin-bottom: 2px; }
+}
 </style>

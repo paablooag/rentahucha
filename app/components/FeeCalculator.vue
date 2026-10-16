@@ -59,5 +59,10 @@ const fees = computed(() => calcFees(Math.max(Number(rent.value) || 0, 0), Math.
 .result .stat-value { color: #fff; }
 .stat-value small { font-size: 0.9rem; font-weight: 400; color: #a8a8a8; }
 .result .green { color: var(--lime); }
+@media (max-width: 420px) {
+  .result { padding: 16px; gap: 12px; }
+  .result .stat-value { font-size: 1.45rem; }
+  .tier-rate { font-size: 0.95rem; }
+}
 p { margin: 0; }
 </style>

@@ -322,3 +322,20 @@ svg { display: block; max-width: 100%; }
   *::before,
   *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
+
+/* Ningún hijo de una rejilla ensancha la página (tablas, calculadoras, textos largos). */
+.grid > *,
+.hero-grid > * { min-width: 0; }
+
+/* Móvil: menos aire vertical y rellenos más contenidos para que el contenido respire sin quedar estrecho. */
+@media (max-width: 719px) {
+  .section { padding: 64px 0; }
+  .section-tight { padding: 40px 0; }
+  .hero { padding: 116px 0 64px; }
+  #contenido > div > section:first-child:not(.hero) { padding-top: 112px; }
+  .section-head { margin-bottom: 32px; }
+  .card { padding: 20px; }
+  .note { padding: 16px 18px; }
+  .table th,
+  .table td { padding: 12px 14px; }
+}
