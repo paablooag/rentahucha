@@ -4,15 +4,20 @@ import type { BlogPost, BlogPostSummary } from '#shared/utils/blog'
 definePageMeta({ layout: 'admin', middleware: 'admin' })
 
 const { data: posts, refresh } = await useFetch<BlogPostSummary[]>('/api/admin/blog', { default: () => [] })
-const filter = ref<'todos' | 'propietarios' | 'inquilinos' | 'inmobiliarias' | 'borradores'>('todos')
+const filter = ref<'todos' | 'propietarios' | 'inquilinos' | 'inmobiliarias' | 'borradores' | 'programados'>('todos')
 const q = ref('')
 const busy = ref<string | null>(null)
 const showImporter = ref(false)
+const showAi = ref(false)
+
+// Hoy en Madrid, la misma referencia que usa la web para mostrar o no un artículo programado.
+const today = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Madrid' }).format(new Date())
+const isScheduled = (p: BlogPostSummary) => p.published && p.publishedAt > today
 
 const visible = computed(() => {
   const term = q.value.trim().toLowerCase()
   return posts.value.filter(p =>
-    (filter.value === 'todos' ? true : filter.value === 'borradores' ? !p.published : p.audience === filter.value)
+    (filter.value === 'todos' ? true : filter.value === 'borradores' ? !p.published : filter.value === 'programados' ? isScheduled(p) : p.audience === filter.value)
     && (!term || p.title.toLowerCase().includes(term) || p.category.toLowerCase().includes(term) || p.slug.includes(term)))
 })
 
@@ -34,9 +39,42 @@ watch(filter, () => { selected.value = new Set() })
 
 const progress = ref<{ done: number; total: number; label: string } | null>(null)
 
-async function setPublished(slug: string, published: boolean) {
+// Al publicar un borrador con fecha pasada, sale con la fecha de hoy (si no, quedaría hundido en la lista).
+async function setPublished(slug: string, published: boolean, publishedAt?: string) {
   const full = await $fetch<BlogPost>(`/api/admin/blog/${slug}`)
-  if (full.published !== published) await $fetch(`/api/admin/blog/${slug}`, { method: 'PUT', body: { ...full, published } })
+  const date = publishedAt ?? (published && !full.published && full.publishedAt < today ? today : full.publishedAt)
+  if (full.published !== published || date !== full.publishedAt) {
+    await $fetch(`/api/admin/blog/${slug}`, { method: 'PUT', body: { ...full, published, publishedAt: date } })
+  }
+}
+
+// Programar en bloque: el primero sale en la fecha de inicio y el resto cada N días, en el orden de la lista.
+const scheduling = ref(false)
+const plan = reactive({ start: today, every: 1 })
+function addDays(d: string, n: number) {
+  const x = new Date(`${d}T12:00:00Z`)
+  x.setUTCDate(x.getUTCDate() + n)
+  return x.toISOString().slice(0, 10)
+}
+async function schedule() {
+  const slugs = visible.value.map(p => p.slug).filter(s => selected.value.has(s))
+  if (!slugs.length || !plan.start) return
+  progress.value = { done: 0, total: slugs.length, label: 'Programando' }
+  const failed: string[] = []
+  for (const [i, slug] of slugs.entries()) {
+    try {
+      await setPublished(slug, true, addDays(plan.start, i * Math.max(1, plan.every)))
+    }
+    catch {
+      failed.push(slug)
+    }
+    progress.value.done++
+  }
+  progress.value = null
+  scheduling.value = false
+  selected.value = new Set(failed)
+  await refresh()
+  if (failed.length) alert(`No se pudieron programar: ${failed.join(', ')}`)
 }
 
 async function bulk(action: 'publicar' | 'ocultar' | 'borrar') {
@@ -96,9 +134,12 @@ function onPageDragEnter(e: DragEvent) {
     <div class="head">
       <div>
         <h1>Blog</h1>
-        <p class="muted">{{ posts.filter(p => p.published).length }} publicados · {{ posts.filter(p => !p.published).length }} borradores</p>
+        <p class="muted">{{ posts.filter(p => p.published && !isScheduled(p)).length }} publicados · {{ posts.filter(isScheduled).length }} programados · {{ posts.filter(p => !p.published).length }} borradores</p>
       </div>
       <div class="head-actions">
+        <button type="button" class="btn btn-ghost btn-sm" :aria-expanded="showAi" @click="showAi = !showAi">
+          <AppIcon name="spark" :size="16" /> {{ showAi ? 'Cerrar IA' : 'Crear con IA' }}
+        </button>
         <button type="button" class="btn btn-ghost btn-sm" :aria-expanded="showImporter" @click="showImporter = !showImporter">
           <AppIcon name="file" :size="16" /> {{ showImporter ? 'Cerrar importación' : 'Importar archivos' }}
         </button>
@@ -106,12 +147,13 @@ function onPageDragEnter(e: DragEvent) {
       </div>
     </div>
 
+    <AdminBlogAi v-if="showAi" @generated="refresh()" />
     <AdminBlogImporter v-if="showImporter" :existing="posts" @imported="refresh()" />
 
     <div class="toolbar">
       <div class="tabs" role="tablist">
-        <button v-for="t in (['todos', 'propietarios', 'inquilinos', 'inmobiliarias', 'borradores'] as const)" :key="t" type="button" role="tab" :aria-selected="filter === t" :class="{ on: filter === t }" @click="filter = t">
-          {{ { todos: 'Todos', propietarios: 'Propietarios', inquilinos: 'Inquilinos', inmobiliarias: 'Inmobiliarias', borradores: 'Borradores' }[t] }}
+        <button v-for="t in (['todos', 'propietarios', 'inquilinos', 'inmobiliarias', 'borradores', 'programados'] as const)" :key="t" type="button" role="tab" :aria-selected="filter === t" :class="{ on: filter === t }" @click="filter = t">
+          {{ { todos: 'Todos', propietarios: 'Propietarios', inquilinos: 'Inquilinos', inmobiliarias: 'Inmobiliarias', borradores: 'Borradores', programados: 'Programados' }[t] }}
         </button>
       </div>
       <input v-model="q" class="input search" type="search" placeholder="Buscar por título o categoría…" aria-label="Buscar artículos">
@@ -124,10 +166,17 @@ function onPageDragEnter(e: DragEvent) {
       </template>
       <template v-else>
         <strong>{{ selected.size }} seleccionado(s)</strong>
-        <button type="button" class="btn btn-sm btn-primary" @click="bulk('publicar')">Publicar</button>
+        <button type="button" class="btn btn-sm btn-primary" @click="bulk('publicar')">Publicar ya</button>
+        <button type="button" class="btn btn-sm btn-ghost light" :aria-expanded="scheduling" @click="scheduling = !scheduling">Programar…</button>
         <button type="button" class="btn btn-sm btn-ghost light" @click="bulk('ocultar')">Pasar a borrador</button>
         <button type="button" class="btn btn-sm btn-ghost light danger-btn" @click="bulk('borrar')">Borrar</button>
         <button type="button" class="link light" @click="selected = new Set()">Quitar selección</button>
+        <form v-if="scheduling" class="plan" @submit.prevent="schedule">
+          <label>Desde <input v-model="plan.start" type="date" class="input mini" :min="today" required></label>
+          <label>uno cada <input v-model.number="plan.every" type="number" min="1" max="60" class="input mini num-in"> día(s)</label>
+          <button type="submit" class="btn btn-sm btn-primary">Programar {{ selected.size }}</button>
+          <span class="small hint">Se publican solos en su fecha, en el orden de la lista.</span>
+        </form>
       </template>
     </div>
 
@@ -150,12 +199,13 @@ function onPageDragEnter(e: DragEvent) {
             <td>{{ AUDIENCES[p.audience] }}</td>
             <td class="nowrap">{{ date(p.publishedAt) }}</td>
             <td>
-              <span class="badge" :class="p.published ? '' : 'badge-muted'">{{ p.published ? 'Publicado' : 'Borrador' }}</span>
+              <span v-if="isScheduled(p)" class="badge badge-scheduled">Programado</span>
+              <span v-else class="badge" :class="p.published ? '' : 'badge-muted'">{{ p.published ? 'Publicado' : 'Borrador' }}</span>
             </td>
             <td class="num actions">
               <NuxtLink :to="`/admin/blog/${p.slug}`">Editar</NuxtLink>
               <button type="button" class="link" :disabled="busy === p.slug" @click="togglePublished(p)">{{ p.published ? 'Ocultar' : 'Publicar' }}</button>
-              <a v-if="p.published" :href="`/blog/${p.slug}`" target="_blank">Ver</a>
+              <a v-if="p.published && !isScheduled(p)" :href="`/blog/${p.slug}`" target="_blank">Ver</a>
               <button type="button" class="link danger" :disabled="busy === p.slug" @click="remove(p)">Borrar</button>
             </td>
           </tr>
@@ -194,5 +244,11 @@ tr.sel td { background: var(--lime-soft) !important; }
 .link { font: inherit; font-size: 0.9rem; background: none; border: 0; color: var(--ink); text-decoration: underline; cursor: pointer; padding: 0; }
 .link.light { color: #cfcfcf; }
 .danger { color: var(--danger); }
+.plan { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; width: 100%; padding-top: 8px; border-top: 1px solid #333; }
+.plan label { display: inline-flex; gap: 6px; align-items: center; font-size: 0.9rem; }
+.mini { padding: 6px 10px; font-size: 0.9rem; width: auto; }
+.num-in { width: 70px; }
+.hint { color: #bdbdbd; }
+.badge-scheduled { background: #dfe5ff; color: var(--ink); }
 tr.busy { opacity: 0.5; }
 </style>

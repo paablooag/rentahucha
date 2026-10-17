@@ -12,7 +12,8 @@ export function toSummary(post: BlogPost): BlogPostSummary {
 export async function listPosts(opts: { includeDrafts?: boolean; audience?: string } = {}): Promise<BlogPostSummary[]> {
   const where: string[] = []
   const params: unknown[] = []
-  if (!opts.includeDrafts) where.push('published')
+  // En la web pública solo lo publicado y con fecha ya alcanzada (hora de Madrid): así se programan publicaciones.
+  if (!opts.includeDrafts) where.push("published AND published_at <= (now() AT TIME ZONE 'Europe/Madrid')::date")
   if (opts.audience) {
     params.push(opts.audience)
     where.push(`audience = $${params.length}`)
@@ -23,6 +24,9 @@ export async function listPosts(opts: { includeDrafts?: boolean; audience?: stri
   )
   return rows.map(toSummary)
 }
+
+// Fecha de hoy en Madrid (AAAA-MM-DD), la misma referencia que usa la consulta de publicados.
+export const madridDate = () => new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Madrid' }).format(new Date())
 
 export function getPost(slug: string): Promise<BlogPost | null> {
   return queryOne<BlogPost>(`SELECT ${COLS} FROM blog_posts WHERE slug = $1`, [slug])

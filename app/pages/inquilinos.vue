@@ -67,6 +67,7 @@ const faqs = [
           <h2>¿Cuánto tendrás en tu hucha?</h2>
         </div>
         <HuchaSimulator />
+        <p class="more-tool"><NuxtLink to="/herramientas/cuanto-alquiler-puedo-pagar">¿No sabes cuánto alquiler puedes pagar? Calcúlalo con tu sueldo <AppIcon name="arrow" :size="16" /></NuxtLink></p>
       </div>
     </section>
 
@@ -157,4 +158,6 @@ const faqs = [
 .fair { margin-top: 24px; }
 .signup { display: grid; gap: 48px; align-items: start; }
 @media (min-width: 900px) { .signup { grid-template-columns: 1fr 1fr; } }
+.more-tool { margin: 24px 0 0; }
+.more-tool a { display: inline-flex; gap: 6px; align-items: center; font-weight: 500; }
 </style>

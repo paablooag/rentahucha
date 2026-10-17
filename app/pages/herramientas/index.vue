@@ -1,13 +1,14 @@
 <script setup lang="ts">
 useSeoMeta({
   title: 'Herramientas gratuitas para propietarios e inquilinos',
-  description: 'Calculadoras gratuitas: cuánto cuesta un impago de alquiler y cuánto puedes ahorrar con una hucha de garantía.',
+  description: 'Calculadoras gratuitas: cuánto alquiler puedes pagar según tu sueldo, cuánto cuesta un impago y cuánto puedes ahorrar con una hucha de garantía.',
 })
 
 const tools = [
   { to: '/herramientas/coste-impago', icon: 'calc', tone: 'green', who: 'Propietarios', title: 'Calculadora del coste de un impago', text: 'Rentas perdidas, abogado, reparaciones y meses vacío: cuánto te puede costar un inquilino que deja de pagar.' },
+  { to: '/herramientas/cuanto-alquiler-puedo-pagar', icon: 'euro', tone: 'green', who: 'Inquilinos', title: 'Cuánto alquiler puedo pagar', text: 'Con tu sueldo neto, hasta qué renta tienes más oportunidades de conseguir piso y si el que te gusta encaja.' },
   { to: '/herramientas/simulador-hucha', icon: 'piggy', tone: 'amber', who: 'Inquilinos', title: 'Simulador de la hucha', text: 'Cuánto ahorrarías para la entrada de tu casa pagando el alquiler a tiempo.' },
-  { to: '/inquilinos', icon: 'euro', tone: 'amber', who: 'Inquilinos', title: 'Cuánto cuesta entrar en un piso', text: 'Compara lo que te piden al firmar en un alquiler tradicional frente a nuestro modelo.' },
+  { to: '/inquilinos', icon: 'calc', tone: 'amber', who: 'Inquilinos', title: 'Cuánto cuesta entrar en un piso', text: 'Compara lo que te piden al firmar en un alquiler tradicional frente a nuestro modelo.' },
 ]
 </script>
 

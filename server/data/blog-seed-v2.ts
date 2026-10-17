@@ -416,6 +416,8 @@ Te decimos qué documentos necesitas según tu comunidad y nos encargamos del de
     publishedAt: D,
     body: `La pregunta antes de buscar piso es cuánto puedes pagar sin ahogarte. Una regla prudente es que el alquiler no supere el **30–35 % de tus ingresos netos**.
 
+> Calcúlalo con tus números en la [calculadora de alquiler según tu sueldo](/herramientas/cuanto-alquiler-puedo-pagar).
+
 ## Tabla rápida
 
 | Ingresos netos al mes | Alquiler al 30 % | Alquiler al 35 % |

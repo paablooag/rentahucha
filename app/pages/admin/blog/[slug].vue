@@ -49,7 +49,12 @@ async function showPreview() {
 
 const words = computed(() => post.body.split(/\s+/).filter(Boolean).length)
 
+const today = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Madrid' }).format(new Date())
+const scheduled = computed(() => post.published && post.publishedAt > today)
+
 async function save(publish?: boolean) {
+  // Un borrador con fecha pasada que se publica ahora sale con la fecha de hoy; una fecha futura lo deja programado.
+  if (publish && !post.published && post.publishedAt < today) post.publishedAt = today
   if (publish !== undefined) post.published = publish
   saving.value = true
   errors.value = {}
@@ -106,7 +111,7 @@ if (import.meta.client) {
         <NuxtLink to="/admin/blog" class="back">← Artículos</NuxtLink>
         <h1>{{ isNew && !originalSlug ? 'Nuevo artículo' : 'Editar artículo' }}</h1>
         <p class="muted small">
-          <span class="badge" :class="post.published ? '' : 'badge-muted'">{{ post.published ? 'Publicado' : 'Borrador' }}</span>
+          <span class="badge" :class="post.published ? '' : 'badge-muted'">{{ scheduled ? `Programado para el ${post.publishedAt.split('-').reverse().join('/')}` : post.published ? 'Publicado' : 'Borrador' }}</span>
           <span v-if="savedAt"> · Guardado a las {{ savedAt }}</span>
           <span v-if="dirty"> · Cambios sin guardar</span>
         </p>
@@ -114,7 +119,7 @@ if (import.meta.client) {
       <div class="actions">
         <a v-if="post.published && originalSlug" :href="`/blog/${originalSlug}`" target="_blank" class="btn btn-ghost btn-sm">Ver en la web</a>
         <button type="button" class="btn btn-ghost btn-sm" :disabled="saving" @click="save(false)">{{ post.published ? 'Pasar a borrador' : 'Guardar borrador' }}</button>
-        <button type="button" class="btn btn-primary btn-sm" :disabled="saving" @click="save(true)">{{ saving ? 'Guardando…' : post.published ? 'Guardar y publicar' : 'Publicar' }}</button>
+        <button type="button" class="btn btn-primary btn-sm" :disabled="saving" @click="save(true)">{{ saving ? 'Guardando…' : post.published ? 'Guardar' : post.publishedAt > today ? 'Programar' : 'Publicar' }}</button>
       </div>
     </div>
 
@@ -159,7 +164,7 @@ if (import.meta.client) {
           <select id="pe-audience" v-model="post.audience" class="select">
             <option v-for="(label, key) in AUDIENCES" :key="key" :value="key">{{ label }}</option>
           </select>
-          <span class="hint">Decide la llamada a la acción: formulario de propietario o de inquilino.</span>
+          <span class="hint">Decide la llamada a la acción: formulario de propietario, de inquilino o de inmobiliaria.</span>
         </div>
         <div class="field">
           <label for="pe-category">Categoría</label>
@@ -168,6 +173,7 @@ if (import.meta.client) {
         <div class="field">
           <label for="pe-date">Fecha de publicación</label>
           <input id="pe-date" v-model="post.publishedAt" class="input" type="date">
+          <span class="hint">Con una fecha futura, el botón pasa a «Programar»: el artículo se publica solo ese día.</span>
         </div>
         <div class="field">
           <label for="pe-slug">URL</label>

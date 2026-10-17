@@ -78,7 +78,8 @@ async function migrate(d: Driver) {
 // v5: 100 artículos (40 para inmobiliarias) y tercer público del blog.
 // v6: títulos comerciales de 2026 a 2027 y tres URLs renombradas.
 // v7: la hucha la custodia una entidad financiera autorizada; reglas de uso firmadas al inicio.
-const BLOG_SEED_VERSION = 7
+// v8: enlace a la calculadora de alquiler según el sueldo.
+const BLOG_SEED_VERSION = 8
 
 // v6: artículos «2026» como gancho pasan a «2027». Las URLs cambian; las antiguas redirigen con 301 (nuxt.config).
 const BLOG_SLUG_RENAMES: [string, string][] = [

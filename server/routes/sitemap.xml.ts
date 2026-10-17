@@ -12,6 +12,7 @@ const PAGES: { path: string; priority: string; changefreq: string }[] = [
   { path: '/herramientas', priority: '0.7', changefreq: 'monthly' },
   { path: '/herramientas/coste-impago', priority: '0.7', changefreq: 'monthly' },
   { path: '/herramientas/simulador-hucha', priority: '0.7', changefreq: 'monthly' },
+  { path: '/herramientas/cuanto-alquiler-puedo-pagar', priority: '0.8', changefreq: 'monthly' },
   { path: '/blog', priority: '0.8', changefreq: 'daily' },
 ]
 

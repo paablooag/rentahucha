@@ -1,7 +1,8 @@
 export default defineEventHandler(async (event) => {
   const slug = getRouterParam(event, 'slug') ?? ''
   const post = await getPost(slug)
-  if (!post || !post.published) throw createError({ statusCode: 404, statusMessage: 'Artículo no encontrado' })
+  // Los programados (fecha futura) no se ven hasta su día.
+  if (!post || !post.published || post.publishedAt > madridDate()) throw createError({ statusCode: 404, statusMessage: 'Artículo no encontrado' })
 
   // Relacionados: primero los del mismo tema y luego los del mismo público (enlazado interno para SEO).
   const others = (await listPosts({ audience: post.audience })).filter(p => p.slug !== slug)
