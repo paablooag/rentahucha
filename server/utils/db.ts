@@ -10,9 +10,15 @@ import { BLOG_SEED_V5_INMOBILIARIAS_A } from '../data/blog-seed-v5-inmobiliarias
 import { BLOG_SEED_V5_INMOBILIARIAS_B } from '../data/blog-seed-v5-inmobiliarias-b'
 import { BLOG_SEED_V5_PROPIETARIOS } from '../data/blog-seed-v5-propietarios'
 import { BLOG_SEED_V5_INQUILINOS } from '../data/blog-seed-v5-inquilinos'
+import { BLOG_SEED_V9_INQUILINOS } from '../data/blog-seed-v9-inquilinos'
+import { BLOG_SEED_V9_PROPIETARIOS } from '../data/blog-seed-v9-propietarios'
+import { BLOG_SEED_V9_INMOBILIARIAS } from '../data/blog-seed-v9-inmobiliarias'
 
 // Los nuevos primero: al insertar en orden inverso, el primero de la lista queda como el más reciente.
 const BLOG_SEED = [
+  ...BLOG_SEED_V9_INQUILINOS,
+  ...BLOG_SEED_V9_PROPIETARIOS,
+  ...BLOG_SEED_V9_INMOBILIARIAS,
   ...BLOG_SEED_V5_INMOBILIARIAS_A,
   ...BLOG_SEED_V5_PROPIETARIOS,
   ...BLOG_SEED_V5_INQUILINOS,
@@ -79,7 +85,8 @@ async function migrate(d: Driver) {
 // v6: títulos comerciales de 2026 a 2027 y tres URLs renombradas.
 // v7: la hucha la custodia una entidad financiera autorizada; reglas de uso firmadas al inicio.
 // v8: enlace a la calculadora de alquiler según el sueldo.
-const BLOG_SEED_VERSION = 8
+// v9: 50 artículos nuevos (20 inquilinos, 18 propietarios, 12 inmobiliarias).
+const BLOG_SEED_VERSION = 9
 
 // v6: artículos «2026» como gancho pasan a «2027». Las URLs cambian; las antiguas redirigen con 301 (nuxt.config).
 const BLOG_SLUG_RENAMES: [string, string][] = [
