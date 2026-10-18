@@ -8,6 +8,7 @@ watch(() => route.fullPath, () => { open.value = false })
 
 const links = [
   { to: '/admin', label: 'Resumen', icon: 'chart', exact: true },
+  { to: '/admin/estadisticas', label: 'Estadísticas', icon: 'share' },
   { to: '/admin/interesados', label: 'Interesados', icon: 'users' },
   { to: '/admin/newsletter', label: 'Newsletter', icon: 'bell' },
   { to: '/admin/blog', label: 'Blog', icon: 'file' },

@@ -106,4 +106,25 @@ export const MIGRATIONS: { id: number; name: string; sql: string }[] = [
       CREATE INDEX tasks_board_idx ON tasks (status, position);
     `,
   },
+  {
+    id: 4,
+    name: 'estadísticas de visitas sin cookies',
+    sql: `
+      -- Sin IP ni cookies: visitor es un hash con sal diaria (no permite seguir a nadie de un día para otro).
+      CREATE TABLE pageviews (
+        id            bigserial PRIMARY KEY,
+        ts            timestamptz NOT NULL DEFAULT now(),
+        event         text NOT NULL DEFAULT 'view',
+        path          text NOT NULL,
+        referrer      text,
+        utm_source    text,
+        utm_medium    text,
+        utm_campaign  text,
+        device        text,
+        visitor       text NOT NULL
+      );
+      CREATE INDEX pageviews_ts_idx ON pageviews (ts DESC);
+      CREATE INDEX pageviews_event_idx ON pageviews (event, ts DESC);
+    `,
+  },
 ]

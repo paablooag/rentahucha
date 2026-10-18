@@ -92,7 +92,7 @@ const pages: Record<string, { title: string; updated: string; blocks: Block[] }>
     blocks: [
       {
         h: 'Esta web no usa cookies de seguimiento',
-        p: ['No instalamos cookies de análisis, de publicidad ni de redes sociales, ni propias ni de terceros. Por eso no te mostramos un aviso de cookies.'],
+        p: ['No instalamos cookies de análisis, de publicidad ni de redes sociales, ni propias ni de terceros. Por eso no te mostramos un aviso de cookies.', 'Para saber qué páginas se visitan, contamos las visitas de forma agregada y anónima: sin cookies, sin guardar nada en tu dispositivo y sin guardar tu dirección IP. Cada visita se asocia a una huella que cambia cada día y no permite identificarte ni seguirte de un día para otro.'],
       },
       {
         h: 'Cookie técnica del panel interno',

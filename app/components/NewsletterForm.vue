@@ -8,6 +8,7 @@ const done = ref(false)
 async function onSubmit() {
   if (!consent.value) return
   done.value = await subscribe(email.value.trim().toLowerCase())
+  if (done.value) trackEvent('newsletter')
 }
 </script>
 

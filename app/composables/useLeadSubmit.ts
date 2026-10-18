@@ -10,6 +10,7 @@ export function useLeadSubmit() {
     serverError.value = null
     try {
       await $fetch('/api/leads', { method: 'POST', body: payload })
+      trackEvent(`lead_${String(payload.role ?? '')}`)
       return { ok: true }
     }
     catch (e: unknown) {
