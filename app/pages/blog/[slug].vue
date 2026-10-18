@@ -31,6 +31,15 @@ const floatCopy = computed(() => (post.value?.audience === 'inmobiliarias'
   ? { text: 'Inquilinos verificados y hucha anti-impago', to: '/apuntate?tipo=propietario#formulario' }
   : { text: 'Alquila sin aval y ahorra con tu hucha', to: '/apuntate?tipo=inquilino#formulario' }))
 
+// Enlaces a las guías por ciudad que menciona el artículo (o a las principales), solo para propietarios e inmobiliarias.
+const cityLinks = computed(() => {
+  const p = post.value
+  if (!p || p.audience === 'inquilinos') return []
+  const text = `${p.title} ${p.html.replace(/<[^>]+>/g, ' ')}`
+  const mentioned = CITIES.filter(c => c.name.split(' / ').some(n => new RegExp(`(^|[^\\p{L}])${n}([^\\p{L}]|$)`, 'u').test(text)))
+  return (mentioned.length ? mentioned : CITIES.slice(0, 6)).slice(0, 8)
+})
+
 // SEO: URL canónica, etiquetas para redes y datos estructurados (artículo, migas de pan y preguntas frecuentes).
 const { brand } = useAppConfig()
 const site = `https://${brand.domain}`
@@ -126,6 +135,11 @@ useHead({
       </div>
 
       <div class="container end">
+        <nav v-if="cityLinks.length" class="city-links" aria-label="Guías por ciudad">
+          <strong>Alquilar tu piso en tu ciudad:</strong>
+          <NuxtLink v-for="c in cityLinks" :key="c.slug" :to="`/alquilar-mi-piso/${c.slug}`">{{ c.name }}</NuxtLink>
+          <NuxtLink to="/alquilar-mi-piso" class="all">Todas las guías →</NuxtLink>
+        </nav>
         <BlogCta :audience="post.audience" />
       </div>
 
@@ -235,4 +249,9 @@ useHead({
 <style>
 /* Hueco al final de la página para que la barra flotante no tape el pie en móvil. */
 @media (max-width: 999px) { body.has-float-cta .footer { padding-bottom: calc(96px + env(safe-area-inset-bottom)); } }
+.city-links { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 20px; font-size: 0.92rem; }
+.city-links strong { margin-right: 4px; }
+.city-links a { padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line); color: var(--ink); text-decoration: none; background: #fff; }
+.city-links a:hover { border-color: var(--green); }
+.city-links a.all { border-color: transparent; background: none; text-decoration: underline; }
 </style>

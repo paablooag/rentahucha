@@ -1,0 +1,17 @@
+// Páginas públicas indexables (sin el blog, que sale de la base de datos). Las usan el sitemap e IndexNow.
+export const PUBLIC_PAGES: { path: string; priority: string; changefreq: string }[] = [
+  { path: '/', priority: '1.0', changefreq: 'weekly' },
+  { path: '/propietarios', priority: '0.9', changefreq: 'monthly' },
+  { path: '/inquilinos', priority: '0.9', changefreq: 'monthly' },
+  { path: '/inmobiliarias', priority: '0.9', changefreq: 'monthly' },
+  { path: '/como-funciona', priority: '0.8', changefreq: 'monthly' },
+  { path: '/apuntate', priority: '0.8', changefreq: 'monthly' },
+  { path: '/herramientas', priority: '0.7', changefreq: 'monthly' },
+  { path: '/herramientas/checklist-alquilar-piso', priority: '0.8', changefreq: 'monthly' },
+  { path: '/herramientas/coste-impago', priority: '0.7', changefreq: 'monthly' },
+  { path: '/herramientas/simulador-hucha', priority: '0.7', changefreq: 'monthly' },
+  { path: '/herramientas/cuanto-alquiler-puedo-pagar', priority: '0.8', changefreq: 'monthly' },
+  { path: '/blog', priority: '0.8', changefreq: 'daily' },
+  { path: '/alquilar-mi-piso', priority: '0.8', changefreq: 'monthly' },
+  ...CITIES.map(c => ({ path: `/alquilar-mi-piso/${c.slug}`, priority: '0.8', changefreq: 'monthly' })),
+]
