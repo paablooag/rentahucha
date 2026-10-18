@@ -132,3 +132,49 @@ export function validateSignup(input: Record<string, unknown>): { ok: true; data
   if (input.adult !== true) errors.adult = 'Tienes que ser mayor de edad.'
   return Object.keys(errors).length || !role ? { ok: false, errors } : { ok: true, data: { role, name, email, phone, password } }
 }
+
+// Perfil del inquilino: lo que cuenta de sí mismo (declarado, sin verificar). Solo lo ven los propietarios a los que escribe.
+export const TENANT_OPTIONS = {
+  employment: ['Contrato indefinido', 'Contrato temporal', 'Autónomo/a', 'Funcionario/a', 'Estudiante', 'Pensionista', 'Otra situación'],
+  // Ingresos netos mensuales del hogar.
+  income: ['Menos de 1.000 €', '1.000–1.500 €', '1.500–2.000 €', '2.000–3.000 €', '3.000–4.500 €', 'Más de 4.500 €'],
+  household: ['Solo/a', 'En pareja', 'Familia con hijos', 'Compartiendo piso'],
+  people: ['1', '2', '3', '4', '5 o más'],
+  pets: ['No', 'Perro', 'Gato', 'Otra mascota'],
+  stay: ['Menos de 1 año', '1–3 años', 'Más de 3 años'],
+} as const
+
+// Punto medio aproximado de cada tramo, para orientar al propietario (renta / ingresos).
+export const INCOME_MIDPOINT: Record<string, number> = {
+  'Menos de 1.000 €': 850, '1.000–1.500 €': 1250, '1.500–2.000 €': 1750, '2.000–3.000 €': 2500, '3.000–4.500 €': 3750, 'Más de 4.500 €': 5000,
+}
+
+export interface TenantProfile {
+  employment: string
+  income: string
+  household: string
+  people: string
+  pets: string
+  moveDate: string | null
+  stay: string
+  about: string
+}
+
+export function validateTenantProfile(input: Record<string, unknown>): TenantProfile {
+  return {
+    employment: oneOf(input.employment, TENANT_OPTIONS.employment),
+    income: oneOf(input.income, TENANT_OPTIONS.income),
+    household: oneOf(input.household, TENANT_OPTIONS.household),
+    people: oneOf(input.people, TENANT_OPTIONS.people),
+    pets: oneOf(input.pets, TENANT_OPTIONS.pets),
+    moveDate: typeof input.moveDate === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(input.moveDate) ? input.moveDate : null,
+    stay: oneOf(input.stay, TENANT_OPTIONS.stay),
+    about: typeof input.about === 'string' ? input.about.trim().slice(0, 1000) : '',
+  }
+}
+
+export const profileCompleteness = (p: TenantProfile | null) => {
+  if (!p) return 0
+  const keys: (keyof TenantProfile)[] = ['employment', 'income', 'household', 'people', 'pets', 'moveDate', 'stay', 'about']
+  return Math.round((keys.filter(k => p[k]).length / keys.length) * 100)
+}

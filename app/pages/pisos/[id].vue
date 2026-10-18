@@ -128,7 +128,7 @@ const availableNow = computed(() => !p.value.availableFrom || new Date(`${p.valu
               <textarea id="ct-msg" v-model="message" class="input" rows="5" maxlength="4000" placeholder="Preséntate: quién vivirá, cuándo te mudarías y por cuánto tiempo." />
               <p v-if="sendError" class="err small" role="alert">{{ sendError }}</p>
               <button class="btn btn-primary" type="submit" :disabled="sending || message.trim().length < 10">{{ sending ? 'Enviando…' : 'Enviar mensaje' }}</button>
-              <p class="tiny muted">Nunca pagues señales ni envíes dinero antes de visitar el piso.</p>
+              <p class="tiny muted">El propietario verá tu <NuxtLink to="/mi-cuenta/perfil">perfil de inquilino</NuxtLink>: complétalo para que te responda antes. Nunca pagues señales ni envíes dinero antes de visitar el piso.</p>
             </form>
           </div>
           <div class="note note-green hucha">

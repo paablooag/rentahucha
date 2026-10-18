@@ -2,7 +2,7 @@
 const { user, unread } = useAccount()
 const links = computed(() => [
   { to: '/mi-cuenta', label: 'Inicio', exact: true },
-  ...(user.value?.role === 'propietario' ? [{ to: '/mi-cuenta/pisos', label: 'Mis pisos', exact: false }] : [{ to: '/pisos', label: 'Buscar pisos', exact: false }, { to: '/mi-cuenta/favoritos', label: 'Guardados', exact: false }]),
+  ...(user.value?.role === 'propietario' ? [{ to: '/mi-cuenta/pisos', label: 'Mis pisos', exact: false }] : [{ to: '/pisos', label: 'Buscar pisos', exact: false }, { to: '/mi-cuenta/favoritos', label: 'Guardados', exact: false }, { to: '/mi-cuenta/perfil', label: 'Mi perfil', exact: false }]),
   { to: '/mi-cuenta/mensajes', label: 'Mensajes', exact: false },
 ])
 const route = useRoute()

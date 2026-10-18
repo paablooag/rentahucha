@@ -49,6 +49,11 @@ async function removeAccount() {
           <strong>{{ convs.length }}</strong>
           <span class="sub">{{ unreadConvs ? `${unreadConvs} con mensajes nuevos` : 'Todo leído' }}</span>
         </NuxtLink>
+        <NuxtLink v-if="!isOwner" to="/mi-cuenta/perfil" class="tile tile-cta">
+          <span class="label">Mi perfil</span>
+          <strong>→</strong>
+          <span class="sub">Los propietarios lo ven al recibir tu mensaje</span>
+        </NuxtLink>
         <NuxtLink v-if="isOwner" to="/mi-cuenta/pisos/nuevo" class="tile tile-cta">
           <span class="label">Nuevo anuncio</span>
           <strong>+</strong>

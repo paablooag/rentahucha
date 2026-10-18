@@ -10,5 +10,5 @@ export default defineEventHandler(async (event) => {
     [c.id, user.id, body],
   )
   await query(`UPDATE conversations SET last_message_at = now(), ${isOwner ? 'owner' : 'tenant'}_read_at = now() WHERE id = $1`, [c.id])
-  return { id: Number(row!.id), senderId: user.id, body, createdAt: row!.createdAt, mine: true }
+  return { id: Number(row!.id), body, kind: 'texto', createdAt: row!.createdAt, mine: true }
 })

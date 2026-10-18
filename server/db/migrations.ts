@@ -241,4 +241,27 @@ export const MIGRATIONS: { id: number; name: string; sql: string }[] = [
       CREATE INDEX pageviews_path_idx ON pageviews (path, ts DESC);
     `,
   },
+  {
+    id: 9,
+    name: 'perfil del inquilino y visitas en el chat',
+    sql: `
+      -- Lo que el inquilino cuenta de sí mismo (declarado, sin verificar). Solo lo ven los propietarios a los que escribe.
+      CREATE TABLE tenant_profiles (
+        user_id      uuid PRIMARY KEY REFERENCES users (id) ON DELETE CASCADE,
+        employment   text NOT NULL DEFAULT '',
+        income       text NOT NULL DEFAULT '',
+        household    text NOT NULL DEFAULT '',
+        people       text NOT NULL DEFAULT '',
+        pets         text NOT NULL DEFAULT '',
+        move_date    date,
+        stay         text NOT NULL DEFAULT '',
+        about        text NOT NULL DEFAULT '',
+        updated_at   timestamptz NOT NULL DEFAULT now()
+      );
+      -- Mensajes especiales: propuesta de visita (meta: { at, status: propuesta | aceptada | rechazada | cancelada }).
+      ALTER TABLE messages ADD COLUMN kind text NOT NULL DEFAULT 'texto' CHECK (kind IN ('texto', 'visita'));
+      ALTER TABLE messages ADD COLUMN meta jsonb;
+      ALTER TABLE messages ADD COLUMN updated_at timestamptz;
+    `,
+  },
 ]
