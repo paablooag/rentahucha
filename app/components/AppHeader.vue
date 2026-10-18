@@ -7,7 +7,10 @@ watch(() => route.fullPath, () => { open.value = false })
 function onScroll() {
   scrolled.value = window.scrollY > 24
 }
+// La sesión se consulta en el navegador (las páginas públicas se sirven prerenderizadas).
+const { user, unread, loaded, refresh } = useAccount()
 onMounted(() => {
+  if (!loaded.value) refresh()
   onScroll()
   window.addEventListener('scroll', onScroll, { passive: true })
 })
@@ -33,7 +36,10 @@ const links = [
       <nav class="nav" :class="{ open }" aria-label="Principal">
         <NuxtLink v-for="l in links" :key="l.to" :to="l.to" class="nav-link">{{ l.label }}</NuxtLink>
         <div class="nav-cta">
-          <NuxtLink to="/apuntate?tipo=inquilino#formulario" class="btn btn-sm cta-ghost">Busco piso</NuxtLink>
+          <NuxtLink :to="user ? '/mi-cuenta' : '/cuenta/entrar'" class="nav-link account">
+            {{ user ? 'Mi cuenta' : 'Entrar' }}<span v-if="unread" class="unread" :aria-label="`${unread} conversaciones con mensajes nuevos`">{{ unread }}</span>
+          </NuxtLink>
+          <NuxtLink to="/pisos" class="btn btn-sm cta-ghost">Busco piso</NuxtLink>
           <NuxtLink to="/apuntate?tipo=propietario#formulario" class="btn btn-sm btn-primary">Soy propietario <AppIcon name="arrow" :size="16" /></NuxtLink>
         </div>
       </nav>
@@ -89,4 +95,6 @@ const links = [
   .nav-link { padding: 14px 16px; font-size: 1.05rem; }
   .nav-cta { margin: 8px 0 0; flex-direction: column; }
 }
+.account { display: inline-flex; align-items: center; gap: 6px; }
+.unread { background: var(--lime); color: var(--ink); border-radius: 999px; font-size: 0.7rem; font-weight: 700; min-width: 18px; height: 18px; padding: 0 5px; display: inline-grid; place-items: center; }
 </style>

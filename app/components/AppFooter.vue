@@ -69,7 +69,7 @@ const dossiers = [
 
     <div class="container fine">
       <p>
-        © {{ year }} {{ brand.name }}. Proyecto en fase previa al lanzamiento. {{ brand.name }} no es una aseguradora ni comercializa seguros.
+        © {{ year }} {{ brand.name }}. En fase beta: ya puedes publicar tu piso y hablar con inquilinos; la hucha se activa en el lanzamiento. {{ brand.name }} no es una aseguradora ni comercializa seguros.
         Desde el lanzamiento, la hucha la custodiará una entidad financiera autorizada, en una cuenta a nombre de cada inquilino; {{ brand.name }} no custodiará fondos de terceros.
       </p>
     </div>

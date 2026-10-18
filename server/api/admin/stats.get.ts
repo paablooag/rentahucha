@@ -39,8 +39,16 @@ export default defineEventHandler(async (event) => {
     `SELECT count(*) AS c, count(*) FILTER (WHERE stage = 'listo') AS ready, count(*) FILTER (WHERE stage = 'conversacion') AS talking FROM leads WHERE role = 'propietario'`,
   )
 
+  const platform = await queryOne<{ owners: number; tenants: number; published: number; review: number; messages: number }>(
+    `SELECT (SELECT count(*) FROM users WHERE role = 'propietario')::int AS owners, (SELECT count(*) FROM users WHERE role = 'inquilino')::int AS tenants,
+            (SELECT count(*) FROM properties WHERE status = 'publicado')::int AS published, (SELECT count(*) FROM properties WHERE status = 'revision')::int AS review,
+            (SELECT count(*) FROM messages WHERE created_at > now() - interval '1 day' * $1)::int AS messages`,
+    [days],
+  )
+
   return {
     days,
+    platform,
     realtime: { visitors: n(realtime?.visitors), pages: realtimePages.map(p => ({ path: p.path, visitors: n(p.visitors) })) },
     today: { visitors: n(today?.visitors), views: n(today?.views) },
     yesterday: { visitors: n(yesterday?.visitors), views: n(yesterday?.views) },

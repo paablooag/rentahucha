@@ -15,6 +15,7 @@ interface Stats {
   devices: { device: string; visitors: number }[]
   events: Record<string, number>
   leads: { propietario: number; inquilino: number; inmobiliaria: number }
+  platform: { owners: number; tenants: number; published: number; review: number; messages: number } | null
   owners: { visitors: number; totalSignups: number; ready: number; talking: number; goal: number }
 }
 
@@ -60,6 +61,7 @@ const maxOf = (list: { visitors: number }[]) => Math.max(1, ...list.map(i => i.v
         <span class="label">Objetivo del mes</span>
         <strong class="big">{{ s.owners.ready }} <small>de {{ s.owners.goal }} propietarios dispuestos a publicar</small></strong>
         <div class="goal-bar" role="progressbar" :aria-valuenow="s.owners.ready" aria-valuemin="0" :aria-valuemax="s.owners.goal"><span :style="{ width: `${goalPct}%` }" /></div>
+        <p v-if="s.platform" class="small muted">Plataforma: {{ s.platform.owners }} cuentas de propietario · <NuxtLink to="/admin/pisos">{{ s.platform.published }} pisos publicados{{ s.platform.review ? ` · ${s.platform.review} por revisar` : '' }}</NuxtLink> · {{ s.platform.tenants }} inquilinos · {{ s.platform.messages }} mensajes</p>
         <p class="small muted">{{ s.owners.totalSignups }} apuntados en total · {{ s.owners.talking }} en conversación · <NuxtLink to="/admin/interesados">ver embudo</NuxtLink></p>
         <p class="small muted">{{ fmt(s.owners.visitors) }} {{ s.owners.visitors === 1 ? 'visitante vio' : 'visitantes vieron' }} páginas para propietarios en {{ s.days }} días · conversión {{ pct(s.leads.propietario, s.owners.visitors) }}</p>
       </section>

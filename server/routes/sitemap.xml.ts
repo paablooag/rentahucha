@@ -8,9 +8,11 @@ const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replac
 export default defineCachedEventHandler(async (event) => {
   const base = `https://${useAppConfig().brand.domain}`
   const posts = await listPosts()
+  const pisos = await query<{ id: string; updatedAt: string }>(`SELECT id, updated_at FROM properties WHERE status = 'publicado' ORDER BY published_at DESC LIMIT 5000`)
 
   const urls = [
     ...PUBLIC_PAGES.map(p => `  <url><loc>${base}${p.path}</loc><changefreq>${p.changefreq}</changefreq><priority>${p.priority}</priority></url>`),
+    ...pisos.map(p => `  <url><loc>${base}/pisos/${p.id}</loc><lastmod>${p.updatedAt.slice(0, 10)}</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>`),
     ...posts.map(p => `  <url><loc>${base}/blog/${esc(p.slug)}</loc><lastmod>${(p.updatedAt || p.publishedAt).slice(0, 10)}</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>`),
   ]
 

@@ -27,7 +27,7 @@ const pages: Record<string, { title: string; updated: string; blocks: Block[] }>
       {
         h: 'Objeto',
         p: [
-          `${brand.name} es un proyecto en fase previa al lanzamiento. Esta web informa sobre el servicio y permite apuntarse a una lista de espera y a una newsletter. Todavía no se presta el servicio ni se contrata nada a través de ella.`,
+          `${brand.name} está en fase beta. Esta web informa sobre el servicio y permite apuntarse a una lista de espera y a una newsletter, crear una cuenta, publicar anuncios de pisos en alquiler y que propietarios e inquilinos se escriban. La hucha, la firma del contrato y la gestión de cobros se activarán en el lanzamiento; hasta entonces no se contrata ni se paga nada a través de la web.`,
           `${brand.name} no es una entidad aseguradora ni comercializa, gestiona o intermedia seguros. Desde el lanzamiento, la hucha la custodiará una entidad financiera autorizada, en una cuenta a nombre de cada inquilino; ${brand.name} solo gestiona las reglas y no custodia fondos de terceros.`,
         ],
       },
@@ -61,12 +61,15 @@ const pages: Record<string, { title: string; updated: string; blocks: Block[] }>
           'En ambos casos, opcionalmente, qué te interesa del servicio y tus comentarios. No pedimos DNI, ingresos, nóminas ni documentos.',
           'Los usamos para avisarte del lanzamiento, darte prioridad para dar de alta tu piso o crear tu pasaporte de inquilino, y analizar de forma agregada el interés en el servicio (cuánta gente lo quiere, en qué ciudades y qué le importa).',
           'Newsletter: tu correo electrónico, para enviarte novedades del servicio y consejos sobre alquiler. Solo si marcas esa casilla.',
+          'Cuenta de usuario: nombre, correo, teléfono si lo das y tu contraseña cifrada (nunca la guardamos en claro). La usamos para que puedas entrar, publicar anuncios o escribir a propietarios.',
+          'Anuncios: los datos del piso que publicas y sus fotos. La dirección exacta no se muestra en público; del anunciante solo se muestra el nombre de pila. Revisamos cada anuncio antes de publicarlo.',
+          'Mensajes: lo que os escribís propietario e inquilino a través de la web, para que podáis hablar sin dar vuestro teléfono o correo. Solo lo ven las dos partes; el equipo solo accede si hay que atender una denuncia de abuso o una obligación legal.',
           'Guardamos la fecha y el texto del consentimiento que diste, para poder demostrarlo. No guardamos tu dirección IP.',
         ],
       },
       {
         h: 'Base jurídica',
-        p: ['Tu consentimiento, que das al marcar la casilla de cada formulario. Puedes retirarlo en cualquier momento sin que afecte a lo anterior: en cada correo hay un enlace para darte de baja, o puedes escribirnos.'],
+        p: ['Lista de espera y newsletter: tu consentimiento, que das al marcar la casilla de cada formulario. Puedes retirarlo en cualquier momento sin que afecte a lo anterior: en cada correo hay un enlace para darte de baja, o puedes escribirnos.', 'Cuenta, anuncios y mensajes: la ejecución de las condiciones de uso que aceptas al crear la cuenta (RGPD art. 6.1.b).'],
       },
       {
         h: 'Quién más accede a tus datos',
@@ -78,11 +81,48 @@ const pages: Record<string, { title: string; updated: string; blocks: Block[] }>
       },
       {
         h: 'Cuánto tiempo los conservamos',
-        p: ['Lista de espera: hasta el lanzamiento y, como máximo, 24 meses desde que te apuntas. Newsletter: hasta que te des de baja.'],
+        p: ['Lista de espera: hasta el lanzamiento y, como máximo, 24 meses desde que te apuntas. Newsletter: hasta que te des de baja. Cuenta, anuncios y mensajes: mientras tengas la cuenta; puedes borrarla tú mismo desde «Mi cuenta» y se eliminan con ella tus anuncios, fotos y conversaciones.'],
       },
       {
         h: 'Tus derechos',
         p: [`Puedes ejercer tus derechos de acceso, rectificación, supresión, oposición, limitación y portabilidad escribiendo a ${brand.email}. Si consideras que no hemos atendido bien tu solicitud, puedes reclamar ante la Agencia Española de Protección de Datos (www.aepd.es).`],
+      },
+    ],
+  },
+  'condiciones': {
+    title: 'Condiciones de uso',
+    updated: 'octubre de 2026',
+    blocks: [
+      {
+        h: 'Qué es este servicio',
+        p: [
+          `${brand.name} está en fase beta. Con una cuenta, los propietarios pueden publicar anuncios de sus pisos en alquiler y quienes buscan piso pueden verlos y escribir a los propietarios a través de la web.`,
+          `En esta fase ${brand.name} no cobra nada, no firma contratos en nombre de nadie, no gestiona cobros y no custodia dinero. La hucha, la firma del contrato y los cobros se activarán en el lanzamiento, con condiciones que se aceptarán aparte. ${brand.name} no es una aseguradora.`,
+        ],
+      },
+      {
+        h: 'Cuenta',
+        p: ['Tienes que ser mayor de edad y dar datos reales. Eres responsable de guardar tu contraseña. Puedes borrar tu cuenta cuando quieras desde «Mi cuenta».'],
+      },
+      {
+        h: 'Anuncios',
+        p: [
+          'Solo puedes anunciar viviendas que tengas derecho a alquilar (como propietario o con su autorización). El anuncio debe ser veraz: fotos del piso real, renta y condiciones correctas, y la calificación energética, que es obligatoria en los anuncios de alquiler.',
+          'Revisamos cada anuncio antes de publicarlo y podemos pedir cambios o retirarlo si incumple estas condiciones o la ley (por ejemplo, si discrimina por origen, sexo, religión, orientación o discapacidad).',
+          'Los gastos de gestión inmobiliaria y de formalización del contrato no se pueden repercutir al inquilino (Ley 12/2023).',
+        ],
+      },
+      {
+        h: 'Mensajes',
+        p: ['Los mensajes son para hablar del alquiler. No se permite el acoso, el spam, pedir dinero por adelantado antes de ver el piso ni compartir datos de terceros. Si recibes algo así, escríbenos y actuaremos.', `Nunca pagues una señal ni envíes dinero a nadie antes de visitar el piso y comprobar quién es el propietario. ${brand.name} nunca te pedirá pagos por mensaje.`],
+      },
+      {
+        h: 'Responsabilidad',
+        p: [`${brand.name} pone en contacto a propietarios e inquilinos y revisa los anuncios, pero el acuerdo de alquiler es entre ellos. No garantizamos que un anuncio termine en contrato.`],
+      },
+      {
+        h: 'Cambios y ley aplicable',
+        p: ['Podemos actualizar estas condiciones; si el cambio es importante, te avisaremos. Se rigen por la legislación española.'],
       },
     ],
   },
@@ -93,6 +133,10 @@ const pages: Record<string, { title: string; updated: string; blocks: Block[] }>
       {
         h: 'Esta web no usa cookies de seguimiento',
         p: ['No instalamos cookies de análisis, de publicidad ni de redes sociales, ni propias ni de terceros. Por eso no te mostramos un aviso de cookies.', 'Para saber qué páginas se visitan, contamos las visitas de forma agregada y anónima: sin cookies, sin guardar nada en tu dispositivo y sin guardar tu dirección IP. Cada visita se asocia a una huella que cambia cada día y no permite identificarte ni seguirte de un día para otro.'],
+      },
+      {
+        h: 'Cookie técnica de tu cuenta',
+        p: ['Si creas una cuenta o entras en ella, instalamos una cookie técnica de sesión («rh-user») para mantenerte dentro hasta 30 días o hasta que salgas. Es imprescindible para el servicio que pides y no requiere consentimiento (LSSI, art. 22.2). Si solo navegas por la web, no se instala.'],
       },
       {
         h: 'Cookie técnica del panel interno',

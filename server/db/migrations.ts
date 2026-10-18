@@ -144,4 +144,88 @@ export const MIGRATIONS: { id: number; name: string; sql: string }[] = [
       ALTER TABLE leads ADD COLUMN contacted_at timestamptz;
     `,
   },
+  {
+    id: 7,
+    name: 'cuentas, pisos, fotos y mensajes',
+    sql: `
+      CREATE TABLE users (
+        id             uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+        role           text NOT NULL CHECK (role IN ('propietario', 'inquilino')),
+        name           text NOT NULL,
+        email          text NOT NULL UNIQUE,
+        phone          text NOT NULL DEFAULT '',
+        password_hash  text NOT NULL,
+        consent_at     timestamptz NOT NULL,
+        consent_text   text NOT NULL,
+        last_login_at  timestamptz,
+        created_at     timestamptz NOT NULL DEFAULT now()
+      );
+
+      -- status: borrador → revision → publicado (o rechazado); pausado y alquilado los pone el propietario.
+      CREATE TABLE properties (
+        id             uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+        owner_id       uuid NOT NULL REFERENCES users (id) ON DELETE CASCADE,
+        status         text NOT NULL DEFAULT 'borrador' CHECK (status IN ('borrador', 'revision', 'publicado', 'rechazado', 'pausado', 'alquilado')),
+        review_note    text NOT NULL DEFAULT '',
+        title          text NOT NULL,
+        city           text NOT NULL,
+        district       text NOT NULL DEFAULT '',
+        address        text NOT NULL DEFAULT '',
+        property_type  text NOT NULL,
+        rent           integer NOT NULL CHECK (rent BETWEEN 100 AND 20000),
+        expenses_incl  boolean NOT NULL DEFAULT false,
+        size_m2        integer CHECK (size_m2 IS NULL OR size_m2 BETWEEN 10 AND 2000),
+        bedrooms       integer NOT NULL CHECK (bedrooms BETWEEN 0 AND 20),
+        bathrooms      integer NOT NULL CHECK (bathrooms BETWEEN 1 AND 10),
+        floor          text NOT NULL DEFAULT '',
+        furnished      text NOT NULL,
+        features       text[] NOT NULL DEFAULT '{}',
+        energy_rating  text NOT NULL DEFAULT '',
+        stay_type      text NOT NULL,
+        available_from date,
+        description    text NOT NULL DEFAULT '',
+        published_at   timestamptz,
+        created_at     timestamptz NOT NULL DEFAULT now(),
+        updated_at     timestamptz NOT NULL DEFAULT now()
+      );
+      CREATE INDEX properties_owner_idx ON properties (owner_id);
+      CREATE INDEX properties_public_idx ON properties (status, lower(city), rent);
+
+      CREATE TABLE property_photos (
+        id           uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+        property_id  uuid NOT NULL REFERENCES properties (id) ON DELETE CASCADE,
+        mime         text NOT NULL,
+        data         bytea NOT NULL,
+        width        integer,
+        height       integer,
+        position     double precision NOT NULL DEFAULT 0,
+        created_at   timestamptz NOT NULL DEFAULT now()
+      );
+      CREATE INDEX property_photos_idx ON property_photos (property_id, position);
+
+      -- Una conversación por piso e inquilino.
+      CREATE TABLE conversations (
+        id                uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+        property_id       uuid NOT NULL REFERENCES properties (id) ON DELETE CASCADE,
+        tenant_id         uuid NOT NULL REFERENCES users (id) ON DELETE CASCADE,
+        owner_id          uuid NOT NULL REFERENCES users (id) ON DELETE CASCADE,
+        last_message_at   timestamptz NOT NULL DEFAULT now(),
+        owner_read_at     timestamptz,
+        tenant_read_at    timestamptz,
+        created_at        timestamptz NOT NULL DEFAULT now(),
+        UNIQUE (property_id, tenant_id)
+      );
+      CREATE INDEX conversations_owner_idx ON conversations (owner_id, last_message_at DESC);
+      CREATE INDEX conversations_tenant_idx ON conversations (tenant_id, last_message_at DESC);
+
+      CREATE TABLE messages (
+        id               bigserial PRIMARY KEY,
+        conversation_id  uuid NOT NULL REFERENCES conversations (id) ON DELETE CASCADE,
+        sender_id        uuid NOT NULL REFERENCES users (id) ON DELETE CASCADE,
+        body             text NOT NULL CHECK (length(body) BETWEEN 1 AND 4000),
+        created_at       timestamptz NOT NULL DEFAULT now()
+      );
+      CREATE INDEX messages_conversation_idx ON messages (conversation_id, id);
+    `,
+  },
 ]

@@ -152,6 +152,11 @@ const faqs = [
             <li><AppIcon name="check" :size="18" /> Te explicamos cómo funciona la hucha antes de nada</li>
             <li><AppIcon name="check" :size="18" /> Bolsa de inquilinos verificados en tu zona</li>
           </ul>
+          <div class="publish-now">
+            <strong>¿Prefieres publicarlo ya?</strong>
+            <p class="small">En la beta puedes crear tu cuenta, subir el anuncio con fotos y hablar con inquilinos desde la web, gratis.</p>
+            <NuxtLink to="/cuenta/registro?tipo=propietario" class="btn btn-dark btn-sm">Publicar mi piso</NuxtLink>
+          </div>
         </div>
         <LeadForm role="propietario" />
       </div>
@@ -183,4 +188,6 @@ const faqs = [
 .checklist-banner { margin-top: 24px; display: flex; gap: 16px; align-items: center; padding: 18px 20px; border-radius: 16px; background: var(--lime-soft); color: var(--ink); text-decoration: none; transition: transform 0.15s; }
 .checklist-banner:hover { transform: translateY(-2px); }
 .checklist-banner > span:nth-child(2) { flex: 1; display: grid; gap: 2px; }
+.publish-now { margin-top: 24px; padding: 16px 18px; border: 1px solid var(--line); border-radius: 16px; display: grid; gap: 6px; justify-items: start; }
+.publish-now p { margin: 0 0 4px; color: var(--muted); }
 </style>

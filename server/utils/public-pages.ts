@@ -13,6 +13,7 @@ export const PUBLIC_PAGES: { path: string; priority: string; changefreq: string 
   { path: '/herramientas/simulador-hucha', priority: '0.7', changefreq: 'monthly' },
   { path: '/herramientas/cuanto-alquiler-puedo-pagar', priority: '0.8', changefreq: 'monthly' },
   { path: '/blog', priority: '0.8', changefreq: 'daily' },
+  { path: '/pisos', priority: '0.8', changefreq: 'daily' },
   { path: '/alquilar-mi-piso', priority: '0.8', changefreq: 'monthly' },
   ...CITIES.map(c => ({ path: `/alquilar-mi-piso/${c.slug}`, priority: '0.8', changefreq: 'monthly' })),
 ]

@@ -6,8 +6,10 @@ export const INDEXNOW_KEY = '78a2ae352375f946d2dee5cef69ca5c4'
 export async function publicUrlVersions(): Promise<string[]> {
   const base = `https://${useAppConfig().brand.domain}`
   const posts = await listPosts()
+  const pisos = await query<{ id: string; updatedAt: string }>(`SELECT id, updated_at FROM properties WHERE status = 'publicado'`)
   return [
     ...PUBLIC_PAGES.map(p => `${base}${p.path}`),
+    ...pisos.map(p => `${base}/pisos/${p.id}|${p.updatedAt.slice(0, 16)}`),
     ...posts.map(p => `${base}/blog/${p.slug}|${(p.updatedAt || p.publishedAt).slice(0, 10)}`),
   ]
 }
