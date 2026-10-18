@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const title = 'Checklist 2027 para alquilar tu piso: todo lo que tienes que revisar'
 const description = `${CHECKLIST_TOTAL} comprobaciones para alquilar tu piso sin sorpresas: certificado energético, fianza, contrato LAU, elección del inquilino, IRPF y fin del contrato. Gratis y en PDF.`
-useSeoMeta({ title, description, ogTitle: title, ogDescription: description })
+useSeoMeta({ title, description, ogTitle: title, ogDescription: description, ogImage: 'https://rentahucha.es/og/checklist.png' })
 useHead({
   script: [{
     type: 'application/ld+json',

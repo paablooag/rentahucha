@@ -1,5 +1,6 @@
 <script setup lang="ts">
 useSeoMeta({
+  ogImage: 'https://rentahucha.es/og/ciudades.png',
   title: 'Alquilar mi piso: guías por ciudad para propietarios',
   description: 'Cómo alquilar tu piso en Madrid, Barcelona, Valencia, Sevilla, Málaga, Bilbao y más ciudades: zonas tensionadas, dónde se deposita la fianza y cómo elegir inquilino.',
 })

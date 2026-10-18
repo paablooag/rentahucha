@@ -17,6 +17,12 @@ useSeoMeta({
   ogType: 'website',
   ogLocale: 'es_ES',
   ogUrl: () => canonical.value,
+  // Imagen para enlaces compartidos; las páginas clave usan la suya (public/og, generadas desde /dossier/og).
+  ogImage: `https://${brand.domain}/og/default.png`,
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
+  ogImageAlt: `${brand.name}: inquilinos verificados y una hucha que responde`,
+  twitterCard: 'summary_large_image',
 })
 </script>
 

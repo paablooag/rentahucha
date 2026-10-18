@@ -1,5 +1,6 @@
 <script setup lang="ts">
 useSeoMeta({
+  ogImage: 'https://rentahucha.es/og/propietarios.png',
   title: 'Alquila tu piso a inquilinos verificados',
   description: 'Inquilinos verificados con un incentivo real para pagar y una hucha que, si hay impago, pasa a ti. Contrato, cobros e incidencias en un panel. Desde el 3,5 %.',
 })

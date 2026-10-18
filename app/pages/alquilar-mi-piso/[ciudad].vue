@@ -6,7 +6,7 @@ if (!city) throw createError({ statusCode: 404, statusMessage: 'Ciudad no encont
 const region = REGIONS[city.region]
 const title = `Alquilar mi piso en ${city.name} en 2027: guía para propietarios`
 const description = `Cómo alquilar tu piso en ${city.name}: ${city.tension ? 'zona tensionada y límites de renta' : 'renta, contrato LAU'}, dónde va la fianza en ${region.name}, cómo elegir inquilino y qué hacer si no paga.`
-useSeoMeta({ title, description, ogTitle: title, ogDescription: description })
+useSeoMeta({ title, description, ogTitle: title, ogDescription: description, ogImage: 'https://rentahucha.es/og/ciudades.png' })
 
 const faqs = computed(() => [
   {
