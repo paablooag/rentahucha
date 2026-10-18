@@ -15,7 +15,7 @@ interface Stats {
   devices: { device: string; visitors: number }[]
   events: Record<string, number>
   leads: { propietario: number; inquilino: number; inmobiliaria: number }
-  owners: { visitors: number; totalSignups: number; goal: number }
+  owners: { visitors: number; totalSignups: number; ready: number; talking: number; goal: number }
 }
 
 const days = ref(30)
@@ -37,7 +37,7 @@ const delta = computed(() => {
 })
 
 const maxDay = computed(() => Math.max(1, ...(s.value?.series.map(d => d.visitors) ?? [1])))
-const goalPct = computed(() => Math.min(100, ((s.value?.owners.totalSignups ?? 0) / (s.value?.owners.goal ?? 10)) * 100))
+const goalPct = computed(() => Math.min(100, ((s.value?.owners.ready ?? 0) / (s.value?.owners.goal ?? 10)) * 100))
 const hover = ref<number | null>(null)
 const maxOf = (list: { visitors: number }[]) => Math.max(1, ...list.map(i => i.visitors))
 </script>
@@ -58,8 +58,9 @@ const maxOf = (list: { visitors: number }[]) => Math.max(1, ...list.map(i => i.v
     <div class="top">
       <section class="card goal">
         <span class="label">Objetivo del mes</span>
-        <strong class="big">{{ s.owners.totalSignups }} <small>de {{ s.owners.goal }} propietarios</small></strong>
-        <div class="goal-bar" role="progressbar" :aria-valuenow="s.owners.totalSignups" aria-valuemin="0" :aria-valuemax="s.owners.goal"><span :style="{ width: `${goalPct}%` }" /></div>
+        <strong class="big">{{ s.owners.ready }} <small>de {{ s.owners.goal }} propietarios dispuestos a publicar</small></strong>
+        <div class="goal-bar" role="progressbar" :aria-valuenow="s.owners.ready" aria-valuemin="0" :aria-valuemax="s.owners.goal"><span :style="{ width: `${goalPct}%` }" /></div>
+        <p class="small muted">{{ s.owners.totalSignups }} apuntados en total · {{ s.owners.talking }} en conversación · <NuxtLink to="/admin/interesados">ver embudo</NuxtLink></p>
         <p class="small muted">{{ fmt(s.owners.visitors) }} {{ s.owners.visitors === 1 ? 'visitante vio' : 'visitantes vieron' }} páginas para propietarios en {{ s.days }} días · conversión {{ pct(s.leads.propietario, s.owners.visitors) }}</p>
       </section>
 

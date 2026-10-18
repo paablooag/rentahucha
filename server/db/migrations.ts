@@ -134,4 +134,14 @@ export const MIGRATIONS: { id: number; name: string; sql: string }[] = [
       ALTER TABLE newsletter_subscribers ADD COLUMN source text NOT NULL DEFAULT 'pie';
     `,
   },
+  {
+    id: 6,
+    name: 'seguimiento de interesados',
+    sql: `
+      ALTER TABLE leads ADD COLUMN stage text NOT NULL DEFAULT 'nuevo'
+        CHECK (stage IN ('nuevo', 'contactado', 'conversacion', 'listo', 'descartado'));
+      ALTER TABLE leads ADD COLUMN notes text NOT NULL DEFAULT '';
+      ALTER TABLE leads ADD COLUMN contacted_at timestamptz;
+    `,
+  },
 ]

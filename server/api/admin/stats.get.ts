@@ -35,7 +35,9 @@ export default defineEventHandler(async (event) => {
 
   const totalVisitors = series.reduce((s, d) => s + n(d.visitors), 0)
   const leadsBy = Object.fromEntries(leads.map(l => [l.role, n(l.count)]))
-  const totalOwners = n((await queryOne<{ c: number }>(`SELECT count(*) AS c FROM leads WHERE role = 'propietario'`))?.c)
+  const ownerTotals = await queryOne<{ c: number; ready: number; talking: number }>(
+    `SELECT count(*) AS c, count(*) FILTER (WHERE stage = 'listo') AS ready, count(*) FILTER (WHERE stage = 'conversacion') AS talking FROM leads WHERE role = 'propietario'`,
+  )
 
   return {
     days,
@@ -50,6 +52,6 @@ export default defineEventHandler(async (event) => {
     devices: devices.map(d => ({ device: d.device, visitors: n(d.visitors) })),
     events: Object.fromEntries(events.map(e => [e.event, n(e.count)])),
     leads: { propietario: leadsBy.propietario ?? 0, inquilino: leadsBy.inquilino ?? 0, inmobiliaria: leadsBy.inmobiliaria ?? 0 },
-    owners: { visitors: n(ownerPages?.visitors), totalSignups: totalOwners, goal: 10 },
+    owners: { visitors: n(ownerPages?.visitors), totalSignups: n(ownerTotals?.c), ready: n(ownerTotals?.ready), talking: n(ownerTotals?.talking), goal: 10 },
   }
 })
