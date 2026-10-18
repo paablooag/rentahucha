@@ -8,6 +8,7 @@ export const PUBLIC_PAGES: { path: string; priority: string; changefreq: string 
   { path: '/apuntate', priority: '0.8', changefreq: 'monthly' },
   { path: '/herramientas', priority: '0.7', changefreq: 'monthly' },
   { path: '/herramientas/checklist-alquilar-piso', priority: '0.8', changefreq: 'monthly' },
+  { path: '/herramientas/rentabilidad-alquiler', priority: '0.8', changefreq: 'monthly' },
   { path: '/herramientas/coste-impago', priority: '0.7', changefreq: 'monthly' },
   { path: '/herramientas/simulador-hucha', priority: '0.7', changefreq: 'monthly' },
   { path: '/herramientas/cuanto-alquiler-puedo-pagar', priority: '0.8', changefreq: 'monthly' },
