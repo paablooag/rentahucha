@@ -178,3 +178,5 @@ export const profileCompleteness = (p: TenantProfile | null) => {
   const keys: (keyof TenantProfile)[] = ['employment', 'income', 'household', 'people', 'pets', 'moveDate', 'stay', 'about']
   return Math.round((keys.filter(k => p[k]).length / keys.length) * 100)
 }
+
+export const REPORT_REASONS = ['Me pide dinero antes de la visita', 'Spam o publicidad', 'Acoso o mensajes ofensivos', 'Anuncio falso', 'Otro motivo'] as const

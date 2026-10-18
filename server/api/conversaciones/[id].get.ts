@@ -25,6 +25,7 @@ export default defineEventHandler(async (event) => {
     isOwner,
     serverTime: new Date().toISOString(),
     property: { id: c.propertyId, title: c.propertyTitle, city: c.propertyCity, status: c.propertyStatus },
+    blocked: !!c.blockedAt,
     otherName: isOwner ? c.tenantName : c.ownerName,
     // Hasta cuándo ha leído la otra persona (para el «visto»).
     otherReadAt: isOwner ? c.tenantReadAt : c.ownerReadAt,

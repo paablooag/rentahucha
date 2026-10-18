@@ -264,4 +264,21 @@ export const MIGRATIONS: { id: number; name: string; sql: string }[] = [
       ALTER TABLE messages ADD COLUMN updated_at timestamptz;
     `,
   },
+  {
+    id: 10,
+    name: 'denuncias de conversaciones',
+    sql: `
+      CREATE TABLE reports (
+        id               uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+        conversation_id  uuid NOT NULL REFERENCES conversations (id) ON DELETE CASCADE,
+        reporter_id      uuid NOT NULL REFERENCES users (id) ON DELETE CASCADE,
+        reason           text NOT NULL,
+        details          text NOT NULL DEFAULT '',
+        resolved_at      timestamptz,
+        created_at       timestamptz NOT NULL DEFAULT now()
+      );
+      -- Una conversación bloqueada ya no admite mensajes (la bloquea quien denuncia o el equipo).
+      ALTER TABLE conversations ADD COLUMN blocked_at timestamptz;
+    `,
+  },
 ]

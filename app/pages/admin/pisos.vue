@@ -8,8 +8,9 @@ interface AdminPiso {
   createdAt: string; updatedAt: string; publishedAt: string | null; ownerName: string; ownerEmail: string; ownerPhone: string
   photos: string[]; conversations: number
 }
-const { data, refresh } = await useFetch<{ pisos: AdminPiso[]; usuarios: Record<string, number>; mensajes30: number }>('/api/admin/pisos', {
-  default: () => ({ pisos: [], usuarios: {}, mensajes30: 0 }),
+interface Denuncia { id: string; reason: string; details: string; createdAt: string; resolvedAt: string | null; reporterName: string; reporterEmail: string; propertyTitle: string; ownerEmail: string; tenantEmail: string; messages: { from: string; body: string; at: string }[] }
+const { data, refresh } = await useFetch<{ pisos: AdminPiso[]; usuarios: Record<string, number>; mensajes30: number; denuncias: Denuncia[] }>('/api/admin/pisos', {
+  default: () => ({ pisos: [], usuarios: {}, mensajes30: 0, denuncias: [] }),
 })
 const filter = ref<PropertyStatus | 'todos'>('revision')
 const list = computed(() => data.value.pisos.filter(p => filter.value === 'todos' || p.status === filter.value))
@@ -18,6 +19,11 @@ const openId = ref<string | null>(null)
 const notes = reactive<Record<string, string>>({})
 const date = (d: string) => new Intl.DateTimeFormat('es-ES', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' }).format(new Date(d))
 
+const openReports = computed(() => data.value.denuncias.filter(d => !d.resolvedAt))
+async function resolveReport(d: Denuncia, action: 'resolver' | 'desbloquear') {
+  await $fetch(`/api/admin/denuncias/${d.id}`, { method: 'POST', body: { action } })
+  await refresh()
+}
 async function act(p: AdminPiso, action: 'aprobar' | 'rechazar') {
   try {
     await $fetch(`/api/admin/pisos/${p.id}`, { method: 'POST', body: { action, note: notes[p.id] } })
@@ -35,6 +41,23 @@ async function act(p: AdminPiso, action: 'aprobar' | 'rechazar') {
         <p class="muted">{{ data.usuarios.propietario ?? 0 }} cuentas de propietario · {{ data.usuarios.inquilino ?? 0 }} de inquilino · {{ data.mensajes30 }} mensajes en 30 días</p>
       </div>
     </div>
+
+    <section v-if="openReports.length" class="reports">
+      <h2>Denuncias pendientes ({{ openReports.length }})</h2>
+      <article v-for="d in openReports" :key="d.id" class="card report">
+        <p><strong>{{ d.reason }}</strong> · {{ date(d.createdAt) }} · denuncia {{ d.reporterName }} ({{ d.reporterEmail }})</p>
+        <p class="small muted">Piso: {{ d.propertyTitle }} · propietario {{ d.ownerEmail }} · inquilino {{ d.tenantEmail }}</p>
+        <p v-if="d.details" class="small">«{{ d.details }}»</p>
+        <details class="small"><summary>Últimos mensajes</summary>
+          <p v-for="(m, i) in d.messages" :key="i"><strong>{{ m.from }}:</strong> {{ m.body }}</p>
+        </details>
+        <div class="btns">
+          <button type="button" class="btn btn-dark btn-sm" @click="resolveReport(d, 'resolver')">Resuelta (sigue bloqueada)</button>
+          <button type="button" class="btn btn-ghost btn-sm" @click="resolveReport(d, 'desbloquear')">Resuelta y desbloquear</button>
+        </div>
+        <p class="tiny muted">Solo se leen mensajes para atender la denuncia. Si hay una cuenta que abusa, bórrala o escríbele.</p>
+      </article>
+    </section>
 
     <div class="tabs" role="tablist">
       <button v-for="s in (['revision', 'publicado', 'rechazado', 'borrador', 'pausado', 'alquilado'] as const)" :key="s" type="button" role="tab" :aria-selected="filter === s" :class="{ on: filter === s }" @click="filter = s">
@@ -84,6 +107,10 @@ h1 { font-size: 2.2rem; margin: 0 0 4px; }
 .tabs button span { font-weight: 600; margin-left: 4px; }
 .tabs button.on { background: var(--ink); color: #fff; }
 .list { display: grid; gap: 12px; }
+.reports { margin-bottom: 24px; display: grid; gap: 10px; }
+.reports h2 { font-size: 1.2rem; margin: 0; color: var(--danger); }
+.report { border-color: var(--danger-soft); display: grid; gap: 6px; }
+.report p { margin: 0; }
 .item { padding: 14px; }
 .row-top { display: flex; gap: 14px; align-items: center; cursor: pointer; }
 .thumb { width: 96px; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 10px; flex: none; }

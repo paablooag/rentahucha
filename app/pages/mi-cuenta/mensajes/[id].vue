@@ -9,7 +9,7 @@ interface Msg { id: number; body: string; kind: 'texto' | 'visita'; meta?: { at:
 interface Conv {
   id: string; isOwner: boolean; serverTime: string
   property: { id: string; title: string; city: string; status: string }
-  otherName: string; otherReadAt: string | null; messages: Msg[]
+  otherName: string; otherReadAt: string | null; messages: Msg[]; blocked: boolean
   tenantProfile?: TenantProfile | null; rent?: number
 }
 
@@ -114,6 +114,20 @@ const calendarLink = (at: string) => {
 }
 const STATUS_LABEL: Record<VisitStatus, string> = { propuesta: 'Pendiente de respuesta', aceptada: 'Visita confirmada', rechazada: 'No le viene bien', cancelada: 'Visita cancelada' }
 
+// Denunciar: bloquea la conversación y avisa al equipo.
+const reporting = ref(false)
+const reportReason = ref('')
+const reportDetails = ref('')
+async function report() {
+  if (!conv.value || !reportReason.value) return
+  try {
+    await $fetch(`/api/conversaciones/${conv.value.id}/denunciar`, { method: 'POST', body: { reason: reportReason.value, details: reportDetails.value } })
+    conv.value.blocked = true
+    reporting.value = false
+  }
+  catch (e) { sendError.value = apiError(e).message }
+}
+
 // Perfil del inquilino (solo lo ve el propietario)
 const tp = computed(() => conv.value?.tenantProfile ?? null)
 const ratio = computed(() => {
@@ -147,7 +161,21 @@ const risky = computed(() => /\b(bizum|western union|se[ñn]al|adelanto|iban|es\
             <NuxtLink :to="`/pisos/${conv.property.id}`" class="small muted prop">{{ conv.property.title }} · {{ conv.property.city }}</NuxtLink>
           </div>
           <button v-if="conv.isOwner" type="button" class="btn btn-ghost btn-sm" :aria-expanded="showProfile" @click="showProfile = !showProfile">Perfil</button>
+          <button v-if="!conv.blocked" type="button" class="link small" :aria-expanded="reporting" @click="reporting = !reporting">Denunciar</button>
         </header>
+
+        <form v-if="reporting" class="report" @submit.prevent="report">
+          <p class="small"><strong>Denunciar esta conversación.</strong> La bloquearemos para los dos y la revisará el equipo.</p>
+          <select v-model="reportReason" class="select" required>
+            <option value="" disabled>Motivo…</option>
+            <option v-for="r in REPORT_REASONS" :key="r" :value="r">{{ r }}</option>
+          </select>
+          <textarea v-model="reportDetails" class="input" rows="2" maxlength="1000" placeholder="Cuéntanos qué ha pasado (opcional)" />
+          <div class="v-actions left">
+            <button class="btn btn-sm danger-btn" type="submit" :disabled="!reportReason">Denunciar y bloquear</button>
+            <button type="button" class="link small" @click="reporting = false">Cancelar</button>
+          </div>
+        </form>
 
         <div v-if="conv.isOwner && showProfile" class="profile">
           <template v-if="tp">
@@ -189,7 +217,8 @@ const risky = computed(() => /\b(bizum|western union|se[ñn]al|adelanto|iban|es\
           </template>
         </div>
 
-        <form class="composer" @submit.prevent="send">
+        <div v-if="conv.blocked" class="blocked small">Esta conversación está bloqueada tras una denuncia. Si crees que es un error, escríbenos a {{ useAppConfig().brand.email }}.</div>
+        <form v-else class="composer" @submit.prevent="send">
           <p v-if="risky" class="warn small">Nunca pagues señales ni envíes dinero antes de visitar el piso y comprobar quién es el propietario.</p>
           <p v-if="sendError" class="err small" role="alert">{{ sendError }}</p>
           <div v-if="proposing" class="visit-form">
@@ -253,4 +282,9 @@ header { display: flex; gap: 12px; align-items: center; padding: 14px 18px; bord
 .warn { margin: 0; color: #8a5a00; background: #fff3cd; padding: 6px 10px; border-radius: 8px; }
 .err { margin: 0; color: var(--danger); }
 @media (max-width: 640px) { .chat-section { padding-top: 16px; } .chat { height: calc(100dvh - 190px); } .msg { max-width: 88%; } }
+.report { padding: 12px 18px; border-bottom: 1px solid var(--line); background: #fff8f7; display: grid; gap: 8px; }
+.report p { margin: 0; }
+.v-actions.left { justify-content: flex-start; }
+.danger-btn { background: var(--danger); color: #fff; border-color: var(--danger); }
+.blocked { padding: 14px 18px; border-top: 1px solid var(--line); background: var(--off); color: var(--muted); }
 </style>

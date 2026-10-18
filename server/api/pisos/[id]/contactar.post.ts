@@ -13,6 +13,8 @@ export default defineEventHandler(async (event) => {
      RETURNING id`,
     [p.id, user.id, p.ownerId],
   )
+  const blocked = await queryOne('SELECT 1 FROM conversations WHERE id = $1 AND blocked_at IS NOT NULL', [conv!.id])
+  if (blocked) throw createError({ statusCode: 403, statusMessage: 'Esta conversación está bloqueada.' })
   await query('INSERT INTO messages (conversation_id, sender_id, body) VALUES ($1, $2, $3)', [conv!.id, user.id, body])
   return { conversationId: conv!.id }
 })

@@ -2,6 +2,7 @@ export default defineEventHandler(async (event) => {
   const user = await requireUser(event)
   rateLimit(event, 'message', 120, 10 * 60 * 1000)
   const c = await getConversationFor(user, getRouterParam(event, 'id'))
+  assertNotBlocked(c)
   const body = String((await readBody<{ body?: string }>(event))?.body ?? '').trim().slice(0, 4000)
   if (!body) throw createError({ statusCode: 422, statusMessage: 'Escribe un mensaje.' })
   const isOwner = c.ownerId === user.id

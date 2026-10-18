@@ -3,6 +3,7 @@ export default defineEventHandler(async (event) => {
   const user = await requireUser(event)
   rateLimit(event, 'visit', 30, 60 * 60 * 1000)
   const c = await getConversationFor(user, getRouterParam(event, 'id'))
+  assertNotBlocked(c)
   if (c.propertyStatus === 'alquilado') throw createError({ statusCode: 409, statusMessage: 'Este piso ya está alquilado.' })
   const at = String((await readBody<{ at?: string }>(event))?.at ?? '')
   if (!/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}$/.test(at)) throw createError({ statusCode: 422, statusMessage: 'Elige día y hora.' })
