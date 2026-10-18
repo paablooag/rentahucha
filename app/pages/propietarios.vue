@@ -122,6 +122,11 @@ const faqs = [
           <p class="lead">Rentas perdidas, abogado, reparaciones y meses vacío. Ajusta los valores a tu caso.</p>
         </div>
         <ImpagoCalculator />
+        <NuxtLink to="/herramientas/checklist-alquilar-piso" class="checklist-banner">
+          <span class="icon-chip chip-green"><AppIcon name="file" /></span>
+          <span><strong>¿Vas a alquilar? Descarga gratis la checklist 2027</strong><span class="muted small">{{ CHECKLIST_TOTAL }} comprobaciones: certificado energético, fianza, contrato, IRPF y fin del contrato.</span></span>
+          <AppIcon name="arrow" :size="18" />
+        </NuxtLink>
       </div>
     </section>
 
@@ -174,4 +179,7 @@ const faqs = [
 .second { margin-top: 88px; }
 .signup { display: grid; gap: 48px; align-items: start; }
 @media (min-width: 900px) { .signup { grid-template-columns: 1fr 1fr; } }
+.checklist-banner { margin-top: 24px; display: flex; gap: 16px; align-items: center; padding: 18px 20px; border-radius: 16px; background: var(--lime-soft); color: var(--ink); text-decoration: none; transition: transform 0.15s; }
+.checklist-banner:hover { transform: translateY(-2px); }
+.checklist-banner > span:nth-child(2) { flex: 1; display: grid; gap: 2px; }
 </style>

@@ -1,10 +1,11 @@
 <script setup lang="ts">
 useSeoMeta({
   title: 'Herramientas gratuitas para propietarios e inquilinos',
-  description: 'Calculadoras gratuitas: cuánto alquiler puedes pagar según tu sueldo, cuánto cuesta un impago y cuánto puedes ahorrar con una hucha de garantía.',
+  description: 'Checklist y calculadoras gratuitas: cuánto alquiler puedes pagar según tu sueldo, cuánto cuesta un impago y cuánto puedes ahorrar con una hucha de garantía.',
 })
 
 const tools = [
+  { to: '/herramientas/checklist-alquilar-piso', icon: 'file', tone: 'green', who: 'Propietarios', title: 'Checklist 2027 para alquilar tu piso', text: 'Todo lo que tienes que revisar antes, durante y al final del alquiler. Interactiva y en PDF.' },
   { to: '/herramientas/coste-impago', icon: 'calc', tone: 'green', who: 'Propietarios', title: 'Calculadora del coste de un impago', text: 'Rentas perdidas, abogado, reparaciones y meses vacío: cuánto te puede costar un inquilino que deja de pagar.' },
   { to: '/herramientas/cuanto-alquiler-puedo-pagar', icon: 'euro', tone: 'green', who: 'Inquilinos', title: 'Cuánto alquiler puedo pagar', text: 'Con tu sueldo neto, hasta qué renta tienes más oportunidades de conseguir piso y si el que te gusta encaja.' },
   { to: '/herramientas/simulador-hucha', icon: 'piggy', tone: 'amber', who: 'Inquilinos', title: 'Simulador de la hucha', text: 'Cuánto ahorrarías para la entrada de tu casa pagando el alquiler a tiempo.' },

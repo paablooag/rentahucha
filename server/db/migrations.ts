@@ -127,4 +127,11 @@ export const MIGRATIONS: { id: number; name: string; sql: string }[] = [
       CREATE INDEX pageviews_event_idx ON pageviews (event, ts DESC);
     `,
   },
+  {
+    id: 5,
+    name: 'origen de las altas en la newsletter',
+    sql: `
+      ALTER TABLE newsletter_subscribers ADD COLUMN source text NOT NULL DEFAULT 'pie';
+    `,
+  },
 ]

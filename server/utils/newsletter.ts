@@ -1,7 +1,7 @@
 export interface NewsletterEntry {
   email: string
   name: string
-  source: 'Pie de la web' | 'Formulario propietario' | 'Formulario inquilino' | 'Formulario inmobiliaria'
+  source: 'Pie de la web' | 'Checklist propietarios' | 'Formulario propietario' | 'Formulario inquilino' | 'Formulario inmobiliaria'
   createdAt: string
 }
 
@@ -9,7 +9,7 @@ export interface NewsletterEntry {
 export function listNewsletter(): Promise<NewsletterEntry[]> {
   return query<NewsletterEntry>(`
     WITH todos AS (
-      SELECT email, '' AS name, 'Pie de la web' AS source, created_at FROM newsletter_subscribers
+      SELECT email, '' AS name, CASE source WHEN 'checklist' THEN 'Checklist propietarios' ELSE 'Pie de la web' END AS source, created_at FROM newsletter_subscribers
       UNION ALL
       SELECT email, name, CASE role WHEN 'propietario' THEN 'Formulario propietario' WHEN 'inmobiliaria' THEN 'Formulario inmobiliaria' ELSE 'Formulario inquilino' END, consent_at
       FROM leads WHERE consent_news

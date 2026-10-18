@@ -1,5 +1,5 @@
 <script setup lang="ts">
-defineProps<{ audience: string; title: string; highlight: string; lead: string; stats: { value: string; label: string }[] }>()
+withDefaults(defineProps<{ tag?: string; audience: string; title: string; highlight: string; lead: string; stats: { value: string; label: string }[] }>(), { tag: 'Dossier' })
 const { brand } = useAppConfig()
 const month = new Intl.DateTimeFormat('es-ES', { month: 'long', year: 'numeric' }).format(new Date())
 </script>
@@ -8,7 +8,7 @@ const month = new Intl.DateTimeFormat('es-ES', { month: 'long', year: 'numeric' 
   <section class="d-page dark">
     <div class="d-cover-top">
       <AppLogo light />
-      <span class="d-cover-tag">Dossier · {{ audience }}</span>
+      <span class="d-cover-tag">{{ tag }} · {{ audience }}</span>
     </div>
 
     <div class="d-cover-main">

@@ -6,6 +6,8 @@ export default defineEventHandler(async (event) => {
   const result = validateNewsletter(body ?? {})
   if (!result.ok) throw createError({ statusCode: 422, statusMessage: result.error })
 
-  await query('INSERT INTO newsletter_subscribers (email) VALUES ($1) ON CONFLICT (email) DO NOTHING', [result.email])
+  // Origen del alta: el pie de la web o la checklist para propietarios (a cambio del PDF).
+  const source = body?.source === 'checklist' ? 'checklist' : 'pie'
+  await query('INSERT INTO newsletter_subscribers (email, source) VALUES ($1, $2) ON CONFLICT (email) DO NOTHING', [result.email, source])
   return { ok: true }
 })

@@ -105,6 +105,11 @@ const maxOf = (list: { visitors: number }[]) => Math.max(1, ...list.map(i => i.v
         <strong>{{ s.events.newsletter ?? 0 }}</strong>
         <span class="sub">altas en {{ s.days }} días</span>
       </div>
+      <div class="kpi">
+        <span class="label">Checklist</span>
+        <strong>{{ s.events.checklist ?? 0 }}</strong>
+        <span class="sub">descargas en {{ s.days }} días</span>
+      </div>
     </div>
 
     <!-- Visitantes por día -->

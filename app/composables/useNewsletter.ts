@@ -2,11 +2,11 @@ export function useNewsletter() {
   const pending = ref(false)
   const error = ref<string | null>(null)
 
-  async function subscribe(email: string): Promise<boolean> {
+  async function subscribe(email: string, source?: 'checklist'): Promise<boolean> {
     pending.value = true
     error.value = null
     try {
-      await $fetch('/api/newsletter', { method: 'POST', body: { email, consent: true } })
+      await $fetch('/api/newsletter', { method: 'POST', body: { email, consent: true, source } })
       return true
     }
     catch (e: unknown) {

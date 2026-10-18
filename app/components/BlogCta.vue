@@ -32,7 +32,10 @@ const copy = computed(() => (props.audience === 'inmobiliarias'
       <h3>{{ copy.title }}</h3>
       <p>{{ copy.text }}</p>
     </div>
-    <NuxtLink :to="copy.to" class="btn btn-dark">{{ copy.button }} <AppIcon name="arrow" :size="18" /></NuxtLink>
+    <div class="actions">
+      <NuxtLink :to="copy.to" class="btn btn-dark">{{ copy.button }} <AppIcon name="arrow" :size="18" /></NuxtLink>
+      <NuxtLink v-if="audience === 'propietarios'" to="/herramientas/checklist-alquilar-piso" class="extra">o descarga gratis la checklist 2027 para alquilar tu piso</NuxtLink>
+    </div>
   </aside>
 </template>
 
@@ -44,6 +47,8 @@ const copy = computed(() => (props.audience === 'inmobiliarias'
 h3 { font-size: 1.6rem; font-weight: 500; letter-spacing: -0.03em; margin-bottom: 8px; }
 p { margin: 0; color: #2f2f2f; }
 .compact h3 { font-size: 1.25rem; }
+.actions { display: grid; gap: 10px; justify-items: center; }
+.extra { font-size: 0.85rem; color: var(--ink); text-align: center; }
 .compact .btn { width: 100%; white-space: normal; text-align: center; justify-content: center; }
 @media (max-width: 420px) { .blog-cta { padding: 22px; } }
 </style>

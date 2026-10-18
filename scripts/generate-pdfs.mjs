@@ -11,6 +11,7 @@ const PORT = process.env.PDF_PORT ?? '3999'
 const docs = [
   { route: '/dossier/propietarios', file: 'rentahucha-propietarios.pdf' },
   { route: '/dossier/inquilinos', file: 'rentahucha-inquilinos.pdf' },
+  { route: '/dossier/checklist-propietarios', file: 'rentahucha-checklist-alquilar-piso-2027.pdf' },
 ]
 
 function findBrowser() {
