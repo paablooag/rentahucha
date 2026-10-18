@@ -91,6 +91,11 @@ const onSaved = (p: Property) => { piso.value = p; flash(p.status === 'revision'
         </template>
         <template v-else-if="piso.status === 'publicado'">
           <p>Tu anuncio está publicado. <NuxtLink :to="`/pisos/${piso.id}`">Ver anuncio</NuxtLink></p>
+          <div class="kpis">
+            <span><strong>{{ piso.views30 ?? 0 }}</strong> visitas (30 días)</span>
+            <NuxtLink to="/mi-cuenta/mensajes"><strong>{{ piso.conversations ?? 0 }}</strong> interesados</NuxtLink>
+            <span><strong>{{ piso.favorites ?? 0 }}</strong> lo han guardado</span>
+          </div>
           <div class="row">
             <button type="button" class="btn btn-ghost btn-sm" :disabled="busy" @click="setStatus('pausar')">Pausar</button>
             <button type="button" class="btn btn-dark btn-sm" :disabled="busy" @click="setStatus('alquilado')">Marcar como alquilado</button>
@@ -147,6 +152,9 @@ h1 { font-size: 2rem; margin: 0; }
 .state p { margin: 0; }
 .blockers { margin: 0; padding-left: 20px; }
 .row { display: flex; gap: 8px; flex-wrap: wrap; }
+.kpis { display: flex; gap: 18px; flex-wrap: wrap; font-size: 0.92rem; color: var(--muted); }
+.kpis a { color: var(--muted); }
+.kpis strong { color: var(--ink); font-size: 1.1rem; margin-right: 3px; }
 .photos { margin-bottom: 28px; }
 .photos.highlight { border-color: var(--green); box-shadow: 0 0 0 3px var(--lime-soft); }
 .photos-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; }

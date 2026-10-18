@@ -7,18 +7,24 @@ const COLUMNS = `p.id, p.status, p.review_note, p.title, p.city, p.district, p.a
   COALESCE((SELECT json_agg(json_build_object('id', f.id, 'width', f.width, 'height', f.height) ORDER BY f.position, f.created_at)
             FROM property_photos f WHERE f.property_id = p.id), '[]'::json) AS photos`
 
+// Solo para el propietario: visitas (estadísticas anónimas), conversaciones y favoritos de su anuncio.
+const OWNER_STATS = `,
+  (SELECT count(DISTINCT v.visitor) FROM pageviews v WHERE v.path = '/pisos/' || p.id::text AND v.event = 'view' AND v.ts > now() - interval '30 days')::int AS views30,
+  (SELECT count(*) FROM conversations c WHERE c.property_id = p.id)::int AS conversations,
+  (SELECT count(*) FROM favorites fv WHERE fv.property_id = p.id)::int AS favorites`
+
 type Row = Property & { photos: Property['photos'] | string; ownerName?: string; ownerId?: string }
 // PGlite devuelve el JSON ya parseado; postgres.js también, pero por si acaso.
 const fix = <T extends Row>(r: T) => ({ ...r, photos: typeof r.photos === 'string' ? JSON.parse(r.photos) : r.photos, rent: Number(r.rent) })
 
 export async function listOwnerProperties(ownerId: string): Promise<Property[]> {
-  const rows = await query<Row>(`SELECT ${COLUMNS} FROM properties p WHERE p.owner_id = $1 ORDER BY p.updated_at DESC`, [ownerId])
+  const rows = await query<Row>(`SELECT ${COLUMNS}${OWNER_STATS} FROM properties p WHERE p.owner_id = $1 ORDER BY p.updated_at DESC`, [ownerId])
   return rows.map(fix)
 }
 
 export async function getOwnerProperty(ownerId: string, id: string): Promise<Property> {
   if (!isUuid(id)) throw createError({ statusCode: 404, statusMessage: 'Piso no encontrado' })
-  const row = await queryOne<Row>(`SELECT ${COLUMNS} FROM properties p WHERE p.id = $1 AND p.owner_id = $2`, [id, ownerId])
+  const row = await queryOne<Row>(`SELECT ${COLUMNS}${OWNER_STATS} FROM properties p WHERE p.id = $1 AND p.owner_id = $2`, [id, ownerId])
   if (!row) throw createError({ statusCode: 404, statusMessage: 'Piso no encontrado' })
   return fix(row)
 }
@@ -27,7 +33,7 @@ const PUBLIC = (cols: string) => `SELECT ${cols}, split_part(u.name, ' ', 1) AS 
 
 /** Sin dirección exacta ni notas internas. */
 function toPublic(r: Row): PublicProperty {
-  const { address: _a, reviewNote: _r, ownerId: _o, ...rest } = fix(r)
+  const { address: _a, reviewNote: _r, ownerId: _o, views30: _v, conversations: _c, favorites: _f, ...rest } = fix(r) as Row & { views30?: number; conversations?: number; favorites?: number }
   return { ...rest, ownerName: r.ownerName ?? '' }
 }
 

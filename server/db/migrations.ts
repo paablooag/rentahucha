@@ -228,4 +228,17 @@ export const MIGRATIONS: { id: number; name: string; sql: string }[] = [
       CREATE INDEX messages_conversation_idx ON messages (conversation_id, id);
     `,
   },
+  {
+    id: 8,
+    name: 'favoritos y visitas por anuncio',
+    sql: `
+      CREATE TABLE favorites (
+        user_id      uuid NOT NULL REFERENCES users (id) ON DELETE CASCADE,
+        property_id  uuid NOT NULL REFERENCES properties (id) ON DELETE CASCADE,
+        created_at   timestamptz NOT NULL DEFAULT now(),
+        PRIMARY KEY (user_id, property_id)
+      );
+      CREATE INDEX pageviews_path_idx ON pageviews (path, ts DESC);
+    `,
+  },
 ]

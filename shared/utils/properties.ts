@@ -51,9 +51,13 @@ export interface Property extends PropertyInput {
   publishedAt: string | null
   createdAt: string
   updatedAt: string
+  /** Solo en la vista del propietario. */
+  views30?: number
+  conversations?: number
+  favorites?: number
 }
 
-export type PublicProperty = Omit<Property, 'address' | 'reviewNote'> & { ownerName: string }
+export type PublicProperty = Omit<Property, 'address' | 'reviewNote' | 'views30' | 'conversations' | 'favorites'> & { ownerName: string }
 
 export type PropertyErrors = Partial<Record<keyof PropertyInput, string>>
 

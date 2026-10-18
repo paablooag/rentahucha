@@ -3,7 +3,7 @@ const route = useRoute()
 const { user, refresh } = useAccount()
 await refresh()
 
-const { data, error } = await useFetch<{ property: PublicProperty; conversationId: string | null; isOwner: boolean }>(() => `/api/pisos/${route.params.id}`)
+const { data, error } = await useFetch<{ property: PublicProperty; conversationId: string | null; saved: boolean; isOwner: boolean }>(() => `/api/pisos/${route.params.id}`)
 if (error.value || !data.value) throw createError({ statusCode: 404, statusMessage: 'Piso no encontrado', fatal: true })
 const p = computed(() => data.value!.property)
 
@@ -33,6 +33,13 @@ async function contact() {
   }
   catch (e) { sendError.value = apiError(e).message }
   finally { sending.value = false }
+}
+const saved = ref(data.value!.saved)
+async function toggleSave() {
+  if (!user.value) return navigateTo({ path: '/cuenta/registro', query: { tipo: 'inquilino', next: `/pisos/${p.value.id}` } })
+  saved.value = !saved.value
+  try { saved.value = (await $fetch<{ saved: boolean }>(`/api/favoritos/${p.value.id}`, { method: 'POST' })).saved }
+  catch { saved.value = !saved.value }
 }
 const date = (d: string) => new Intl.DateTimeFormat('es-ES', { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(`${d}T12:00:00`))
 const availableNow = computed(() => !p.value.availableFrom || new Date(`${p.value.availableFrom}T12:00:00`) <= new Date())
@@ -90,7 +97,10 @@ const availableNow = computed(() => !p.value.availableFrom || new Date(`${p.valu
 
         <aside class="side">
           <div class="card contact">
-            <div class="price">{{ formatEuro(p.rent) }}<span>/mes</span></div>
+            <div class="price-row">
+              <div class="price">{{ formatEuro(p.rent) }}<span>/mes</span></div>
+              <button v-if="!data.isOwner" type="button" class="save" :class="{ on: saved }" :aria-pressed="saved" @click="toggleSave">{{ saved ? '♥ Guardado' : '♡ Guardar' }}</button>
+            </div>
             <p class="small muted">Anuncio de {{ p.ownerName }}, particular · revisado por RentaHucha</p>
 
             <template v-if="data.isOwner">
@@ -171,4 +181,7 @@ h2 { font-size: 1.25rem; margin: 24px 0 10px; }
 .tiny { font-size: 0.75rem; margin: 0; }
 .hucha { margin-top: 14px; display: grid; gap: 4px; }
 .hucha p { margin: 0; }
+.price-row { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.save { font: inherit; font-size: 0.88rem; border: 1px solid var(--line); background: #fff; border-radius: 999px; padding: 6px 12px; cursor: pointer; white-space: nowrap; }
+.save.on { background: var(--lime-soft); border-color: var(--green); }
 </style>

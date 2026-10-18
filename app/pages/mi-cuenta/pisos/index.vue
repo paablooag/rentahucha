@@ -32,6 +32,7 @@ const { data: pisos } = await useFetch<Property[]>('/api/mis-pisos', { default: 
             <span class="status" :class="`s-${p.status}`">{{ PROPERTY_STATUS[p.status] }}</span>
             <strong>{{ p.title }}</strong>
             <span class="muted small">{{ p.district ? `${p.district}, ` : '' }}{{ p.city }} · {{ formatEuro(p.rent) }}/mes · {{ p.bedrooms }} hab.</span>
+            <span v-if="p.status === 'publicado' || p.status === 'alquilado'" class="small stats">{{ p.views30 ?? 0 }} visitas en 30 días · {{ p.conversations ?? 0 }} interesados · {{ p.favorites ?? 0 }} guardados</span>
             <span v-if="p.status === 'rechazado' && p.reviewNote" class="note-small">Cambios pedidos: {{ p.reviewNote }}</span>
           </div>
           <span class="go">Editar →</span>
@@ -58,6 +59,7 @@ h1 { font-size: 2.2rem; margin: 0; }
 .s-revision { background: #fff3cd; }
 .s-rechazado { background: var(--danger-soft); color: var(--danger); }
 .s-alquilado { background: #dfe5ff; }
+.stats { color: var(--green); font-weight: 500; }
 .note-small { font-size: 0.85rem; color: var(--danger); }
 .go { font-weight: 600; color: var(--green); white-space: nowrap; }
 @media (max-width: 560px) { .item { flex-wrap: wrap; } .thumb { width: 100%; } .go { display: none; } }
