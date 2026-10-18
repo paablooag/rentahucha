@@ -11,6 +11,7 @@ const links = [
   { to: '/admin/interesados', label: 'Interesados', icon: 'users' },
   { to: '/admin/newsletter', label: 'Newsletter', icon: 'bell' },
   { to: '/admin/blog', label: 'Blog', icon: 'file' },
+  { to: '/admin/tareas', label: 'Tareas', icon: 'check' },
 ]
 
 async function logout() {

@@ -8,7 +8,7 @@ type Seed = Omit<BlogPost, 'updatedAt' | 'published'>
 const D = '2026-10-15'
 const CAT = 'Elecciones 29N'
 
-const NOTA = `> **Actualizado a 15 de octubre de 2026.** Los decretos de vivienda están pendientes de convalidación por la Diputación Permanente del Congreso. Si no se convalidan, decaen. Consulta siempre el BOE para la versión vigente.`
+const NOTA = `> **Actualizado a 18 de octubre de 2026.** Los decretos de vivienda (reales decretos-ley 28/2026 y 29/2026) están pendientes de convalidación por la Diputación Permanente del Congreso. La votación, prevista inicialmente para el 16 de octubre, se ha aplazado al 12 de noviembre según la prensa. Si no se convalidan, decaen. Consulta siempre el BOE y la web del Congreso.`
 
 export const BLOG_SEED_V3_ELECCIONES: Seed[] = [
   {
@@ -149,7 +149,7 @@ ${NOTA}
 
 ## Si el decreto no se convalida
 
-Si el 16 de octubre la Diputación Permanente no lo convalida, la medida decae. Lo que sigue vigente son las prórrogas de la LAU: la obligatoria hasta 5 o 7 años y la tácita de hasta 3 años.`,
+Si la Diputación Permanente no lo convalida (la votación está prevista para el 12 de noviembre), la medida decae. Lo que sigue vigente son las prórrogas de la LAU: la obligatoria hasta 5 o 7 años y la tácita de hasta 3 años.`,
   },
   {
     slug: 'limite-2-por-ciento-subida-alquiler-hasta-2027',
@@ -842,7 +842,8 @@ ${NOTA}
 |---|---|
 | 6-10-2026 | Disolución de las Cortes y convocatoria electoral (RD 806/2026) |
 | 7-10-2026 | Publicación en el BOE de los decretos de vivienda; entra en vigor el de medidas urgentes |
-| 16-10-2026 | Votación prevista de convalidación en la Diputación Permanente |
+| 11-11-2026 | Huelga general por la vivienda (24 horas) |
+| 12-11-2026 | Votación prevista de convalidación en la Diputación Permanente (aplazada desde el 16 de octubre) |
 | 15-11-2026 | Entraría en vigor el decreto de estabilidad de contratos, si se convalida |
 | 29-11-2026 | Elecciones generales |
 | 31-12-2027 | Fin del límite del 2 % y de la congelación por encima del índice |
@@ -855,6 +856,6 @@ ${NOTA}
 - **Preaviso de no renovación**: 4 meses antes del fin, en tu caso (LAU).
 - **Fin de la prórroga obligatoria**: 5 años desde la firma (7 si eres empresa).
 
-Apunta estas fechas en tu calendario y revisa las novedades después de la votación del 16 de octubre.`,
+Apunta estas fechas en tu calendario y revisa las novedades después de la votación prevista para el 12 de noviembre.`,
   },
 ]

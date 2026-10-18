@@ -1,5 +1,6 @@
 import postgres from 'postgres'
 import { MIGRATIONS } from '../db/migrations'
+import { TASKS_SEED } from '../data/tasks-seed'
 import { BLOG_SEED as BLOG_SEED_V1 } from '../data/blog-seed'
 import { BLOG_SEED_V2 } from '../data/blog-seed-v2'
 import { BLOG_SEED_V3_ELECCIONES } from '../data/blog-seed-v3-elecciones'
@@ -13,9 +14,13 @@ import { BLOG_SEED_V5_INQUILINOS } from '../data/blog-seed-v5-inquilinos'
 import { BLOG_SEED_V9_INQUILINOS } from '../data/blog-seed-v9-inquilinos'
 import { BLOG_SEED_V9_PROPIETARIOS } from '../data/blog-seed-v9-propietarios'
 import { BLOG_SEED_V9_INMOBILIARIAS } from '../data/blog-seed-v9-inmobiliarias'
+import { BLOG_SEED_V10_ACTUALIDAD_A } from '../data/blog-seed-v10-actualidad-a'
+import { BLOG_SEED_V10_ACTUALIDAD_B } from '../data/blog-seed-v10-actualidad-b'
 
 // Los nuevos primero: al insertar en orden inverso, el primero de la lista queda como el más reciente.
 const BLOG_SEED = [
+  ...BLOG_SEED_V10_ACTUALIDAD_A,
+  ...BLOG_SEED_V10_ACTUALIDAD_B,
   ...BLOG_SEED_V9_INQUILINOS,
   ...BLOG_SEED_V9_PROPIETARIOS,
   ...BLOG_SEED_V9_INMOBILIARIAS,
@@ -86,7 +91,8 @@ async function migrate(d: Driver) {
 // v7: la hucha la custodia una entidad financiera autorizada; reglas de uso firmadas al inicio.
 // v8: enlace a la calculadora de alquiler según el sueldo.
 // v9: 50 artículos nuevos (20 inquilinos, 18 propietarios, 12 inmobiliarias).
-const BLOG_SEED_VERSION = 9
+// v10: 50 artículos de actualidad (acampadas, huelga del 11-N, decretos el 12-N, Francia, hoteles, Airbnb) y fecha de votación corregida.
+const BLOG_SEED_VERSION = 10
 
 // v6: artículos «2026» como gancho pasan a «2027». Las URLs cambian; las antiguas redirigen con 301 (nuxt.config).
 const BLOG_SLUG_RENAMES: [string, string][] = [
@@ -139,10 +145,25 @@ async function seed(d: Driver) {
   )
 }
 
+// Tareas iniciales del tablero: se cargan una sola vez; después el tablero lo gestiona el panel.
+async function seedTasks(d: Driver) {
+  const done = await d.query(`SELECT 1 FROM app_meta WHERE key = 'tasks_seeded'`)
+  if (done.length) return
+  let position = 0
+  for (const t of TASKS_SEED) {
+    await d.query(
+      'INSERT INTO tasks (title, description, status, owner, priority, area, position) VALUES ($1, $2, $3, $4, $5, $6, $7)',
+      [t.title, t.description, t.status, t.owner, t.priority, t.area, position++],
+    )
+  }
+  await d.query(`INSERT INTO app_meta (key, value) VALUES ('tasks_seeded', '1')`)
+}
+
 async function init(): Promise<Driver> {
   const d = await connect()
   await migrate(d)
   await seed(d)
+  await seedTasks(d)
   return d
 }
 

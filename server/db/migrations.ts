@@ -87,4 +87,23 @@ export const MIGRATIONS: { id: number; name: string; sql: string }[] = [
       ALTER TABLE blog_posts ADD CONSTRAINT blog_posts_audience_check CHECK (audience IN ('propietarios', 'inquilinos', 'inmobiliarias'));
     `,
   },
+  {
+    id: 3,
+    name: 'tablero de tareas',
+    sql: `
+      CREATE TABLE tasks (
+        id           uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+        title        text NOT NULL,
+        description  text NOT NULL DEFAULT '',
+        status       text NOT NULL DEFAULT 'pendiente' CHECK (status IN ('pendiente', 'en_curso', 'esperando', 'hecha')),
+        owner        text NOT NULL DEFAULT 'claude' CHECK (owner IN ('pablo', 'claude')),
+        priority     text NOT NULL DEFAULT 'media' CHECK (priority IN ('alta', 'media', 'baja')),
+        area         text NOT NULL DEFAULT '',
+        position     double precision NOT NULL DEFAULT 0,
+        created_at   timestamptz NOT NULL DEFAULT now(),
+        updated_at   timestamptz NOT NULL DEFAULT now()
+      );
+      CREATE INDEX tasks_board_idx ON tasks (status, position);
+    `,
+  },
 ]

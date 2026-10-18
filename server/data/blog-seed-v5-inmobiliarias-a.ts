@@ -553,7 +553,8 @@ ${CTA}`,
 |---|---|
 | 1-7-2025 | Número de registro obligatorio para anunciar alquileres de corta duración |
 | 7-10-2026 | Publicación de los decretos de vivienda |
-| 16-10-2026 | Votación de convalidación prevista |
+| 11-11-2026 | Huelga general por la vivienda |
+| 12-11-2026 | Votación de convalidación prevista (aplazada desde el 16 de octubre) |
 | 15-11-2026 | Entraría en vigor el decreto de estabilidad de contratos, si se convalida |
 | 29-11-2026 | Elecciones generales |
 | 31-12-2027 | Fin del límite temporal de las subidas, según el decreto |
