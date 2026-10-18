@@ -35,6 +35,8 @@ export default defineNuxtConfig({
     '/inquilinos': { prerender: true },
     '/inmobiliarias': { prerender: true },
     '/herramientas/**': { prerender: true },
+    '/alquilar-mi-piso': { prerender: true },
+    '/alquilar-mi-piso/**': { prerender: true },
     '/dossier/propietarios': { prerender: true },
     '/dossier/inquilinos': { prerender: true },
     '/dossier/checklist-propietarios': { prerender: true },

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { LeadErrors, LeadRole } from '#shared/utils/leads'
 
-const props = withDefaults(defineProps<{ role?: LeadRole; switchable?: boolean }>(), { role: 'propietario', switchable: false })
+const props = withDefaults(defineProps<{ role?: LeadRole; switchable?: boolean; city?: string }>(), { role: 'propietario', switchable: false, city: '' })
 const emit = defineEmits<{ 'update:role': [LeadRole] }>()
 
 const { brand, legal } = useAppConfig()
@@ -16,7 +16,7 @@ const form = reactive({
   name: '',
   email: '',
   phone: '',
-  city: '',
+  city: props.city,
   units: '',
   rentRange: '',
   flatStatus: '',
