@@ -13,7 +13,7 @@ El tablero de tareas del panel (**Admin → Tareas**) es la fuente de verdad del
 
 ## Qué es RentaHucha (no contradecir nunca)
 
-- Plataforma de alquiler de vivienda en toda España, en fase de lista de espera.
+- Plataforma de alquiler de vivienda en toda España, **en beta**: ya se pueden crear cuentas, publicar pisos (con revisión previa), buscarlos y hablar por chat. La hucha, la firma del contrato y los cobros se activan en el lanzamiento: nunca decir que ya funcionan.
 - **Propietarios**: inquilinos verificados, contrato conforme a la LAU, aviso de cada pago, incidencias en un panel y protocolo de impago. Cuota del 5 % de la renta (hasta el 3,5 % con varios pisos).
 - **Inquilinos**: gratis. Aportan cada mes un pequeño porcentaje (≈4 %) a una **hucha a su nombre**, que se llena mes a mes (no es un depósito inicial), con tope de dos mensualidades en vivienda habitual. Se devuelve **íntegra con un 10 % de bonus** si el alquiler termina sin incidencias.
 - La hucha la **custodia una entidad financiera autorizada**; RentaHucha nunca guarda el dinero, solo gestiona las reglas. Reglas firmadas al inicio: impago comprobado → se paga al propietario lo pendiente con el saldo; desperfectos → solo con acuerdo de ambas partes o una resolución.
@@ -29,6 +29,14 @@ El tablero de tareas del panel (**Admin → Tareas**) es la fuente de verdad del
 - No inventar datos, cifras de mercado ni normas: si no hay fuente fiable, no se da la cifra. Actualidad: buscar en la web antes de escribir y citar la fuente.
 - Los años como gancho comercial pueden ser 2027; las fechas reales (decretos, elecciones, BOE) nunca se cambian.
 
+## Mapa de la web
+
+- **Captación**: `/propietarios`, `/inquilinos`, `/inmobiliarias`, `/apuntate` (lista de espera → tabla `leads`), `/valoracion-alquiler` y `/encuesta-alquiler` (→ `form_submissions`), herramientas en `/herramientas/*` (checklist con PDF, test del propietario, generador de anuncios, carta de inquilino, calculadoras), guías por ciudad en `/alquilar-mi-piso/*` (datos en `shared/utils/cities.ts`, con fecha de comprobación), blog en `/blog`.
+- **Plataforma**: cuentas en `/cuenta/*` (sesión `rh-user`), panel de usuario en `/mi-cuenta/*` (pisos, mensajes con visitas, perfil de inquilino, favoritos), buscador público `/pisos`. Fotos en la base de datos (`property_photos`, bytea).
+- **Panel** `/admin/*` (sesión `rh-admin`): estadísticas sin cookies, interesados (mini-CRM), pisos (revisión de anuncios y denuncias), formularios, blog (con IA), tareas.
+- **Correo**: recibir con ImprovMX (hola@ → Gmail de Pablo), enviar con Brevo por SMTP (`server/utils/mail.ts`, plantilla `mailLayout`; avisos en `server/utils/notify.ts`). Vista previa: `/api/admin/correos/<tipo>`. Sin variables `NUXT_SMTP_*` no se envía nada (solo se anota en el registro).
+- SEO: sitemap y robots en `server/routes`, páginas públicas en `server/utils/public-pages.ts`, IndexNow en `server/plugins/indexnow.ts`, imágenes para redes en `public/og` (plantilla `/dossier/og`).
+
 ## Cómo trabajar
 
 - Stack: Nuxt 4 (`~4.4.5`), Nitro, PostgreSQL (PGlite en local), servidor IONOS en 31.70.158.20.
@@ -37,7 +45,21 @@ El tablero de tareas del panel (**Admin → Tareas**) es la fuente de verdad del
 - Cambios de esquema: nueva migración al final de `server/db/migrations.ts`.
 - PDF de los dossieres: `npm run build:all` (usa Playwright).
 - Commits en español y **sin ninguna atribución a Claude** (ni Co-Authored-By ni «Generated with»).
-- Nunca subir `.env`, `.data` ni secretos.
+- Nunca subir `.env`, `.data` ni secretos. **El repositorio es público**: nada de datos personales, contraseñas, ni mensajes de captación o estrategia (eso va al tablero del panel).
+- Legal: si una función nueva trata datos personales, actualizar `app/pages/legal/[slug].vue` (privacidad, cookies, condiciones).
+
+### Trampas conocidas
+
+- En Nuxt 4, `useFetch` no es reactivo en profundidad: si se modifican arrays u objetos de `data` en sitio (p. ej. añadir mensajes), usar `{ deep: true }` o reasignar.
+- Las constantes de `shared/utils` a veces no se autoimportan en rutas del servidor: si sale «X is not defined», importar explícitamente desde `#shared/utils/...`.
+- Los composables (`useAccount`, `useState`…) solo dentro de `setup`, nunca dentro de un manejador de eventos.
+- Tras crear una página o exportación nueva, si el servidor de desarrollo da 404 o no la ve, reiniciarlo.
+
+### Desde Claude Code en la web (claude.ai/code)
+
+- No hay acceso al panel, a la base de datos de producción ni al servidor: se trabaja sobre el código. Lo pendiente está en `docs/backlog.md`; lo que dependa de datos del panel, pedírselo a Pablo.
+- Trabajar en una rama y, cuando el cambio esté probado (`npx nuxt build` sin errores como mínimo), fusionar en `main`, o subir directamente a `main` si Pablo lo pide: el despliegue es automático.
+- Al terminar, actualizar `docs/backlog.md` y contarle a Pablo qué ha cambiado y qué necesita de él.
 
 ## Autonomía
 
