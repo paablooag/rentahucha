@@ -61,6 +61,8 @@ const pages: Record<string, { title: string; updated: string; blocks: Block[] }>
           'En ambos casos, opcionalmente, qué te interesa del servicio y tus comentarios. No pedimos DNI, ingresos, nóminas ni documentos.',
           'Los usamos para avisarte del lanzamiento, darte prioridad para dar de alta tu piso o crear tu pasaporte de inquilino, y analizar de forma agregada el interés en el servicio (cuánta gente lo quiere, en qué ciudades y qué le importa).',
           'Newsletter: tu correo electrónico, para enviarte novedades del servicio y consejos sobre alquiler. Solo si marcas esa casilla.',
+          'Valoración del alquiler: tu nombre, correo, teléfono si lo das y los datos del piso que nos cuentas, para enviarte la valoración y hablar contigo sobre ella.',
+          'Encuesta: tus respuestas, que se guardan sin nombre y se muestran solo de forma agregada. Si dejas tu correo y marcas la casilla, lo usamos para enviarte el informe y novedades.',
           'Cuenta de usuario: nombre, correo, teléfono si lo das y tu contraseña cifrada (nunca la guardamos en claro). La usamos para que puedas entrar, publicar anuncios o escribir a propietarios.',
           'Anuncios: los datos del piso que publicas y sus fotos. La dirección exacta no se muestra en público; del anunciante solo se muestra el nombre de pila. Revisamos cada anuncio antes de publicarlo.',
           'Mensajes: lo que os escribís propietario e inquilino a través de la web, para que podáis hablar sin dar vuestro teléfono o correo. Solo lo ven las dos partes; el equipo solo accede si hay que atender una denuncia de abuso o una obligación legal.',
@@ -81,7 +83,7 @@ const pages: Record<string, { title: string; updated: string; blocks: Block[] }>
       },
       {
         h: 'Cuánto tiempo los conservamos',
-        p: ['Lista de espera: hasta el lanzamiento y, como máximo, 24 meses desde que te apuntas. Newsletter: hasta que te des de baja. Cuenta, anuncios y mensajes: mientras tengas la cuenta; puedes borrarla tú mismo desde «Mi cuenta» y se eliminan con ella tus anuncios, fotos y conversaciones.'],
+        p: ['Lista de espera: hasta el lanzamiento y, como máximo, 24 meses desde que te apuntas. Newsletter: hasta que te des de baja. Valoraciones del alquiler: 12 meses desde que la pides. Encuesta: las respuestas, anónimas y sin límite; el correo, hasta que te des de baja. Cuenta, anuncios y mensajes: mientras tengas la cuenta; puedes borrarla tú mismo desde «Mi cuenta» y se eliminan con ella tus anuncios, fotos y conversaciones.'],
       },
       {
         h: 'Tus derechos',

@@ -113,6 +113,16 @@ const maxOf = (list: { visitors: number }[]) => Math.max(1, ...list.map(i => i.v
         <strong>{{ s.events.checklist ?? 0 }}</strong>
         <span class="sub">descargas en {{ s.days }} días</span>
       </div>
+      <div class="kpi">
+        <span class="label">Valoraciones</span>
+        <strong>{{ s.events.valoracion ?? 0 }}</strong>
+        <span class="sub"><NuxtLink to="/admin/formularios">pedidas en {{ s.days }} días</NuxtLink></span>
+      </div>
+      <div class="kpi">
+        <span class="label">Herramientas usadas</span>
+        <strong>{{ (s.events.test ?? 0) + (s.events.anuncio_generado ?? 0) + (s.events.carta_generada ?? 0) + (s.events.encuesta ?? 0) }}</strong>
+        <span class="sub">test {{ s.events.test ?? 0 }} · anuncios {{ s.events.anuncio_generado ?? 0 }} · cartas {{ s.events.carta_generada ?? 0 }} · encuesta {{ s.events.encuesta ?? 0 }}</span>
+      </div>
     </div>
 
     <!-- Visitantes por día -->

@@ -34,11 +34,25 @@ async function submit() {
   }
   finally { pending.value = false }
 }
+// Borrador del generador de anuncios (/herramientas/generador-anuncio), solo al crear un piso nuevo.
+const fromDraft = ref(false)
+onMounted(() => {
+  if (props.initial) return
+  try {
+    const raw = localStorage.getItem('rh-draft-anuncio')
+    if (!raw) return
+    Object.assign(form, JSON.parse(raw))
+    localStorage.removeItem('rh-draft-anuncio')
+    fromDraft.value = true
+  }
+  catch {}
+})
 const err = (k: keyof PropertyInput) => ({ 'aria-invalid': !!errors.value[k] })
 </script>
 
 <template>
   <form class="pf" novalidate @submit.prevent="submit">
+    <p v-if="fromDraft" class="note note-green small draft">Hemos rellenado el anuncio con lo que pusiste en el generador. Revísalo, guárdalo y sube las fotos.</p>
     <fieldset>
       <legend>Lo básico</legend>
       <div class="field full">
@@ -146,6 +160,7 @@ const err = (k: keyof PropertyInput) => ({ 'aria-invalid': !!errors.value[k] })
 
 <style scoped>
 .pf { display: grid; gap: 24px; }
+.draft { margin: 0; }
 fieldset { border: 1px solid var(--line); border-radius: 18px; padding: 20px; margin: 0; display: grid; gap: 16px; grid-template-columns: 1fr 1fr; background: #fff; }
 fieldset > * { min-width: 0; }
 legend { font-weight: 600; padding: 0 6px; }

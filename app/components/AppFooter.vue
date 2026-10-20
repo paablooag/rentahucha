@@ -36,7 +36,9 @@ const dossiers = [
       <div>
         <h4>Propietarios</h4>
         <NuxtLink to="/propietarios">Alquilar mi piso</NuxtLink>
+        <NuxtLink to="/valoracion-alquiler">Valoración gratis</NuxtLink>
         <NuxtLink to="/alquilar-mi-piso">Guías por ciudad</NuxtLink>
+        <NuxtLink to="/herramientas/generador-anuncio">Generador de anuncios</NuxtLink>
         <NuxtLink to="/herramientas/checklist-alquilar-piso">Checklist para alquilar</NuxtLink>
         <NuxtLink to="/herramientas/rentabilidad-alquiler">Rentabilidad del alquiler</NuxtLink>
         <NuxtLink to="/herramientas/coste-impago">Coste de un impago</NuxtLink>
@@ -45,7 +47,9 @@ const dossiers = [
       <div>
         <h4>Inquilinos</h4>
         <NuxtLink to="/inquilinos">Alquilar sin aval</NuxtLink>
+        <NuxtLink to="/pisos">Pisos en alquiler</NuxtLink>
         <NuxtLink to="/herramientas/cuanto-alquiler-puedo-pagar">Cuánto alquiler puedo pagar</NuxtLink>
+        <NuxtLink to="/herramientas/carta-inquilino">Carta de presentación</NuxtLink>
         <NuxtLink to="/herramientas/simulador-hucha">Simulador de la hucha</NuxtLink>
         <NuxtLink to="/pasaporte/demo">Pasaporte de inquilino</NuxtLink>
       </div>

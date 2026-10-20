@@ -281,4 +281,26 @@ export const MIGRATIONS: { id: number; name: string; sql: string }[] = [
       ALTER TABLE conversations ADD COLUMN blocked_at timestamptz;
     `,
   },
+  {
+    id: 11,
+    name: 'formularios: valoración del alquiler y encuesta',
+    sql: `
+      CREATE TABLE form_submissions (
+        id            uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+        kind          text NOT NULL CHECK (kind IN ('valoracion', 'encuesta')),
+        name          text NOT NULL DEFAULT '',
+        email         text NOT NULL DEFAULT '',
+        phone         text NOT NULL DEFAULT '',
+        city          text NOT NULL DEFAULT '',
+        data          jsonb NOT NULL DEFAULT '{}',
+        consent_news  boolean NOT NULL DEFAULT false,
+        consent_at    timestamptz,
+        consent_text  text NOT NULL DEFAULT '',
+        status        text NOT NULL DEFAULT 'nuevo' CHECK (status IN ('nuevo', 'respondido', 'descartado')),
+        notes         text NOT NULL DEFAULT '',
+        created_at    timestamptz NOT NULL DEFAULT now()
+      );
+      CREATE INDEX form_submissions_kind_idx ON form_submissions (kind, created_at DESC);
+    `,
+  },
 ]

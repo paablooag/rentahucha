@@ -34,7 +34,8 @@ const copy = computed(() => (props.audience === 'inmobiliarias'
     </div>
     <div class="actions">
       <NuxtLink :to="copy.to" class="btn btn-dark">{{ copy.button }} <AppIcon name="arrow" :size="18" /></NuxtLink>
-      <NuxtLink v-if="audience === 'propietarios'" to="/herramientas/checklist-alquilar-piso" class="extra">o descarga gratis la checklist 2027 para alquilar tu piso</NuxtLink>
+      <NuxtLink v-if="audience === 'propietarios'" to="/valoracion-alquiler" class="extra">o pide gratis la valoración del alquiler de tu piso</NuxtLink>
+      <NuxtLink v-else-if="audience === 'inquilinos'" to="/herramientas/carta-inquilino" class="extra">o prepara tu carta de presentación para el propietario</NuxtLink>
     </div>
   </aside>
 </template>

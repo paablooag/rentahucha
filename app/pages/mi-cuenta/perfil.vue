@@ -11,6 +11,20 @@ const saved = ref(false)
 const error = ref('')
 const pct = computed(() => profileCompleteness(form))
 
+// Borrador de la carta de presentación (/herramientas/carta-inquilino): rellena lo que esté vacío.
+const fromDraft = ref(false)
+onMounted(() => {
+  try {
+    const raw = localStorage.getItem('rh-draft-perfil')
+    if (!raw) return
+    const d = JSON.parse(raw) as Partial<TenantProfile>
+    for (const [k, v] of Object.entries(d)) if (v && !form[k as keyof TenantProfile]) (form as Record<string, unknown>)[k] = v
+    localStorage.removeItem('rh-draft-perfil')
+    fromDraft.value = true
+  }
+  catch {}
+})
+
 async function save() {
   pending.value = true
   error.value = ''
@@ -31,6 +45,7 @@ async function save() {
       <h1>Mi perfil de inquilino</h1>
       <p class="muted intro">Los propietarios a los que escribas verán este perfil junto a tus mensajes. Un perfil completo recibe más respuestas. Nadie más lo ve.</p>
 
+      <p v-if="fromDraft" class="note note-green small">Hemos rellenado tu perfil con la carta de presentación. Revísalo y pulsa «Guardar perfil».</p>
       <div class="progress">
         <span>Perfil completo al {{ pct }} %</span>
         <div class="bar"><span :style="{ width: `${pct}%` }" /></div>

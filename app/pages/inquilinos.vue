@@ -68,6 +68,7 @@ const faqs = [
         </div>
         <HuchaSimulator />
         <p class="more-tool"><NuxtLink to="/herramientas/cuanto-alquiler-puedo-pagar">¿No sabes cuánto alquiler puedes pagar? Calcúlalo con tu sueldo <AppIcon name="arrow" :size="16" /></NuxtLink></p>
+        <p class="more-tool"><NuxtLink to="/herramientas/carta-inquilino">Prepara tu carta de presentación para el propietario <AppIcon name="arrow" :size="16" /></NuxtLink></p>
       </div>
     </section>
 

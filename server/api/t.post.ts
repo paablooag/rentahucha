@@ -5,7 +5,7 @@ import { createHash } from 'node:crypto'
 // visitantes únicos del día, pero no permite seguir a nadie entre días ni recuperar la IP (que no se guarda).
 
 const BOTS = /bot|crawl|spider|slurp|bing|google|yandex|baidu|duckduck|facebookexternalhit|preview|headless|lighthouse|monitor|curl|wget|python|axios|node-fetch/i
-const EVENTS = new Set(['view', 'lead_propietario', 'lead_inquilino', 'lead_inmobiliaria', 'newsletter', 'checklist', 'cta'])
+const EVENTS = new Set(['view', 'lead_propietario', 'lead_inquilino', 'lead_inmobiliaria', 'newsletter', 'checklist', 'cta', 'valoracion', 'test', 'encuesta', 'anuncio_generado', 'carta_generada'])
 
 function dailySalt() {
   const day = new Date().toISOString().slice(0, 10)
