@@ -157,6 +157,9 @@ const maxOf = (list: { visitors: number }[]) => Math.max(1, ...list.map(i => i.v
       </details>
     </section>
 
+    <!-- Comportamiento: tiempo, recorridos, entradas y salidas -->
+    <AdminBehavior :days="days" />
+
     <!-- Listas -->
     <div class="lists">
       <section class="card">
@@ -240,7 +243,7 @@ h1 { font-size: 2.2rem; margin-bottom: 4px; }
 .axis { display: flex; justify-content: space-between; margin-top: 6px; }
 .table-view { margin-top: 12px; font-size: 0.9rem; }
 .table-view summary { cursor: pointer; color: var(--muted); }
-.lists { display: grid; gap: 14px; }
+.lists { display: grid; gap: 14px; margin-top: 28px; }
 @media (min-width: 900px) { .lists { grid-template-columns: 1.3fr 1fr; } }
 .mt { margin-top: 20px !important; }
 .rank { list-style: none; padding: 0; margin: 0; display: grid; gap: 4px; }

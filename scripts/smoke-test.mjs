@@ -101,6 +101,12 @@ r = await admin('/api/admin/captacion', { method: 'POST', body: { company: `Inmo
 check(r.status === 200 && r.json?.added === 1, `alta en captación → ${r.status}`)
 r = await admin('/api/admin/stats?dias=7')
 check(r.status === 200 && typeof r.json?.today?.visitors === 'number', `estadísticas → ${r.status}`)
+r = await admin('/api/admin/comportamiento?dias=7')
+check(r.status === 200 && r.json?.summary, `comportamiento → ${r.status}`)
+r = await admin('/api/admin/mapa-calor?dias=7')
+check(r.status === 200 && Array.isArray(r.json?.clicks), `mapa de calor → ${r.status}`)
+r = await anon('/api/t', { method: 'POST', body: { e: 'view', p: '/', v: 'prueba', s: 1, w: 1280 } })
+check(r.status === 200, `seguimiento → ${r.status}`)
 
 console.log(failures ? `\n${failures} comprobaciones fallidas` : '\nTodo correcto')
 process.exit(failures ? 1 : 0)

@@ -136,7 +136,7 @@ const pages: Record<string, { title: string; updated: string; blocks: Block[] }>
     blocks: [
       {
         h: 'Esta web no usa cookies de seguimiento',
-        p: ['No instalamos cookies de análisis, de publicidad ni de redes sociales, ni propias ni de terceros. Por eso no te mostramos un aviso de cookies.', 'Para saber qué páginas se visitan, contamos las visitas de forma agregada y anónima: sin cookies, sin guardar nada en tu dispositivo y sin guardar tu dirección IP. Cada visita se asocia a una huella que cambia cada día y no permite identificarte ni seguirte de un día para otro.'],
+        p: ['No instalamos cookies de análisis, de publicidad ni de redes sociales, ni propias ni de terceros. Por eso no te mostramos un aviso de cookies.', 'Para saber qué páginas se visitan, contamos las visitas de forma agregada y anónima: sin cookies, sin guardar nada en tu dispositivo y sin guardar tu dirección IP. Cada visita se asocia a una huella que cambia cada día y no permite identificarte ni seguirte de un día para otro.', 'Para mejorar la web medimos también, de forma anónima, cuánto tiempo está visible cada página, hasta dónde se baja, el orden de las páginas dentro de una misma visita (con un identificador que solo existe en la memoria de la pestaña y desaparece al cerrarla o recargarla) y dónde se hace clic (la posición en la página y el texto del botón o enlace pulsado). Nunca registramos lo que escribes en los formularios.'],
       },
       {
         h: 'Cookie técnica de tu cuenta',

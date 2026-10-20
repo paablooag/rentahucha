@@ -389,4 +389,30 @@ export const MIGRATIONS: { id: number; name: string; sql: string }[] = [
       ALTER TABLE conversations ADD COLUMN owner_reminded_at timestamptz;
     `,
   },
+  {
+    id: 16,
+    name: 'estadísticas de comportamiento: tiempo, recorridos y mapa de calor',
+    sql: `
+      -- visit: identificador aleatorio que solo vive en la memoria de la pestaña (no se guarda en el dispositivo);
+      -- seq: orden de la página dentro de la visita; duration_ms: tiempo visible; max_scroll: % de la página recorrido.
+      ALTER TABLE pageviews ADD COLUMN visit text;
+      ALTER TABLE pageviews ADD COLUMN seq integer;
+      ALTER TABLE pageviews ADD COLUMN duration_ms integer;
+      ALTER TABLE pageviews ADD COLUMN max_scroll smallint;
+      CREATE INDEX pageviews_visit_idx ON pageviews (visit, seq);
+      CREATE INDEX pageviews_path_ts_idx ON pageviews (path, ts DESC);
+
+      -- Clics para el mapa de calor: posición relativa (0-1000) en la página, sin nada de lo que se escribe.
+      CREATE TABLE page_clicks (
+        id      bigserial PRIMARY KEY,
+        ts      timestamptz NOT NULL DEFAULT now(),
+        path    text NOT NULL,
+        device  text NOT NULL,
+        x       smallint NOT NULL,
+        y       smallint NOT NULL,
+        target  text NOT NULL DEFAULT ''
+      );
+      CREATE INDEX page_clicks_path_idx ON page_clicks (path, device, ts DESC);
+    `,
+  },
 ]
