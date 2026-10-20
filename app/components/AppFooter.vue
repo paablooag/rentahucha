@@ -48,6 +48,7 @@ const dossiers = [
         <h4>Inquilinos</h4>
         <NuxtLink to="/inquilinos">Alquilar sin aval</NuxtLink>
         <NuxtLink to="/pisos">Pisos en alquiler</NuxtLink>
+        <NuxtLink to="/alquiler">Alquiler por ciudad</NuxtLink>
         <NuxtLink to="/herramientas/cuanto-alquiler-puedo-pagar">Cuánto alquiler puedo pagar</NuxtLink>
         <NuxtLink to="/herramientas/carta-inquilino">Carta de presentación</NuxtLink>
         <NuxtLink to="/herramientas/simulador-hucha">Simulador de la hucha</NuxtLink>

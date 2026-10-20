@@ -22,6 +22,10 @@ export const REGIONS = {
   murcia: { name: 'Región de Murcia', deposit: null },
   navarra: { name: 'Navarra', deposit: null },
   euskadi: { name: 'País Vasco', deposit: 'el Servicio Vasco de Vivienda' },
+  cantabria: { name: 'Cantabria', deposit: null },
+  clm: { name: 'Castilla-La Mancha', deposit: 'la Dirección General de Vivienda y Urbanismo de Castilla-La Mancha' },
+  extremadura: { name: 'Extremadura', deposit: null },
+  larioja: { name: 'La Rioja', deposit: null },
 } satisfies Record<string, Region>
 
 export type RegionId = keyof typeof REGIONS
@@ -141,6 +145,79 @@ export const CITIES: City[] = [
     intro: 'Córdoba tiene un mercado de alquiler tranquilo, con inquilinos que suelen buscar quedarse. Un piso cuidado y un precio realista son tu mejor anuncio.',
     tips: ['En Andalucía, según el Ministerio, ahora mismo no hay que depositar la fianza en un organismo público. Sigue siendo obligatoria: la guardas tú.', 'Pide siempre ingresos acreditados, aunque el candidato te dé buena impresión en la visita.'],
   },
+  ...moreCities(),
 ]
+
+// Ciudades añadidas el 20-10-2026 con los mismos datos oficiales (comprobados el 18-10-2026).
+// El consejo sobre la fianza se genera a partir de la comunidad para que no se desalinee de REGIONS.
+function moreCities(): City[] {
+  const CAT_TENSION = { scope: 'todo el municipio', until: '16 de marzo de 2027' }
+  const depositTip = (r: RegionId) => {
+    const reg: Region = REGIONS[r]
+    return reg.deposit
+      ? `La fianza se deposita en ${reg.deposit}: hazlo en plazo y guarda el justificante.`
+      : `En ${reg.name}, según el Ministerio, ahora mismo no hay obligación de depositar la fianza en un organismo público. Sigue siendo obligatoria: la guardas tú y la devuelves al final.`
+  }
+  const c = (slug: string, name: string, region: RegionId, tension: City['tension'], intro: string, tip: string): City => ({ slug, name, region, tension, intro, tips: [depositTip(region), tip] })
+  const TENSION_TIP = 'Ten a mano el contrato anterior del piso si lo has alquilado en los últimos cinco años: es la referencia para fijar la nueva renta.'
+  const INCOME_TIP = 'Pide siempre ingresos acreditados, aunque el candidato te dé buena impresión en la visita.'
+  const PRICE_TIP = 'Un precio ajustado a pisos parecidos de tu barrio reduce los meses vacíos, que suelen costar más que bajar un poco la renta.'
+
+  return [
+    // Comunidad de Madrid
+    c('alcala-de-henares', 'Alcalá de Henares', 'madrid', null, 'Alcalá de Henares combina demanda de familias, trabajadores que se desplazan a Madrid y estudiantes de su universidad. Define bien a quién alquilas antes de anunciar.', STUDENTS),
+    c('mostoles', 'Móstoles', 'madrid', null, 'Móstoles es una de las grandes ciudades del sur de Madrid, con mucha demanda de familias y de quien busca precios más contenidos que en la capital.', INCOME_TIP),
+    c('getafe', 'Getafe', 'madrid', null, 'Getafe tiene demanda estable de trabajadores y familias, con buena conexión con Madrid. Un contrato de larga duración con un inquilino solvente da tranquilidad.', PRICE_TIP),
+    c('leganes', 'Leganés', 'madrid', null, 'En Leganés alquilan sobre todo familias y trabajadores del sur de Madrid. Elegir bien al inquilino importa más que alquilar el primer día.', INCOME_TIP),
+    c('alcorcon', 'Alcorcón', 'madrid', null, 'Alcorcón atrae a quien trabaja en Madrid y busca un piso más asequible bien comunicado. La demanda es constante: tómate tu tiempo para elegir.', PRICE_TIP),
+    c('fuenlabrada', 'Fuenlabrada', 'madrid', null, 'Fuenlabrada tiene un mercado de alquiler de familias que buscan estabilidad. Un buen inventario con fotos te ahorra discusiones al final del contrato.', INCOME_TIP),
+    // Cataluña (zona tensionada según la resolución de 14-3-2024)
+    c('lhospitalet-de-llobregat', "L'Hospitalet de Llobregat", 'cataluna', CAT_TENSION, "L'Hospitalet de Llobregat es zona de mercado residencial tensionado. Antes de poner precio, revisa qué límite de renta se aplica a tu piso.", OWN_RULES_CAT),
+    c('badalona', 'Badalona', 'cataluna', CAT_TENSION, 'Badalona es zona de mercado residencial tensionado, con mucha demanda de quien trabaja en Barcelona. La renta de un contrato nuevo tiene límites.', OWN_RULES_CAT),
+    c('terrassa', 'Terrassa', 'cataluna', CAT_TENSION, 'Terrassa es zona de mercado residencial tensionado. Antes de anunciar, comprueba la renta del contrato anterior y la normativa catalana.', TENSION_TIP),
+    c('sabadell', 'Sabadell', 'cataluna', CAT_TENSION, 'Sabadell es zona de mercado residencial tensionado y una de las grandes ciudades del Vallès, con demanda constante de vivienda habitual.', TENSION_TIP),
+    c('tarragona', 'Tarragona', 'cataluna', CAT_TENSION, 'Tarragona es zona de mercado residencial tensionado. Si alquilas por temporada o como vivienda habitual, las reglas cambian: decídelo antes de anunciar.', SHORT_STAY),
+    c('girona', 'Girona', 'cataluna', CAT_TENSION, 'Girona es zona de mercado residencial tensionado y ciudad universitaria. Ten claro si alquilas vivienda habitual o por curso.', STUDENTS),
+    c('lleida', 'Lleida', 'cataluna', CAT_TENSION, 'Lleida es zona de mercado residencial tensionado. Antes de fijar la renta de un contrato nuevo, revisa la del anterior.', TENSION_TIP),
+    c('mataro', 'Mataró', 'cataluna', CAT_TENSION, 'Mataró es zona de mercado residencial tensionado, con demanda de quien trabaja en el área de Barcelona y busca costa.', OWN_RULES_CAT),
+    c('reus', 'Reus', 'cataluna', CAT_TENSION, 'Reus es zona de mercado residencial tensionado. La renta de un contrato nuevo tiene límites: compruébalos antes de anunciar.', TENSION_TIP),
+    c('sant-cugat-del-valles', 'Sant Cugat del Vallès', 'cataluna', CAT_TENSION, 'Sant Cugat del Vallès es zona de mercado residencial tensionado, con mucha demanda de familias. Antes de poner precio, revisa los límites aplicables.', OWN_RULES_CAT),
+    // Comunitat Valenciana
+    c('elche', 'Elche', 'valencia', null, 'Elche tiene un mercado de alquiler amplio, con demanda de familias, trabajadores y estudiantes universitarios.', STUDENTS),
+    c('castellon-de-la-plana', 'Castellón de la Plana', 'valencia', null, 'Castellón de la Plana tiene un mercado de alquiler tranquilo y estable. Un piso cuidado y bien presentado se alquila antes.', PRICE_TIP),
+    c('benidorm', 'Benidorm', 'valencia', null, 'En Benidorm el alquiler de vivienda habitual compite con el turístico. Un contrato largo con un inquilino solvente te da ingresos todo el año.', SHORT_STAY),
+    // Andalucía
+    c('almeria', 'Almería', 'andalucia', null, 'Almería tiene demanda de familias, trabajadores y estudiantes. Pide ingresos acreditados y deja todo por escrito.', INCOME_TIP),
+    c('cadiz', 'Cádiz', 'andalucia', null, 'En Cádiz la vivienda habitual compite con el alquiler turístico y de temporada. Decide qué tipo de alquiler quieres antes de anunciar.', SHORT_STAY),
+    c('jerez-de-la-frontera', 'Jerez de la Frontera', 'andalucia', null, 'Jerez de la Frontera tiene un mercado de alquiler estable, con inquilinos que buscan quedarse. Cuida el inventario con fotos al firmar.', INCOME_TIP),
+    c('huelva', 'Huelva', 'andalucia', null, 'Huelva tiene un mercado de alquiler tranquilo. Un precio realista y un piso cuidado son tu mejor anuncio.', PRICE_TIP),
+    c('marbella', 'Marbella', 'andalucia', null, 'En Marbella conviven el alquiler de larga duración, el de temporada y el turístico. Para vivienda habitual, elige un inquilino solvente y contrato LAU.', SHORT_STAY),
+    c('jaen', 'Jaén', 'andalucia', null, 'Jaén tiene un mercado de alquiler estable, con demanda de familias, funcionarios y estudiantes.', STUDENTS),
+    // País Vasco y Navarra
+    c('barakaldo', 'Barakaldo', 'euskadi', { scope: 'todo el municipio', until: '1 de mayo de 2028' }, 'Barakaldo es zona de mercado residencial tensionado desde mayo de 2025. La renta de un contrato nuevo tiene límites: revisa la del contrato anterior.', TENSION_TIP),
+    c('irun', 'Irun', 'euskadi', { scope: 'todo el municipio', until: '1 de mayo de 2028' }, 'Irun es zona de mercado residencial tensionado desde mayo de 2025, con demanda de quien trabaja a ambos lados de la frontera.', TENSION_TIP),
+    c('tudela', 'Tudela', 'navarra', { scope: 'todo el municipio', until: '30 de julio de 2028' }, 'Tudela es zona de mercado residencial tensionado desde julio de 2025. Antes de fijar la renta, revisa la del contrato anterior del piso.', TENSION_TIP),
+    // Galicia y Asturias
+    c('vigo', 'Vigo', 'galicia', null, 'Vigo es la ciudad más poblada de Galicia y tiene una demanda de alquiler constante. Elegir bien al inquilino es lo que más protege lo que ganas.', INCOME_TIP),
+    c('ourense', 'Ourense', 'galicia', null, 'Ourense tiene un mercado de alquiler tranquilo, con inquilinos que suelen buscar estabilidad.', PRICE_TIP),
+    c('lugo', 'Lugo', 'galicia', null, 'Lugo tiene un mercado de alquiler estable, con demanda de familias, funcionarios y estudiantes.', STUDENTS),
+    c('pontevedra', 'Pontevedra', 'galicia', null, 'Pontevedra tiene demanda de vivienda habitual de familias y trabajadores. Un contrato largo bien hecho da tranquilidad a las dos partes.', INCOME_TIP),
+    c('oviedo', 'Oviedo', 'asturias', null, 'Oviedo tiene un mercado de alquiler estable, con demanda de familias, funcionarios y estudiantes universitarios.', STUDENTS),
+    c('aviles', 'Avilés', 'asturias', { scope: 'el barrio de La Magdalena', until: '30 de julio de 2029' }, 'En Avilés solo el barrio de La Magdalena es zona de mercado residencial tensionado (desde julio de 2026). Si tu piso está en otro barrio, se aplican las reglas generales.', 'Comprueba en qué barrio está exactamente tu piso antes de fijar la renta.'),
+    // Castilla y León
+    c('burgos', 'Burgos', 'cyl', null, 'Burgos tiene un mercado de alquiler estable, con inquilinos que suelen quedarse años. Es buen sitio para contratos largos.', INCOME_TIP),
+    c('salamanca', 'Salamanca', 'cyl', null, 'Salamanca es una de las ciudades universitarias más conocidas de España: mucha oferta va al alquiler por curso. Decide si prefieres vivienda habitual o temporada.', STUDENTS),
+    c('leon', 'León', 'cyl', null, 'León tiene un mercado de alquiler tranquilo, con demanda de familias, funcionarios y estudiantes.', STUDENTS),
+    // Canarias
+    c('santa-cruz-de-tenerife', 'Santa Cruz de Tenerife', 'canarias', null, 'En Santa Cruz de Tenerife la vivienda habitual es muy buscada por residentes. Un contrato largo con un inquilino solvente te ahorra la rotación del alquiler corto.', SHORT_STAY),
+    // Otras comunidades
+    c('santander', 'Santander', 'cantabria', null, 'Santander tiene demanda de vivienda habitual todo el año y de temporada en verano. Decide qué tipo de alquiler encaja con tu piso.', SHORT_STAY),
+    c('toledo', 'Toledo', 'clm', null, 'Toledo tiene demanda de funcionarios, familias y de quien trabaja en Madrid. Un precio ajustado y un buen inventario hacen el resto.', PRICE_TIP),
+    c('albacete', 'Albacete', 'clm', null, 'Albacete tiene un mercado de alquiler estable, con inquilinos que buscan quedarse. Pide siempre ingresos acreditados.', INCOME_TIP),
+    c('badajoz', 'Badajoz', 'extremadura', null, 'Badajoz tiene un mercado de alquiler tranquilo, con demanda de familias, funcionarios y estudiantes.', STUDENTS),
+    c('caceres', 'Cáceres', 'extremadura', null, 'Cáceres tiene un mercado de alquiler estable y ciudad universitaria. Ten claro si alquilas vivienda habitual o por curso.', STUDENTS),
+    c('logrono', 'Logroño', 'larioja', null, 'Logroño tiene un mercado de alquiler estable, con inquilinos que suelen buscar contratos largos.', PRICE_TIP),
+  ]
+}
 
 export const cityBySlug = (slug: string) => CITIES.find(c => c.slug === slug)

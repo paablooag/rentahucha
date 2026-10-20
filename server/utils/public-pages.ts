@@ -19,6 +19,8 @@ export const PUBLIC_PAGES: { path: string; priority: string; changefreq: string 
   { path: '/herramientas/cuanto-alquiler-puedo-pagar', priority: '0.8', changefreq: 'monthly' },
   { path: '/blog', priority: '0.8', changefreq: 'daily' },
   { path: '/pisos', priority: '0.8', changefreq: 'daily' },
+  { path: '/alquiler', priority: '0.9', changefreq: 'weekly' },
+  ...CITIES.map(c => ({ path: `/alquiler/${c.slug}`, priority: '0.8', changefreq: 'weekly' })),
   { path: '/alquilar-mi-piso', priority: '0.8', changefreq: 'monthly' },
   ...CITIES.map(c => ({ path: `/alquilar-mi-piso/${c.slug}`, priority: '0.8', changefreq: 'monthly' })),
 ]

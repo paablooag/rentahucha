@@ -156,6 +156,7 @@ const others = CITIES.filter(c => c.slug !== city.slug)
 
     <section class="section section-alt">
       <div class="container">
+        <p class="small tenant-link">¿Buscas piso en {{ city.name }}? <NuxtLink :to="`/alquiler/${city.slug}`">Alquiler de pisos en {{ city.name }}</NuxtLink></p>
         <h2 class="others-title">Alquilar en otras ciudades</h2>
         <div class="others">
           <NuxtLink v-for="c in others" :key="c.slug" :to="`/alquilar-mi-piso/${c.slug}`">{{ c.name }}</NuxtLink>
