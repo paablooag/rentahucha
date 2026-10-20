@@ -40,7 +40,7 @@ El tablero de tareas del panel (**Admin → Tareas**) es la fuente de verdad del
 ## Cómo trabajar
 
 - Stack: Nuxt 4 (`~4.4.5`), Nitro, PostgreSQL (PGlite en local), servidor IONOS en 31.70.158.20.
-- **Cada push a `main` se despliega solo en producción** (GitHub Actions). Probar en local antes: `npx nuxt dev --port 3140` y pruebas con Playwright + Edge.
+- **Cada push a `main` se despliega solo en producción** (GitHub Actions), pero antes pasa la prueba automática `scripts/smoke-test.mjs` (web compilada + PostgreSQL vacío): si falla, no se despliega. Al añadir un flujo importante, añádelo a esa prueba. Probar en local antes: `npx nuxt dev --port 3140`, pruebas con Playwright + Edge y `BASE_URL=http://localhost:3140 ADMIN_USER=… ADMIN_PASSWORD=… node scripts/smoke-test.mjs`.
 - Artículos iniciales en `server/data/blog-seed-*.ts`; al añadir o corregir, subir `BLOG_SEED_VERSION` en `server/utils/db.ts` (los artículos editados en el panel no se pisan).
 - Cambios de esquema: nueva migración al final de `server/db/migrations.ts`.
 - PDF de los dossieres: `npm run build:all` (usa Playwright).
