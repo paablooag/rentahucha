@@ -19,6 +19,9 @@ export default defineEventHandler(async (event) => {
   const session = await userSession(event)
   await session.update({ userId: user!.id })
   const welcome = mailLayout({
+    preheader: role === 'propietario' ? 'Publica tu piso en unos minutos.' : 'Escribe a los propietarios sin dar tu teléfono.',
+    eyebrow: 'Bienvenida',
+    footer: 'Recibes este correo porque acabas de crear una cuenta en RentaHucha.',
     title: `Bienvenido/a a RentaHucha, ${name.split(' ')[0]}`,
     paragraphs: role === 'propietario'
       ? ['Ya puedes publicar tu piso: rellena los datos, sube al menos 3 fotos y envíalo a revisión. Lo revisamos y lo publicamos, normalmente en menos de 24 horas.', 'Cuando un inquilino te escriba, te avisaremos por correo. Podrás ver su perfil y proponerle una visita desde el chat.']

@@ -23,6 +23,9 @@ export default defineEventHandler(async (event) => {
         ? ['Te escribiremos en breve para contarte las condiciones para agencias y conocer cómo trabajáis.']
         : [`Te escribiremos personalmente para conocer tu caso y explicarte cómo funciona, sin compromiso. Si ya quieres publicar tu piso de ${d.city}, puedes hacerlo gratis desde la web.`]
     const mail = mailLayout({
+      preheader: 'Gracias por apuntarte. Te contamos los siguientes pasos.',
+      eyebrow: 'Lista de espera',
+      footer: 'Recibes este correo porque te has apuntado a la lista de espera de RentaHucha.',
       title: `Ya estás en la lista, ${first}`,
       paragraphs: [`Gracias por apuntarte a RentaHucha.`, ...body, 'Si tienes cualquier duda, responde a este correo.'],
       button: d.role === 'propietario' ? { label: 'Publicar mi piso', url: siteUrl('/cuenta/registro?tipo=propietario') } : d.role === 'inquilino' ? { label: 'Ver pisos', url: siteUrl('/pisos') } : undefined,

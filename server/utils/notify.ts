@@ -27,14 +27,14 @@ export async function notifyNewMessage(conversationId: string, senderId: string,
     const from = (toOwner ? c.tenantName : c.ownerName).split(' ')[0]
     const excerpt = preview.length > 280 ? `${preview.slice(0, 280)}…` : preview
     const { text, html } = mailLayout({
+      preheader: excerpt,
+      eyebrow: 'Mensaje nuevo',
       title: `${from} te ha escrito`,
-      paragraphs: [
-        `Hola, ${name}: tienes un mensaje nuevo sobre «${c.propertyTitle}».`,
-        `«${excerpt}»`,
-        'Responde desde la web: así no tienes que dar tu teléfono ni tu correo.',
-      ],
+      paragraphs: [`Hola, ${name}: tienes un mensaje nuevo sobre «${c.propertyTitle}».`],
+      highlight: { label: from, text: excerpt },
       button: { label: 'Ver y responder', url: siteUrl(`/mi-cuenta/mensajes/${conversationId}`) },
-      footer: 'Puedes desactivar estos avisos en Mi cuenta. Nunca envíes dinero antes de visitar el piso.',
+      after: ['Responde desde la web: así no tienes que dar tu teléfono ni tu correo. Nunca envíes dinero ni pagues una señal antes de visitar el piso.'],
+      footer: 'Recibes este aviso porque tienes una cuenta en RentaHucha. Puedes desactivarlo en Mi cuenta.',
     })
     await query(`UPDATE conversations SET ${toOwner ? 'owner' : 'tenant'}_notified_at = now() WHERE id = $1`, [conversationId])
     await sendMail({ to, subject: `${from} te ha escrito sobre «${c.propertyTitle}»`, text, html })
@@ -53,14 +53,23 @@ export async function notifyListingReviewed(propertyId: string, approved: boolea
     const first = p.name.split(' ')[0]
     const mail = approved
       ? mailLayout({
-          title: 'Tu anuncio ya está publicado',
+          preheader: 'Ya aparece en el buscador. Te avisaremos cuando alguien te escriba.',
+          eyebrow: 'Tu anuncio',
+          title: '¡Tu anuncio ya está publicado!',
           paragraphs: [`Hola, ${first}: hemos revisado «${p.title}» y ya aparece en el buscador.`, 'Cuando alguien te escriba, te avisaremos por correo. Desde tu panel ves las visitas del anuncio, los interesados y cuántos lo han guardado.'],
           button: { label: 'Ver mi anuncio', url: siteUrl(`/pisos/${propertyId}`) },
+          after: ['Consejo: responde pronto a los interesados y propón día de visita desde el chat. Los anuncios que contestan rápido alquilan antes.'],
+          footer: 'Recibes este correo porque has publicado un anuncio en RentaHucha.',
         })
       : mailLayout({
+          preheader: 'Antes de publicarlo hace falta un pequeño cambio.',
+          eyebrow: 'Tu anuncio',
           title: 'Tu anuncio necesita algún cambio',
-          paragraphs: [`Hola, ${first}: hemos revisado «${p.title}» y, antes de publicarlo, hace falta esto:`, note, 'Cuando lo cambies, vuelve a enviarlo a revisión desde tu panel.'],
+          paragraphs: [`Hola, ${first}: hemos revisado «${p.title}» y, antes de publicarlo, hace falta esto:`],
+          highlight: { label: 'Lo que hay que cambiar', text: note },
           button: { label: 'Editar el anuncio', url: siteUrl(`/mi-cuenta/pisos/${propertyId}`) },
+          after: ['Cuando lo cambies, vuelve a enviarlo a revisión desde tu panel. Si tienes dudas, responde a este correo.'],
+          footer: 'Recibes este correo porque has enviado un anuncio a RentaHucha.',
         })
     await sendMail({ to: p.email, subject: approved ? `Publicado: ${p.title}` : `Cambios en tu anuncio: ${p.title}`, ...mail })
   }

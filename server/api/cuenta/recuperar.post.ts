@@ -11,9 +11,13 @@ export default defineEventHandler(async (event) => {
     await query('DELETE FROM password_resets WHERE user_id = $1 OR expires_at < now()', [user.id])
     await query(`INSERT INTO password_resets (token_hash, user_id, expires_at) VALUES ($1, $2, now() + interval '1 hour')`, [hash, user.id])
     const mail = mailLayout({
+      preheader: 'El enlace caduca en 1 hora.',
+      eyebrow: 'Tu cuenta',
       title: 'Cambia tu contraseña',
-      paragraphs: [`Hola, ${user.name.split(' ')[0]}: hemos recibido una petición para cambiar la contraseña de tu cuenta.`, 'El enlace sirve una sola vez y caduca en 1 hora. Si no lo has pedido tú, ignora este correo: tu contraseña no cambia.'],
+      paragraphs: [`Hola, ${user.name.split(' ')[0]}: hemos recibido una petición para cambiar la contraseña de tu cuenta.`],
       button: { label: 'Elegir una contraseña nueva', url: siteUrl(`/cuenta/restablecer?token=${token}`) },
+      after: ['El enlace sirve una sola vez y caduca en 1 hora. Si no lo has pedido tú, ignora este correo: tu contraseña no cambia.'],
+      footer: 'Recibes este correo porque se ha pedido cambiar la contraseña de tu cuenta.',
     })
     await sendMail({ to: email, subject: 'Cambia tu contraseña de RentaHucha', ...mail })
   }

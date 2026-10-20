@@ -15,12 +15,16 @@ export default defineEventHandler(async (event) => {
     [name, email, phone, city, JSON.stringify(rest), consentNews, VALUATION_CONSENT],
   )
   const confirm = mailLayout({
-    title: 'Hemos recibido tu solicitud de valoración',
+    preheader: 'Te la enviamos en menos de 48 horas laborables.',
+    eyebrow: 'Valoración del alquiler',
+    title: 'Estamos preparando tu valoración',
     paragraphs: [
-      `Hola, ${name.split(' ')[0]}: gracias por contarnos cómo es tu piso en ${rest.district}, ${city}.`,
-      'Una persona del equipo está preparando la valoración con pisos comparables de tu zona y el índice de referencia oficial. Te la enviaremos a este correo en menos de 48 horas laborables.',
-      'Si quieres añadir algo (fotos, reformas, planta…), responde a este correo.',
+      `Hola, ${name.split(' ')[0]}: gracias por contarnos cómo es tu piso. Una persona del equipo está buscando pisos comparables de tu zona y consultando el índice de referencia oficial.`,
     ],
+    highlight: { label: 'Tu piso', text: `${rest.propertyType} en ${rest.district}, ${city} · ${rest.sizeM2} m² · ${rest.bedrooms} hab. · ${rest.bathrooms} ${rest.bathrooms === '1' ? 'baño' : 'baños'} · ${rest.condition.toLowerCase()}` },
+    button: { label: 'Mientras tanto: checklist para alquilar', url: siteUrl('/herramientas/checklist-alquilar-piso') },
+    after: ['Te la enviaremos a este correo en menos de 48 horas laborables. Si quieres añadir algo (fotos, reformas, planta, orientación…), responde a este correo.'],
+    footer: 'Recibes este correo porque has pedido una valoración del alquiler en RentaHucha.',
   })
   sendMailLater({ to: email, subject: 'Tu valoración del alquiler está en marcha', ...confirm })
   notifyTeam(`Valoración pedida: ${rest.district}, ${city}`, [`${name} · ${email}${phone ? ` · ${phone}` : ''}`, `${rest.propertyType}, ${rest.sizeM2} m², ${rest.bedrooms} hab., ${rest.bathrooms} baños · ${rest.condition} · ${rest.situation}`, 'Promesa: respuesta en menos de 48 h laborables.'], siteUrl('/admin/formularios'))
