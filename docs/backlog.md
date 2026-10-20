@@ -14,8 +14,6 @@ Al terminar una tarea, muévela a «Hecho» con la fecha y una línea de qué se
 
 ## Producto
 
-- [ ] Alertas de búsqueda por correo para inquilinos: guardar una búsqueda en /pisos y avisar (máx. 1 correo al día) cuando se publique un piso que encaje. Con baja en un clic.
-- [ ] Recordatorio por correo al propietario si un interesado lleva 48 h sin respuesta.
 - [ ] Mapa aproximado por barrio en la ficha del piso (sin dirección exacta).
 - [ ] Cuenta de tipo inmobiliaria (varios pisos, nombre comercial) sin inventar condiciones ni precios para agencias.
 - [ ] Pruebas automáticas de los flujos clave (registro, publicar piso, chat, valoración) con Playwright en GitHub Actions antes del despliegue.
@@ -27,6 +25,11 @@ Al terminar una tarea, muévela a «Hecho» con la fecha y una línea de qué se
 - [ ] Prueba social solo con datos reales (pisos publicados, propietarios en la plataforma) cuando existan; nunca testimonios inventados.
 
 ## Hecho
+
+- 2026-10-20 · Recordatorio único al propietario cuando un interesado lleva 48 h sin respuesta.
+- 2026-10-20 · Alertas de pisos por correo (máx. una al día, baja en un clic) y demanda real por ciudad para propietarios (desde 5 personas).
+- 2026-10-20 · Portal /alquiler (64 ciudades), guía del modelo oficial de contrato, CTA dentro de los artículos y artículos sobre el 29-N.
+- 2026-10-20 · Captación B2B en el panel y cartel con QR.
 
 - 2026-10-20 · Correo transaccional con diseño de marca (Brevo) y recuperación de contraseña.
 - 2026-10-20 · Cinco páginas con formulario: valoración, test, generador de anuncios, carta de inquilino y encuesta.

@@ -75,3 +75,40 @@ export async function notifyListingReviewed(propertyId: string, approved: boolea
   }
   catch (e) { console.warn('[aviso anuncio]', e instanceof Error ? e.message : e) }
 }
+
+/**
+ * Recordatorio único al propietario cuando un interesado lleva más de 48 h sin respuesta (y menos de 7 días).
+ * Se llama cada hora desde un plugin. Respeta la preferencia de avisos del propietario.
+ */
+export async function sendOwnerReminders() {
+  const due = await query<{ id: string; propertyTitle: string; ownerName: string; ownerEmail: string; tenantName: string; lastBody: string }>(
+    `SELECT c.id, p.title AS property_title, o.name AS owner_name, o.email AS owner_email, t.name AS tenant_name,
+            (SELECT m.body FROM messages m WHERE m.conversation_id = c.id ORDER BY m.id DESC LIMIT 1) AS last_body
+     FROM conversations c
+     JOIN properties p ON p.id = c.property_id
+     JOIN users o ON o.id = c.owner_id
+     JOIN users t ON t.id = c.tenant_id
+     WHERE c.blocked_at IS NULL AND p.status = 'publicado' AND o.notify_messages
+       AND c.owner_reminded_at IS NULL
+       AND (SELECT m.sender_id FROM messages m WHERE m.conversation_id = c.id ORDER BY m.id DESC LIMIT 1) = c.tenant_id
+       AND (SELECT max(m.created_at) FROM messages m WHERE m.conversation_id = c.id) BETWEEN now() - interval '7 days' AND now() - interval '48 hours'
+     LIMIT 50`,
+  )
+  for (const c of due) {
+    const excerpt = c.lastBody.length > 280 ? `${c.lastBody.slice(0, 280)}…` : c.lastBody
+    const from = c.tenantName.split(' ')[0]
+    const mail = mailLayout({
+      preheader: `${from} espera tu respuesta desde hace más de dos días.`,
+      eyebrow: 'Interesado esperando',
+      title: `${from} sigue esperando tu respuesta`,
+      paragraphs: [`Hola, ${c.ownerName.split(' ')[0]}: ${from} te escribió sobre «${c.propertyTitle}» hace más de dos días y aún no le has respondido.`],
+      highlight: { label: from, text: excerpt },
+      button: { label: 'Responder ahora', url: siteUrl(`/mi-cuenta/mensajes/${c.id}`) },
+      after: ['Los inquilinos suelen escribir a varios pisos a la vez: los propietarios que responden pronto alquilan antes. Si ya no está disponible, márcalo como alquilado o pausa el anuncio desde tu panel.'],
+      footer: 'Recordatorio único. Puedes desactivar los avisos de mensajes en Mi cuenta.',
+    })
+    await query('UPDATE conversations SET owner_reminded_at = now() WHERE id = $1', [c.id])
+    await sendMail({ to: c.ownerEmail, subject: `${from} espera tu respuesta sobre «${c.propertyTitle}»`, ...mail })
+  }
+  return due.length
+}

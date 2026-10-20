@@ -382,4 +382,11 @@ export const MIGRATIONS: { id: number; name: string; sql: string }[] = [
       CREATE INDEX search_alerts_city_idx ON search_alerts (lower(city));
     `,
   },
+  {
+    id: 15,
+    name: 'recordatorio al propietario de interesados sin respuesta',
+    sql: `
+      ALTER TABLE conversations ADD COLUMN owner_reminded_at timestamptz;
+    `,
+  },
 ]
