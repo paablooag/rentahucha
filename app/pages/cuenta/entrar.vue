@@ -42,7 +42,7 @@ async function submit() {
           <button class="btn btn-primary" type="submit" :disabled="pending">{{ pending ? 'Entrando…' : 'Entrar' }}</button>
         </form>
         <p class="small muted alt">¿No tienes cuenta? <NuxtLink :to="{ path: '/cuenta/registro', query: route.query }">Créala gratis</NuxtLink></p>
-        <p class="small muted">¿Has olvidado la contraseña? Escríbenos a <a :href="`mailto:${useAppConfig().brand.email}`">{{ useAppConfig().brand.email }}</a> desde el correo de tu cuenta y te ayudamos.</p>
+        <p class="small muted"><NuxtLink to="/cuenta/recuperar">¿Has olvidado la contraseña?</NuxtLink></p>
       </div>
     </div>
   </section>

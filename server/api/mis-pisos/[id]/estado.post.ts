@@ -18,5 +18,6 @@ export default defineEventHandler(async (event) => {
   else throw createError({ statusCode: 409, statusMessage: 'No se puede hacer este cambio ahora.' })
 
   await query('UPDATE properties SET status = $2, updated_at = now() WHERE id = $1', [p.id, next])
+  if (next === 'revision') notifyTeam(`Anuncio para revisar: ${p.title}`, [`${user.name} (${user.email}) ha enviado su piso de ${p.city} (${p.rent} €/mes) a revisión.`], siteUrl('/admin/pisos'))
   return getOwnerProperty(user.id, p.id)
 })

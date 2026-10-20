@@ -8,6 +8,11 @@ const { data: pisos } = await useFetch<Property[]>('/api/mis-pisos', { immediate
 const { data: convs } = await useFetch<{ id: string; unread: number }[]>('/api/conversaciones', { default: () => [], headers: useRequestHeaders(['cookie']) })
 const unreadConvs = computed(() => convs.value.filter(c => c.unread > 0).length)
 
+const notify = ref(true)
+onMounted(async () => { notify.value = (await $fetch<{ notifyMessages: boolean }>('/api/cuenta/yo')).notifyMessages })
+async function toggleNotify() {
+  notify.value = (await $fetch<{ messages: boolean }>('/api/cuenta/avisos', { method: 'PUT', body: { messages: !notify.value } })).messages
+}
 const deleting = ref(false)
 const delPass = ref('')
 const delError = ref('')
@@ -68,6 +73,7 @@ async function removeAccount() {
           <dt>Correo</dt><dd>{{ user?.email }}</dd>
           <dt>Tipo</dt><dd>{{ isOwner ? 'Propietario' : 'Busco piso' }}</dd>
         </dl>
+        <label class="notify"><input type="checkbox" :checked="notify" @change="toggleNotify"> Avisarme por correo cuando reciba un mensaje</label>
         <div class="row">
           <button type="button" class="btn btn-ghost btn-sm" @click="logout">Salir</button>
           <button type="button" class="link danger" @click="deleting = !deleting">Borrar mi cuenta</button>
@@ -99,6 +105,8 @@ h1 { font-size: 2.2rem; margin: 0 0 6px; }
 dl { display: grid; grid-template-columns: max-content 1fr; gap: 6px 18px; margin: 0 0 16px; font-size: 0.95rem; }
 dt { font-weight: 600; }
 dd { margin: 0; word-break: break-word; }
+.notify { display: flex; gap: 10px; align-items: center; margin: 0 0 16px; font-size: 0.95rem; }
+.notify input { accent-color: var(--green); }
 .row { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
 .link { font: inherit; background: none; border: 0; text-decoration: underline; cursor: pointer; padding: 0; }
 .danger { color: var(--danger); }

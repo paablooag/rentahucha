@@ -10,5 +10,6 @@ export default defineEventHandler(async (event) => {
          AND m.created_at > COALESCE(c.${col}_read_at, 'epoch'::timestamptz))`,
     [user.id],
   )
-  return { user, unread: Number(row?.n ?? 0) }
+  const prefs = await queryOne<{ notifyMessages: boolean }>('SELECT notify_messages FROM users WHERE id = $1', [user.id])
+  return { user, unread: Number(row?.n ?? 0), notifyMessages: prefs?.notifyMessages ?? true }
 })

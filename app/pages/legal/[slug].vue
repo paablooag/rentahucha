@@ -77,6 +77,7 @@ const pages: Record<string, { title: string; updated: string; blocks: Block[] }>
         h: 'Quién más accede a tus datos',
         p: [
           `Los datos se guardan en nuestros propios sistemas, alojados por ${legal.hostingProvider}, que actúa como encargado del tratamiento con un contrato que garantiza la protección de tus datos. Si el proveedor está fuera del Espacio Económico Europeo, la transferencia se ampara en las cláusulas contractuales tipo de la Comisión Europea o en el Marco de Privacidad de Datos UE-EE. UU.`,
+          'Los correos que te enviamos (avisos de tu cuenta, valoraciones y, si lo pides, novedades) salen a través de Brevo (Sendinblue SAS, Francia, en la Unión Europea), que actúa como encargado del tratamiento. Los que nos escribes a nuestra dirección de correo se reciben a través de ImprovMX.',
           'Solo las personas autorizadas del equipo acceden a ellos, con usuario y contraseña.',
           'No vendemos ni cedemos tus datos a terceros, salvo obligación legal.',
         ],

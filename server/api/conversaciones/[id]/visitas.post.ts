@@ -18,5 +18,6 @@ export default defineEventHandler(async (event) => {
     [c.id, user.id, JSON.stringify({ at, status: 'propuesta' })],
   )
   await query(`UPDATE conversations SET last_message_at = now(), ${isOwner ? 'owner' : 'tenant'}_read_at = now() WHERE id = $1`, [c.id])
+  notifyNewMessage(c.id, user.id, `Propone una visita el ${at.replace('T', ' a las ')}.`)
   return { id: Number(row!.id), body: 'Propuesta de visita', kind: 'visita', meta: { at, status: 'propuesta' }, createdAt: row!.createdAt, mine: true }
 })

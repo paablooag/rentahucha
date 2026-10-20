@@ -15,6 +15,11 @@ export default defineNuxtConfig({
     allowWeakPassword: false,
     // PostgreSQL (NUXT_DATABASE_URL=postgres://usuario:clave@host:5432/bd). En desarrollo, sin URL se usa PGlite.
     databaseUrl: '',
+    // Correo transaccional por SMTP (Brevo): NUXT_SMTP_HOST, NUXT_SMTP_PORT, NUXT_SMTP_USER, NUXT_SMTP_PASS. Sin ellos no se envía nada.
+    smtpHost: '',
+    smtpPort: '587',
+    smtpUser: '',
+    smtpPass: '',
   },
   app: {
     head: {

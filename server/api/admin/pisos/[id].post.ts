@@ -8,10 +8,12 @@ export default defineEventHandler(async (event) => {
 
   if (action === 'aprobar') {
     await query(`UPDATE properties SET status = 'publicado', review_note = '', published_at = COALESCE(published_at, now()), updated_at = now() WHERE id = $1`, [id])
+    notifyListingReviewed(id, true, '')
   }
   else if (action === 'rechazar' || action === 'retirar') {
     if (text.length < 5) throw createError({ statusCode: 422, statusMessage: 'Explica al propietario qué tiene que cambiar.' })
     await query(`UPDATE properties SET status = 'rechazado', review_note = $2, updated_at = now() WHERE id = $1`, [id, text])
+    notifyListingReviewed(id, false, text)
   }
   else throw createError({ statusCode: 422, statusMessage: 'Acción no válida' })
   return { ok: true }

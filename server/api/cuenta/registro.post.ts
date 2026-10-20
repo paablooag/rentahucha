@@ -18,5 +18,14 @@ export default defineEventHandler(async (event) => {
   )
   const session = await userSession(event)
   await session.update({ userId: user!.id })
+  const welcome = mailLayout({
+    title: `Bienvenido/a a RentaHucha, ${name.split(' ')[0]}`,
+    paragraphs: role === 'propietario'
+      ? ['Ya puedes publicar tu piso: rellena los datos, sube al menos 3 fotos y envíalo a revisión. Lo revisamos y lo publicamos, normalmente en menos de 24 horas.', 'Cuando un inquilino te escriba, te avisaremos por correo. Podrás ver su perfil y proponerle una visita desde el chat.']
+      : ['Ya puedes escribir a los propietarios sin dar tu teléfono. Completa tu perfil de inquilino: los propietarios lo ven al recibir tu mensaje y responden antes.', 'Cuando un propietario te responda, te avisaremos por correo.'],
+    button: role === 'propietario' ? { label: 'Publicar mi piso', url: siteUrl('/mi-cuenta/pisos/nuevo') } : { label: 'Completar mi perfil', url: siteUrl('/mi-cuenta/perfil') },
+  })
+  sendMailLater({ to: email, subject: 'Bienvenido/a a RentaHucha', ...welcome })
+  if (role === 'propietario') notifyTeam(`Nueva cuenta de propietario: ${name}`, [`${name} · ${email}${phone ? ` · ${phone}` : ''}`])
   return { ok: true, user: { id: user!.id, role, name, email, phone } }
 })

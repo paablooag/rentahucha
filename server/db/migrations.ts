@@ -303,4 +303,22 @@ export const MIGRATIONS: { id: number; name: string; sql: string }[] = [
       CREATE INDEX form_submissions_kind_idx ON form_submissions (kind, created_at DESC);
     `,
   },
+  {
+    id: 12,
+    name: 'avisos por correo y recuperación de contraseña',
+    sql: `
+      ALTER TABLE users ADD COLUMN notify_messages boolean NOT NULL DEFAULT true;
+      -- Último aviso por correo de mensajes nuevos, para no enviar uno por cada mensaje.
+      ALTER TABLE conversations ADD COLUMN owner_notified_at timestamptz;
+      ALTER TABLE conversations ADD COLUMN tenant_notified_at timestamptz;
+      -- Solo se guarda el hash del enlace: quien lea la base de datos no puede usarlo.
+      CREATE TABLE password_resets (
+        token_hash  text PRIMARY KEY,
+        user_id     uuid NOT NULL REFERENCES users (id) ON DELETE CASCADE,
+        expires_at  timestamptz NOT NULL,
+        used_at     timestamptz,
+        created_at  timestamptz NOT NULL DEFAULT now()
+      );
+    `,
+  },
 ]

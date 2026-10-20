@@ -12,5 +12,6 @@ export default defineEventHandler(async (event) => {
   if (!reason) throw createError({ statusCode: 422, statusMessage: 'Elige el motivo.' })
   await query('INSERT INTO reports (conversation_id, reporter_id, reason, details) VALUES ($1, $2, $3, $4)', [c.id, user.id, reason, String(body?.details ?? '').trim().slice(0, 1000)])
   await query('UPDATE conversations SET blocked_at = COALESCE(blocked_at, now()) WHERE id = $1', [c.id])
+  notifyTeam(`Denuncia: ${reason}`, [`${user.name} (${user.email}) ha denunciado una conversación sobre «${c.propertyTitle}». La conversación ha quedado bloqueada.`], siteUrl('/admin/pisos'))
   return { ok: true }
 })
