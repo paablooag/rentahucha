@@ -62,6 +62,7 @@ const pages: Record<string, { title: string; updated: string; blocks: Block[] }>
           'Los usamos para avisarte del lanzamiento, darte prioridad para dar de alta tu piso o crear tu pasaporte de inquilino, y analizar de forma agregada el interés en el servicio (cuánta gente lo quiere, en qué ciudades y qué le importa).',
           'Newsletter: tu correo electrónico, para enviarte novedades del servicio y consejos sobre alquiler. Solo si marcas esa casilla.',
           'Valoración del alquiler: tu nombre, correo, teléfono si lo das y los datos del piso que nos cuentas, para enviarte la valoración y hablar contigo sobre ella.',
+          'Alertas de pisos: tu correo y tu búsqueda (ciudad, renta máxima, habitaciones), para avisarte de los pisos nuevos que encajan, como mucho una vez al día. Cada correo trae un enlace para cancelar la alerta, y se borra al cancelarla.',
           'Encuesta: tus respuestas, que se guardan sin nombre y se muestran solo de forma agregada. Si dejas tu correo y marcas la casilla, lo usamos para enviarte el informe y novedades.',
           'Cuenta de usuario: nombre, correo, teléfono si lo das y tu contraseña cifrada (nunca la guardamos en claro). La usamos para que puedas entrar, publicar anuncios o escribir a propietarios.',
           'Anuncios: los datos del piso que publicas y sus fotos. La dirección exacta no se muestra en público; del anunciante solo se muestra el nombre de pila. Revisamos cada anuncio antes de publicarlo.',

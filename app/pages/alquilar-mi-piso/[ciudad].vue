@@ -60,6 +60,8 @@ const steps = [
   { t: 'Cobra con rastro y actúa pronto', d: 'Transferencia o domiciliación. Si un pago falla, habla enseguida y, si hace falta, por la vía legal: nunca cambies la cerradura.' },
 ]
 const others = CITIES.filter(c => c.slug !== city.slug)
+// Demanda real en la ciudad (alertas y lista de espera). Solo se muestra a partir de 5 personas.
+const { data: demand } = await useFetch<{ show: boolean; n: number | null }>(`/api/demanda/${encodeURIComponent(city.name)}`, { default: () => ({ show: false, n: null }) })
 </script>
 
 <template>
@@ -96,6 +98,7 @@ const others = CITIES.filter(c => c.slug !== city.slug)
             <p>Fianza legal de una mensualidad y, como mucho, dos de garantía adicional.</p>
           </div>
         </div>
+        <p v-if="demand.show" class="demand"><strong>{{ demand.n }} personas</strong> buscan piso en {{ city.name }} en RentaHucha ahora mismo.</p>
         <p class="checked small muted">Datos del Ministerio de Vivienda y Agenda Urbana consultados el {{ CITIES_CHECKED }}. Las zonas tensionadas se actualizan cada trimestre.</p>
       </div>
     </section>
@@ -190,4 +193,5 @@ const others = CITIES.filter(c => c.slug !== city.slug)
 .others { display: flex; flex-wrap: wrap; gap: 8px; }
 .others a { padding: 8px 14px; border-radius: 999px; background: #fff; border: 1px solid var(--line); color: var(--ink); text-decoration: none; font-size: 0.92rem; }
 .others a:hover { border-color: var(--green); }
+.demand { margin: 16px 0 0; padding: 12px 16px; border-radius: 14px; background: var(--lime); display: inline-block; }
 </style>

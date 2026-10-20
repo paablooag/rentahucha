@@ -361,4 +361,25 @@ export const MIGRATIONS: { id: number; name: string; sql: string }[] = [
       CREATE INDEX prospect_events_idx ON prospect_events (prospect_id, id);
     `,
   },
+  {
+    id: 14,
+    name: 'alertas de búsqueda de pisos',
+    sql: `
+      -- Quien busca piso deja su búsqueda y su correo; se le avisa (como mucho una vez al día) de los pisos nuevos que encajan.
+      CREATE TABLE search_alerts (
+        id            uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+        email         text NOT NULL,
+        city          text NOT NULL,
+        max_rent      integer,
+        min_bedrooms  integer,
+        stay_type     text NOT NULL DEFAULT '',
+        token         text NOT NULL UNIQUE,
+        consent_at    timestamptz NOT NULL DEFAULT now(),
+        last_sent_at  timestamptz,
+        created_at    timestamptz NOT NULL DEFAULT now(),
+        UNIQUE (email, city, max_rent, min_bedrooms, stay_type)
+      );
+      CREATE INDEX search_alerts_city_idx ON search_alerts (lower(city));
+    `,
+  },
 ]

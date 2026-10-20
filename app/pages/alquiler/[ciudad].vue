@@ -80,8 +80,8 @@ const others = CITIES.filter(c => c.region !== city.region).slice(0, 18)
         </div>
         <div v-else class="empty card">
           <strong>Todavía no hay pisos publicados en {{ city.name }}</strong>
-          <p class="muted">Estamos empezando a abrir la plataforma ciudad a ciudad. Apúntate y te avisamos el primero cuando haya pisos que encajen contigo.</p>
-          <a href="#avisame" class="btn btn-dark btn-sm">Avisadme</a>
+          <p class="muted">Estamos empezando a abrir la plataforma ciudad a ciudad. Crea una alerta y te escribimos el primero cuando se publique un piso que encaje contigo.</p>
+          <AlertForm :city="city.name" />
         </div>
 
         <div class="facts">

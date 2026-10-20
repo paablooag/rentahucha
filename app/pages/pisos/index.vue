@@ -67,11 +67,13 @@ useSeoMeta({
       </div>
       <div v-else-if="!pending" class="empty card">
         <h2>Todavía no hay pisos publicados{{ f.ciudad ? ` en ${f.ciudad}` : '' }}</h2>
-        <p class="muted">Estamos empezando. Apúntate y te avisamos en cuanto haya pisos que encajen contigo, o crea tu cuenta para escribir a los propietarios cuando lleguen.</p>
-        <div class="row">
-          <NuxtLink to="/apuntate?tipo=inquilino#formulario" class="btn btn-primary">Avísame de pisos</NuxtLink>
-          <NuxtLink to="/cuenta/registro?tipo=propietario" class="btn btn-ghost">¿Tienes un piso? Publícalo gratis</NuxtLink>
-        </div>
+        <p class="muted">Estamos empezando a abrir la plataforma ciudad a ciudad. Crea una alerta y te escribimos en cuanto se publique un piso que encaje contigo.</p>
+        <AlertForm :city="f.ciudad" :max-rent="f.max" :min-bedrooms="f.hab" />
+        <NuxtLink to="/cuenta/registro?tipo=propietario" class="small">¿Tienes un piso? Publícalo gratis</NuxtLink>
+      </div>
+      <div v-if="data.items.length" class="card alert-box">
+        <strong>¿No ves el tuyo? Te avisamos de los nuevos</strong>
+        <AlertForm :city="f.ciudad" :max-rent="f.max" :min-bedrooms="f.hab" />
       </div>
       <div v-if="data.hasMore || page > 1" class="pager">
         <button type="button" class="btn btn-ghost btn-sm" :disabled="page === 1" @click="page--">← Anteriores</button>
@@ -91,4 +93,5 @@ useSeoMeta({
 .empty p { margin: 0 0 6px; }
 .row { display: flex; gap: 10px; flex-wrap: wrap; }
 .pager { display: flex; gap: 10px; justify-content: center; margin-top: 24px; }
+.alert-box { margin-top: 24px; display: grid; gap: 10px; }
 </style>
