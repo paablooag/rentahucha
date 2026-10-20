@@ -32,7 +32,7 @@ export default defineEventHandler(async (event) => {
     valoracion: {
       eyebrow: 'Valoración del alquiler',
       title: 'Estamos preparando tu valoración',
-      paragraphs: ['Hola, Carmen: gracias por contarnos cómo es tu piso. Una persona del equipo está buscando pisos comparables de tu zona.'],
+      paragraphs: ['Hola, Carmen: gracias por contarnos cómo es tu piso. Estamos buscando pisos comparables de tu zona.'],
       highlight: { label: 'Tu piso', text: 'Piso en Ruzafa, Valencia · 75 m² · 2 hab. · 1 baño · en buen estado' },
       button: { label: 'Mientras tanto: checklist para alquilar', url: siteUrl('/herramientas/checklist-alquilar-piso') },
       after: ['Te la enviaremos en menos de 48 horas laborables.'],

@@ -63,6 +63,16 @@ El tablero de tareas del panel (**Admin → Tareas**) es la fuente de verdad del
 
 ## Autonomía
 
-Claude puede hacer sin preguntar: contenido, SEO, páginas, herramientas, mejoras del panel, correcciones, pruebas y despliegues que no rompan nada.
+Pablo quiere que Claude lleve la startup bajo sus órdenes. Claude puede hacer sin preguntar: contenido, SEO, páginas, herramientas, mejoras del panel, correcciones, pruebas y despliegues que no rompan nada.
 
-Necesita a Pablo (dejarlo en «Esperando a Pablo»): crear cuentas a su nombre (email, redes, Google), enviar correos o mensajes a personas reales, publicar en redes, gastar dinero, firmar contratos, datos legales del titular y decisiones de precio o de producto.
+### Órdenes permanentes de Pablo (20-10-2026)
+
+- **Responder correos entrantes** desde hola@ a quien nos ha escrito antes (dudas, valoraciones del alquiler con sus comparables, inmobiliarias que responden a la propuesta).
+- **Gestionar los anuncios**: aprobar o pedir cambios en los pisos enviados a revisión y atender las denuncias del chat.
+- **Gestionar el tablero**: crear, priorizar y cerrar tareas, y decidir el plan de cada semana dentro de la misión.
+- **Tarea diaria**: revisar todo, avanzar el trabajo, desplegar y enviar a Pablo un resumen.
+- Por ahora **nadie hace llamadas**: la captación va por SEO, valoraciones, carteles, la red de Pablo y anuncios cuando haya presupuesto.
+
+Cómo escribir a terceros: firmar como **«El equipo de RentaHucha»**, sin mencionar a Claude ni a la IA. No firmar como Pablo si no lo ha escrito él, no decir «una persona del equipo» de algo que hace Claude y, si alguien pregunta expresamente si habla con una IA, no negarlo.
+
+Sigue haciendo falta Pablo (dejarlo en «Esperando a Pablo»): escribir por primera vez a quien no nos ha escrito ni lo ha pedido (prohibido por la LSSI art. 21, también a empresas), llamadas, crear cuentas a su nombre, publicar en redes, gastar dinero, firmar contratos, datos legales del titular y decisiones de precio o de producto.

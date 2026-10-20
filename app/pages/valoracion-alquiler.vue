@@ -48,7 +48,7 @@ async function submit() {
 }
 
 const faqs = [
-  { q: '¿Quién hace la valoración?', a: 'Una persona del equipo de RentaHucha, no un algoritmo. Revisa pisos parecidos anunciados en tu zona y el Sistema Estatal de Referencia del Precio del Alquiler del Ministerio de Vivienda, y te envía una horquilla orientativa con las referencias que ha usado.' },
+  { q: '¿Cómo se hace la valoración?', a: 'El equipo de RentaHucha revisa pisos parecidos anunciados en tu zona y el Sistema Estatal de Referencia del Precio del Alquiler del Ministerio de Vivienda, y te envía una horquilla orientativa con las referencias usadas, para que puedas comprobarlas.' },
   { q: '¿Cuánto tarda?', a: 'Normalmente menos de 48 horas laborables. Te la enviamos al correo que nos dejes.' },
   { q: '¿Me compromete a algo?', a: 'No. Es gratis y sin compromiso. Si después quieres alquilar con nosotros, te lo explicamos; si no, no volvemos a escribirte salvo que marques la casilla de novedades.' },
   { q: '¿Y si mi piso está en zona tensionada?', a: 'Te lo indicamos en la valoración. En zona tensionada, la renta de un contrato nuevo suele estar limitada por la del contrato anterior o por el índice de referencia, según el caso.' },
@@ -62,7 +62,7 @@ const err = (k: string) => ({ 'aria-invalid': !!errors.value[k] })
     <section class="section">
       <div class="container layout">
         <div class="intro">
-          <span class="eyebrow">Gratis · Sin compromiso · Hecha por una persona</span>
+          <span class="eyebrow">Gratis · Sin compromiso · Con comparables reales</span>
           <h1>¿Cuánto puedes pedir de alquiler por tu piso?</h1>
           <p class="lead">Cuéntanos cómo es y te enviamos una horquilla orientativa con pisos comparables de tu zona y el índice de referencia oficial. En menos de 48 horas laborables.</p>
           <ul class="check-list">

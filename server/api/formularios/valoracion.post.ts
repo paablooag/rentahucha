@@ -1,6 +1,6 @@
 import { VALUATION_CONSENT, validateValuation } from '#shared/utils/forms'
 
-// Solicitud de valoración gratuita del alquiler. La responde una persona del equipo con comparables de la zona.
+// Solicitud de valoración gratuita del alquiler. La prepara el equipo con pisos comparables de la zona.
 export default defineEventHandler(async (event) => {
   rateLimit(event, 'valuation', 10, 60 * 60 * 1000)
   const body = await readBody<Record<string, unknown>>(event)
@@ -19,7 +19,7 @@ export default defineEventHandler(async (event) => {
     eyebrow: 'Valoración del alquiler',
     title: 'Estamos preparando tu valoración',
     paragraphs: [
-      `Hola, ${name.split(' ')[0]}: gracias por contarnos cómo es tu piso. Una persona del equipo está buscando pisos comparables de tu zona y consultando el índice de referencia oficial.`,
+      `Hola, ${name.split(' ')[0]}: gracias por contarnos cómo es tu piso. Estamos buscando pisos comparables de tu zona y consultando el índice de referencia oficial.`,
     ],
     highlight: { label: 'Tu piso', text: `${rest.propertyType} en ${rest.district}, ${city} · ${rest.sizeM2} m² · ${rest.bedrooms} hab. · ${rest.bathrooms} ${rest.bathrooms === '1' ? 'baño' : 'baños'} · ${rest.condition.toLowerCase()}` },
     button: { label: 'Mientras tanto: checklist para alquilar', url: siteUrl('/herramientas/checklist-alquilar-piso') },

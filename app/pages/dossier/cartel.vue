@@ -22,7 +22,7 @@ const { data: qr } = await useAsyncData('qr-cartel', async () => ({
       <div class="main">
         <h1>¿Alquilas tu piso?</h1>
         <p class="big">Te decimos <span class="hl">cuánto puedes pedir</span>, gratis.</p>
-        <p class="lead">Una persona del equipo compara tu piso con otros parecidos de tu zona y el índice oficial, y te envía una horquilla en menos de 48 horas laborables. Sin compromiso.</p>
+        <p class="lead">Comparamos tu piso con otros parecidos de tu zona y con el índice oficial, y te envía una horquilla en menos de 48 horas laborables. Sin compromiso.</p>
         <ul>
           <li>Inquilinos verificados: ingresos, contrato y vida laboral comprobados</li>
           <li>Contrato conforme a la LAU y aviso de cada pago</li>
@@ -45,7 +45,7 @@ const { data: qr } = await useAsyncData('qr-cartel', async () => ({
           <div class="c-text">
             <AppLogo />
             <strong>¿Alquilas tu piso?</strong>
-            <span>Valoración gratis del alquiler, hecha por una persona, en 48 h.</span>
+            <span>Valoración gratis del alquiler con pisos comparables, en 48 h.</span>
             <span class="c-url">rentahucha.es/valoracion-alquiler</span>
           </div>
           <div class="c-qr" v-html="qr?.tarjeta" />

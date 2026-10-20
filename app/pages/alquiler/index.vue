@@ -43,7 +43,7 @@ const groups = computed(() => {
       <p v-if="!groups.length" class="muted">No tenemos guía de esa ciudad todavía. <NuxtLink to="/apuntate?tipo=inquilino#formulario">Apúntate</NuxtLink> y te avisamos cuando haya pisos.</p>
       <div class="note note-green owners">
         <strong>¿Tienes un piso?</strong>
-        <p>Publícalo gratis en la beta, o pide una valoración del alquiler hecha por una persona con pisos comparables de tu zona.</p>
+        <p>Publícalo gratis en la beta, o pide una valoración del alquiler con pisos comparables de tu zona.</p>
         <div class="row">
           <NuxtLink to="/cuenta/registro?tipo=propietario" class="btn btn-dark btn-sm">Publicar mi piso</NuxtLink>
           <NuxtLink to="/valoracion-alquiler" class="btn btn-ghost btn-sm">Valoración gratis</NuxtLink>

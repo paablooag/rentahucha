@@ -107,7 +107,7 @@ ${(o.after ?? []).map(s => p(s, `font-size:14px;color:${C.muted}`)).join('\n')}
 <a href="${site}/mi-cuenta" style="color:${C.ink};text-decoration:underline">Mi cuenta</a> &nbsp;·&nbsp;
 <a href="mailto:${brand.email}" style="color:${C.ink};text-decoration:underline">${esc(brand.email)}</a>
 </p>
-<p style="margin:0 0 6px;font-size:12px;line-height:1.6;color:${C.muted}">${o.footer ? `${esc(o.footer)}<br>` : ''}Responde a este correo si necesitas ayuda: lo lee una persona.</p>
+<p style="margin:0 0 6px;font-size:12px;line-height:1.6;color:${C.muted}">${o.footer ? `${esc(o.footer)}<br>` : ''}Si necesitas ayuda, responde a este correo.</p>
 <p style="margin:0;font-size:12px;line-height:1.6;color:${C.muted}">${esc(brand.name)} no es una aseguradora · <a href="${site}/legal/privacidad" style="color:${C.muted}">Privacidad</a></p>
 </td></tr>
 
