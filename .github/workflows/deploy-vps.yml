@@ -17,7 +17,51 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  # Antes de desplegar: compila, arranca la web con un PostgreSQL vacío y recorre los flujos clave
+  # (scripts/smoke-test.mjs). Si algo falla, no se despliega.
+  pruebas:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: prueba
+          POSTGRES_PASSWORD: prueba
+          POSTGRES_DB: rentahucha
+        ports: ['5432:5432']
+        options: >-
+          --health-cmd "pg_isready -U prueba" --health-interval 5s --health-timeout 5s --health-retries 10
+    env:
+      NUXT_DATABASE_URL: postgres://prueba:prueba@localhost:5432/rentahucha
+      NUXT_SESSION_PASSWORD: sesion-de-prueba-solo-para-ci-0123456789abcdef
+      NUXT_ADMIN_USER: prueba
+      NUXT_ADMIN_PASSWORD: clave-de-prueba-solo-para-ci-123
+      PORT: '3999'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm install --no-audit --no-fund
+      - run: npx nuxt build
+      - name: Arrancar la web
+        run: |
+          nohup node .output/server/index.mjs > servidor.log 2>&1 &
+          for i in $(seq 1 60); do curl -fsS -o /dev/null http://localhost:3999/ && break; sleep 2; done
+      - name: Prueba de los flujos clave
+        run: node scripts/smoke-test.mjs
+        env:
+          BASE_URL: http://localhost:3999
+          ADMIN_USER: prueba
+          ADMIN_PASSWORD: clave-de-prueba-solo-para-ci-123
+      - name: Registro del servidor (si falla)
+        if: failure()
+        run: tail -n 80 servidor.log
+
   deploy:
+    needs: pruebas
     runs-on: ubuntu-latest
     timeout-minutes: 20
     environment:
