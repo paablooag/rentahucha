@@ -10,6 +10,7 @@ const links = [
   { to: '/admin', label: 'Resumen', icon: 'chart', exact: true },
   { to: '/admin/estadisticas', label: 'Estadísticas', icon: 'share' },
   { to: '/admin/interesados', label: 'Interesados', icon: 'users' },
+  { to: '/admin/captacion', label: 'Captación', icon: 'share' },
   { to: '/admin/pisos', label: 'Pisos', icon: 'file' },
   { to: '/admin/formularios', label: 'Formularios', icon: 'check' },
   { to: '/admin/newsletter', label: 'Newsletter', icon: 'bell' },

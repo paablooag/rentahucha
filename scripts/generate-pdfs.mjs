@@ -12,6 +12,7 @@ const docs = [
   { route: '/dossier/propietarios', file: 'rentahucha-propietarios.pdf' },
   { route: '/dossier/inquilinos', file: 'rentahucha-inquilinos.pdf' },
   { route: '/dossier/checklist-propietarios', file: 'rentahucha-checklist-alquilar-piso-2027.pdf' },
+  { route: '/dossier/cartel', file: 'rentahucha-cartel-propietarios.pdf' },
 ]
 
 function findBrowser() {

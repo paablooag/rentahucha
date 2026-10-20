@@ -321,4 +321,44 @@ export const MIGRATIONS: { id: number; name: string; sql: string }[] = [
       );
     `,
   },
+  {
+    id: 13,
+    name: 'captación de inmobiliarias y administradores',
+    sql: `
+      -- Empresas a las que llamamos. Solo datos públicos de empresa; el correo solo se usa si lo piden (consentimiento).
+      CREATE TABLE prospects (
+        id                uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+        kind              text NOT NULL DEFAULT 'inmobiliaria' CHECK (kind IN ('inmobiliaria', 'administrador', 'otro')),
+        company           text NOT NULL,
+        contact_name      text NOT NULL DEFAULT '',
+        city              text NOT NULL,
+        phone             text NOT NULL DEFAULT '',
+        email             text NOT NULL DEFAULT '',
+        website           text NOT NULL DEFAULT '',
+        source            text NOT NULL DEFAULT '',
+        status            text NOT NULL DEFAULT 'por_llamar'
+          CHECK (status IN ('por_llamar', 'volver_a_llamar', 'pide_info', 'en_conversacion', 'cliente', 'no_interesa')),
+        notes             text NOT NULL DEFAULT '',
+        next_call_at      date,
+        consent_at        timestamptz,
+        proposal_sent_at  timestamptz,
+        followup_sent_at  timestamptz,
+        do_not_contact    boolean NOT NULL DEFAULT false,
+        created_at        timestamptz NOT NULL DEFAULT now(),
+        updated_at        timestamptz NOT NULL DEFAULT now()
+      );
+      CREATE UNIQUE INDEX prospects_company_city_idx ON prospects (lower(company), lower(city));
+      CREATE INDEX prospects_status_idx ON prospects (status, next_call_at);
+
+      -- Historial de cada empresa: llamadas, correos, cambios de estado.
+      CREATE TABLE prospect_events (
+        id           bigserial PRIMARY KEY,
+        prospect_id  uuid NOT NULL REFERENCES prospects (id) ON DELETE CASCADE,
+        kind         text NOT NULL,
+        detail       text NOT NULL DEFAULT '',
+        created_at   timestamptz NOT NULL DEFAULT now()
+      );
+      CREATE INDEX prospect_events_idx ON prospect_events (prospect_id, id);
+    `,
+  },
 ]
