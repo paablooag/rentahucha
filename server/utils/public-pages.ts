@@ -10,6 +10,7 @@ export const PUBLIC_PAGES: { path: string; priority: string; changefreq: string 
   { path: '/herramientas/checklist-alquilar-piso', priority: '0.8', changefreq: 'monthly' },
   { path: '/valoracion-alquiler', priority: '0.9', changefreq: 'monthly' },
   { path: '/encuesta-alquiler', priority: '0.7', changefreq: 'weekly' },
+  { path: '/herramientas/modelo-contrato-alquiler', priority: '0.9', changefreq: 'monthly' },
   { path: '/herramientas/test-propietario', priority: '0.8', changefreq: 'monthly' },
   { path: '/herramientas/generador-anuncio', priority: '0.8', changefreq: 'monthly' },
   { path: '/herramientas/carta-inquilino', priority: '0.8', changefreq: 'monthly' },

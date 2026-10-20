@@ -39,6 +39,7 @@ const dossiers = [
         <NuxtLink to="/valoracion-alquiler">Valoración gratis</NuxtLink>
         <NuxtLink to="/alquilar-mi-piso">Guías por ciudad</NuxtLink>
         <NuxtLink to="/herramientas/generador-anuncio">Generador de anuncios</NuxtLink>
+        <NuxtLink to="/herramientas/modelo-contrato-alquiler">Modelo de contrato</NuxtLink>
         <NuxtLink to="/herramientas/checklist-alquilar-piso">Checklist para alquilar</NuxtLink>
         <NuxtLink to="/herramientas/rentabilidad-alquiler">Rentabilidad del alquiler</NuxtLink>
         <NuxtLink to="/herramientas/coste-impago">Coste de un impago</NuxtLink>

@@ -7,6 +7,7 @@ useSeoMeta({
 const tools = [
   { to: '/herramientas/checklist-alquilar-piso', icon: 'file', tone: 'green', who: 'Propietarios', title: 'Checklist 2027 para alquilar tu piso', text: 'Todo lo que tienes que revisar antes, durante y al final del alquiler. Interactiva y en PDF.' },
   { to: '/valoracion-alquiler', icon: 'euro', tone: 'green', who: 'Propietarios', title: 'Valoración gratis del alquiler', text: '¿Cuánto puedes pedir por tu piso? Te enviamos una horquilla con pisos comparables de tu zona.' },
+  { to: '/herramientas/modelo-contrato-alquiler', icon: 'file', tone: 'green', who: 'Todos', title: 'Modelo de contrato de alquiler', text: 'El modelo oficial del Ministerio para descargar, explicado cláusula a cláusula.' },
   { to: '/herramientas/test-propietario', icon: 'check', tone: 'green', who: 'Propietarios', title: 'Test: ¿estás preparado para alquilar?', text: '8 preguntas en 2 minutos para saber qué te falta antes de alquilar tu piso.' },
   { to: '/herramientas/generador-anuncio', icon: 'file', tone: 'green', who: 'Propietarios', title: 'Generador de anuncios', text: 'Título y descripción de tu anuncio de alquiler en un minuto, listos para copiar o publicar.' },
   { to: '/herramientas/rentabilidad-alquiler', icon: 'euro', tone: 'green', who: 'Propietarios', title: 'Rentabilidad del alquiler', text: 'Rentabilidad bruta y neta de tu piso con gastos, meses vacíos y gestión: lo que te queda de verdad.' },
