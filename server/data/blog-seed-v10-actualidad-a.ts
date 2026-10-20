@@ -98,7 +98,7 @@ Acceso a una vivienda digna, medidas contra los desahucios sin alternativa y la 
 
 - [La acampada de Sol: qué es y qué piden](/blog/acampada-de-sol-por-la-vivienda-que-es-y-que-piden)
 - [Los decretos de vivienda, explicados](/blog/decretos-de-vivienda-octubre-2026-explicados)
-- [La votación de los decretos pasa al 12 de noviembre](/blog/decretos-de-vivienda-votacion-12-noviembre)
+- [La votación de los decretos, prevista para el 12 de noviembre](/blog/decretos-de-vivienda-votacion-12-noviembre)
 
 ${CTA_INQ}`,
   },
@@ -214,12 +214,12 @@ ${CTA_INQ}`,
   },
   {
     slug: 'decretos-de-vivienda-votacion-12-noviembre',
-    title: 'Los decretos de vivienda se votarán el 12 de noviembre: qué está en juego',
+    title: 'Decretos de vivienda: la votación prevista para el 12 de noviembre y qué está en juego',
     excerpt: 'La votación prevista para el 16 de octubre se aplaza. Qué incluyen los dos decretos, qué dice la prensa sobre los apoyos y qué pasa si caen.',
     audience: 'propietarios',
     category: CAT,
     publishedAt: D,
-    body: `Los dos decretos de vivienda aprobados por el Gobierno el 6 de octubre de 2026 (**reales decretos-ley 28/2026 y 29/2026**, publicados en el BOE el día 7) siguen pendientes de convalidación. Según la prensa, la **Diputación Permanente del Congreso** prevé votarlos el **12 de noviembre**, y no el 16 de octubre como se anunció.
+    body: `Los dos decretos de vivienda aprobados por el Gobierno el 6 de octubre de 2026 (**reales decretos-ley 28/2026 y 29/2026**, publicados en el BOE el día 7) siguen pendientes de convalidación. Según la prensa, la **Diputación Permanente del Congreso** prevé votarlos el **12 de noviembre**, y no el 16 de octubre como se anunció. A 20 de octubre no hay convocatoria oficial y algunos medios apuntan a que la fecha podría moverse: si no se convalidan dentro del plazo legal, decaen.
 
 ${AL_DIA}
 
@@ -318,7 +318,7 @@ ${AL_DIA}
 - No tomes decisiones irreversibles antes de conocer el resultado.
 - Revisa la situación tras la votación prevista para el **12 de noviembre**.
 
-Más contexto en [los decretos se votarán el 12 de noviembre](/blog/decretos-de-vivienda-votacion-12-noviembre).
+Más contexto en [la votación prevista de los decretos](/blog/decretos-de-vivienda-votacion-12-noviembre).
 
 ${CTA_PROP}`,
   },
@@ -329,7 +329,7 @@ ${CTA_PROP}`,
     audience: 'inquilinos',
     category: CAT,
     publishedAt: D,
-    body: `El decreto de medidas urgentes, que incluye la **prórroga extraordinaria**, está en vigor desde el 7 de octubre de 2026 y pendiente de convalidación, prevista para el **12 de noviembre**.
+    body: `El decreto de medidas urgentes, que incluye la **prórroga extraordinaria**, está en vigor desde octubre de 2026 y pendiente de convalidación, prevista según la prensa para el **12 de noviembre**.
 
 ${AL_DIA}
 

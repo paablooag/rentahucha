@@ -16,9 +16,11 @@ import { BLOG_SEED_V9_PROPIETARIOS } from '../data/blog-seed-v9-propietarios'
 import { BLOG_SEED_V9_INMOBILIARIAS } from '../data/blog-seed-v9-inmobiliarias'
 import { BLOG_SEED_V10_ACTUALIDAD_A } from '../data/blog-seed-v10-actualidad-a'
 import { BLOG_SEED_V10_ACTUALIDAD_B } from '../data/blog-seed-v10-actualidad-b'
+import { BLOG_SEED_V11_ELECCIONES } from '../data/blog-seed-v11-elecciones'
 
 // Los nuevos primero: al insertar en orden inverso, el primero de la lista queda como el más reciente.
 const BLOG_SEED = [
+  ...BLOG_SEED_V11_ELECCIONES,
   ...BLOG_SEED_V10_ACTUALIDAD_A,
   ...BLOG_SEED_V10_ACTUALIDAD_B,
   ...BLOG_SEED_V9_INQUILINOS,
@@ -92,7 +94,8 @@ async function migrate(d: Driver) {
 // v8: enlace a la calculadora de alquiler según el sueldo.
 // v9: 50 artículos nuevos (20 inquilinos, 18 propietarios, 12 inmobiliarias).
 // v10: 50 artículos de actualidad (acampadas, huelga del 11-N, decretos el 12-N, Francia, hoteles, Airbnb) y fecha de votación corregida.
-const BLOG_SEED_VERSION = 10
+// v11: vivienda en las elecciones del 29-N (2 artículos) y la fecha de votación de los decretos, sin confirmación oficial.
+const BLOG_SEED_VERSION = 11
 
 // v6: artículos «2026» como gancho pasan a «2027». Las URLs cambian; las antiguas redirigen con 301 (nuxt.config).
 const BLOG_SLUG_RENAMES: [string, string][] = [

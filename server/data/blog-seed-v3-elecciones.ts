@@ -8,7 +8,7 @@ type Seed = Omit<BlogPost, 'updatedAt' | 'published'>
 const D = '2026-10-15'
 const CAT = 'Elecciones 29N'
 
-const NOTA = `> **Actualizado a 18 de octubre de 2026.** Los decretos de vivienda (reales decretos-ley 28/2026 y 29/2026) están pendientes de convalidación por la Diputación Permanente del Congreso. La votación, prevista inicialmente para el 16 de octubre, se ha aplazado al 12 de noviembre según la prensa. Si no se convalidan, decaen. Consulta siempre el BOE y la web del Congreso.`
+const NOTA = `> **Actualizado a 20 de octubre de 2026.** Los decretos de vivienda (reales decretos-ley 28/2026 y 29/2026) están pendientes de convalidación por la Diputación Permanente del Congreso. La prensa sitúa la votación el 12 de noviembre, aunque no hay convocatoria oficial y la fecha podría cambiar. Si no se convalidan dentro del plazo, decaen. Consulta siempre el BOE y la web del Congreso.`
 
 export const BLOG_SEED_V3_ELECCIONES: Seed[] = [
   {

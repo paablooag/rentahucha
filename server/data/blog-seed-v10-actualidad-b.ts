@@ -657,7 +657,7 @@ ${CTA_INMO}`,
 ## 5. Lo que no decimos
 Predicciones sobre el resultado o el próximo Gobierno.
 
-Más en [los decretos se votarán el 12 de noviembre](/blog/decretos-de-vivienda-votacion-12-noviembre).
+Más en [la votación prevista de los decretos](/blog/decretos-de-vivienda-votacion-12-noviembre).
 
 ${CTA_INMO}`,
   },

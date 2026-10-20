@@ -40,6 +40,14 @@ const cityLinks = computed(() => {
   return (mentioned.length ? mentioned : CITIES.slice(0, 6)).slice(0, 8)
 })
 
+// El artículo se parte antes del segundo apartado para intercalar una llamada a la acción (BlogInlineCta).
+const parts = computed(() => {
+  const html = post.value?.html ?? ''
+  const first = html.indexOf('<h2')
+  const second = first >= 0 ? html.indexOf('<h2', first + 3) : -1
+  return second > 0 ? [html.slice(0, second), html.slice(second)] : [html, '']
+})
+
 // SEO: URL canónica, etiquetas para redes y datos estructurados (artículo, migas de pan y preguntas frecuentes).
 const { brand } = useAppConfig()
 const site = `https://${brand.domain}`
@@ -127,7 +135,9 @@ useHead({
               <li v-for="t in post.toc" :key="t.id"><a :href="`#${t.id}`">{{ t.text }}</a></li>
             </ol>
           </details>
-          <article class="prose" v-html="post.html" />
+          <article class="prose" v-html="parts[0]" />
+          <BlogInlineCta v-if="parts[1]" :audience="post.audience" :slug="post.slug" />
+          <article v-if="parts[1]" class="prose" v-html="parts[1]" />
         </div>
         <aside class="side">
           <BlogCta :audience="post.audience" compact />
