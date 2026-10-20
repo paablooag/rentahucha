@@ -22,7 +22,7 @@ const faqs = [
     <!-- Hero -->
     <section class="hero">
       <div class="container">
-        <span class="eyebrow">Próximamente en {{ brand.area }}</span>
+        <span class="eyebrow">Beta abierta en {{ brand.area }}</span>
         <h1>El alquiler donde pagar a tiempo te hace ahorrar y el propietario <span class="hl">alquila tranquilo</span>.</h1>
         <p class="lead">
           Inquilinos verificados para el propietario, con una hucha que responde si hay impago. Para el inquilino, esa hucha se convierte en la entrada de su casa.
