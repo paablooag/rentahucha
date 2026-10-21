@@ -434,4 +434,17 @@ export const MIGRATIONS: { id: number; name: string; sql: string }[] = [
       ALTER TABLE properties ADD COLUMN big_holder boolean NOT NULL DEFAULT false;
     `,
   },
+  {
+    id: 19,
+    name: 'datos de Google Search Console',
+    sql: `
+      -- Copia diaria de Search Console (server/utils/search-console.ts). Rutas sin dominio.
+      CREATE TABLE gsc_daily (day date PRIMARY KEY, clicks integer NOT NULL, impressions integer NOT NULL, position real NOT NULL);
+      CREATE TABLE gsc_pages (day date NOT NULL, page text NOT NULL, clicks integer NOT NULL, impressions integer NOT NULL, position real NOT NULL);
+      CREATE INDEX gsc_pages_day_idx ON gsc_pages (day);
+      -- Google omite las búsquedas poco frecuentes (anonimizadas): la suma de esta tabla es menor que el total.
+      CREATE TABLE gsc_queries (day date NOT NULL, query text NOT NULL, page text NOT NULL, clicks integer NOT NULL, impressions integer NOT NULL, position real NOT NULL);
+      CREATE INDEX gsc_queries_day_idx ON gsc_queries (day);
+    `,
+  },
 ]

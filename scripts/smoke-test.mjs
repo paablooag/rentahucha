@@ -116,6 +116,8 @@ r = await admin('/api/admin/mapa-calor?dias=7')
 check(r.status === 200 && Array.isArray(r.json?.clicks), `mapa de calor → ${r.status}`)
 r = await admin('/api/admin/stats?dias=7')
 check(r.status === 200 && typeof r.json?.today?.visitors === 'number', `estadísticas → ${r.status}`)
+r = await admin('/api/admin/google?dias=28')
+check(r.status === 200 && typeof r.json?.configured === 'boolean', `datos de Google → ${r.status}`)
 r = await anon('/api/t', { method: 'POST', body: { e: 'view', p: '/', v: 'prueba', s: 1, w: 1280 } })
 check(r.status === 200, `seguimiento → ${r.status}`)
 

@@ -10,6 +10,7 @@ const links = [
   { to: '/admin', label: 'Resumen', icon: 'chart', exact: true },
   { to: '/admin/estadisticas', label: 'Estadísticas', icon: 'share' },
   { to: '/admin/mapa-calor', label: 'Mapa de calor', icon: 'chart' },
+  { to: '/admin/google', label: 'Google', icon: 'share' },
   { to: '/admin/interesados', label: 'Interesados', icon: 'users' },
   { to: '/admin/captacion', label: 'Captación', icon: 'share' },
   { to: '/admin/pisos', label: 'Pisos', icon: 'file' },

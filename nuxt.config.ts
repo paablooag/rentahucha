@@ -20,6 +20,9 @@ export default defineNuxtConfig({
     smtpPort: '587',
     smtpUser: '',
     smtpPass: '',
+    // Google Search Console de solo lectura: ruta a la clave JSON de la cuenta de servicio (NUXT_GSC_KEY_FILE), fuera del repositorio.
+    gscKeyFile: '',
+    gscSite: '',
   },
   app: {
     head: {
