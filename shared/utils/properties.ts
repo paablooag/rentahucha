@@ -41,7 +41,7 @@ export interface PropertyInput {
   availableFrom: string | null
   description: string
   // Datos que debe incluir el anuncio según el art. 20 del RDL 29/2026 (BOE 7-10-2026), «cuando proceda».
-  /** Número, código o título identificativo de la vivienda (p. ej. el del registro de arrendamientos). */
+  /** Número, código o título identificativo de la vivienda (p. ej. el código autonómico de vivienda turística). */
   regCode: string
   /** Índice de referencia del precio (zonas tensionadas), tal como lo da el sistema del Ministerio. */
   referenceIndex: string

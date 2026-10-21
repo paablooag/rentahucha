@@ -166,8 +166,8 @@ const knownCity = computed(() => CITIES.find(c => norm(c.name) === norm(form.cit
       </div>
       <div class="field">
         <label for="pf-reg">Número o código de registro <span class="muted small">(si tiene)</span></label>
-        <input id="pf-reg" v-model="form.regCode" class="input" maxlength="80" placeholder="Código del registro de arrendamientos">
-        <span class="hint">Por ejemplo, el del registro de arrendamientos de corta duración o el autonómico.</span>
+        <input id="pf-reg" v-model="form.regCode" class="input" maxlength="80" placeholder="Código autonómico o municipal">
+        <span class="hint">Por ejemplo, el código de vivienda turística de tu comunidad. Si no tiene, déjalo en blanco.</span>
       </div>
       <div class="field full">
         <label for="pf-limit">Límite de renta aplicable y norma que lo fija <span class="muted small">(si hay limitación)</span></label>

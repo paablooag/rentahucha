@@ -48,7 +48,7 @@ Tienes que indicar el **índice de referencia del precio** que corresponde a tu 
 ¿No sabes si tu municipio es zona tensionada? Las declaraciones vigentes las publica el Ministerio de Vivienda. En nuestras [guías por ciudad](/alquilar-mi-piso) indicamos, para cada ciudad, si figura en la lista y la fecha en que lo comprobamos.
 
 ### Si tu vivienda tiene un número de registro
-Si la vivienda tiene un número o código identificativo (como los códigos municipales o autonómicos, o el del registro de arrendamientos cuando se aplique), debe aparecer en el anuncio. El propio decreto pone como ejemplo los códigos de las viviendas de uso turístico.
+Si la vivienda tiene un número o código identificativo (como los códigos municipales o autonómicos), debe aparecer en el anuncio. El propio decreto pone como ejemplo los códigos de las viviendas de uso turístico.
 
 ### Si eres gran tenedor
 Debes indicarlo en el anuncio.

@@ -67,7 +67,7 @@ ${CTA_PROP}`,
 ## Lo que dice la normativa hoy
 
 - **Licencia o autorización** autonómica o municipal para la vivienda de uso turístico.
-- **Registro único de arrendamientos** y número en el anuncio, obligatorio desde julio de 2025 para los alquileres de corta duración.
+- **Registro único de arrendamientos**: exigido desde julio de 2025 para los alquileres de corta duración y anulado por el Tribunal Supremo en 2026 (siguen los registros autonómicos de vivienda turística).
 - **Comunidad de propietarios**: desde 2025, los nuevos pisos turísticos necesitan la aprobación previa de la comunidad. Lee [la comunidad ya puede vetar pisos turísticos](/blog/comunidad-de-vecinos-puede-vetar-pisos-turisticos).
 - **Fiscalidad**: el decreto de octubre de 2026 prevé IVA del 10 % en ciertos alquileres turísticos y recargos de IBI, si se mantiene.
 
@@ -105,12 +105,14 @@ ${CTA_PROP}`,
   },
   {
     slug: 'registro-unico-airbnb-por-que-desaparecieron-anuncios',
-    title: 'Registro único y Airbnb: por qué desaparecieron miles de anuncios',
-    excerpt: 'Desde julio de 2025, los alquileres de corta duración necesitan número de registro. Qué acordaron el Gobierno y las plataformas y cuántos anuncios se retiraron.',
+    title: 'Registro único y Airbnb: por qué desaparecieron miles de anuncios y qué cambió con el Supremo',
+    excerpt: 'En 2025 se retiraron miles de anuncios sin número de registro. En 2026 el Supremo anuló el registro único estatal. Qué pasó y qué sigue vigente.',
     audience: 'propietarios',
     category: 'Turismo',
     publishedAt: D,
-    body: `Desde el **1 de julio de 2025**, para anunciar un alquiler de corta duración (turístico, de temporada o por habitaciones) hace falta un número del **Registro Único de Arrendamientos** (Real Decreto 1312/2024).
+    body: `Desde el 1 de julio de 2025, el **Real Decreto 1312/2024** exigía un número del **Registro Único de Arrendamientos** para anunciar alquileres de corta duración en plataformas. Eso provocó la retirada de miles de anuncios. En 2026, el Tribunal Supremo anuló el registro estatal.
+
+> **Actualizado a 21 de octubre de 2026.** El Tribunal Supremo **anuló el Registro Único de Arrendamientos estatal** por considerar que el Estado no tiene competencia para crearlo (sentencia 620/2026, de 19 de mayo, publicada en el BOE el 8 de junio de 2026; en el mismo sentido, la sentencia de 1 de junio de 2026, publicada el 18 de julio). Se mantienen la Ventanilla Única Digital de Arrendamientos y la obligación de las plataformas de enviar datos. Los registros y licencias **autonómicos o municipales** (por ejemplo, de vivienda turística) siguen vigentes.
 
 ## Lo que pasó en 2025
 
@@ -120,14 +122,20 @@ ${CTA_PROP}`,
 | Julio de 2025 | Tras requerimientos de Consumo, se retiran unos 65.000 anuncios de alojamientos sin licencia |
 | Septiembre de 2025 | Vivienda notifica más de 53.500 pisos turísticos cuya solicitud de registro no prosperó para que se retiren sus anuncios |
 
-## Cómo funciona ahora
+## Qué cambió en 2026
 
-- La plataforma recibe los números de registro y retira los anuncios irregulares.
-- Normalmente se avisa antes al anfitrión para que subsane los defectos; si el número está revocado, la retirada es rápida.
+- El Supremo anuló el registro único estatal y su número por falta de competencia del Estado.
+- Se mantienen la Ventanilla Única Digital y la obligación de las plataformas de enviar datos.
+- Las licencias y registros autonómicos o municipales de vivienda turística siguen siendo necesarios.
 
 ## Si tienes un piso en una plataforma
 
-Comprueba que tu número de registro es válido y corresponde al tipo de alquiler que ofreces. Lee [quién debe registrarse](/blog/registro-unico-de-arrendamientos-quien-debe-registrarse).
+Comprueba que tienes la licencia o el registro de tu comunidad y tu ayuntamiento. Más detalle en [qué queda del registro único tras la anulación](/blog/registro-unico-de-arrendamientos-quien-debe-registrarse).
+
+## Fuentes
+
+- Poder Judicial: [El Tribunal Supremo anula el Registro Único de arrendamientos de corta duración por considerar que el Estado carece de competencia para su creación](https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Noticias-Judiciales/El-Tribunal-Supremo-anula-el-Registro-Unico-de-arrendamientos-de-corta-duracion-por-considerar-que-el-Estado-carece-de-competencia-para-su-creacion).
+- BOE: [sentencia del Tribunal Supremo de 1 de junio de 2026](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-15677) (recurso de la Región de Murcia contra el Real Decreto 1312/2024).
 
 ${CTA_PROP}`,
   },
@@ -372,7 +380,7 @@ ${CTA_INQ}`,
 |---|---|
 | Zonificación | Limita nuevos pisos turísticos en ciertas zonas |
 | Licencias | Control de quién puede operar |
-| Registro único | Número obligatorio en los anuncios |
+| Registro único estatal | Anulado por el Supremo en 2026; siguen las licencias autonómicas |
 | Fiscalidad | Recargos de IBI e impuestos específicos, según el municipio |
 | Comunidad de propietarios | Aprobación previa de nuevos pisos turísticos |
 
@@ -708,7 +716,7 @@ ${CTA_INMO}`,
 |---|---|
 | Causa temporal documentada | Evita que se recalifique como vivienda habitual |
 | Duración de 31 días a 12 meses | Regla del decreto de octubre de 2026, si se mantiene |
-| Número del registro único | Obligatorio para anunciarlo en plataformas |
+| Licencia o registro autonómico de vivienda turística | Necesario para anunciarlo (el registro único estatal fue anulado en 2026) |
 | Fianza de dos meses | Uso distinto de vivienda |
 | Inventario detallado | Suelen ser pisos amueblados |
 

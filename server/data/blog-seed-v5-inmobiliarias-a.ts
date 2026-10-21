@@ -527,7 +527,7 @@ ${CTA}`,
 
 - **Zonas tensionadas**: límites a la renta de los contratos nuevos donde la comunidad autónoma las ha declarado.
 - **Actualización de rentas**: para contratos firmados desde la Ley 12/2023, si se pacta actualización, el límite es el índice del INE para arrendamientos de vivienda (IRAV).
-- **Registro único de arrendamientos** (Real Decreto 1312/2024): número de registro obligatorio para anunciar alquileres de corta duración (turísticos y de temporada, también por habitaciones).
+- **Registro único de arrendamientos** (Real Decreto 1312/2024): el registro estatal y su número fueron anulados por el Tribunal Supremo en 2026; siguen la Ventanilla Única Digital, las obligaciones de datos de las plataformas y los registros autonómicos de vivienda turística.
 - **Decretos de octubre de 2026**: prórrogas extraordinarias, límites a las subidas y reglas de temporada y habitaciones, pendientes de convalidación. Lee el [resumen de los decretos](/blog/decretos-de-vivienda-octubre-2026-explicados).
 - **Reforma de la justicia (LO 1/2025)**: intento previo de negociación antes de muchas demandas civiles.
 
@@ -776,7 +776,7 @@ ${CTA}`,
 
 ## Las novedades
 
-- **Registro único de arrendamientos**: para anunciar alquileres de temporada hace falta número de registro. Lee [quién debe registrarse](/blog/registro-unico-de-arrendamientos-quien-debe-registrarse).
+- **Registro único de arrendamientos**: anulado por el Tribunal Supremo en 2026. Revisa si tu comunidad tiene un registro propio: [qué queda del registro único](/blog/registro-unico-de-arrendamientos-quien-debe-registrarse).
 - **Decreto de octubre de 2026** (pendiente de convalidación): de 31 días a 12 meses, causa justificada por el propietario y no más de dos contratos encadenados. Detalle en [las nuevas reglas de la temporada](/blog/alquiler-de-temporada-nuevas-reglas-12-meses).
 
 ## Checklist por operación
@@ -795,35 +795,31 @@ ${CTA}`,
   },
   {
     slug: 'registro-unico-arrendamientos-agencias-temporada',
-    title: 'Registro único de arrendamientos: lo que tu agencia debe hacer si anuncia temporada',
-    excerpt: 'Número de registro, anuncios en plataformas y responsabilidades: guía rápida del Real Decreto 1312/2024 para inmobiliarias.',
+    title: 'Registro único de arrendamientos tras la sentencia del Supremo: qué debe revisar tu agencia',
+    excerpt: 'El Supremo anuló el registro único estatal. Qué siguen exigiendo las comunidades y las plataformas, y qué datos deben llevar ahora los anuncios de la agencia.',
     audience: A,
     category: 'Normativa',
     publishedAt: D,
-    body: `El **Real Decreto 1312/2024** creó el Registro Único de Arrendamientos y la Ventanilla Única Digital de Arrendamientos. Desde el **1 de julio de 2025**, los alquileres de corta duración que se ofrecen en plataformas necesitan un **número de registro**.
+    body: `El **Real Decreto 1312/2024** creó el Registro Único de Arrendamientos para los alquileres de corta duración. En 2026 el Tribunal Supremo anuló el registro estatal y su número, pero no todo el sistema.
 
-## A qué afecta
+> **Actualizado a 21 de octubre de 2026.** El Tribunal Supremo **anuló el Registro Único de Arrendamientos estatal** por considerar que el Estado no tiene competencia para crearlo (sentencia 620/2026, de 19 de mayo, publicada en el BOE el 8 de junio de 2026; en el mismo sentido, la sentencia de 1 de junio de 2026, publicada el 18 de julio). Se mantienen la Ventanilla Única Digital de Arrendamientos y la obligación de las plataformas de enviar datos. Los registros y licencias **autonómicos o municipales** (por ejemplo, de vivienda turística) siguen vigentes.
 
-- Alquiler **turístico**.
-- Alquiler **de temporada** (por ejemplo, por estudios o trabajo).
-- Alquiler **por habitaciones** de corta duración.
+## Qué debe revisar la agencia
 
-No afecta, en general, al alquiler de vivienda habitual de larga duración.
-
-## Qué debe hacer la agencia
-
-1. Comprobar que el piso tiene **número de registro** antes de anunciarlo como temporada.
-2. Incluir el número en el **anuncio**.
-3. Conservar la documentación del alquiler para las obligaciones de información periódica.
-
-## Cómo se obtiene
-
-Se solicita en el **Registro de la Propiedad** correspondiente, a través de la ventanilla digital, con los datos de la vivienda y del tipo de alquiler. Consulta los requisitos actualizados en el Colegio de Registradores.
+1. **Turístico**: que el piso tenga la licencia o el registro autonómico y municipal que corresponda, y que su código aparezca en el anuncio.
+2. **Temporada y habitaciones**: si la comunidad tiene un registro propio, y las nuevas reglas de los decretos de octubre de 2026.
+3. **Todos los anuncios**: los datos que exige el artículo 20 del Real Decreto-ley 29/2026 (índice de referencia, límite de renta, número identificativo cuando proceda y gran tenedor). Lo explicamos en [cómo adaptar los anuncios al Real Decreto-ley 29/2026](/blog/anuncios-de-alquiler-inmobiliarias-decreto-29-2026).
+4. **Plataformas**: siguen obligadas a enviar datos a la Ventanilla Única Digital de Arrendamientos; conserva la documentación de cada alquiler.
 
 ## Errores a evitar
 
-- Anunciar temporada sin número.
-- Usar el número de un alquiler turístico para otro tipo de alquiler sin comprobar que cubre ese uso.
+- Seguir exigiendo o anunciando el número del registro estatal como si fuera obligatorio.
+- Olvidar el código autonómico de vivienda turística, que sí sigue vigente.
+
+## Fuentes
+
+- Poder Judicial: [El Tribunal Supremo anula el Registro Único de arrendamientos de corta duración por considerar que el Estado carece de competencia para su creación](https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Noticias-Judiciales/El-Tribunal-Supremo-anula-el-Registro-Unico-de-arrendamientos-de-corta-duracion-por-considerar-que-el-Estado-carece-de-competencia-para-su-creacion).
+- BOE: [sentencia del Tribunal Supremo de 1 de junio de 2026](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-15677) (recurso de la Región de Murcia contra el Real Decreto 1312/2024).
 
 ${CTA}`,
   },

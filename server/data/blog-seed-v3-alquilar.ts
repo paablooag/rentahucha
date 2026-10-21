@@ -8,43 +8,124 @@ const D = '2026-10-15'
 export const BLOG_SEED_V3_ALQUILAR: Seed[] = [
   {
     slug: 'como-poner-tu-piso-en-alquiler-paso-a-paso',
-    title: 'Cómo poner tu piso en alquiler paso a paso (guía 2027)',
-    excerpt: 'De preparar el piso a entregar las llaves: los 10 pasos, los documentos y los errores que debes evitar.',
+    title: 'Cómo poner tu piso en alquiler en 2027: guía paso a paso con requisitos, precio y contrato',
+    excerpt: 'Todo lo que necesitas para poner tu piso en alquiler, en orden: papeles, precio, qué debe llevar el anuncio desde octubre de 2026, cómo elegir inquilino, el contrato, la fianza y los impuestos.',
     audience: 'propietarios',
     category: 'Poner en alquiler',
     publishedAt: D,
-    body: `Alquilar tu piso por primera vez puede parecer un lío. Esta es la ruta completa, en orden.
+    body: `Poner un piso en alquiler no es difícil, pero hay que hacerlo **en orden** y cumpliendo unas cuantas normas que han cambiado en los últimos años. Esta guía recoge el proceso completo, desde el primer día hasta la entrega de llaves, con lo que exige la ley a fecha de octubre de 2026.
 
-## Los 10 pasos
+> **Resumen en 30 segundos:** prepara el piso y los papeles (certificado energético incluido), fija un precio con datos y comprueba si tu zona es tensionada, publica un anuncio completo (desde el 8-10-2026 con datos obligatorios nuevos), elige inquilino con criterios objetivos de solvencia, firma un contrato conforme a la LAU con inventario, deposita la fianza y declara las rentas.
 
-1. **Revisa el piso**: reparaciones pendientes, limpieza y pintura.
-2. **Saca el certificado energético**: es obligatorio para anunciar.
-3. **Fija el precio**: compara con pisos similares y comprueba si tu zona es tensionada.
-4. **Haz buenas fotos** con luz natural.
-5. **Publica el anuncio** con toda la información.
-6. **Filtra y organiza visitas**.
-7. **Analiza la solvencia**: ingresos, contrato de trabajo y referencias.
-8. **Firma el contrato** con un inventario y fotos.
-9. **Deposita la fianza** en el organismo de tu comunidad autónoma.
-10. **Cambia los suministros** y entrega las llaves.
+## Paso 1. Prepara el piso
 
-## Documentos que necesitas
+Un piso cuidado se alquila antes y atrae mejores inquilinos.
 
-- Nota simple o escritura.
-- Certificado energético.
-- Cédula de habitabilidad, en las comunidades que la exigen.
-- Últimos recibos de IBI y comunidad.
+- **Reparaciones pendientes**: caldera, persianas, grifos, enchufes y humedades. Lo que falle el primer mes será tu primera incidencia.
+- **Limpieza y pintura** si hace falta: es la reforma más rentable.
+- **Decide si lo alquilas amueblado** y haz una lista de lo que dejas.
 
-## Errores típicos
+Si dudas sobre qué reformas compensan, mira [reformas que se pagan solas al alquilar](/blog/reformas-que-se-pagan-solas-al-alquilar).
 
-- Precio por encima del mercado: el piso se queda vacío semanas.
+## Paso 2. Reúne los papeles
+
+| Documento | ¿Obligatorio? |
+|---|---|
+| Certificado de eficiencia energética | Sí. La etiqueta debe aparecer en el anuncio (RD 390/2021) |
+| Cédula de habitabilidad o licencia de primera ocupación | Solo en las comunidades que la exigen |
+| Escritura o nota simple | Recomendable, para acreditar que eres el propietario |
+| Últimos recibos de IBI y comunidad | Recomendable, para fijar gastos |
+| Referencia catastral | Necesaria para consultar el índice de referencia del precio |
+
+¿Tienes hipoteca? Revisa la escritura por si el banco pone condiciones al alquiler. ¿Vives en una comunidad con estatutos? Comprueba que no limitan el uso.
+
+## Paso 3. Fija el precio con datos
+
+El error más caro es pedir de más: cada mes vacío te cuesta una mensualidad entera.
+
+1. **Compara con pisos parecidos** en tu barrio (superficie, estado, planta, extras).
+2. **Consulta el índice de referencia** del Ministerio de Vivienda en [serpavi.mivau.gob.es](https://serpavi.mivau.gob.es/) con la referencia catastral.
+3. **Comprueba si tu municipio es zona tensionada.** Si lo es, la renta de un contrato nuevo tiene límites (en general, la del contrato anterior; y para grandes tenedores, el índice). Lo explicamos en [zonas tensionadas: qué son y dónde se aplican](/blog/zonas-tensionadas-que-son-y-donde-se-aplican) y en las [guías por ciudad](/alquilar-mi-piso).
+
+¿No quieres hacerlo a mano? Pide una [valoración gratis del alquiler](/valoracion-alquiler): te enviamos una horquilla con comparables reales de tu zona y el índice oficial. Y con la [calculadora de rentabilidad](/herramientas/rentabilidad-alquiler) ves cuánto te queda de verdad después de gastos.
+
+## Paso 4. Prepara un anuncio completo
+
+Desde el **8 de octubre de 2026**, el artículo 20 del Real Decreto-ley 29/2026 obliga a que todo anuncio de alquiler sea veraz y, cuando corresponda, incluya:
+
+- el **índice de referencia** del precio (en zonas tensionadas),
+- el **límite de renta aplicable** y la norma que lo fija (si hay limitación),
+- el **número de registro** de la vivienda (si tiene),
+- si el arrendador es **gran tenedor**.
+
+Además, la **etiqueta energética** sigue siendo obligatoria. Lo tienes todo explicado en [qué debe incluir tu anuncio de alquiler](/blog/que-debe-incluir-un-anuncio-de-alquiler-decreto-29-2026).
+
+**¿Alquiler turístico o de temporada?** Revisa la licencia o el registro que exija tu comunidad autónoma y tu ayuntamiento, y pon su código en el anuncio. El registro único estatal que se exigía desde julio de 2025 fue anulado por el Tribunal Supremo en 2026: [qué queda del registro único](/blog/registro-unico-de-arrendamientos-quien-debe-registrarse).
+
+Consejos para que el anuncio funcione:
+
+- **Fotos horizontales, con luz de día** y el piso recogido. La primera es la que más se mira.
+- **Pon el precio** y lo que incluye.
+- Describe el perfil que buscas con **criterios objetivos** (ingresos estables, estancia larga). Nunca por origen, sexo, religión o si tiene hijos: la discriminación está prohibida.
+
+Si quieres, el [generador de anuncios](/herramientas/generador-anuncio) te escribe el título y la descripción en un minuto, con los datos legales incluidos.
+
+## Paso 5. Elige inquilino
+
+Con muchos candidatos, decide con criterios objetivos y por escrito.
+
+- **Solvencia**: como referencia prudente, que la renta no pase del 30-35 % de los ingresos netos del hogar.
+- **Documentación**: nóminas o declaración de la renta, contrato o vida laboral. Pide solo lo necesario y guárdalo solo el tiempo imprescindible (protección de datos).
+- **Visitas**: agrúpalas en una o dos franjas para ahorrar tiempo.
+
+Qué puedes preguntar y qué no: [preguntas para elegir inquilino que son legales](/blog/preguntas-para-elegir-inquilino-legales).
+
+## Paso 6. Firma el contrato
+
+El contrato de vivienda habitual se rige por la **Ley de Arrendamientos Urbanos (LAU)**. Lo esencial:
+
+- **Duración y prórrogas**: el inquilino puede prorrogar año a año hasta 5 años (7 si el arrendador es una empresa); después hay prórroga tácita de hasta 3 años si nadie avisa. Si podrías necesitar el piso para ti o un familiar, ponlo expresamente en el contrato.
+- **Renta y actualización**: si el contrato no prevé actualizar la renta, no se actualiza. Entre el 8-10-2026 y el 31-12-2027 hay además un límite extraordinario del 2 % sin nuevo acuerdo: [cuánto puede subir el alquiler en 2026 y 2027](/blog/limite-2-por-ciento-subida-alquiler-hasta-2027).
+- **Fianza**: una mensualidad en vivienda. **Garantía adicional**: como máximo dos mensualidades en contratos de hasta 5 o 7 años.
+- **Gastos de gestión inmobiliaria y de formalización del contrato**: no se pueden cobrar al inquilino.
+- **Inventario con fotos y fecha**, firmado por los dos: es tu mejor prueba al terminar el contrato.
+
+El Ministerio de Vivienda publica un modelo orientativo: te lo explicamos cláusula a cláusula en el [modelo de contrato de alquiler](/herramientas/modelo-contrato-alquiler).
+
+## Paso 7. Fianza, suministros y llaves
+
+- **Deposita la fianza** en el organismo de tu comunidad autónoma, en el plazo que fije (en muchas es obligatorio y hay multas por no hacerlo). Lo indicamos en cada [guía por ciudad](/alquilar-mi-piso).
+- **Suministros**: decide si los cambias de titular o se quedan a tu nombre y cómo se repercuten. Déjalo por escrito.
+- **Seguro de hogar**: el de continente es tuyo; si quieres cubrir impagos, puedes contratar un seguro de impago por tu cuenta.
+- Entrega las llaves con el inventario firmado.
+
+## Paso 8. Impuestos
+
+Las rentas del alquiler se declaran en el **IRPF** como rendimientos del capital inmobiliario. Puedes deducir gastos como el IBI, la comunidad, el seguro, los intereses de la hipoteca, las reparaciones y la amortización. Para la vivienda habitual del inquilino existe además una **reducción del rendimiento neto**, que tras la Ley 12/2023 va del 50 % al 90 % según el caso (zona tensionada con rebaja de renta, alquiler a jóvenes, rehabilitación…). Comprueba los porcentajes vigentes en la [Agencia Tributaria](https://sede.agenciatributaria.gob.es/) antes de declarar. Más detalle en [cómo declarar el alquiler en la renta](/blog/como-declarar-el-alquiler-en-la-renta).
+
+## Errores que salen caros
+
+- Pedir un precio por encima del mercado y tener el piso vacío semanas.
 - No hacer inventario.
 - No depositar la fianza.
 - Elegir con prisa y sin comprobar ingresos.
+- Copiar un contrato de internet que no cumple la LAU vigente.
+- Publicar un anuncio sin los datos que ahora son obligatorios.
 
-## Para alquilar tranquilo
+## Antes de empezar: tu lista
 
-Elige bien al inquilino y suma una protección frente a impagos: con RentaHucha, la hucha del inquilino pasa a ti si deja de pagar. Si quieres cubrir más meses, puedes contratar además un seguro de impago. Más información en [seguro de impago o renta garantizada](/blog/seguro-de-impago-o-renta-garantizada).`,
+Descarga la [checklist para alquilar tu piso](/herramientas/checklist-alquilar-piso) (28 comprobaciones, en PDF) o haz el [test del propietario](/herramientas/test-propietario) para ver qué te falta.
+
+## Publícalo en RentaHucha
+
+RentaHucha está en beta: puedes [publicar tu piso gratis](/cuenta/registro), revisamos el anuncio antes de publicarlo y los interesados te escriben por chat sin que tengas que dar tu teléfono. Desde el lanzamiento, el inquilino irá llenando cada mes una hucha a su nombre, custodiada por una entidad financiera autorizada: si hay un impago comprobado, su saldo se usa para pagarte lo pendiente. No somos una aseguradora; si quieres cubrir más meses, puedes sumar tu propio seguro de impago.
+
+## Fuentes
+
+- BOE: [Ley 29/1994, de Arrendamientos Urbanos](https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003) (texto consolidado).
+- BOE: [Real Decreto-ley 29/2026, de 6 de octubre](https://www.boe.es/buscar/act.php?id=BOE-A-2026-20823), artículo 20 (publicidad de los arrendamientos) y disposición final sexta (actualización de la renta). Pendiente de convalidación.
+- BOE: [Real Decreto 390/2021](https://www.boe.es/buscar/act.php?id=BOE-A-2021-9176), certificación de la eficiencia energética de los edificios.
+- Ministerio de Vivienda: [sistema estatal de índices de referencia del precio del alquiler](https://serpavi.mivau.gob.es/).`,
   },
   {
     slug: 'fotos-que-alquilan-guia-con-el-movil',

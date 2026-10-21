@@ -99,7 +99,8 @@ async function migrate(d: Driver) {
 // v11: vivienda en las elecciones del 29-N (2 artículos) y la fecha de votación de los decretos, sin confirmación oficial.
 // v12: qué debe incluir un anuncio de alquiler según el art. 20 del RDL 29/2026 (3 artículos).
 // v13: «¿Cuánto puede subir el alquiler en 2026 y 2027?» reescrito según Search Console (título, texto y BOE).
-const BLOG_SEED_VERSION = 13
+// v14: guía «Cómo poner tu piso en alquiler» ampliada y registro único corregido tras la anulación del Supremo (STS 620/2026).
+const BLOG_SEED_VERSION = 14
 
 // v6: artículos «2026» como gancho pasan a «2027». Las URLs cambian; las antiguas redirigen con 301 (nuxt.config).
 const BLOG_SLUG_RENAMES: [string, string][] = [

@@ -159,45 +159,43 @@ Por escrito, con el cálculo y la fuente, al menos con un mes de antelación (ar
   },
   {
     slug: 'registro-unico-de-arrendamientos-quien-debe-registrarse',
-    title: 'Registro único de arrendamientos: quién debe registrarse y cómo',
-    excerpt: 'Desde julio de 2025, los alquileres de corta duración necesitan un número de registro para anunciarse. A quién afecta y cómo obtenerlo.',
+    title: 'Registro único de arrendamientos: qué queda tras la anulación del Supremo',
+    excerpt: 'El Supremo anuló en 2026 el registro único estatal de alquileres de corta duración. Qué sigue siendo obligatorio (registros autonómicos, datos de las plataformas) y qué hacer si alquilas por temporada o turístico.',
     audience: A,
     category: 'Legal',
     publishedAt: D,
-    body: `El **Real Decreto 1312/2024** creó el Registro Único de Arrendamientos y la Ventanilla Única Digital de Arrendamientos. Desde el **1 de julio de 2025** es obligatorio tener un número de registro para anunciar ciertos alquileres en plataformas.
+    body: `El **Real Decreto 1312/2024** creó el Registro Único de Arrendamientos y la Ventanilla Única Digital de Arrendamientos, y desde el 1 de julio de 2025 exigía un número de registro estatal para anunciar alquileres de corta duración en plataformas. En 2026 el Tribunal Supremo anuló la parte del registro.
 
-## A quién afecta
+> **Actualizado a 21 de octubre de 2026.** El Tribunal Supremo **anuló el Registro Único de Arrendamientos estatal** por considerar que el Estado no tiene competencia para crearlo (sentencia 620/2026, de 19 de mayo, publicada en el BOE el 8 de junio de 2026; en el mismo sentido, la sentencia de 1 de junio de 2026, publicada el 18 de julio). Se mantienen la Ventanilla Única Digital de Arrendamientos y la obligación de las plataformas de enviar datos. Los registros y licencias **autonómicos o municipales** (por ejemplo, de vivienda turística) siguen vigentes.
 
-| Tipo de alquiler | ¿Necesita número? |
+## Qué se anuló y qué sigue
+
+| | Situación |
 |---|---|
-| Turístico | Sí |
-| Temporada (estudios, trabajo…) | Sí |
-| Por habitaciones de corta duración | Sí |
-| Vivienda habitual de larga duración | En general, no |
+| Registro único estatal y su número | **Anulado** por el Supremo |
+| Ventanilla Única Digital de Arrendamientos | Se mantiene |
+| Envío de datos de las plataformas a la ventanilla | Se mantiene |
+| Registros y licencias autonómicos o municipales (por ejemplo, de vivienda turística) | **Siguen vigentes** según cada comunidad |
+| Vivienda habitual de larga duración | No necesitaba número estatal |
 
-## Cómo se obtiene
+## Qué hacer si alquilas
 
-1. Solicitud en el **Registro de la Propiedad** donde está inscrita la vivienda, de forma electrónica.
-2. Datos de la vivienda, del titular y del tipo de alquiler.
-3. Si es turístico, la licencia o autorización autonómica o municipal que corresponda.
-4. Se asigna un **número** que debe aparecer en el anuncio.
-
-## Obligaciones después
-
-- Mostrar el número en todos los anuncios.
-- Facilitar información periódica sobre los arrendamientos realizados.
-- Mantener los datos actualizados.
+- **Vivienda habitual de larga duración**: no tenías que registrarte en el registro estatal. Revisa lo que exige el anuncio desde octubre de 2026: [qué debe incluir tu anuncio de alquiler](/blog/que-debe-incluir-un-anuncio-de-alquiler-decreto-29-2026).
+- **Turístico**: consulta el registro o la licencia de tu comunidad autónoma y de tu ayuntamiento; siguen siendo necesarios y su código debe aparecer en el anuncio cuando proceda.
+- **Temporada o habitaciones**: revisa si tu comunidad tiene un registro propio. La regulación de estos alquileres también ha cambiado con los decretos de octubre de 2026.
 
 ## Preguntas frecuentes
 
-### ¿Tengo que registrar mi alquiler de larga duración?
-En general no, porque el registro se dirige a los alquileres de corta duración. Si alquilas también por temporada o habitaciones, sí.
+### ¿Sigo teniendo que poner el número del registro único en el anuncio?
+El número estatal se anuló junto con el registro. Lo que sí debe aparecer, cuando proceda, es el número o código identificativo que exija tu comunidad o ayuntamiento (por ejemplo, el de vivienda turística), según el artículo 20 del Real Decreto-ley 29/2026.
 
-### ¿Qué pasa si anuncio sin número?
-Las plataformas deben retirar los anuncios sin número válido y puede haber consecuencias administrativas.
+### ¿Y los números que ya se habían concedido?
+El Supremo no detalla los efectos sobre los números ya emitidos. Consulta a tu comunidad autónoma o a un profesional si tu actividad depende de ello.
 
-### ¿Cuánto cuesta?
-Tiene un coste registral. Consulta la tarifa vigente en el Registro de la Propiedad.`,
+## Fuentes
+
+- Poder Judicial: [El Tribunal Supremo anula el Registro Único de arrendamientos de corta duración por considerar que el Estado carece de competencia para su creación](https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Noticias-Judiciales/El-Tribunal-Supremo-anula-el-Registro-Unico-de-arrendamientos-de-corta-duracion-por-considerar-que-el-Estado-carece-de-competencia-para-su-creacion).
+- BOE: [sentencia del Tribunal Supremo de 1 de junio de 2026](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-15677) (recurso de la Región de Murcia contra el Real Decreto 1312/2024).`,
   },
   {
     slug: 'inquiokupacion-y-okupacion-diferencias',
@@ -815,7 +813,7 @@ El decreto de octubre de 2026 (si se convalida) establece que, en zonas tensiona
 
 ## Registro
 
-Si es de corta duración, necesitas número del [registro único](/blog/registro-unico-de-arrendamientos-quien-debe-registrarse).`,
+Si es de corta duración, revisa la licencia o el registro de tu comunidad: el registro único estatal fue anulado en 2026 ([qué queda del registro único](/blog/registro-unico-de-arrendamientos-quien-debe-registrarse)).`,
   },
   {
     slug: 'alquilar-a-empresas-para-sus-trabajadores',
