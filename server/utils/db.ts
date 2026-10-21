@@ -18,9 +18,11 @@ import { BLOG_SEED_V10_ACTUALIDAD_A } from '../data/blog-seed-v10-actualidad-a'
 import { BLOG_SEED_V10_ACTUALIDAD_B } from '../data/blog-seed-v10-actualidad-b'
 import { BLOG_SEED_V11_ELECCIONES } from '../data/blog-seed-v11-elecciones'
 import { BLOG_SEED_V12_ANUNCIOS } from '../data/blog-seed-v12-anuncios'
+import { BLOG_SEED_V15_BUSQUEDAS } from '../data/blog-seed-v15-busquedas'
 
 // Los nuevos primero: al insertar en orden inverso, el primero de la lista queda como el más reciente.
 const BLOG_SEED = [
+  ...BLOG_SEED_V15_BUSQUEDAS,
   ...BLOG_SEED_V12_ANUNCIOS,
   ...BLOG_SEED_V11_ELECCIONES,
   ...BLOG_SEED_V10_ACTUALIDAD_A,
@@ -100,7 +102,8 @@ async function migrate(d: Driver) {
 // v12: qué debe incluir un anuncio de alquiler según el art. 20 del RDL 29/2026 (3 artículos).
 // v13: «¿Cuánto puede subir el alquiler en 2026 y 2027?» reescrito según Search Console (título, texto y BOE).
 // v14: guía «Cómo poner tu piso en alquiler» ampliada y registro único corregido tras la anulación del Supremo (STS 620/2026).
-const BLOG_SEED_VERSION = 14
+// v15: «¿Es Madrid zona tensionada?» (búsqueda vista en Search Console).
+const BLOG_SEED_VERSION = 15
 
 // v6: artículos «2026» como gancho pasan a «2027». Las URLs cambian; las antiguas redirigen con 301 (nuxt.config).
 const BLOG_SLUG_RENAMES: [string, string][] = [

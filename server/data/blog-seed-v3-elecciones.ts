@@ -659,7 +659,13 @@ En zona tensionada se aplican las reducciones más altas del IRPF, del 70 % y el
 
 ## Antes de fijar la renta
 
-Comprueba si tu municipio está declarado y cuál fue la renta del último contrato. Si tienes dudas, consulta a un profesional.`,
+Comprueba si tu municipio está declarado y cuál fue la renta del último contrato. Si tienes dudas, consulta a un profesional.
+
+## ¿Mi ciudad es zona tensionada?
+
+- **Madrid**: no hay ninguna zona declarada en la Comunidad de Madrid. Lo explicamos en [¿es Madrid zona tensionada?](/blog/madrid-zona-tensionada-alquiler).
+- **Barcelona** y gran parte de Cataluña, y municipios del País Vasco, Navarra, Asturias o Galicia, sí lo son.
+- Consulta tu ciudad, con la fecha de comprobación, en las [guías de alquiler por ciudad](/alquilar-mi-piso).`,
   },
   {
     slug: 'ley-de-vivienda-12-2023-en-5-minutos',
