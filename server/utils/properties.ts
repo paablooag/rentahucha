@@ -4,6 +4,7 @@
 const COLUMNS = `p.id, p.status, p.review_note, p.title, p.city, p.district, p.address, p.property_type, p.rent, p.expenses_incl,
   p.size_m2, p.bedrooms, p.bathrooms, p.floor, p.furnished, p.features, p.energy_rating, p.stay_type,
   to_char(p.available_from, 'YYYY-MM-DD') AS available_from, p.description, p.published_at, p.created_at, p.updated_at,
+  p.reg_code, p.reference_index, p.rent_limit, p.big_holder,
   COALESCE((SELECT json_agg(json_build_object('id', f.id, 'width', f.width, 'height', f.height) ORDER BY f.position, f.created_at)
             FROM property_photos f WHERE f.property_id = p.id), '[]'::json) AS photos`
 
@@ -62,6 +63,7 @@ export const PROPERTY_FIELDS: [keyof PropertyInput, string][] = [
   ['rent', 'rent'], ['expensesIncl', 'expenses_incl'], ['sizeM2', 'size_m2'], ['bedrooms', 'bedrooms'], ['bathrooms', 'bathrooms'],
   ['floor', 'floor'], ['furnished', 'furnished'], ['features', 'features'], ['energyRating', 'energy_rating'], ['stayType', 'stay_type'],
   ['availableFrom', 'available_from'], ['description', 'description'],
+  ['regCode', 'reg_code'], ['referenceIndex', 'reference_index'], ['rentLimit', 'rent_limit'], ['bigHolder', 'big_holder'],
 ]
 
 // Comprobación de tipo real de imagen por sus primeros bytes (no nos fiamos del nombre ni del tipo declarado).

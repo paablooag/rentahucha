@@ -5,6 +5,7 @@ useHead({ title: 'Pisos' })
 interface AdminPiso {
   id: string; status: PropertyStatus; reviewNote: string; title: string; city: string; district: string; address: string; rent: number
   bedrooms: number; bathrooms: number; sizeM2: number | null; energyRating: string; stayType: string; description: string
+  regCode: string; referenceIndex: string; rentLimit: string; bigHolder: boolean
   createdAt: string; updatedAt: string; publishedAt: string | null; ownerName: string; ownerEmail: string; ownerPhone: string
   photos: string[]; conversations: number
 }
@@ -82,6 +83,7 @@ async function act(p: AdminPiso, action: 'aprobar' | 'rechazar') {
           <div class="photos"><img v-for="f in p.photos" :key="f" :src="`/api/fotos/${f}`" alt="" loading="lazy"></div>
           <p class="desc small">{{ p.description }}</p>
           <p class="small"><strong>Dirección (privada):</strong> {{ p.address || '—' }} · <strong>Tipo:</strong> {{ p.stayType }}</p>
+          <p class="small"><strong>Datos legales:</strong> índice {{ p.referenceIndex || '—' }} · límite {{ p.rentLimit || '—' }} · registro {{ p.regCode || '—' }} · {{ p.bigHolder ? 'gran tenedor' : 'no gran tenedor' }}</p>
           <p v-if="p.reviewNote" class="small"><strong>Última nota:</strong> {{ p.reviewNote }}</p>
           <div class="review">
             <textarea v-model="notes[p.id]" class="input" rows="2" placeholder="Si pides cambios: qué tiene que corregir (lo verá el propietario)" />

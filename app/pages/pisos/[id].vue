@@ -93,6 +93,17 @@ const availableNow = computed(() => !p.value.availableFrom || new Date(`${p.valu
           <div v-if="p.features.length" class="chips">
             <span v-for="x in p.features" :key="x" class="chip">{{ x }}</span>
           </div>
+
+          <template v-if="p.referenceIndex || p.rentLimit || p.regCode || p.bigHolder">
+            <h2>Información legal del anuncio</h2>
+            <dl class="specs">
+              <template v-if="p.referenceIndex"><dt>Índice de referencia del precio</dt><dd>{{ p.referenceIndex }}</dd></template>
+              <template v-if="p.rentLimit"><dt>Límite de renta aplicable</dt><dd>{{ p.rentLimit }}</dd></template>
+              <template v-if="p.regCode"><dt>Número de registro</dt><dd>{{ p.regCode }}</dd></template>
+              <template v-if="p.bigHolder"><dt>Arrendador</dt><dd>Gran tenedor</dd></template>
+            </dl>
+            <p class="small muted">Datos declarados por el anunciante (art. 20 del Real Decreto-ley 29/2026).</p>
+          </template>
         </div>
 
         <aside class="side">

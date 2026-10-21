@@ -40,6 +40,15 @@ export interface PropertyInput {
   stayType: string
   availableFrom: string | null
   description: string
+  // Datos que debe incluir el anuncio según el art. 20 del RDL 29/2026 (BOE 7-10-2026), «cuando proceda».
+  /** Número, código o título identificativo de la vivienda (p. ej. el del registro de arrendamientos). */
+  regCode: string
+  /** Índice de referencia del precio (zonas tensionadas), tal como lo da el sistema del Ministerio. */
+  referenceIndex: string
+  /** Límite de renta aplicable y la norma que lo fija (ámbitos con limitación de renta). */
+  rentLimit: string
+  /** El arrendador es gran tenedor. */
+  bigHolder: boolean
 }
 
 /** Piso tal como lo ve su propietario. La dirección exacta nunca se muestra en público. */
@@ -87,6 +96,10 @@ export function validateProperty(input: Record<string, unknown>): { ok: true; da
     availableFrom: typeof input.availableFrom === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(input.availableFrom) ? input.availableFrom : null,
     // En la descripción se respetan los saltos de línea.
     description: typeof input.description === 'string' ? input.description.trim().replace(/\n{3,}/g, '\n\n').slice(0, 3000) : '',
+    regCode: str(input.regCode, 80),
+    referenceIndex: str(input.referenceIndex, 160),
+    rentLimit: str(input.rentLimit, 300),
+    bigHolder: input.bigHolder === true,
   }
 
   if (data.title.length < 10) errors.title = 'Escribe un título de al menos 10 caracteres (p. ej. «Piso luminoso de 2 habitaciones en Ruzafa»).'

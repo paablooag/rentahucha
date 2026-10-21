@@ -6,6 +6,7 @@ const emit = defineEmits<{ saved: [Property] }>()
 const blank = (): PropertyInput => ({
   title: '', city: '', district: '', address: '', propertyType: 'Piso', rent: NaN, expensesIncl: false, sizeM2: null,
   bedrooms: 2, bathrooms: 1, floor: '', furnished: '', features: [], energyRating: '', stayType: PROPERTY_OPTIONS.stayType[0], availableFrom: null, description: '',
+  regCode: '', referenceIndex: '', rentLimit: '', bigHolder: false,
 })
 const form = reactive<PropertyInput>(props.initial ? { ...blank(), ...props.initial, features: [...props.initial.features] } : blank())
 const errors = ref<PropertyErrors>({})
@@ -48,6 +49,9 @@ onMounted(() => {
   catch {}
 })
 const err = (k: keyof PropertyInput) => ({ 'aria-invalid': !!errors.value[k] })
+// Si la ciudad está en nuestra lista, decimos si el Ministerio la declara zona tensionada.
+const norm = (s: string) => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim()
+const knownCity = computed(() => CITIES.find(c => norm(c.name) === norm(form.city)) ?? null)
 </script>
 
 <template>
@@ -150,6 +154,28 @@ const err = (k: keyof PropertyInput) => ({ 'aria-invalid': !!errors.value[k] })
       </div>
     </fieldset>
 
+    <fieldset>
+      <legend>Datos legales del anuncio</legend>
+      <p class="full small muted intro">Desde el 8 de octubre de 2026, todo anuncio de alquiler debe incluir estos datos <strong>cuando correspondan</strong> (art. 20 del <a href="https://www.boe.es/buscar/act.php?id=BOE-A-2026-20823" target="_blank" rel="noopener">Real Decreto-ley 29/2026</a>). Si alguno no se aplica a tu piso, déjalo en blanco.</p>
+      <p v-if="knownCity?.tension" class="full note note-green small">Según el Ministerio de Vivienda, {{ knownCity.name }} es zona de mercado residencial tensionado ({{ knownCity.tension.scope }}, hasta el {{ knownCity.tension.until }}): indica el índice de referencia y el límite de renta.</p>
+      <p v-else-if="knownCity" class="full small muted">{{ knownCity.name }} no figura como zona tensionada en la última lista del Ministerio que hemos revisado ({{ CITIES_CHECKED }}). Compruébalo si tienes dudas.</p>
+      <div class="field">
+        <label for="pf-ref">Índice de referencia del precio <span class="muted small">(zona tensionada)</span></label>
+        <input id="pf-ref" v-model="form.referenceIndex" class="input" maxlength="160" placeholder="Entre 780 y 950 €/mes">
+        <span class="hint">Lo calcula el <a href="https://serpavi.mivau.gob.es/" target="_blank" rel="noopener">sistema estatal de índices (SERPAVI)</a> con la referencia catastral.</span>
+      </div>
+      <div class="field">
+        <label for="pf-reg">Número o código de registro <span class="muted small">(si tiene)</span></label>
+        <input id="pf-reg" v-model="form.regCode" class="input" maxlength="80" placeholder="Código del registro de arrendamientos">
+        <span class="hint">Por ejemplo, el del registro de arrendamientos de corta duración o el autonómico.</span>
+      </div>
+      <div class="field full">
+        <label for="pf-limit">Límite de renta aplicable y norma que lo fija <span class="muted small">(si hay limitación)</span></label>
+        <input id="pf-limit" v-model="form.rentLimit" class="input" maxlength="300" placeholder="Renta del contrato anterior (850 €/mes, actualizada), art. 17.6 LAU">
+      </div>
+      <label class="check full"><input v-model="form.bigHolder" type="checkbox"> El arrendador es gran tenedor</label>
+    </fieldset>
+
     <div class="actions">
       <p v-if="error" class="err" role="alert">{{ error }}</p>
       <p v-else-if="savedAt" class="ok small" role="status">Guardado</p>
@@ -161,6 +187,8 @@ const err = (k: keyof PropertyInput) => ({ 'aria-invalid': !!errors.value[k] })
 <style scoped>
 .pf { display: grid; gap: 24px; }
 .draft { margin: 0; }
+.intro { margin: 0; }
+.intro a, .hint a { color: inherit; }
 fieldset { border: 1px solid var(--line); border-radius: 18px; padding: 20px; margin: 0; display: grid; gap: 16px; grid-template-columns: 1fr 1fr; background: #fff; }
 fieldset > * { min-width: 0; }
 legend { font-weight: 600; padding: 0 6px; }

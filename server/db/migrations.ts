@@ -424,4 +424,14 @@ export const MIGRATIONS: { id: number; name: string; sql: string }[] = [
       ALTER TABLE users ADD COLUMN company text NOT NULL DEFAULT '';
     `,
   },
+  {
+    id: 18,
+    name: 'datos obligatorios del anuncio (RDL 29/2026, art. 20)',
+    sql: `
+      ALTER TABLE properties ADD COLUMN reg_code text NOT NULL DEFAULT '';
+      ALTER TABLE properties ADD COLUMN reference_index text NOT NULL DEFAULT '';
+      ALTER TABLE properties ADD COLUMN rent_limit text NOT NULL DEFAULT '';
+      ALTER TABLE properties ADD COLUMN big_holder boolean NOT NULL DEFAULT false;
+    `,
+  },
 ]

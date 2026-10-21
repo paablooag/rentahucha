@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const title = 'Generador de anuncios de alquiler gratis: título y descripción en 1 minuto'
-const description = 'Crea el anuncio de alquiler de tu piso en un minuto: título y descripción claros, con lo que buscan los inquilinos y lo que exige la ley (etiqueta energética). Gratis y sin registro.'
+const description = 'Crea el anuncio de alquiler de tu piso en un minuto: título y descripción claros, con lo que buscan los inquilinos y lo que exige la ley (etiqueta energética y los datos del Real Decreto-ley 29/2026). Gratis y sin registro.'
 useSeoMeta({ title, description, ogTitle: title, ogDescription: description, ogImage: 'https://rentahucha.es/og/propietarios.png' })
 
 const HIGHLIGHTS = ['Muy luminoso', 'Reformado', 'Silencioso', 'Cocina equipada', 'Armarios empotrados', 'Vistas', 'Junto al metro o transporte', 'Cerca de colegios', 'Zona de servicios y comercios', 'Ideal para teletrabajar']
@@ -9,6 +9,7 @@ const f = reactive({
   propertyType: 'Piso', city: '', district: '', sizeM2: null as number | null, bedrooms: 2, bathrooms: 1, floor: '',
   furnished: 'Amueblado', features: [] as string[], highlights: [] as string[], transport: '', rent: null as number | null,
   expensesIncl: false, energyRating: '', stayType: PROPERTY_OPTIONS.stayType[0] as string, availableFrom: '', extra: '',
+  referenceIndex: '', rentLimit: '', regCode: '', bigHolder: false,
 })
 
 const join = (items: string[]) => (items.length <= 1 ? items.join('') : `${items.slice(0, -1).join(', ')} y ${items.at(-1)}`)
@@ -50,6 +51,13 @@ const adText = computed(() => {
   if (f.availableFrom) cond.push(`Disponible a partir del ${new Intl.DateTimeFormat('es-ES', { day: 'numeric', month: 'long' }).format(new Date(`${f.availableFrom}T12:00:00`))}.`)
   cond.push(`Calificación energética: ${f.energyRating || '[indica la letra]'}.`)
   p.push(cond.join(' '))
+  // Datos del art. 20 del RDL 29/2026, cuando proceden.
+  const legal: string[] = []
+  if (f.referenceIndex.trim()) legal.push(`Índice de referencia del precio: ${f.referenceIndex.trim()}.`)
+  if (f.rentLimit.trim()) legal.push(`Límite de renta aplicable: ${f.rentLimit.trim()}.`)
+  if (f.regCode.trim()) legal.push(`Número de registro: ${f.regCode.trim()}.`)
+  if (f.bigHolder) legal.push('El arrendador es gran tenedor.')
+  if (legal.length) p.push(legal.join(' '))
   p.push('Buscamos inquilinos con ingresos estables que cuiden la vivienda. Escríbenos para concertar una visita.')
   return p.join('\n\n')
 })
@@ -73,6 +81,7 @@ function publish() {
       bathrooms: f.bathrooms, floor: f.floor, furnished: f.furnished,
       features: f.features.filter(x => (PROPERTY_OPTIONS.features as readonly string[]).includes(x)), energyRating: energy,
       stayType: f.stayType, availableFrom: f.availableFrom || null, rent: f.rent ?? NaN, expensesIncl: f.expensesIncl, description: adText.value,
+      referenceIndex: f.referenceIndex, rentLimit: f.rentLimit, regCode: f.regCode, bigHolder: f.bigHolder,
     }))
   }
   catch {}
@@ -114,6 +123,14 @@ function publish() {
               <div class="field"><label for="g-energy">Calificación energética</label><select id="g-energy" v-model="f.energyRating" class="select"><option value="">Elige…</option><option v-for="o in PROPERTY_OPTIONS.energyRating" :key="o">{{ o }}</option></select></div>
               <div class="field"><label for="g-stay">Tipo de alquiler</label><select id="g-stay" v-model="f.stayType" class="select"><option v-for="o in PROPERTY_OPTIONS.stayType" :key="o">{{ o }}</option></select></div>
               <div class="field"><label for="g-av">Disponible desde</label><input id="g-av" v-model="f.availableFrom" class="input" type="date"></div>
+              <div class="field full legal">
+                <span class="label">Datos legales <span class="muted small">(si se aplican a tu piso)</span></span>
+                <p class="small muted">Desde el 8-10-2026 el anuncio debe incluirlos cuando correspondan. <NuxtLink to="/blog/que-debe-incluir-un-anuncio-de-alquiler-decreto-29-2026">Qué exige el decreto</NuxtLink>.</p>
+              </div>
+              <div class="field"><label for="g-ref">Índice de referencia <span class="muted small">(zona tensionada)</span></label><input id="g-ref" v-model="f.referenceIndex" class="input" maxlength="160" placeholder="Entre 780 y 950 €/mes"></div>
+              <div class="field"><label for="g-reg">Número de registro <span class="muted small">(si tiene)</span></label><input id="g-reg" v-model="f.regCode" class="input" maxlength="80"></div>
+              <div class="field full"><label for="g-lim">Límite de renta y norma <span class="muted small">(si hay limitación)</span></label><input id="g-lim" v-model="f.rentLimit" class="input" maxlength="300"></div>
+              <label class="check full small"><input v-model="f.bigHolder" type="checkbox"> El arrendador es gran tenedor</label>
               <div class="field full"><label for="g-extra">Algo más <span class="muted small">(opcional)</span></label><textarea id="g-extra" v-model="f.extra" class="input" rows="2" maxlength="400" placeholder="Orientación sur, comunidad tranquila, parking fácil…" /></div>
             </div>
           </form>
@@ -146,6 +163,10 @@ function publish() {
 </template>
 
 <style scoped>
+.legal p { margin: 2px 0 0; }
+.legal a { color: inherit; }
+.check { display: flex; gap: 8px; align-items: center; font-weight: 400; }
+.check input { accent-color: var(--green); }
 .back { display: inline-block; margin-bottom: 16px; font-size: 0.9rem; text-decoration: none; }
 .layout { display: grid; gap: 24px; }
 @media (min-width: 1000px) { .layout { grid-template-columns: 1.1fr 1fr; align-items: start; } .preview { position: sticky; top: 96px; } }

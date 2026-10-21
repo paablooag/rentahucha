@@ -3,7 +3,7 @@ export default defineEventHandler(async (event) => {
   await requireAdmin(event)
   const pisos = await query(
     `SELECT p.id, p.status, p.review_note, p.title, p.city, p.district, p.address, p.rent, p.bedrooms, p.bathrooms, p.size_m2,
-            p.energy_rating, p.stay_type, p.description, p.created_at, p.updated_at, p.published_at,
+            p.energy_rating, p.stay_type, p.description, p.reg_code, p.reference_index, p.rent_limit, p.big_holder, p.created_at, p.updated_at, p.published_at,
             u.name AS owner_name, u.email AS owner_email, u.phone AS owner_phone,
             COALESCE((SELECT json_agg(f.id ORDER BY f.position, f.created_at) FROM property_photos f WHERE f.property_id = p.id), '[]'::json) AS photos,
             (SELECT count(*) FROM conversations c WHERE c.property_id = p.id)::int AS conversations
