@@ -25,7 +25,7 @@ Al terminar una tarea, muévela a «Hecho» con la fecha y una línea de qué se
 
 ## Hecho
 
-n- 2026-10-21 · Cuentas de inmobiliaria: registro con nombre comercial, hasta 300 pisos, marca en anuncios y tarjetas; /inmobiliarias lleva al registro.
+- 2026-10-21 · Cuentas de inmobiliaria: registro con nombre comercial, hasta 300 pisos, marca en anuncios y tarjetas; /inmobiliarias lleva al registro.
 - 2026-10-20 · Recordatorio único al propietario cuando un interesado lleva 48 h sin respuesta.
 - 2026-10-20 · Alertas de pisos por correo (máx. una al día, baja en un clic) y demanda real por ciudad para propietarios (desde 5 personas).
 - 2026-10-20 · Portal /alquiler (64 ciudades), guía del modelo oficial de contrato, CTA dentro de los artículos y artículos sobre el 29-N.
