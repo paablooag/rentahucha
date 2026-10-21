@@ -153,12 +153,12 @@ Si la Diputación Permanente no lo convalida (la votación está prevista para e
   },
   {
     slug: 'limite-2-por-ciento-subida-alquiler-hasta-2027',
-    title: 'Límite del 2 % a la subida del alquiler hasta 2027: cómo se aplica',
-    excerpt: 'Qué rentas quedan congeladas, cuáles pueden subir hasta un 2 % y qué pasa con los contratos referenciados al IPC.',
+    title: '¿Cuánto puede subir el alquiler en 2026 y 2027? El límite del 2 %, explicado',
+    excerpt: 'Hasta el 31 de diciembre de 2027, si no hay un nuevo acuerdo la subida anual no puede pasar del 2 %, y si la renta supera el índice de referencia no puede subir nada. Con ejemplos y el texto del BOE.',
     audience: 'propietarios',
     category: CAT,
     publishedAt: D,
-    body: `El decreto de octubre de 2026 fija un límite a la actualización anual de la renta **hasta el 31 de diciembre de 2027**.
+    body: `**Respuesta corta:** si la actualización anual de tu contrato cae entre el 8 de octubre de 2026 y el 31 de diciembre de 2027, la renta **no puede subir más de un 2 %** salvo que propietario e inquilino pacten otra cosa, y **no puede subir nada** si ya supera el límite que marca el índice de referencia del precio del alquiler. Lo dice la disposición final sexta del Real Decreto-ley 29/2026.
 
 ${NOTA}
 
@@ -166,26 +166,49 @@ ${NOTA}
 
 | Tu renta respecto al índice de referencia | Qué puedes hacer en la actualización |
 |---|---|
-| Por encima del límite del índice | No puedes subirla |
-| Por debajo | Subida máxima del 2 %, salvo acuerdo |
+| Por encima del límite máximo del índice | No se aplica ninguna subida |
+| Igual o por debajo | Lo que pactéis de nuevo; sin nuevo pacto, como máximo un 2 % |
 
-El índice de referencia es el **Sistema Estatal de Referencia de Precios del Alquiler**, que publica el Ministerio de Vivienda.
+El índice de referencia es el **sistema estatal de índices de referencia del precio del alquiler**, que publica el Ministerio de Vivienda y se consulta en [serpavi.mivau.gob.es](https://serpavi.mivau.gob.es/) con la referencia catastral.
 
-## Cómo calcularlo
+## A qué contratos afecta
 
-1. Consulta el índice para tu vivienda: superficie, zona y características.
-2. Compara tu renta con el valor máximo del rango.
-3. Aplica la regla que te corresponda en la fecha de actualización del contrato.
+A los contratos de alquiler de vivienda sujetos a la Ley de Arrendamientos Urbanos cuya renta toque actualizar porque se cumple una anualidad **entre la entrada en vigor del decreto (8 de octubre de 2026) y el 31 de diciembre de 2027**. Si tu contrato cumple año fuera de esas fechas, no se aplica este límite extraordinario.
 
-## Ejemplo
+## ¿Y el IPC o el IRAV?
 
-Renta de 800 € por debajo del índice: la actualización máxima es de 16 € (2 %), y la nueva renta queda en **816 €**.
+El mismo decreto da nueva redacción al artículo 18.1 de la LAU:
+
+- La renta solo se actualiza en la fecha en que se cumple cada año de contrato y en los términos pactados. **Si el contrato no dice nada, no hay actualización.**
+- Si el contrato prevé actualizar pero no concreta el índice, se usa el **Índice de Referencia para la Actualización Anual de los Contratos de Arrendamiento de Vivienda (IRAV)**, que publica el INE.
+- En todo caso, la subida anual no puede superar la variación del IRAV en la fecha de actualización.
+
+Por eso, una cláusula «se actualizará según el IPC» no basta para subir lo que marque el IPC: hay que comprobar antes los límites vigentes.
+
+## Cómo calcularlo, paso a paso
+
+1. Mira la fecha en que tu contrato cumple año.
+2. Consulta el índice de referencia de tu vivienda y compara tu renta con el valor máximo del rango.
+3. Si la superas, no hay subida. Si no la superas y no hay nuevo acuerdo, la subida máxima es el 2 %, y nunca más que la variación del IRAV.
+
+## Ejemplos
+
+- **Renta de 800 € por debajo del índice, sin nuevo acuerdo:** subida máxima de 16 € (2 %), y la renta queda en **816 €**. Si la variación del IRAV fuera menor que el 2 %, el tope sería esa variación.
+- **Renta de 1.100 € por encima del límite del índice:** no se aplica ninguna subida en esa anualidad.
+- **Contrato sin cláusula de actualización:** la renta no se actualiza.
 
 ## Consejos
 
 - Comunica la actualización por escrito y con el cálculo.
 - No apliques una subida automática por IPC sin comprobar antes el límite vigente.
-- Si el decreto no se convalidara, se volvería a la regla general: lo pactado en el contrato y, en zonas tensionadas, la Ley 12/2023.`,
+- Si el decreto no se convalidara, decaería y se volvería a la regla general de la LAU y, en zonas tensionadas, de la Ley 12/2023.
+
+¿Quieres saber si tu renta está bien ajustada? Pide una [valoración gratis del alquiler](/valoracion-alquiler) con pisos comparables de tu zona y el índice oficial.
+
+## Fuentes
+
+- BOE: [Real Decreto-ley 29/2026, de 6 de octubre](https://www.boe.es/buscar/act.php?id=BOE-A-2026-20823), disposición final sexta (limitación extraordinaria de la actualización anual de la renta) y artículo 3 (nueva redacción del artículo 18.1 de la LAU). Consultado el 21-10-2026.
+- Ministerio de Vivienda: [sistema estatal de índices de referencia del precio del alquiler](https://serpavi.mivau.gob.es/).`,
   },
   {
     slug: 'que-es-la-diputacion-permanente-y-tu-alquiler',

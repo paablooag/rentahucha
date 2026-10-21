@@ -98,7 +98,8 @@ async function migrate(d: Driver) {
 // v10: 50 artículos de actualidad (acampadas, huelga del 11-N, decretos el 12-N, Francia, hoteles, Airbnb) y fecha de votación corregida.
 // v11: vivienda en las elecciones del 29-N (2 artículos) y la fecha de votación de los decretos, sin confirmación oficial.
 // v12: qué debe incluir un anuncio de alquiler según el art. 20 del RDL 29/2026 (3 artículos).
-const BLOG_SEED_VERSION = 12
+// v13: «¿Cuánto puede subir el alquiler en 2026 y 2027?» reescrito según Search Console (título, texto y BOE).
+const BLOG_SEED_VERSION = 13
 
 // v6: artículos «2026» como gancho pasan a «2027». Las URLs cambian; las antiguas redirigen con 301 (nuxt.config).
 const BLOG_SLUG_RENAMES: [string, string][] = [
