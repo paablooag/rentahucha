@@ -43,7 +43,7 @@ export const userSession = (event: H3Event) => useSession<UserSession>(event, se
 export async function getUser(event: H3Event): Promise<PublicUser | null> {
   const session = await userSession(event)
   if (!session.data.userId) return null
-  const user = await queryOne<PublicUser>('SELECT id, role, name, email, phone FROM users WHERE id = $1', [session.data.userId])
+  const user = await queryOne<PublicUser>('SELECT id, role, name, email, phone, is_agency, company FROM users WHERE id = $1', [session.data.userId])
   if (!user) await session.clear()
   return user
 }

@@ -57,7 +57,7 @@ export interface Property extends PropertyInput {
   favorites?: number
 }
 
-export type PublicProperty = Omit<Property, 'address' | 'reviewNote' | 'views30' | 'conversations' | 'favorites'> & { ownerName: string }
+export type PublicProperty = Omit<Property, 'address' | 'reviewNote' | 'views30' | 'conversations' | 'favorites'> & { ownerName: string; ownerIsAgency?: boolean }
 
 export type PropertyErrors = Partial<Record<keyof PropertyInput, string>>
 
@@ -113,12 +113,16 @@ export function publishBlockers(p: Pick<Property, 'energyRating' | 'description'
 
 // Cuentas de usuario
 export type UserRole = 'propietario' | 'inquilino'
-export interface PublicUser { id: string; role: UserRole; name: string; email: string; phone: string }
+export interface PublicUser { id: string; role: UserRole; name: string; email: string; phone: string; isAgency: boolean; company: string }
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/
-export function validateSignup(input: Record<string, unknown>): { ok: true; data: { role: UserRole; name: string; email: string; phone: string; password: string } } | { ok: false; errors: Record<string, string> } {
+export function validateSignup(input: Record<string, unknown>): { ok: true; data: { role: UserRole; name: string; email: string; phone: string; password: string; isAgency: boolean; company: string } } | { ok: false; errors: Record<string, string> } {
   const errors: Record<string, string> = {}
-  const role = input.role === 'inquilino' ? 'inquilino' : input.role === 'propietario' ? 'propietario' : null
+  // «inmobiliaria» es una cuenta de propietario con nombre comercial.
+  const isAgency = input.role === 'inmobiliaria'
+  const role = input.role === 'inquilino' ? 'inquilino' : input.role === 'propietario' || isAgency ? 'propietario' : null
+  const company = isAgency ? str(input.company, 100) : ''
+  if (isAgency && company.length < 2) errors.company = 'Escribe el nombre comercial de la inmobiliaria.'
   const name = str(input.name, 80)
   const email = str(input.email, 120).toLowerCase()
   const phone = str(input.phone, 30)
@@ -130,7 +134,7 @@ export function validateSignup(input: Record<string, unknown>): { ok: true; data
   else if (password.length > 200) errors.password = 'La contraseña es demasiado larga.'
   if (input.consent !== true) errors.consent = 'Necesitamos que aceptes las condiciones y la política de privacidad.'
   if (input.adult !== true) errors.adult = 'Tienes que ser mayor de edad.'
-  return Object.keys(errors).length || !role ? { ok: false, errors } : { ok: true, data: { role, name, email, phone, password } }
+  return Object.keys(errors).length || !role ? { ok: false, errors } : { ok: true, data: { role, name, email, phone, password, isAgency, company } }
 }
 
 // Perfil del inquilino: lo que cuenta de sí mismo (declarado, sin verificar). Solo lo ven los propietarios a los que escribe.
@@ -180,3 +184,6 @@ export const profileCompleteness = (p: TenantProfile | null) => {
 }
 
 export const REPORT_REASONS = ['Me pide dinero antes de la visita', 'Spam o publicidad', 'Acoso o mensajes ofensivos', 'Anuncio falso', 'Otro motivo'] as const
+
+/** Máximo de pisos por cuenta (las inmobiliarias gestionan más). */
+export const maxProperties = (u: { isAgency?: boolean }) => (u.isAgency ? 300 : 50)

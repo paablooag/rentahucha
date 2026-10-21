@@ -45,7 +45,8 @@ const faqs = [
           <li><AppIcon name="users" :size="16" /> Tu cliente sigue siendo tuyo</li>
         </ul>
         <div class="actions">
-          <a href="#formulario" class="btn btn-primary">Quiero subir nuestros pisos <AppIcon name="arrow" :size="18" /></a>
+          <NuxtLink to="/cuenta/registro?tipo=inmobiliaria" class="btn btn-primary">Crear cuenta y subir pisos <AppIcon name="arrow" :size="18" /></NuxtLink>
+          <a href="#formulario" class="btn btn-ghost">Prefiero que me contéis antes</a>
           <NuxtLink to="/blog?para=inmobiliarias" class="btn btn-ghost">Guías para inmobiliarias</NuxtLink>
         </div>
       </div>

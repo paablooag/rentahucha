@@ -101,7 +101,7 @@ const availableNow = computed(() => !p.value.availableFrom || new Date(`${p.valu
               <div class="price">{{ formatEuro(p.rent) }}<span>/mes</span></div>
               <button v-if="!data.isOwner" type="button" class="save" :class="{ on: saved }" :aria-pressed="saved" @click="toggleSave">{{ saved ? '♥ Guardado' : '♡ Guardar' }}</button>
             </div>
-            <p class="small muted">Anuncio de {{ p.ownerName }}, particular · revisado por RentaHucha</p>
+            <p class="small muted">Anuncio de {{ p.ownerName }}, {{ p.ownerIsAgency ? 'inmobiliaria' : 'particular' }} · revisado por RentaHucha</p>
 
             <template v-if="data.isOwner">
               <p>Es tu anuncio.</p>

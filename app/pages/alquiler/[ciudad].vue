@@ -10,7 +10,7 @@ const { data } = await useFetch<{ items: PublicProperty[] }>('/api/pisos', { que
 const pisos = computed(() => data.value.items.filter(p => p.city.toLowerCase() === city.name.toLowerCase()).slice(0, 9))
 
 const title = `Alquiler de pisos en ${city.name}: requisitos, fianza y zona tensionada (2027)`
-const description = `Guía para alquilar piso en ${city.name}: ${city.tension ? 'zona tensionada y tus derechos, ' : ''}cuánto se paga de fianza, dónde se deposita en ${region.name}, qué piden los propietarios y pisos de particulares revisados.`
+const description = `Guía para alquilar piso en ${city.name}: ${city.tension ? 'zona tensionada y tus derechos, ' : ''}cuánto se paga de fianza, dónde se deposita en ${region.name}, qué piden los propietarios y pisos revisados antes de publicarse.`
 useSeoMeta({ title, description, ogTitle: title, ogDescription: description, ogImage: 'https://rentahucha.es/og/ciudades.png' })
 
 const faqs = computed(() => [
@@ -60,7 +60,7 @@ const others = CITIES.filter(c => c.region !== city.region).slice(0, 18)
       <div class="container">
         <nav class="crumbs small" aria-label="Migas de pan"><NuxtLink to="/alquiler">Alquiler por ciudad</NuxtLink> / <span>{{ city.name }}</span></nav>
         <div class="section-head">
-          <span class="eyebrow">{{ region.name }} · Pisos de particulares revisados</span>
+          <span class="eyebrow">{{ region.name }} · Pisos revisados antes de publicarse</span>
           <h1>Alquiler de pisos en {{ city.name }}</h1>
           <p class="lead">Busca piso, escribe a los propietarios sin dar tu teléfono y entra sin aval: en lugar de garantías grandes, vas llenando cada mes una hucha a tu nombre que recuperas con un 10 % extra si todo va bien (desde el lanzamiento).</p>
         </div>
@@ -126,7 +126,7 @@ const others = CITIES.filter(c => c.region !== city.region).slice(0, 18)
           <h2>Te avisamos cuando haya pisos en {{ city.name }}</h2>
           <p class="lead">Dinos qué buscas y serás de los primeros en verlos. Sin compromiso.</p>
           <ul class="check-list">
-            <li><AppIcon name="check" :size="18" /> Pisos de particulares, revisados antes de publicarse</li>
+            <li><AppIcon name="check" :size="18" /> Pisos revisados antes de publicarse</li>
             <li><AppIcon name="check" :size="18" /> Escribe al propietario sin dar tu teléfono</li>
             <li><AppIcon name="check" :size="18" /> Sin aval: una hucha a tu nombre que recuperas con premio</li>
           </ul>

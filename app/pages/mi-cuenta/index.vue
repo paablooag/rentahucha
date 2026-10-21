@@ -31,6 +31,7 @@ async function removeAccount() {
     <div class="container">
       <AccountNav />
       <h1>Hola, {{ user?.name.split(' ')[0] }}</h1>
+      <p v-if="user?.isAgency" class="agency small">Cuenta de inmobiliaria · <strong>{{ user.company }}</strong> · hasta 300 pisos</p>
       <p class="muted lead-s">{{ isOwner ? 'Publica tu piso, revisa su estado y responde a los interesados.' : 'Busca piso y habla con los propietarios desde aquí, sin dar tu teléfono.' }}</p>
 
       <div class="beta note">
@@ -71,7 +72,7 @@ async function removeAccount() {
         <dl>
           <dt>Nombre</dt><dd>{{ user?.name }}</dd>
           <dt>Correo</dt><dd>{{ user?.email }}</dd>
-          <dt>Tipo</dt><dd>{{ isOwner ? 'Propietario' : 'Busco piso' }}</dd>
+          <dt>Tipo</dt><dd>{{ user?.isAgency ? `Inmobiliaria (${user.company})` : isOwner ? 'Propietario' : 'Busco piso' }}</dd>
         </dl>
         <label class="notify"><input type="checkbox" :checked="notify" @change="toggleNotify"> Avisarme por correo cuando reciba un mensaje</label>
         <div class="row">

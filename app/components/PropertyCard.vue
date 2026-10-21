@@ -12,7 +12,7 @@ defineProps<{ p: PublicProperty }>()
     <div class="body">
       <div class="price">{{ formatEuro(p.rent) }}<span>/mes</span></div>
       <h3>{{ p.title }}</h3>
-      <p class="muted small">{{ p.district ? `${p.district}, ` : '' }}{{ p.city }}</p>
+      <p class="muted small">{{ p.district ? `${p.district}, ` : '' }}{{ p.city }}<template v-if="p.ownerIsAgency"> · {{ p.ownerName }}</template></p>
       <p class="facts small">{{ p.bedrooms === 0 ? 'Estudio' : `${p.bedrooms} hab.` }} · {{ p.bathrooms }} {{ p.bathrooms === 1 ? 'baño' : 'baños' }}<template v-if="p.sizeM2"> · {{ p.sizeM2 }} m²</template> · {{ p.furnished }}</p>
     </div>
   </NuxtLink>

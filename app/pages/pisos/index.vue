@@ -29,7 +29,7 @@ useSeoMeta({
   <section class="section">
     <div class="container">
       <div class="section-head">
-        <span class="eyebrow">Beta · Pisos de particulares revisados</span>
+        <span class="eyebrow">Beta · Pisos revisados de particulares e inmobiliarias</span>
         <h1>{{ title }}</h1>
         <p class="lead">Anuncios publicados por sus propietarios y revisados por nosotros. Escríbeles desde aquí, sin dar tu teléfono. <NuxtLink to="/alquiler">Guías de alquiler por ciudad</NuxtLink>.</p>
       </div>

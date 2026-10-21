@@ -6,15 +6,15 @@ export default defineEventHandler(async (event) => {
 
   const result = validateSignup(body ?? {})
   if (!result.ok) throw createError({ statusCode: 422, statusMessage: 'Revisa los datos', data: { errors: result.errors } })
-  const { role, name, email, phone, password } = result.data
+  const { role, name, email, phone, password, isAgency, company } = result.data
 
   const exists = await queryOne('SELECT 1 FROM users WHERE email = $1', [email])
   if (exists) throw createError({ statusCode: 409, statusMessage: 'Ya hay una cuenta con este correo. Entra con tu contraseña.' })
 
   const user = await queryOne<{ id: string }>(
-    `INSERT INTO users (role, name, email, phone, password_hash, consent_at, consent_text, last_login_at)
-     VALUES ($1, $2, $3, $4, $5, now(), $6, now()) RETURNING id`,
-    [role, name, email, phone, await hashPassword(password), SIGNUP_CONSENT],
+    `INSERT INTO users (role, name, email, phone, password_hash, consent_at, consent_text, last_login_at, is_agency, company)
+     VALUES ($1, $2, $3, $4, $5, now(), $6, now(), $7, $8) RETURNING id`,
+    [role, name, email, phone, await hashPassword(password), SIGNUP_CONSENT, isAgency, company],
   )
   const session = await userSession(event)
   await session.update({ userId: user!.id })
@@ -29,6 +29,6 @@ export default defineEventHandler(async (event) => {
     button: role === 'propietario' ? { label: 'Publicar mi piso', url: siteUrl('/mi-cuenta/pisos/nuevo') } : { label: 'Completar mi perfil', url: siteUrl('/mi-cuenta/perfil') },
   })
   sendMailLater({ to: email, subject: 'Bienvenido/a a RentaHucha', ...welcome })
-  if (role === 'propietario') notifyTeam(`Nueva cuenta de propietario: ${name}`, [`${name} · ${email}${phone ? ` · ${phone}` : ''}`])
-  return { ok: true, user: { id: user!.id, role, name, email, phone } }
+  if (role === 'propietario') notifyTeam(isAgency ? `Nueva cuenta de inmobiliaria: ${company}` : `Nueva cuenta de propietario: ${name}`, [`${name}${isAgency ? ` (${company})` : ''} · ${email}${phone ? ` · ${phone}` : ''}`])
+  return { ok: true, user: { id: user!.id, role, name, email, phone, isAgency, company } }
 })

@@ -13,7 +13,7 @@ const OWNER_STATS = `,
   (SELECT count(*) FROM conversations c WHERE c.property_id = p.id)::int AS conversations,
   (SELECT count(*) FROM favorites fv WHERE fv.property_id = p.id)::int AS favorites`
 
-type Row = Property & { photos: Property['photos'] | string; ownerName?: string; ownerId?: string }
+type Row = Property & { photos: Property['photos'] | string; ownerName?: string; ownerIsAgency?: boolean; ownerId?: string }
 // PGlite devuelve el JSON ya parseado; postgres.js también, pero por si acaso.
 const fix = <T extends Row>(r: T) => ({ ...r, photos: typeof r.photos === 'string' ? JSON.parse(r.photos) : r.photos, rent: Number(r.rent) })
 
@@ -29,12 +29,12 @@ export async function getOwnerProperty(ownerId: string, id: string): Promise<Pro
   return fix(row)
 }
 
-const PUBLIC = (cols: string) => `SELECT ${cols}, split_part(u.name, ' ', 1) AS owner_name FROM properties p JOIN users u ON u.id = p.owner_id`
+const PUBLIC = (cols: string) => `SELECT ${cols}, CASE WHEN u.is_agency AND u.company <> '' THEN u.company ELSE split_part(u.name, ' ', 1) END AS owner_name, u.is_agency AS owner_is_agency FROM properties p JOIN users u ON u.id = p.owner_id`
 
 /** Sin dirección exacta ni notas internas. */
 function toPublic(r: Row): PublicProperty {
-  const { address: _a, reviewNote: _r, ownerId: _o, views30: _v, conversations: _c, favorites: _f, ...rest } = fix(r) as Row & { views30?: number; conversations?: number; favorites?: number }
-  return { ...rest, ownerName: r.ownerName ?? '' }
+  const { address: _a, reviewNote: _r, ownerId: _o, ownerIsAgency: _ag, views30: _v, conversations: _c, favorites: _f, ...rest } = fix(r) as Row & { views30?: number; conversations?: number; favorites?: number }
+  return { ...rest, ownerName: r.ownerName ?? '', ownerIsAgency: r.ownerIsAgency === true }
 }
 
 export async function searchProperties(f: { city?: string; maxRent?: number; minBedrooms?: number; stayType?: string; page?: number }) {

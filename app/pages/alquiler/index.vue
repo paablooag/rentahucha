@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const title = 'Alquiler de pisos por ciudad: guías y alertas en toda España'
-const description = 'Alquiler de pisos de particulares en Madrid, Barcelona, Valencia, Sevilla, Málaga, Bilbao y más de 60 ciudades: zona tensionada, fianza, requisitos y alertas de pisos nuevos.'
+const description = 'Alquiler de pisos revisados en Madrid, Barcelona, Valencia, Sevilla, Málaga, Bilbao y más de 60 ciudades: zona tensionada, fianza, requisitos y alertas de pisos nuevos.'
 useSeoMeta({ title, description, ogTitle: title, ogDescription: description, ogImage: 'https://rentahucha.es/og/ciudades.png' })
 
 const q = ref('')

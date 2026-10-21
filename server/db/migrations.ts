@@ -415,4 +415,13 @@ export const MIGRATIONS: { id: number; name: string; sql: string }[] = [
       CREATE INDEX page_clicks_path_idx ON page_clicks (path, device, ts DESC);
     `,
   },
+  {
+    id: 17,
+    name: 'cuentas de inmobiliaria',
+    sql: `
+      -- Una inmobiliaria es una cuenta de propietario con nombre comercial: publica igual, con su marca en los anuncios.
+      ALTER TABLE users ADD COLUMN is_agency boolean NOT NULL DEFAULT false;
+      ALTER TABLE users ADD COLUMN company text NOT NULL DEFAULT '';
+    `,
+  },
 ]
