@@ -104,7 +104,7 @@ async function act(p: AdminPiso, action: 'aprobar' | 'rechazar') {
 .head { margin-bottom: 16px; }
 h1 { font-size: 2.2rem; margin: 0 0 4px; }
 .head p { margin: 0; }
-.tabs { display: inline-flex; flex-wrap: wrap; gap: 4px; padding: 4px; background: #fff; border: 1px solid var(--line); border-radius: 999px; margin-bottom: 16px; }
+.tabs { display: inline-flex; flex-wrap: wrap; gap: 4px; padding: 4px; background: #fff; border: 1px solid var(--line); border-radius: 22px; margin-bottom: 16px; }
 .tabs button { font: inherit; font-size: 0.88rem; border: 0; background: transparent; border-radius: 999px; padding: 7px 12px; cursor: pointer; color: var(--muted); }
 .tabs button span { font-weight: 600; margin-left: 4px; }
 .tabs button.on { background: var(--ink); color: #fff; }

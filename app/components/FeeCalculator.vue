@@ -52,7 +52,7 @@ const fees = computed(() => calcFees(Math.max(Number(rent.value) || 0, 0), Math.
 .tier { border: 1px solid var(--line); border-radius: 999px; padding: 8px 4px; text-align: center; display: grid; gap: 0; transition: all 0.2s; }
 .tier.active { border-color: var(--ink); background: var(--lime); }
 .tier-rate { font-weight: 600; color: var(--ink); }
-.tier-label { font-size: 0.7rem; color: var(--muted); }
+.tier-label { font-size: 0.75rem; color: var(--muted); }
 .tier.active .tier-label { color: #2f2f2f; }
 .result { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding: 20px; background: var(--black); border-radius: 16px; }
 .result .stat-label { color: #a8a8a8; }

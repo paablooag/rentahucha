@@ -96,10 +96,11 @@ h1 { font-size: 2.2rem; margin: 0 0 4px; }
 .pill { font-size: 0.75rem; font-weight: 600; padding: 3px 10px; border-radius: 999px; background: #fff3cd; height: fit-content; }
 .st-respondido .pill { background: var(--lime); }
 .detail { margin-top: 12px; display: grid; gap: 10px; }
-dl { display: grid; grid-template-columns: max-content 1fr; gap: 4px 16px; margin: 0; font-size: 0.9rem; }
+dl { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 4px 16px; margin: 0; font-size: 0.9rem; }
+dd { min-width: 0; overflow-wrap: anywhere; }
 dt { color: var(--muted); }
 dd { margin: 0; }
 .btns { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
-.link { font: inherit; background: none; border: 0; text-decoration: underline; cursor: pointer; padding: 0; color: var(--muted); }
+.link { font: inherit; background: none; border: 0; text-decoration: underline; cursor: pointer; padding: 6px 2px; min-height: 32px; color: var(--muted); }
 .danger { color: var(--danger); }
 </style>

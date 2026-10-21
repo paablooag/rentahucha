@@ -70,7 +70,7 @@ const links = [
   padding: 8px 14px; border-radius: 999px; transition: background 0.2s, color 0.2s; white-space: nowrap;
 }
 /* Entre tablet y escritorio ancho el menú se compacta para caber en una línea. */
-@media (min-width: 1021px) and (max-width: 1240px) {
+@media (min-width: 1101px) and (max-width: 1280px) {
   .nav-link { padding: 8px 9px; font-size: 0.9rem; }
   .nav-cta { margin-left: 6px; }
   .nav-cta .btn { padding: 8px 13px; }
@@ -82,7 +82,7 @@ const links = [
 .cta-ghost:hover { background: rgba(255, 255, 255, 0.18); }
 .toggle { display: none; background: rgba(255, 255, 255, 0.1); border: 0; color: #fff; cursor: pointer; width: 42px; height: 42px; border-radius: 50%; place-items: center; }
 
-@media (max-width: 1020px) {
+@media (max-width: 1100px) {
   .toggle { display: grid; }
   .header.scrolled { border-radius: 24px; }
   .nav {

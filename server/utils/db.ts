@@ -140,8 +140,9 @@ async function seed(d: Driver) {
       [p.slug, p.title, p.excerpt, p.body],
     )
   }
-  // v2: todos los artículos iniciales con fecha de publicación del 15 de octubre de 2026.
-  if (current < 2) {
+  // v2: los artículos de la v1 pasaron a fecha del 15 de octubre de 2026. Solo al actualizar desde la v1:
+  // en una base de datos nueva cada artículo conserva su propia fecha.
+  if (current === 1) {
     await d.query('UPDATE blog_posts SET published_at = $1::date WHERE slug = ANY($2::text[])', [SEED_DATE_V2, BLOG_SEED.map(p => p.slug)])
   }
   await d.query(

@@ -88,6 +88,6 @@ h1 { font-size: 2.2rem; margin-bottom: 4px; }
 .b-owner { background: var(--ink); color: var(--lime); }
 .b-agency { background: #dfe5ff; color: var(--ink); }
 .b-tenant { background: var(--lime); color: var(--ink); }
-.link { font: inherit; background: none; border: 0; text-decoration: underline; cursor: pointer; padding: 0; }
+.link { font: inherit; background: none; border: 0; text-decoration: underline; cursor: pointer; padding: 6px 2px; min-height: 32px; }
 .danger { color: var(--danger); }
 </style>

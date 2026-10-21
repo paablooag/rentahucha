@@ -95,6 +95,7 @@ function toggleExclude() {
 
 <style scoped>
 .behavior { display: grid; gap: 14px; margin-top: 28px; }
+.behavior > *, .grid3 > * { min-width: 0; }
 .b-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
 .b-head h2 { font-size: 1.5rem; margin: 0; }
 .excl { display: inline-flex; gap: 8px; align-items: center; font-size: 0.9rem; background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px; }

@@ -219,7 +219,7 @@ h1 { font-size: 2.2rem; margin-bottom: 4px; }
 .top { display: grid; gap: 14px; margin-bottom: 14px; }
 @media (min-width: 900px) { .top { grid-template-columns: 1.4fr 1fr; } }
 .big { display: block; font-size: 3rem; font-weight: 600; letter-spacing: -0.03em; line-height: 1.1; margin: 6px 0 10px; }
-.big small { font-size: 1rem; font-weight: 400; color: var(--muted); }
+.big small { font-size: 1rem; font-weight: 400; color: var(--muted); letter-spacing: 0; }
 .goal-bar { height: 10px; background: var(--grey-01); border-radius: 99px; overflow: hidden; margin-bottom: 10px; }
 .goal-bar span { display: block; height: 100%; background: var(--lime); border-radius: 99px; transition: width 0.4s; }
 .goal p, .live p { margin: 0; }
@@ -241,7 +241,7 @@ h1 { font-size: 2.2rem; margin-bottom: 4px; }
 .tip { position: absolute; bottom: calc(100% + 6px); left: 50%; transform: translateX(-50%); background: var(--ink); color: #fff; font-size: 0.78rem; padding: 6px 10px; border-radius: 8px; white-space: nowrap; z-index: 2; pointer-events: none; display: grid; }
 .tip.left { left: auto; right: 0; transform: none; }
 .axis { display: flex; justify-content: space-between; margin-top: 6px; }
-.table-view { margin-top: 12px; font-size: 0.9rem; }
+.table-view { margin-top: 12px; font-size: 0.9rem; overflow-x: auto; }
 .table-view summary { cursor: pointer; color: var(--muted); }
 .lists { display: grid; gap: 14px; margin-top: 28px; }
 @media (min-width: 900px) { .lists { grid-template-columns: 1.3fr 1fr; } }

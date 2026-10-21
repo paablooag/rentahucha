@@ -206,7 +206,7 @@ h1 { font-size: 2.2rem; margin: 0 0 4px; }
 .later { display: inline-flex; gap: 6px; align-items: center; font-size: 0.85rem; }
 .later .input { width: auto; padding: 6px 10px; }
 .danger { color: var(--danger); }
-.link { font: inherit; background: none; border: 0; text-decoration: underline; cursor: pointer; padding: 0; color: var(--muted); }
+.link { font: inherit; background: none; border: 0; text-decoration: underline; cursor: pointer; padding: 6px 2px; min-height: 32px; color: var(--muted); }
 .err { color: var(--danger); margin: 0; }
 .ok { color: var(--green); margin: 0; }
 .events { list-style: none; padding: 0; margin: 0; display: grid; gap: 4px; border-top: 1px solid var(--line); padding-top: 10px; }

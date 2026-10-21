@@ -157,7 +157,7 @@ async function remove(id: string, kind: 'leads' | 'newsletter', label: string) {
 h1 { font-size: 2.2rem; margin-bottom: 4px; }
 .head p { margin: 0; }
 .toolbar { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin-bottom: 16px; }
-.tabs { display: inline-flex; gap: 4px; padding: 4px; background: #fff; border: 1px solid var(--line); border-radius: 999px; flex-wrap: wrap; }
+.tabs { display: inline-flex; gap: 4px; padding: 4px; background: #fff; border: 1px solid var(--line); border-radius: 22px; flex-wrap: wrap; }
 .tabs button { font: inherit; font-size: 0.9rem; border: 0; background: transparent; border-radius: 999px; padding: 8px 14px; cursor: pointer; color: var(--muted); }
 .tabs button.on { background: var(--ink); color: #fff; }
 .search { max-width: 320px; }
@@ -167,7 +167,7 @@ h1 { font-size: 2.2rem; margin-bottom: 4px; }
 .b-propietario { background: var(--ink); color: var(--lime); }
 .b-inquilino { background: var(--lime); color: var(--ink); }
 .b-inmobiliaria { background: #dfe5ff; color: var(--ink); }
-.link { font: inherit; background: none; border: 0; color: var(--ink); text-decoration: underline; cursor: pointer; padding: 0; }
+.link { font: inherit; background: none; border: 0; color: var(--ink); text-decoration: underline; cursor: pointer; padding: 6px 2px; min-height: 32px; }
 .danger { color: var(--danger); }
 .detail td { background: #fafafa !important; }
 .detail dl { display: grid; grid-template-columns: max-content 1fr; gap: 6px 18px; margin: 4px 0 14px; font-size: 0.9rem; }

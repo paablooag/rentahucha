@@ -229,7 +229,7 @@ h1 { font-size: 2.2rem; margin-bottom: 4px; }
 .kpi strong { font-size: 2.4rem; font-weight: 500; letter-spacing: -0.03em; line-height: 1.1; }
 .kpi.dark strong { color: var(--lime); }
 .kpi .sub { font-size: 0.82rem; color: var(--muted); }
-.panels { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.panels { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); }
 .card h3 { font-size: 1.05rem; font-weight: 600; letter-spacing: -0.01em; margin-bottom: 14px; }
 .bars,
 .pairs { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }

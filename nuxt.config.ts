@@ -53,6 +53,9 @@ export default defineNuxtConfig({
     '/blog/como-buscar-piso-de-alquiler-en-2026': { redirect: { to: '/blog/como-buscar-piso-de-alquiler-en-2027', statusCode: 301 } },
     '/blog/cuanto-cuesta-reformar-un-piso-2026': { redirect: { to: '/blog/cuanto-cuesta-reformar-un-piso-2027', statusCode: 301 } },
     '/blog/normativa-inmobiliaria-alquiler-2026': { redirect: { to: '/blog/normativa-inmobiliaria-alquiler-2027', statusCode: 301 } },
+    // Rutas cortas que alguien puede escribir a mano.
+    '/panel': { redirect: { to: '/panel/propietario', statusCode: 302 } },
+    '/pasaporte': { redirect: { to: '/pasaporte/demo', statusCode: 302 } },
     '/admin/**': { ssr: false, headers: { 'X-Robots-Tag': 'noindex, nofollow' } },
     '/api/admin/**': { headers: { 'Cache-Control': 'no-store' } },
   },

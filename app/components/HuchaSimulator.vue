@@ -110,6 +110,6 @@ const maxBar = computed(() => Math.max(...bars.value.map(b => b.value), 1))
   .totals { grid-template-columns: 1fr 1fr; }
   .payout { grid-column: span 2; margin: 0; }
   .bar-val,
-  .bar-label { font-size: 0.6rem; }
+  .bar-label { font-size: 0.72rem; }
 }
 </style>

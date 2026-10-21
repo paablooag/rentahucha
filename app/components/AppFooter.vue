@@ -102,8 +102,9 @@ const dossiers = [
 .dl-meta { font-size: 0.82rem; color: #7a7a7a; }
 .dl-go { color: #7a7a7a; transform: rotate(90deg); transition: color 0.2s; }
 .dl-card:hover .dl-go { color: var(--lime); }
-.cols { display: grid; gap: 40px; grid-template-columns: 1fr; }
-@media (min-width: 720px) { .cols { grid-template-columns: 2fr 1fr 1fr 1fr; } }
+.cols { display: grid; gap: 32px 20px; grid-template-columns: 1fr 1fr; }
+.cols > :first-child { grid-column: 1 / -1; }
+@media (min-width: 720px) { .cols { grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; } .cols > :first-child { grid-column: auto; } }
 .about p { margin: 18px 0 10px; max-width: 34ch; }
 .mail { color: var(--lime) !important; }
 h4 { color: #fff; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 14px; }

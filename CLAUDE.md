@@ -54,6 +54,7 @@ El tablero de tareas del panel (**Admin → Tareas**) es la fuente de verdad del
 - Las constantes de `shared/utils` a veces no se autoimportan en rutas del servidor: si sale «X is not defined», importar explícitamente desde `#shared/utils/...`.
 - Los composables (`useAccount`, `useState`…) solo dentro de `setup`, nunca dentro de un manejador de eventos.
 - Tras crear una página o exportación nueva, si el servidor de desarrollo da 404 o no la ve, reiniciarlo.
+- En Windows, parar el servidor de desarrollo a la fuerza puede dañar la base local (PGlite): si todo da 500 con «Aborted()», renombrar `.data/pglite` (solo hay datos de prueba) y arrancar de nuevo. Cambiar `nuxt.config.ts` con el servidor en marcha también puede dejarlo colgado (EBUSY): reiniciarlo.
 
 ### Desde Claude Code en la web (claude.ai/code)
 

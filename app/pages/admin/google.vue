@@ -206,13 +206,14 @@ h2 { font-size: 1.05rem; margin: 0 0 8px; }
 .tip { position: absolute; bottom: calc(100% + 6px); left: 50%; transform: translateX(-50%); background: var(--ink); color: #fff; font-size: 0.78rem; padding: 6px 10px; border-radius: 8px; white-space: nowrap; z-index: 2; pointer-events: none; display: grid; }
 .tip.left { left: auto; right: 0; transform: none; }
 .axis { display: flex; justify-content: space-between; margin-top: 6px; }
-.table-view { margin-top: 12px; font-size: 0.9rem; }
+.table-view { margin-top: 12px; font-size: 0.9rem; overflow-x: auto; }
 .table-view summary { cursor: pointer; color: var(--muted); }
 .grid2 { display: grid; gap: 14px; margin-bottom: 14px; }
-@media (min-width: 1000px) { .grid2 { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1000px) { .grid2 { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
+.grid2 > * { min-width: 0; }
 .grid2 .card > p { margin: 0 0 10px; }
 .table td { vertical-align: top; }
 .q { display: block; font-weight: 500; }
-.pg { display: block; max-width: 360px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--muted); }
+.pg { display: block; max-width: min(360px, 46vw); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--muted); }
 .note { background: var(--lime-soft); padding: 10px 14px; border-radius: 12px; }
 </style>

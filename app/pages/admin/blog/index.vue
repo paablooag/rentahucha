@@ -221,7 +221,7 @@ h1 { font-size: 2.2rem; margin-bottom: 4px; }
 .head p { margin: 0; }
 .head-actions { display: flex; gap: 8px; flex-wrap: wrap; }
 .toolbar { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin-bottom: 16px; }
-.tabs { display: inline-flex; gap: 4px; padding: 4px; background: #fff; border: 1px solid var(--line); border-radius: 999px; flex-wrap: wrap; }
+.tabs { display: inline-flex; gap: 4px; padding: 4px; background: #fff; border: 1px solid var(--line); border-radius: 22px; flex-wrap: wrap; }
 .tabs button { font: inherit; font-size: 0.9rem; border: 0; background: transparent; border-radius: 999px; padding: 8px 14px; cursor: pointer; color: var(--muted); }
 .tabs button.on { background: var(--ink); color: #fff; }
 .search { max-width: 300px; }
@@ -241,7 +241,7 @@ tr.sel td { background: var(--lime-soft) !important; }
 .nowrap { white-space: nowrap; }
 .actions { white-space: nowrap; }
 .actions > * { margin-left: 12px; font-size: 0.9rem; }
-.link { font: inherit; font-size: 0.9rem; background: none; border: 0; color: var(--ink); text-decoration: underline; cursor: pointer; padding: 0; }
+.link { font: inherit; font-size: 0.9rem; background: none; border: 0; color: var(--ink); text-decoration: underline; cursor: pointer; padding: 6px 2px; min-height: 32px; }
 .link.light { color: #cfcfcf; }
 .danger { color: var(--danger); }
 .plan { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; width: 100%; padding-top: 8px; border-top: 1px solid #333; }

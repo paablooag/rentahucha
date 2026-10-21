@@ -227,7 +227,7 @@ h1 { font-size: 2.2rem; margin-bottom: 4px; }
 .col-esperando h2::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: #f08a6c; }
 .col-en_curso h2::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: #f5c451; }
 .col-hecha h2::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--lime); }
-.add { width: 28px; height: 28px; border-radius: 50%; border: 0; background: #fff; cursor: pointer; font-size: 1.1rem; line-height: 1; }
+.add { width: 34px; height: 34px; border-radius: 50%; border: 0; background: #fff; cursor: pointer; font-size: 1.1rem; line-height: 1; }
 .add:hover { background: var(--ink); color: #fff; }
 ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
 
@@ -247,7 +247,7 @@ ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
 .who.pablo { background: #ffe1d6; color: #7a2e12; }
 .who.claude { background: var(--lime-soft); color: var(--ink); }
 .moves { display: flex; justify-content: flex-end; gap: 4px; padding: 0 8px 8px; }
-.moves button { font: inherit; font-size: 0.8rem; border: 1px solid var(--line); background: #fff; border-radius: 8px; width: 30px; height: 24px; cursor: pointer; color: var(--muted); }
+.moves button { font: inherit; font-size: 0.8rem; border: 1px solid var(--line); background: #fff; border-radius: 8px; width: 36px; height: 32px; cursor: pointer; color: var(--muted); }
 .moves button:disabled { opacity: 0.3; cursor: default; }
 .moves button:not(:disabled):hover { border-color: var(--ink); color: var(--ink); }
 .empty { font-size: 0.82rem; color: var(--muted); text-align: center; padding: 18px 8px; border: 1px dashed #d4d4d4; border-radius: 12px; }
@@ -259,7 +259,7 @@ ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
 @media (min-width: 640px) { .row { grid-template-columns: repeat(4, 1fr); } }
 .actions { display: flex; gap: 10px; justify-content: flex-end; align-items: center; }
 .actions .danger { margin-right: auto; }
-.link { font: inherit; background: none; border: 0; text-decoration: underline; cursor: pointer; padding: 0; }
+.link { font: inherit; background: none; border: 0; text-decoration: underline; cursor: pointer; padding: 6px 2px; min-height: 32px; }
 .danger { color: var(--danger); }
 @media (max-width: 760px) { .board { grid-template-columns: 1fr; overflow: visible; } }
 </style>

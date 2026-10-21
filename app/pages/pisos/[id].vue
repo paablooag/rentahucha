@@ -180,7 +180,7 @@ h2 { font-size: 1.25rem; margin: 24px 0 10px; }
 .desc { white-space: pre-line; margin: 0; }
 .specs { display: grid; grid-template-columns: max-content 1fr; gap: 8px 20px; margin: 0 0 14px; }
 .specs dt { color: var(--muted); }
-.specs dd { margin: 0; }
+.specs dd { margin: 0; min-width: 0; overflow-wrap: anywhere; }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; }
 .chip { padding: 6px 12px; border-radius: 999px; background: var(--grey-01); font-size: 0.88rem; }
 .contact { display: grid; gap: 10px; }
