@@ -25,6 +25,10 @@ Al terminar una tarea, muévela a «Hecho» con la fecha y una línea de qué se
 
 ## Hecho
 
+- 2026-10-21 · Search Console en el panel (Admin → Google): sincronización cada 6 h con cuenta de servicio de solo lectura; oportunidades y páginas sin clics.
+- 2026-10-21 · Datos obligatorios del anuncio (art. 20 RDL 29/2026) en formulario, ficha, panel y generador; 3 artículos sobre las nuevas obligaciones.
+- 2026-10-21 · Revisión del responsive de toda la web (320-1440 px) y del panel; /panel y /pasaporte redirigen a sus demos.
+- 2026-10-21 · Artículo del límite del 2 % reescrito según Search Console (82 impresiones, 0 clics).
 - 2026-10-21 · Cuentas de inmobiliaria: registro con nombre comercial, hasta 300 pisos, marca en anuncios y tarjetas; /inmobiliarias lleva al registro.
 - 2026-10-20 · Recordatorio único al propietario cuando un interesado lleva 48 h sin respuesta.
 - 2026-10-20 · Alertas de pisos por correo (máx. una al día, baja en un clic) y demanda real por ciudad para propietarios (desde 5 personas).
