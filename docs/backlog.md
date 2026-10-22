@@ -8,7 +8,7 @@ Al terminar una tarea, muévela a «Hecho» con la fecha y una línea de qué se
 
 ## Con fecha
 
-- [ ] 13-11-2026: resultado de la convalidación del RDL 29/2026 → actualizar artículos «pendiente de convalidación», calculadora del IRPF, banners y textos de captación.
+- [ ] 13-11-2026: resultado de la convalidación del RDL 29/2026 → actualizar artículos «pendiente de convalidación», calculadora del IRPF, página del IRAV, banners, textos de captación y la guía en PDF (app/pages/dossier/guia-decreto.vue + `npm run pdf`).
 - [ ] **Después del 12-11-2026**: actualizar los artículos sobre la votación de los decretos de vivienda con el resultado (buscar fuente oficial antes de escribir; posición neutral).
 - [ ] **Después del 29-11-2026**: actualizar los artículos sobre las elecciones con los resultados oficiales.
 - [ ] **Cuando se publique en el BOE la resolución de zonas tensionadas del tercer trimestre de 2026** (prevista a finales de octubre): revisar `shared/utils/cities.ts` y `CITIES_CHECKED` con la página del Ministerio (consultar zonas de mercado residencial tensionado).
@@ -26,6 +26,8 @@ Al terminar una tarea, muévela a «Hecho» con la fecha y una línea de qué se
 
 ## Hecho
 
+- 2026-10-22 · Auditoría del RDL 29/2026 en todo el blog (IRPF, deducción del inquilino, IVA, IBI, temporada, habitaciones, prórroga, gran tenedor, desahucios, seguro de impago) y guía central del decreto.
+- 2026-10-22 · Guía del decreto en PDF a cambio del correo (origen «guia-decreto»), página del IRAV con datos del INE, artículos del IVA de reformas y del documento de finalización.
 - 2026-10-22 · Calculadora de la reducción del IRPF por alquiler (/herramientas/reduccion-irpf-alquiler), destacada en portada y propietarios.
 - 2026-10-22 · Reducción del IRPF del RDL 29/2026 (hasta el 100 % desde el 1-12-2026): artículo nuevo y cifras corregidas en 10 sitios.
 - 2026-10-22 · Artículos «¿Es Madrid zona tensionada?» y «¿Cuánto cobra una inmobiliaria por gestionar tu alquiler?»; artículos de la convalidación completados.
