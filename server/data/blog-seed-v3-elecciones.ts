@@ -655,7 +655,7 @@ Según datos publicados en octubre de 2026, rondan los **310 municipios**, sobre
 
 ## Ventajas fiscales
 
-En zona tensionada se aplican las reducciones más altas del IRPF, del 70 % y el 90 %, en los casos previstos.
+En los contratos firmados hasta el 1 de diciembre de 2026, las reducciones más altas del IRPF (70 % y 90 %) están ligadas a la zona tensionada. Para los posteriores, el decreto de octubre fija nuevos porcentajes, de hasta el 100 %: [la reducción del IRPF por alquilar desde diciembre de 2026](/blog/reduccion-irpf-alquiler-vivienda-2027-hasta-100).
 
 ## Antes de fijar la renta
 
@@ -684,7 +684,7 @@ Comprueba si tu municipio está declarado y cuál fue la renta del último contr
 4. **Gran tenedor**: en general, quien tiene más de 10 viviendas, o más de 5 en una zona tensionada si así se declara.
 5. **Prórroga extraordinaria**: hasta 3 años en zona tensionada, en ciertos casos, al terminar el contrato.
 6. **Actualización de rentas**: límites temporales del 2 % (2023) y del 3 % (2024), y un índice propio desde 2025.
-7. **Incentivos fiscales**: reducciones del IRPF del 50 % al 90 % para caseros.
+7. **Incentivos fiscales**: reducciones del IRPF para caseros, de hasta el 100 % en los contratos nuevos desde diciembre de 2026 si se convalida el decreto.
 8. **Información previa**: el inquilino puede pedir datos sobre la vivienda y su renta.
 
 ## Por qué se habla de ella en campaña
@@ -791,7 +791,7 @@ Es una facultad municipal: cada ayuntamiento decide si lo aplica.
 ## Opciones si tienes un piso turístico
 
 - Mantenerlo, con los nuevos costes.
-- Pasarlo a **alquiler de vivienda habitual**, con reducciones del IRPF del 50 % al 90 %.
+- Pasarlo a **alquiler de vivienda habitual**, con reducciones del IRPF de hasta el 100 % según el caso.
 - Alquilarlo por **temporada**, cumpliendo las nuevas reglas de 31 días a 12 meses con causa.
 
 Haz números con tu asesor antes de decidir.`,

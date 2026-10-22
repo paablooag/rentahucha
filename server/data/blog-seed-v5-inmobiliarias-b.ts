@@ -122,7 +122,7 @@ ${CTA}`,
 |---|---|
 | Ingreso variable según la temporada | Ingreso estable |
 | Limpieza, check-in y reseñas | Un inquilino, un contrato |
-| Más costes e impuestos en debate | Reducciones del IRPF del 50 % al 90 % |
+| Más costes e impuestos en debate | Reducciones del IRPF de hasta el 100 % |
 | Más regulación local | Marco conocido (LAU) |
 
 ## Cómo plantearlo

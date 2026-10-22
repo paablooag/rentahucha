@@ -439,7 +439,7 @@ IBI, comunidad, seguro y suministros mínimos. Y, en algunos municipios, recargo
 
 ## Alternativa
 
-Alquilado como vivienda habitual, puedes aplicar reducciones del 50 % al 90 % del rendimiento neto. Haz números en [cuánto cuesta tener un piso vacío](/blog/cuanto-cuesta-tener-un-piso-vacio).`,
+Alquilado como vivienda habitual, puedes aplicar reducciones del rendimiento neto de hasta el 100 % según el contrato ([cómo funcionan](/blog/reduccion-irpf-alquiler-vivienda-2027-hasta-100)). Haz números en [cuánto cuesta tener un piso vacío](/blog/cuanto-cuesta-tener-un-piso-vacio).`,
   },
   {
     slug: 'declarar-varios-inquilinos-en-el-mismo-ano',
@@ -522,7 +522,7 @@ Una plaza de garaje alquilada **sola** se rige por el **Código Civil** y lo pac
 |---|---|---|
 | Ingresos | Variables por temporada | Estables |
 | Gastos | Limpieza, plataformas, suministros, reposición | Menores |
-| Fiscalidad | Sin reducciones de vivienda | Reducciones del 50 % al 90 % |
+| Fiscalidad | Sin reducciones de vivienda | Reducciones de hasta el 100 % |
 | Tiempo | Mucho | Poco |
 
 ## 2. Planifica la transición

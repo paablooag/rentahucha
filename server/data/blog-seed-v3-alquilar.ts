@@ -101,7 +101,7 @@ El Ministerio de Vivienda publica un modelo orientativo: te lo explicamos cláus
 
 ## Paso 8. Impuestos
 
-Las rentas del alquiler se declaran en el **IRPF** como rendimientos del capital inmobiliario. Puedes deducir gastos como el IBI, la comunidad, el seguro, los intereses de la hipoteca, las reparaciones y la amortización. Para la vivienda habitual del inquilino existe además una **reducción del rendimiento neto**, que tras la Ley 12/2023 va del 50 % al 90 % según el caso (zona tensionada con rebaja de renta, alquiler a jóvenes, rehabilitación…). Comprueba los porcentajes vigentes en la [Agencia Tributaria](https://sede.agenciatributaria.gob.es/) antes de declarar. Más detalle en [cómo declarar el alquiler en la renta](/blog/como-declarar-el-alquiler-en-la-renta).
+Las rentas del alquiler se declaran en el **IRPF** como rendimientos del capital inmobiliario. Puedes deducir gastos como el IBI, la comunidad, el seguro, los intereses de la hipoteca, las reparaciones y la amortización. Para la vivienda habitual del inquilino existe además una **reducción del rendimiento neto**. En los contratos firmados después del 1 de diciembre de 2026 va **del 15 % al 100 %**: es máxima si bajas la renta más de un 5 % o quedas por debajo del índice de referencia, y mínima si la subes (Real Decreto-ley 29/2026, pendiente de convalidación). Te lo explicamos en [la reducción del IRPF por alquilar desde diciembre de 2026](/blog/reduccion-irpf-alquiler-vivienda-2027-hasta-100). Más detalle en [cómo declarar el alquiler en la renta](/blog/como-declarar-el-alquiler-en-la-renta).
 
 ## Errores que salen caros
 

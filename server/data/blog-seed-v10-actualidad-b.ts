@@ -217,7 +217,7 @@ ${CTA_PROP}`,
 | Suministros e internet | | Normalmente a cargo del inquilino |
 | Reposición de menaje y desgaste | | Menor |
 | Licencias, registro y tasas | | — |
-| Impuestos (IRPF, IVA si aplica) | | IRPF con reducción del 50 % al 90 % |
+| Impuestos (IRPF, IVA si aplica) | | IRPF con reducción de hasta el 100 % |
 | Horas de tu tiempo | Muchas | Pocas |
 | **Neto** | | |
 

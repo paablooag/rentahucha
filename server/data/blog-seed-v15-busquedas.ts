@@ -41,7 +41,7 @@ Según la Ley 12/2023, por el derecho a la vivienda, la declaración la hace **l
 
 ## ¿Y en la declaración de la renta?
 
-La reducción más alta del rendimiento del alquiler en el IRPF está ligada a contratos en zonas tensionadas con rebaja de renta, así que en Madrid no se puede aplicar ese tramo. Sí pueden aplicarse otros, según el caso. Comprueba los porcentajes vigentes en la Agencia Tributaria: [cómo declarar el alquiler en la renta](/blog/como-declarar-el-alquiler-en-la-renta).
+En los contratos firmados hasta el 1 de diciembre de 2026, los porcentajes más altos de reducción del IRPF están ligados a las zonas tensionadas, así que en Madrid no se pueden aplicar. Para los firmados después, el decreto de octubre permite llegar al **100 %** también fuera de zonas tensionadas, por ejemplo si bajas la renta más de un 5 % y quedas por debajo del índice de referencia: [la reducción del IRPF por alquilar desde diciembre de 2026](/blog/reduccion-irpf-alquiler-vivienda-2027-hasta-100).
 
 ## Cómo fijar el precio en Madrid
 
@@ -69,5 +69,102 @@ Por ejemplo, Barcelona y gran parte de Cataluña, y municipios del País Vasco, 
 - Ministerio de Vivienda y Agenda Urbana: listado de zonas de mercado residencial tensionado (consultado el 18-10-2026).
 - BOE: [Ley 12/2023, de 24 de mayo, por el derecho a la vivienda](https://www.boe.es/buscar/act.php?id=BOE-A-2023-12203).
 - BOE: [Real Decreto-ley 29/2026, de 6 de octubre](https://www.boe.es/buscar/act.php?id=BOE-A-2026-20823).`,
+  },
+  {
+    slug: 'reduccion-irpf-alquiler-vivienda-2027-hasta-100',
+    title: 'Reducción del IRPF por alquilar tu piso desde diciembre de 2026: hasta el 100 % (y cuándo baja al 15 %)',
+    excerpt: 'El decreto de octubre cambia la reducción del IRPF para los contratos de alquiler de vivienda firmados después del 1 de diciembre de 2026: hasta el 100 % si bajas la renta o te quedas por debajo del índice, y mucho menos si la subes. Tablas, ejemplos y qué pasa con tu contrato actual.',
+    audience: 'propietarios',
+    category: 'Fiscalidad',
+    publishedAt: '2026-10-22',
+    body: `**Respuesta corta:** si firmas un contrato de alquiler de vivienda **después del 1 de diciembre de 2026**, la reducción del IRPF sobre el rendimiento neto puede llegar al **100 %** (no tributas por ese alquiler) cuando bajas la renta más de un 5 % respecto al contrato anterior o, si es el primer alquiler, cuando la renta queda por debajo del índice de referencia. Si mantienes la renta, la reducción es del **50 %**; si la subes, baja **hasta el 15 %**. Lo establece el Real Decreto-ley 29/2026.
+
+> **Actualizado a 22 de octubre de 2026.** El Real Decreto-ley 29/2026 está en vigor desde el 8 de octubre, pero tiene que ser convalidado por el Congreso (Diputación Permanente). La prensa sitúa la votación el 12 de noviembre. Si no se convalida, decae y se mantiene el régimen anterior. Actualizaremos este artículo con el resultado.
+
+## Qué régimen se aplica a tu contrato
+
+| Fecha de firma del contrato | Reducción que se aplica |
+|---|---|
+| Antes del 26 de mayo de 2023 (Ley 12/2023) | El régimen antiguo: 60 % |
+| Del 26 de mayo de 2023 al 1 de diciembre de 2026 | El de la Ley 12/2023: del 50 % al 90 % según el caso |
+| Después del 1 de diciembre de 2026 | **El nuevo régimen**, que se explica abajo |
+
+Además, para cualquier contrato cuyo plazo mínimo de cinco años termine después del 1 de diciembre de 2026, la **prórroga tácita** puede tener una reducción del **80 %** (ver abajo).
+
+## El nuevo régimen: si ya habías alquilado el piso antes
+
+Se aplica a un nuevo contrato del mismo arrendador que **no sea gran tenedor**, comparando la renta inicial con la última renta del contrato anterior (actualizada):
+
+### Si bajas la renta más de un 5 %
+
+| Caso | Reducción |
+|---|---|
+| Renuevas con el **mismo inquilino** al acabar los 5 años o las prórrogas, o con otro inquilino y la renta queda **por debajo del índice de referencia** | **100 %** |
+| Zona tensionada e inquilino de **18 a 35 años** | **95 %** |
+| Zona tensionada | **90 %** |
+| Inquilino de **18 a 35 años** | **85 %** |
+| Resto de casos | **70 %** |
+
+### Si mantienes o subes la renta
+
+| Renta inicial respecto a la anterior | Reducción |
+|---|---|
+| Igual o menor (sin bajar más de un 5 %) | **50 %** |
+| Sube hasta un 5 % | 40 % |
+| Sube más de un 5 % y hasta un 10 % | 30 % |
+| Sube más de un 10 % y hasta un 15 % | 25 % |
+| Sube más de un 15 % y hasta un 20 % | 20 % |
+| Sube más de un 20 % | 15 % |
+
+## Si alquilas el piso por primera vez
+
+Si no eres gran tenedor:
+
+| Caso | Reducción |
+|---|---|
+| Renta inicial **por debajo** del límite del índice de referencia | **100 %** |
+| Zona tensionada e inquilino de 18 a 35 años | 95 % |
+| Zona tensionada | 90 % |
+| Inquilino de 18 a 35 años | 85 % |
+| Renta igual o superior al límite del índice | 50 % |
+
+## Otros casos
+
+- **Alquiler social** a una Administración o entidad sin ánimo de lucro, o vivienda en un programa público con renta limitada: **70 %**.
+- **Vivienda rehabilitada** en los dos años anteriores al contrato: **60 %**.
+- **Prórroga tácita** (artículo 10.1 de la LAU): **80 %** si la renta no supera el límite del índice de referencia y el arrendador no es gran tenedor.
+- Si cumples varios supuestos, se aplica **el porcentaje más alto**.
+- Con varios inquilinos, los porcentajes ligados a la edad se aplican en proporción a los que tengan de 18 a 35 años.
+
+## Requisitos que conviene no olvidar
+
+- Los requisitos se miran **al firmar** el contrato, y la reducción se mantiene mientras se sigan cumpliendo.
+- Solo se aplica sobre el rendimiento **declarado** por ti antes de que Hacienda abra una comprobación: si no declaras el alquiler y te lo regularizan, pierdes la reducción.
+- No se aplica a contratos que incumplan los límites de renta de las zonas tensionadas (artículo 17.6 de la LAU).
+- El **índice de referencia** se consulta en [serpavi.mivau.gob.es](https://serpavi.mivau.gob.es/) con la referencia catastral.
+
+## Ejemplos
+
+Rendimiento neto de 7.000 € al año (rentas menos gastos deducibles):
+
+| Situación del contrato nuevo | Reducción | Rendimiento que tributa |
+|---|---|---|
+| Bajas la renta un 6 % y quedas por debajo del índice | 100 % | 0 € |
+| Bajas la renta un 6 %, sin más requisitos | 70 % | 2.100 € |
+| Mantienes la renta | 50 % | 3.500 € |
+| Subes la renta un 8 % | 30 % | 4.900 € |
+| Subes la renta un 25 % | 15 % | 5.950 € |
+
+## Qué significa para fijar el precio
+
+Con este régimen, **subir la renta al cambiar de inquilino tiene un coste fiscal** y bajarla un poco puede compensar. Antes de decidir, haz números con lo que de verdad te queda: la [calculadora de rentabilidad](/herramientas/rentabilidad-alquiler) te ayuda, y si quieres saber dónde está el mercado en tu zona, pide una [valoración gratis del alquiler](/valoracion-alquiler) con el índice oficial.
+
+Más sobre la declaración: [cómo declarar el alquiler en la renta](/blog/como-declarar-el-alquiler-en-la-renta).
+
+*Información general sobre la norma publicada en el BOE. No sustituye el asesoramiento de un profesional para tu caso concreto.*
+
+## Fuentes
+
+- BOE: [Real Decreto-ley 29/2026, de 6 de octubre](https://www.boe.es/buscar/act.php?id=BOE-A-2026-20823), artículo 6 (nueva redacción del artículo 23.2 y de la disposición transitoria trigésima octava de la Ley 35/2006 del IRPF), y [texto consolidado de la Ley del IRPF](https://www.boe.es/buscar/act.php?id=BOE-A-2006-20764). Consultados el 22-10-2026.`,
   },
 ]

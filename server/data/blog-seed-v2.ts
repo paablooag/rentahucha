@@ -75,16 +75,15 @@ Los intereses y las reparaciones no pueden superar, en conjunto, los ingresos de
 
 ## La reducción por alquiler de vivienda
 
-Si el piso es vivienda habitual del inquilino, el rendimiento neto positivo tiene una reducción. Para contratos firmados desde la Ley 12/2023 hay varios porcentajes:
+Si el piso es vivienda habitual del inquilino, el rendimiento neto positivo tiene una reducción. El porcentaje depende de **cuándo firmaste el contrato**:
 
-| Situación | Reducción |
+| Fecha de firma | Reducción |
 |---|---|
-| General | 50 % |
-| Obras de rehabilitación en los dos años anteriores | 60 % |
-| Primer alquiler a jóvenes de 18 a 35 años en zona tensionada | 70 % |
-| Nuevo contrato en zona tensionada bajando la renta al menos un 5 % | 90 % |
+| Antes del 26 de mayo de 2023 | 60 % |
+| Del 26 de mayo de 2023 al 1 de diciembre de 2026 | Del 50 % al 90 % según el caso (Ley 12/2023): 50 % en general, 60 % si se rehabilitó, 70 % en algunos casos de zona tensionada o jóvenes y 90 % en zona tensionada bajando la renta más de un 5 % |
+| Después del 1 de diciembre de 2026 | Del 15 % al 100 % según si bajas, mantienes o subes la renta (Real Decreto-ley 29/2026, pendiente de convalidación) |
 
-Los contratos anteriores mantienen el régimen que tenían. Comprueba tu caso en la web de la Agencia Tributaria o con un asesor.
+El nuevo régimen lo explicamos con tablas y ejemplos en [la reducción del IRPF por alquilar desde diciembre de 2026](/blog/reduccion-irpf-alquiler-vivienda-2027-hasta-100). Comprueba tu caso en la web de la Agencia Tributaria o con un asesor.
 
 ## Un ejemplo sencillo
 
@@ -93,7 +92,7 @@ Los contratos anteriores mantienen el régimen que tenían. Comprueba tu caso en
 | Rentas cobradas (850 €/mes) | 10.200 € |
 | Gastos deducibles (IBI, comunidad, seguro, amortización…) | −3.200 € |
 | Rendimiento neto | 7.000 € |
-| Reducción del 50 % | −3.500 € |
+| Reducción del 50 % (contrato de 2024, caso general) | −3.500 € |
 | **Rendimiento a integrar en la base** | **3.500 €** |
 
 Guarda todas las facturas: si Hacienda revisa la declaración, te pedirá justificar cada gasto.`,

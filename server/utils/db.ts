@@ -103,7 +103,8 @@ async function migrate(d: Driver) {
 // v13: «¿Cuánto puede subir el alquiler en 2026 y 2027?» reescrito según Search Console (título, texto y BOE).
 // v14: guía «Cómo poner tu piso en alquiler» ampliada y registro único corregido tras la anulación del Supremo (STS 620/2026).
 // v15: «¿Es Madrid zona tensionada?» (búsqueda vista en Search Console).
-const BLOG_SEED_VERSION = 15
+// v16: nueva reducción del IRPF por alquiler (RDL 29/2026, hasta el 100 %) y cifras corregidas en 9 artículos.
+const BLOG_SEED_VERSION = 16
 
 // v6: artículos «2026» como gancho pasan a «2027». Las URLs cambian; las antiguas redirigen con 301 (nuxt.config).
 const BLOG_SLUG_RENAMES: [string, string][] = [

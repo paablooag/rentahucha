@@ -748,7 +748,7 @@ ${CTA}`,
 ## La conversación con el propietario
 
 - Explica el límite **antes** de que se ilusione con una cifra.
-- Enséñale las **ventajas fiscales**: en zona tensionada hay reducciones del IRPF de hasta el 90 % en ciertos casos.
+- Enséñale las **ventajas fiscales**: las reducciones del IRPF pueden llegar al 100 % en los contratos nuevos desde diciembre de 2026 si se baja la renta o se queda por debajo del índice ([cómo funcionan](/blog/reduccion-irpf-alquiler-vivienda-2027-hasta-100)).
 - Destaca lo que sí controla: **calidad del inquilino** y **tiempo vacío**.
 
 ## Errores que vemos

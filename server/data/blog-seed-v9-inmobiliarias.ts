@@ -240,7 +240,7 @@ ${CTA}`,
 "El contrato anterior era de [importe]. Con la normativa, la nueva renta no puede superar [importe], salvo las excepciones previstas."
 
 ## 3. Muestra las ventajas
-"En zona tensionada, la reducción del IRPF puede llegar al 70 % o al 90 % en ciertos casos."
+"Con el decreto de octubre, en los contratos nuevos desde diciembre la reducción del IRPF puede llegar al 100 % si se baja la renta o se queda por debajo del índice."
 
 ## 4. Habla de lo que sí controla
 "Lo que sí podemos mejorar es el tiempo vacío y la calidad del inquilino."
