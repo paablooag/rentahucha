@@ -321,7 +321,7 @@ Los inmuebles que no son tu vivienda habitual y no están alquilados generan una
 
 ## El recargo de algunos ayuntamientos
 
-La Ley 12/2023 permite a los ayuntamientos aplicar un **recargo en el IBI** a las viviendas vacías durante largos periodos, con requisitos. Infórmate en el tuyo.
+Los ayuntamientos pueden aplicar un **recargo en el IBI** a las viviendas vacías más de dos años sin causa justificada (y, en zona tensionada, aunque tengas una sola). Te lo explicamos en [el recargo del IBI por piso vacío](/blog/pisos-vacios-recargo-ibi-decreto).
 
 ## Por qué muchos no alquilan
 

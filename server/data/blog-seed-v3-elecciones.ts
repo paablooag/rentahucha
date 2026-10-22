@@ -102,7 +102,7 @@ ${NOTA}
 **Fiscalidad**
 - Deducción del 10 % del alquiler en el IRPF para inquilinos con base imponible inferior a 33.007,20 € (hasta 1.163 € al año): [requisitos y ejemplos](/blog/deduccion-irpf-10-por-ciento-inquilinos).
 - Deducciones de hasta el 100 % para el casero, si no es gran tenedor, que rebaje la renta más de un 5 % en determinados casos.
-- Posibles recargos de IBI para viviendas turísticas y para pisos vacíos de quien tenga muchos.
+- Posibles recargos de IBI para viviendas turísticas en zona tensionada y para pisos vacíos más de dos años (en zona tensionada, también de quien tenga uno solo).
 
 **Otras medidas**: suspensión de desahucios de hogares vulnerables hasta 2030 (con excepciones), límites a compras por debajo del 70 % del valor de mercado, la empresa pública Casa 47 y el fondo TU CASA.
 
@@ -833,15 +833,17 @@ Pasan a tributar al **10 % de IVA** los alquileres de viviendas amuebladas cuand
 
 ## IBI
 
-Los ayuntamientos podrán aplicar **recargos** a las viviendas de uso turístico:
+En los municipios situados en una **zona de mercado residencial tensionado**, los ayuntamientos podrán aplicar **recargos** en el IBI a las viviendas destinadas a alojamiento turístico (identificadas según la normativa de cada comunidad):
 
-| Viviendas turísticas del propietario | Recargo máximo |
+| Viviendas turísticas del titular | Recargo máximo sobre la cuota |
 |---|---|
 | Una | Hasta el 50 % |
 | Dos o más | Hasta el 100 % |
 | Cuatro o más | Hasta el 150 % |
 
-Es una facultad municipal: cada ayuntamiento decide si lo aplica.
+Es una facultad municipal: cada ayuntamiento decide si lo aplica en su ordenanza. Fuera de las zonas tensionadas, este recargo no se aplica. Se devenga el 31 de diciembre y se liquida cada año.
+
+Fuente: BOE: [Real Decreto-ley 29/2026, de 6 de octubre](https://www.boe.es/buscar/act.php?id=BOE-A-2026-20823), artículo 8 (nuevos apartados 4 bis y 4 ter del artículo 72 del texto refundido de la Ley Reguladora de las Haciendas Locales). Consultado el 22-10-2026.
 
 ## Opciones si tienes un piso turístico
 
@@ -853,32 +855,69 @@ Haz números con tu asesor antes de decidir.`,
   },
   {
     slug: 'pisos-vacios-recargo-ibi-decreto',
-    title: 'Pisos vacíos: el recargo de IBI y cuándo se considera desocupado',
-    excerpt: 'Recargos de hasta el 150 % para quien tiene cuatro o más viviendas vacías más de tres años. A quién afecta y a quién no.',
+    title: 'Recargo del IBI por piso vacío: a quién afecta, cuánto es y cómo evitarlo (decreto de octubre de 2026)',
+    excerpt: 'Los ayuntamientos pueden subir el IBI de los pisos vacíos más de dos años sin causa justificada: hasta un 50 %, 100 % o 150 % según la zona y cuántos pisos tengas. En zona tensionada, también a quien tiene uno solo. Causas que lo evitan.',
     audience: 'propietarios',
     category: CAT,
     publishedAt: D,
-    body: `Desde la Ley 12/2023, los ayuntamientos pueden aplicar un **recargo en el IBI** a las viviendas desocupadas de forma permanente. El decreto de octubre de 2026 lo ajusta.
+    body: `**Respuesta corta:** si tu piso lleva **más de dos años vacío sin causa justificada**, tu ayuntamiento puede aplicarte un **recargo en el IBI**. Fuera de las zonas tensionadas solo afecta a quien tiene **cuatro o más** viviendas; **en zona tensionada puede afectar a cualquier propietario**, aunque tenga un solo piso. Cada ayuntamiento decide si lo aplica.
 
 ${NOTA}
 
-## Lo que prevé
+## Cuándo un piso cuenta como «desocupado con carácter permanente»
 
-- Recargo de **hasta el 150 %** para propietarios con **cuatro o más viviendas** vacías durante **más de tres años**.
-- Lo aplica cada ayuntamiento mediante su ordenanza fiscal.
+Cuando permanece vacío **de forma continuada y sin causa justificada más de dos años**, según los requisitos, pruebas y procedimiento que fije la ordenanza fiscal de tu ayuntamiento. Antes de declararlo, el ayuntamiento tiene que **darte audiencia** y acreditar indicios de desocupación (por ejemplo, el padrón o los consumos de agua y luz).
 
-## A quién no afecta
+## Cuánto puede ser el recargo
 
-- Al propietario de una vivienda vacía por un tiempo corto.
-- A las segundas residencias en uso, los traslados por trabajo o salud, las viviendas en venta o alquiler dentro de plazos razonables y las que están en obras, según las causas justificadas que recoja la normativa.
+### Si tu municipio no es zona tensionada
+
+Solo se aplica a titulares de **cuatro o más** viviendas:
+
+| Situación | Recargo máximo sobre la cuota del IBI |
+|---|---|
+| Vacío más de 2 años | Hasta el 50 % |
+| Vacío más de 3 años | Hasta el 100 % |
+| Además, con dos o más viviendas vacías en el mismo municipio | Hasta 50 puntos más |
+
+### Si tu municipio es zona tensionada
+
+| Situación | Recargo máximo |
+|---|---|
+| Cualquier propietario, vacío más de 2 años | Hasta el 50 % |
+| Titular de cuatro o más viviendas | Hasta el 100 % |
+| Titular de cuatro o más, vacío más de 3 años | Hasta 50 puntos más |
+
+¿No sabes si tu municipio es zona tensionada? Míralo en las [guías por ciudad](/alquilar-mi-piso).
+
+## Causas que lo evitan
+
+La norma considera **en todo caso** justificadas, entre otras:
+
+- **Ofrecerlo en alquiler** en condiciones de mercado, con un **máximo de seis meses** en esa situación.
+- Ofrecerlo **en venta** en condiciones de mercado, con un máximo de **un año**.
+- **Segunda residencia**, con un máximo de **cuatro años** de desocupación continuada.
+- **Obras o rehabilitación**, u otras circunstancias que impidan ocuparlo.
+- Traslado temporal por **trabajo o formación**, o cambio de domicilio por **dependencia, salud o emergencia social**.
+- Un **litigio** o procedimiento pendiente que impida usarlo.
+
+Ojo con el alquiler: tenerlo anunciado solo te cubre **seis meses**. Si en ese tiempo no se alquila, quizá el precio está por encima del mercado.
+
+## Cuándo se cobra
+
+El recargo se devenga el **31 de diciembre** y el ayuntamiento lo liquida cada año, junto con el acto que declara el piso desocupado.
 
 ## Más allá del recargo
 
-Un piso vacío también te cuesta IBI, comunidad, seguro y suministros mínimos. Calcula [cuánto te cuesta un piso vacío](/blog/cuanto-cuesta-tener-un-piso-vacio).
+Un piso vacío ya te cuesta IBI, comunidad, seguro y suministros mínimos: calcula [cuánto te cuesta un piso vacío](/blog/cuanto-cuesta-tener-un-piso-vacio). Si lo alquilas como vivienda habitual, además, en los contratos posteriores al 1 de diciembre de 2026 la reducción del IRPF puede llegar al 100 % si la renta queda por debajo del índice de referencia: [calcúlalo](/herramientas/reduccion-irpf-alquiler).
 
-## Si quieres alquilarlo con tranquilidad
+## Si quieres alquilarlo
 
-Con RentaHucha alquilas a inquilinos verificados, la hucha del inquilino pasa a ti si hay un impago y te beneficias de las reducciones del IRPF del alquiler de vivienda.`,
+Pide una [valoración gratis del alquiler](/valoracion-alquiler) para ponerle un precio que se alquile, y [publícalo gratis en RentaHucha](/cuenta/registro): revisamos el anuncio y los interesados te escriben por chat.
+
+## Fuentes
+
+- BOE: [Real Decreto-ley 29/2026, de 6 de octubre](https://www.boe.es/buscar/act.php?id=BOE-A-2026-20823), artículo 8 (nuevos apartados 4 bis y 4 ter del artículo 72 del texto refundido de la Ley Reguladora de las Haciendas Locales). Consultado el 22-10-2026.`,
   },
   {
     slug: 'glosario-de-vivienda-para-entender-la-campana',
