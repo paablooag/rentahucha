@@ -469,33 +469,57 @@ Guarda los contratos anteriores y posteriores para poder acreditar la rebaja. Co
   },
   {
     slug: 'desahucios-vulnerabilidad-hasta-2030-que-dice-el-decreto',
-    title: 'Desahucios y vulnerabilidad hasta 2030: qué dice el decreto',
-    excerpt: 'Suspensión de lanzamientos, compensación al propietario y excepciones para pequeños caseros vulnerables. La norma, explicada sin valoraciones.',
+    title: 'Desahucios y vulnerabilidad hasta 2030: qué dice el decreto de octubre de 2026 (y qué pasa si eres pequeño propietario)',
+    excerpt: 'Enervación extraordinaria con pago de la Administración en los impagos de inquilinos vulnerables, suspensión de lanzamientos hasta 2030, compensación al propietario y excepciones para quien tiene dos viviendas o menos. La norma, explicada sin valoraciones.',
     audience: 'propietarios',
     category: CAT,
     publishedAt: D,
-    body: `El decreto de octubre de 2026 regula la suspensión de desahucios de hogares vulnerables **hasta el 31 de diciembre de 2030**.
+    body: `El Real Decreto-ley 29/2026 regula de tres formas los desahucios de personas en situación de vulnerabilidad, con medidas que en parte llegan **hasta el 31 de diciembre de 2030**. Esto es lo que dice el texto publicado en el BOE.
 
 ${NOTA}
 
-## Qué prevé
+## 1. Impago de un inquilino económicamente vulnerable: la Administración paga o se subroga
 
-- Suspensión del procedimiento cuando el demandante es una entidad que compró la deuda por debajo del valor de mercado y el ocupante es vulnerable sin alternativa habitacional.
-- Suspensión en otros casos si la Administración no ofrece una alternativa habitacional.
-- **Compensación** al demandante (personas físicas y entidades de alquiler asequible): rentas dejadas de percibir, suministros impagados y costas, a cargo de la Administración de vivienda.
-- En los impagos, la comunidad autónoma tiene **dos meses** para pagar lo necesario y detener el desahucio. Si no lo hace, el proceso continúa.
+Es el caso más habitual para un propietario particular. Se añade un apartado 6 al artículo 22 de la Ley de Enjuiciamiento Civil (**enervación extraordinaria**):
 
-## Excepción
+1. Si en un desahucio por falta de pago se acredita que el inquilino está en **situación de vulnerabilidad económica**, se comunica a la Administración competente.
+2. La Administración tiene **dos meses** (plazo improrrogable) para **ofrecerle una alternativa habitacional** o, si no, **pagar al propietario o consignar en el juzgado todo lo reclamado y lo que se haya devengado**, más las **costas**. Mientras tanto, el procedimiento y el lanzamiento quedan suspendidos.
+3. Si paga o consigna en plazo, el procedimiento termina y **el contrato sigue vigente**.
+4. Si pasan los dos meses sin alternativa ni pago, **la Administración queda subrogada automáticamente en la posición de deudora** del inquilino, no hay lanzamiento y el contrato sigue hasta que expire, mientras dure la vulnerabilidad.
 
-No hay suspensión si el propietario acredita que **también es vulnerable** y tiene **dos viviendas o menos**.
+Si la Administración se retrasa en pagar lo acordado por el tribunal, debe intereses. Esta vía no cuenta como la enervación ordinaria del inquilino y puede darse aunque hayas enviado el requerimiento fehaciente de pago.
+
+## 2. Otros procesos con personas vulnerables sin alternativa habitacional
+
+Cuando no se aplica lo anterior, si la persona demandada es vulnerable (según los servicios sociales o los criterios del artículo 441.7 de la LEC) y no tiene alternativa habitacional:
+
+- El tribunal pide a la Administración que informe de los recursos disponibles y los ofrezca. Si no responde o no los tiene, **suspende el proceso** hasta que se garantice una alternativa, incluso si ya hay sentencia o fecha de lanzamiento (siempre que no se haya ejecutado).
+- La suspensión se **revisa cada 12 meses** y se levanta cuando desaparece la vulnerabilidad, se ofrece una alternativa adecuada, la persona la rechaza sin causa justificada o pasan **tres años**.
+- **Compensación al propietario** si es **persona física** (o empresa de alquiler asequible o social): como máximo, la **renta dejada de percibir**, los **suministros impagados** y las **costas**, a cargo de la Administración de vivienda. No se compensan el lucro cesante hipotético ni los daños morales. El inquilino sigue debiendo la renta.
+
+### Las excepciones
+
+- **No hay suspensión** si el tribunal aprecia que debe prevalecer la **vulnerabilidad económica o habitacional del propietario** (no se aplica a empresas ni a grandes tenedores).
+- **Tampoco prevalece la vulnerabilidad económica del inquilino** cuando el propietario es una **persona física con dos viviendas o menos**.
+
+## 3. Entidades que compran deuda o inmuebles muy por debajo de su valor
+
+Hasta el 31 de diciembre de 2030, cuando demanda una entidad dedicada a adquirir inmuebles o carteras de préstamos impagados a un precio claramente inferior a su valor de mercado, y el ocupante es vulnerable sin alternativa habitacional, **el tribunal suspende el proceso**. No se aplica a las entidades públicas de vivienda social.
+
+## En las demandas
+
+Quien presente la demanda debe indicar si es **gran tenedor** y, si dice que no, aportar un **certificado del Registro de la Propiedad** con las viviendas a su nombre.
 
 ## Cómo protegerte como propietario
 
-- Analiza la solvencia del inquilino antes de firmar.
-- Valora un **seguro de impago**: según su póliza, cobras aunque haya un procedimiento judicial.
+- Analiza la solvencia del inquilino antes de firmar, con criterios objetivos.
 - Documenta todos los pagos y las comunicaciones.
+- Actúa pronto si falla un pago: [qué hacer si tu inquilino no paga](/blog/que-hacer-si-tu-inquilino-no-paga).
+- Si quieres cubrir más, puedes contratar un seguro de impago por tu cuenta (no se le puede exigir al inquilino).
 
-Más información en [qué hacer si tu inquilino no paga](/blog/que-hacer-si-tu-inquilino-no-paga).`,
+## Fuentes
+
+- BOE: [Real Decreto-ley 29/2026, de 6 de octubre](https://www.boe.es/buscar/act.php?id=BOE-A-2026-20823), artículos 1 y 2 y artículo 5 (nuevo apartado 6 del artículo 22 de la Ley de Enjuiciamiento Civil). Consultado el 22-10-2026.`,
   },
   {
     slug: 'fondo-tu-casa-prestamos-50000-euros-entrada',

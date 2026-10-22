@@ -544,9 +544,12 @@ ${CTA_INQ}`,
 ${AL_DIA}
 
 ## Qué prevé, en resumen
-- Suspensión cuando la demandante es una entidad que compró la deuda por debajo del valor de mercado y el hogar es vulnerable sin alternativa.
-- Suspensión en otros casos si la administración no ofrece una alternativa habitacional.
-- Excepción: no se suspende si el propietario también es vulnerable y tiene dos viviendas o menos.
+- **Si no puedes pagar el alquiler por vulnerabilidad económica**: en el desahucio por impago, la Administración tiene dos meses para ofrecerte otra vivienda o pagar lo que debes; si no lo hace, pasa a ser ella la deudora, no hay lanzamiento y tu contrato sigue vigente mientras dure la vulnerabilidad.
+- Suspensión cuando quien demanda es una entidad que compró la deuda o el inmueble muy por debajo de su valor de mercado y el hogar es vulnerable sin alternativa.
+- Suspensión en otros casos si la Administración no ofrece una alternativa habitacional, revisada cada 12 meses y con un máximo de tres años.
+- Excepciones: puede no haber suspensión si el juez considera que pesa más la vulnerabilidad del propietario, y tu vulnerabilidad económica no prevalece si el propietario es una persona física con dos viviendas o menos.
+
+Más detalle en [qué dice el decreto sobre desahucios](/blog/desahucios-vulnerabilidad-hasta-2030-que-dice-el-decreto).
 
 ## Cómo acreditar la vulnerabilidad
 A través de los **servicios sociales**, con informes sobre ingresos y situación familiar.
