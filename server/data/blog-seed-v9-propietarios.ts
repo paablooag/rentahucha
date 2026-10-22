@@ -414,12 +414,14 @@ ${CTA}`,
   },
   {
     slug: 'alquilar-a-jovenes-ventajas-fiscales',
-    title: 'Alquilar a jóvenes: la reducción fiscal del 70 % en zonas tensionadas',
-    excerpt: 'Si alquilas tu vivienda por primera vez a un joven de 18 a 35 años en zona tensionada, puedes reducir el 70 % del rendimiento neto.',
+    title: 'Alquilar a jóvenes (18 a 35 años): reducción del IRPF del 70 % y, desde diciembre de 2026, del 85 % o el 95 %',
+    excerpt: 'Con la Ley 12/2023, el primer alquiler a un joven de 18 a 35 años en zona tensionada reduce el 70 % del rendimiento. En los contratos posteriores al 1-12-2026, el decreto lo sube al 85 % (95 % en zona tensionada) en ciertos casos.',
     audience: A,
     category: 'Fiscalidad',
     publishedAt: D,
-    body: `Desde la Ley 12/2023, la reducción del rendimiento neto por alquilar vivienda habitual es, en general, del **50 %**. Sube al **70 %** en este caso:
+    body: `## Contratos firmados del 26 de mayo de 2023 al 1 de diciembre de 2026
+
+Con la Ley 12/2023, la reducción del rendimiento neto por alquilar vivienda habitual es, en general, del **50 %**. Sube al **70 %** en este caso:
 
 - Vivienda en **zona de mercado residencial tensionado**.
 - Contrato con un inquilino de **18 a 35 años**.
@@ -428,12 +430,23 @@ ${CTA}`,
 
 Se aplica solo si no te corresponde la del 90 % (nuevo contrato en zona tensionada con una rebaja de más del 5 % de la renta).
 
+## Contratos posteriores al 1 de diciembre de 2026
+
+Con el Real Decreto-ley 29/2026 (pendiente de convalidación), si no eres gran tenedor, un inquilino de **18 a 35 años** da derecho a:
+
+- **85 %** si rebajas la renta más de un 5 % respecto al contrato anterior, o si es el primer alquiler de la vivienda;
+- **95 %** en los mismos casos si la vivienda está en **zona tensionada**;
+- y **100 %** si, además, la renta queda por debajo del límite del índice de referencia (o renuevas con el mismo inquilino al acabar los cinco años).
+
+Con varios inquilinos, el porcentaje ligado a la edad se aplica en proporción a los que tengan de 18 a 35 años. Calcula tu caso con la [calculadora de la reducción del IRPF](/herramientas/reduccion-irpf-alquiler).
+
 ## Ejemplo
 | Concepto | Importe |
 |---|---|
 | Rendimiento neto anual | 8.000 € |
 | Reducción del 50 % | Tributarías por 4.000 € |
 | Reducción del 70 % | Tributarías por 2.400 € |
+| Reducción del 85 % (contrato posterior al 1-12-2026) | Tributarías por 1.200 € |
 
 ## Comprueba los requisitos
 Cada reducción tiene condiciones concretas. Revisa la información de la Agencia Tributaria del año correspondiente o consulta a un asesor. Más en [bonificaciones fiscales para caseros](/blog/bonificaciones-fiscales-caseros-que-bajan-el-alquiler).

@@ -460,7 +460,7 @@ La deducción estatal decaería. Las deducciones autonómicas seguirían igual.
   {
     slug: 'bonificaciones-fiscales-caseros-que-bajan-el-alquiler',
     title: 'Bonificaciones fiscales para caseros que bajan el alquiler',
-    excerpt: 'Las reducciones de la Ley 12/2023 y las nuevas deducciones del decreto para propietarios que rebajan la renta más de un 5 %.',
+    excerpt: 'Las reducciones del IRPF de la Ley 12/2023 y el nuevo régimen del decreto de octubre (hasta el 100 %) para propietarios que rebajan la renta o se quedan por debajo del índice.',
     audience: 'propietarios',
     category: CAT,
     publishedAt: D,
@@ -468,7 +468,7 @@ La deducción estatal decaería. Las deducciones autonómicas seguirían igual.
 
 ${NOTA}
 
-## Lo que ya existe (Ley 12/2023, contratos desde 2024)
+## Contratos firmados del 26 de mayo de 2023 al 1 de diciembre de 2026 (Ley 12/2023)
 
 | Caso | Reducción del rendimiento neto |
 |---|---|
@@ -477,12 +477,19 @@ ${NOTA}
 | Primer alquiler a joven de 18 a 35 años en zona tensionada | 70 % |
 | Rebaja de más del 5 % en zona tensionada | 90 % |
 
-## Lo que añade el decreto de octubre de 2026
+## Contratos posteriores al 1 de diciembre de 2026 (decreto de octubre)
 
-Deducciones de **hasta el 100 %** para propietarios que no sean grandes tenedores, cuando un contrato nuevo rebaja la renta más de un 5 %:
+Si no eres gran tenedor y en el contrato nuevo **rebajas la renta más de un 5 %**:
 
-- Con el mismo inquilino, al terminar los cinco años o la última prórroga.
-- Con un inquilino nuevo, si la renta queda por debajo del límite del índice de referencia.
+| Caso | Reducción |
+|---|---|
+| Mismo inquilino al acabar los cinco años o las prórrogas, o renta por debajo del índice de referencia | 100 % |
+| Zona tensionada e inquilino de 18 a 35 años | 95 % |
+| Zona tensionada | 90 % |
+| Inquilino de 18 a 35 años | 85 % |
+| Resto | 70 % |
+
+Si mantienes la renta, un 50 %; si la subes, del 40 % al 15 %. En el primer alquiler de la vivienda, 100 % si la renta queda por debajo del índice. Calcula tu caso con la [calculadora de la reducción del IRPF](/herramientas/reduccion-irpf-alquiler).
 
 ## Ejemplo orientativo
 
