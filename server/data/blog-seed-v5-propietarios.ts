@@ -39,7 +39,9 @@ El inquilino puede **parar el desahucio pagando** todo lo debido antes del juici
 
 ## Vulnerabilidad
 
-Desde la Ley 12/2023, la demanda debe indicar si la vivienda es la habitual del inquilino y si el propietario es gran tenedor, y los servicios sociales pueden intervenir. Los decretos de octubre de 2026 prevén además suspensiones para hogares vulnerables hasta 2030 en ciertos casos. Más detalle en [desahucios y vulnerabilidad](/blog/desahucios-vulnerabilidad-hasta-2030-que-dice-el-decreto).
+Desde la Ley 12/2023, la demanda debe indicar si la vivienda es la habitual del inquilino y si el propietario es gran tenedor (y, si dices que no lo eres, ahora hay que aportar un certificado del Registro de la Propiedad), y los servicios sociales pueden intervenir.
+
+Con el Real Decreto-ley 29/2026 (en vigor desde el 8 de octubre de 2026 y pendiente de convalidación), si el inquilino acredita **vulnerabilidad económica** en un desahucio por impago, el procedimiento se **suspende hasta dos meses** mientras la Administración le ofrece otra vivienda o **te paga todo lo debido y las costas**. Si paga, el procedimiento termina y el contrato sigue; si no hace ninguna de las dos cosas, **pasa a ser ella la deudora**, no hay lanzamiento y el contrato continúa mientras dure la vulnerabilidad. Más detalle en [desahucios y vulnerabilidad](/blog/desahucios-vulnerabilidad-hasta-2030-que-dice-el-decreto).
 
 ## Cómo acortar el proceso
 
@@ -60,7 +62,7 @@ Un caso orientativo, sin oposición del inquilino y sin vulnerabilidad acreditad
 | Mes 2–5 | Admisión y requerimiento judicial al inquilino |
 | Mes 4–8 o más | Fecha de lanzamiento |
 
-Con oposición, vulnerabilidad o un juzgado saturado, puede alargarse bastante más.
+Con oposición o un juzgado saturado, puede alargarse bastante más. Si el inquilino acredita vulnerabilidad económica, añade una suspensión de hasta dos meses y el resultado puede ser que cobres de la Administración en lugar de recuperar el piso.
 
 ## Documentos que te pedirá el abogado
 
@@ -85,7 +87,7 @@ Con oposición, vulnerabilidad o un juzgado saturado, puede alargarse bastante m
 No. Puede ser delito de coacciones aunque te deba dinero. Solo un juez puede ordenar la entrega de la vivienda.
 
 ### ¿Recupero las rentas que me debe?
-La sentencia puede condenar al pago, pero cobrarlo depende de la solvencia del inquilino. Por eso importan la selección, la fianza y la hucha de RentaHucha, que pasa a ti si hay impago.
+La sentencia puede condenar al pago, pero cobrarlo depende de la solvencia del inquilino. Por eso importan la selección y la fianza; y, desde el lanzamiento de RentaHucha, la hucha del inquilino, que se usará para pagarte lo pendiente si hay un impago comprobado.
 
 ### ¿Cuánto cuesta un desahucio?
 Lo vemos en [cuánto cuesta un desahucio](/blog/cuanto-cuesta-un-desahucio).`,
