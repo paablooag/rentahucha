@@ -126,7 +126,9 @@ ${CTA}`,
     audience: A,
     category: 'Normativa',
     publishedAt: D,
-    body: `La Ley 12/2023, por el derecho a la vivienda, cambió el artículo 20 de la LAU: los **gastos de gestión inmobiliaria y de formalización del contrato corren a cargo del arrendador**. Para muchas agencias fue el cambio más importante de la última década.
+    body: `> **¿Eres propietario y quieres saber cuánto cuesta que te gestionen el piso?** Lee [cuánto cobra una inmobiliaria por gestionar tu alquiler](/blog/cuanto-cuesta-gestion-alquiler-inmobiliaria). Este artículo está pensado para agencias que fijan su tarifa.
+
+La Ley 12/2023, por el derecho a la vivienda, cambió el artículo 20 de la LAU: los **gastos de gestión inmobiliaria y de formalización del contrato corren a cargo del arrendador**. Para muchas agencias fue el cambio más importante de la última década.
 
 ## Qué dice la norma
 
@@ -219,7 +221,9 @@ ${CTA}`,
     audience: A,
     category: 'Gestión de alquiler',
     publishedAt: D,
-    body: `La gestión integral convierte un ingreso puntual (la comisión al alquilar) en un **ingreso recurrente**. Bien montada, estabiliza la agencia. Mal montada, se come el tiempo del equipo.
+    body: `> **¿Eres propietario y quieres saber cuánto cuesta que te gestionen el piso?** Lee [cuánto cobra una inmobiliaria por gestionar tu alquiler](/blog/cuanto-cuesta-gestion-alquiler-inmobiliaria). Este artículo está pensado para agencias que fijan su tarifa.
+
+La gestión integral convierte un ingreso puntual (la comisión al alquilar) en un **ingreso recurrente**. Bien montada, estabiliza la agencia. Mal montada, se come el tiempo del equipo.
 
 ## Qué incluye una gestión integral
 

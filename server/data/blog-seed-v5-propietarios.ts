@@ -648,16 +648,36 @@ Un buen inquilino que se queda vale dinero: evita meses vacíos y gastos de rota
   },
   {
     slug: 'seguro-de-impago-cuanto-cuesta-y-que-mirar',
-    title: 'Seguro de impago de alquiler: cuánto cuesta y qué mirar antes de contratarlo',
-    excerpt: 'Prima, carencia, meses cubiertos, requisitos del inquilino y defensa jurídica. Guía para comparar pólizas si decides contratar una.',
+    title: 'Seguro de impago de alquiler: cuánto cuesta en 2026 (precios y ejemplos) y qué mirar antes de contratarlo',
+    excerpt: 'Suele costar entre un 3 % y un 6 % de la renta anual, con primas mínimas. Ejemplos con 700, 900 y 1.200 € de renta, qué comparar entre pólizas y por qué ya no puedes exigir al inquilino que lo pague.',
     audience: A,
     category: 'Protección',
     publishedAt: D,
-    body: `El seguro de impago es un producto de las aseguradoras. Puedes contratarlo por tu cuenta con la compañía que elijas. RentaHucha no vende seguros, pero te explicamos qué mirar.
+    body: `El seguro de impago es un producto de las aseguradoras que contrata el **propietario**, con la compañía que elija. RentaHucha no vende seguros, pero te explicamos cuánto cuesta y qué mirar.
 
 ## Cuánto cuesta
 
-La prima suele calcularse como un **porcentaje de la renta anual**, que varía según la aseguradora, las coberturas y el perfil del inquilino. Pide varias ofertas.
+La prima se calcula, en general, como un **porcentaje de la renta anual**, con una **prima mínima** que hace que en rentas bajas el porcentaje real suba.
+
+| Fuente | Precio que recoge |
+|---|---|
+| OCU, comparativa de 17 seguros de 8 aseguradoras (julio de 2026) | La opción más barata rondaba el **3 % de la renta anual**, con una prima mínima de unos 130 €; otras compañías fijan mínimos de 200 € o más |
+| Arrenta | Entre el **3,5 % y el 6 %** de la renta anual |
+| Saber de Seguros | Entre el **3 % y el 5 %** de la renta anual |
+
+## Ejemplos
+
+| Renta mensual | Renta anual | Al 3 % | Al 5 % |
+|---|---|---|---|
+| 700 € | 8.400 € | 252 € | 420 € |
+| 900 € | 10.800 € | 324 € | 540 € |
+| 1.200 € | 14.400 € | 432 € | 720 € |
+
+El precio final depende de las coberturas (meses cubiertos, defensa jurídica, daños) y del perfil del inquilino: pide siempre varias ofertas.
+
+## Quién lo paga: el propietario
+
+Con el Real Decreto-ley 29/2026 (en vigor desde el 8 de octubre de 2026 y pendiente de convalidación), el artículo 36.5 de la LAU dice que **en ningún caso puede exigirse al inquilino que contrate un seguro de impago u otras coberturas análogas**. La prima es un gasto del propietario, y es **deducible** en el IRPF del alquiler.
 
 ## Qué comparar
 
@@ -666,14 +686,26 @@ La prima suele calcularse como un **porcentaje de la renta anual**, que varía s
 | Meses cubiertos | ¿Cuántas rentas paga como máximo? |
 | Carencia | ¿Desde cuándo cubre tras firmar? |
 | Franquicia | ¿Hay meses que no paga al principio? |
-| Requisitos | ¿Qué ingresos y documentos exige al inquilino? |
+| Requisitos | ¿Qué ingresos y documentos exige al inquilino? Muchas piden que la renta no pase de un 35-45 % de sus ingresos |
 | Defensa jurídica | ¿Incluye abogado y procurador? |
-| Daños | ¿Cubre desperfectos o actos vandálicos? |
+| Daños | ¿Cubre desperfectos o actos vandálicos? ¿Con qué límite? |
 | Plazos | ¿En cuánto tiempo hay que comunicar el impago? |
+| Prima mínima | ¿Cuánto pagas si tu renta es baja? |
+
+## ¿Lo necesito?
+
+Depende de cuánto te afecte un impago. Calcula [cuánto te puede costar un impago](/herramientas/coste-impago) y compáralo con la prima. Ten en cuenta también que, desde octubre de 2026, si el inquilino es económicamente vulnerable, la Administración debe pagar la deuda o subrogarse en ella: [qué dice el decreto](/blog/desahucios-vulnerabilidad-hasta-2030-que-dice-el-decreto).
 
 ## Compatible con RentaHucha
 
-La selección del inquilino y su hucha, que pasa a ti si hay impago, suman a cualquier seguro.`,
+Desde el lanzamiento, la selección del inquilino y su hucha (que, si hay un impago comprobado, se usa para pagarte lo pendiente) sumarán a cualquier seguro que contrates.
+
+## Fuentes
+
+- OCU: [Mejores seguros de impago de rentas de alquiler 2026](https://www.ocu.org/fincas-y-casas/gestion/seguros-y-prestamos/analisis/2026/07/comparativa-seguros-impago-rentas).
+- Arrenta: [¿Cuánto cuesta un seguro de impago de alquiler?](https://www.arrenta.es/blog/seguro-impago/precio-seguro-impago-alquiler-cuanto-cuesta/).
+- Saber de Seguros: [Cuánto cuesta un seguro de impago de alquiler (precios 2026)](https://www.saberdeseguros.es/seguro-impago-alquiler-precio/).
+- BOE: [Real Decreto-ley 29/2026](https://www.boe.es/buscar/act.php?id=BOE-A-2026-20823), artículo 3 (nuevo artículo 36.5 de la LAU).`,
   },
   {
     slug: 'fotos-con-ia-home-staging-virtual-sin-enganar',

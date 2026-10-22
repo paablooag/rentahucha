@@ -528,7 +528,9 @@ ${CTA}`,
     audience: A,
     category: 'Negocio',
     publishedAt: D,
-    body: `## 1. Calcula tu coste por piso
+    body: `> **¿Eres propietario y quieres saber cuánto cuesta que te gestionen el piso?** Lee [cuánto cobra una inmobiliaria por gestionar tu alquiler](/blog/cuanto-cuesta-gestion-alquiler-inmobiliaria). Este artículo está pensado para agencias que fijan su tarifa.
+
+## 1. Calcula tu coste por piso
 
 Horas al mes × coste por hora + herramientas + parte proporcional de la estructura.
 

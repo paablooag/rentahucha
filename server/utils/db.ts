@@ -122,7 +122,9 @@ async function migrate(d: Driver) {
 // v32: impagos con la enervación extraordinaria del RDL 29/2026.
 // v33: guía central del RDL 29/2026 para propietarios con enlaces a cada medida.
 // v34: enlace a la guía del decreto en el aviso de convalidación.
-const BLOG_SEED_VERSION = 34
+// v35: enlaces de los artículos de gestión para agencias al de precios para propietarios.
+// v36: seguro de impago con precios citados (OCU y otros) y el art. 36.5 LAU.
+const BLOG_SEED_VERSION = 36
 
 // v6: artículos «2026» como gancho pasan a «2027». Las URLs cambian; las antiguas redirigen con 301 (nuxt.config).
 const BLOG_SLUG_RENAMES: [string, string][] = [
