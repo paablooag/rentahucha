@@ -119,7 +119,8 @@ async function migrate(d: Driver) {
 // v29: gran tenedor (5 o más en zona tensionada, certificación registral, IRPF y anuncios).
 // v30: alquiler por habitaciones según el RDL 29/2026 (arrendamiento de vivienda, límite en cualquier municipio).
 // v31: desahucios de personas vulnerables según el texto del RDL 29/2026 (enervación extraordinaria, subrogación, excepciones).
-const BLOG_SEED_VERSION = 31
+// v32: impagos con la enervación extraordinaria del RDL 29/2026.
+const BLOG_SEED_VERSION = 32
 
 // v6: artículos «2026» como gancho pasan a «2027». Las URLs cambian; las antiguas redirigen con 301 (nuxt.config).
 const BLOG_SLUG_RENAMES: [string, string][] = [

@@ -42,6 +42,10 @@ Si no hay acuerdo, el abogado presenta la demanda (puede acumular la reclamació
 | Intento de acuerdo | Semana 2–6 | Abogado o mediador |
 | Demanda | Tras el intento | Abogado y procurador |
 
+## Si el inquilino está en situación de vulnerabilidad económica
+
+Con el Real Decreto-ley 29/2026 (en vigor desde el 8 de octubre de 2026 y pendiente de convalidación), si en el desahucio por impago se acredita que el inquilino es **económicamente vulnerable**, se avisa a la Administración, que tiene **dos meses** para ofrecerle otra vivienda o **pagarte todo lo debido y las costas**. Si no lo hace, **pasa a ser ella la deudora**, no hay lanzamiento y el contrato sigue. Esta vía puede darse aunque hayas enviado el burofax. Te lo explicamos en [qué dice el decreto sobre desahucios](/blog/desahucios-vulnerabilidad-hasta-2030-que-dice-el-decreto).
+
 ## Lo que nunca debes hacer
 
 - Cambiar la cerradura o entrar en el piso sin permiso.
@@ -52,7 +56,7 @@ Aunque te deba dinero, estas acciones pueden ser **delito de coacciones** y comp
 
 ## Cómo lo hacemos nosotros
 
-El aviso sale el día 1 y, si es un bache puntual, proponemos un plan de pago corto. Si el impago no se resuelve, el saldo de la hucha del inquilino pasa a ti y te entregamos el expediente completo para que tu abogado reclame sin perder tiempo. RentaHucha no es una aseguradora: si quieres cubrir más meses, puedes contratar por tu cuenta un seguro de impago.`,
+Desde el lanzamiento, el aviso saldrá el día 1 y, si es un bache puntual, propondremos un plan de pago corto. Si el impago no se resuelve, el saldo de la hucha del inquilino pasará a ti y te entregaremos el expediente completo para que tu abogado reclame sin perder tiempo. RentaHucha no es una aseguradora: si quieres cubrir más meses, puedes contratar por tu cuenta un seguro de impago.`,
   },
   {
     slug: 'cuanto-cuesta-un-impago-de-alquiler',
