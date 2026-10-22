@@ -37,7 +37,8 @@ const label = 'Decreto de vivienda 2026 · guía para propietarios'
             <tr><td><strong>Temporada</strong></td><td>Pasa a ser «vivienda temporal»: causa real escrita en el contrato (la prueba es tuya), más de 31 días y en general hasta 12 meses. Sin causa, es vivienda habitual desde la firma. El inquilino puede irse tras un mes avisando con 10 días.</td></tr>
             <tr><td><strong>Habitaciones</strong></td><td>Alquilar una habitación es alquiler de vivienda (habitual o temporal). La suma de las habitaciones no puede superar la renta del piso completo.</td></tr>
             <tr><td><strong>Garantías</strong></td><td>Garantía adicional: máximo dos mensualidades (una en temporada). No se puede exigir al inquilino un seguro de impago.</td></tr>
-            <tr><td><strong>Gastos de gestión</strong></td><td>No se pueden repercutir al inquilino, ni directa ni indirectamente.</td></tr>
+            <tr><td><strong>Gastos y tributos</strong></td><td>Los gastos de gestión y formalización no se pueden repercutir al inquilino; en los contratos nuevos, tampoco el IBI ni otros tributos de la vivienda.</td></tr>
+            <tr><td><strong>Desistimiento</strong></td><td>En los contratos nuevos, si el inquilino se va pasados 6 meses avisando con 30 días, no hay indemnización para el propietario.</td></tr>
             <tr><td><strong>Anuncios</strong></td><td>Veraces y, cuando proceda, con índice de referencia, límite de renta, número de registro y condición de gran tenedor.</td></tr>
             <tr><td><strong>Fin del contrato</strong></td><td>Documento de finalización firmado por ambos con el estado de la vivienda. Si no se firma o no recoge desperfectos, se presume que se entregó bien.</td></tr>
           </tbody>

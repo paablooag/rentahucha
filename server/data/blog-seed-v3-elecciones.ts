@@ -102,6 +102,8 @@ ${NOTA}
 | Anuncios | Deben incluir, cuando proceda, índice de referencia, límite de renta, número de registro y si eres gran tenedor | [Qué debe incluir tu anuncio](/blog/que-debe-incluir-un-anuncio-de-alquiler-decreto-29-2026) |
 | Garantías | Garantía adicional: máximo dos mensualidades (una en temporada); no se puede exigir seguro de impago al inquilino | [Fianza en temporada](/blog/fianza-y-garantia-en-alquiler-de-temporada) |
 | Gastos de gestión | No se pueden repercutir al inquilino de ninguna forma | [Cuánto cobra una inmobiliaria](/blog/cuanto-cuesta-gestion-alquiler-inmobiliaria) |
+| IBI y tributos | En los contratos nuevos, no pueden imponerse al inquilino | [Quién paga cada gasto](/blog/ibi-comunidad-y-suministros-quien-los-paga) |
+| Desistimiento | En los contratos nuevos, si el inquilino se va pasados 6 meses (avisando con 30 días), no hay indemnización | [Si tu inquilino se va antes](/blog/inquilino-quiere-irse-antes-indemnizacion) |
 | Fin del contrato | Documento de finalización obligatorio; si no se firma, se presume que el piso se entregó bien | [Plantilla](/blog/documento-finalizacion-contrato-alquiler-plantilla) |
 | Gran tenedor | Más de 10 viviendas o 1.500 m² (5 o más en zona tensionada si se declara), con certificado del Registro | [¿Soy gran tenedor?](/blog/como-saber-si-eres-gran-tenedor) |
 | IRPF del propietario | Contratos posteriores al 1-12-2026: reducción del 15 % al 100 % según bajes, mantengas o subas la renta | [Calculadora](/herramientas/reduccion-irpf-alquiler) |
