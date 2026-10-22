@@ -83,6 +83,14 @@ const label = 'Decreto de vivienda 2026 · guía para propietarios'
         </ul>
       </div>
       <div class="d-section">
+        <span class="eyebrow">Durante y al final</span>
+        <h2>Reparaciones y venta del piso</h2>
+        <ul class="d-list">
+          <li><span><strong>Reparaciones:</strong> si hay daños que afectan a la habitabilidad, el inquilino puede pedirte la reparación con un presupuesto; tienes 15 días para aceptarlo, proponer otra o hacerla. Si no, puede repararlo y descontarlo de la renta.</span></li>
+          <li><span><strong>Venta:</strong> el inquilino tiene derecho de tanteo y retracto y ya no se puede pactar que renuncie. Notifícale por escrito el precio y las condiciones.</span></li>
+        </ul>
+      </div>
+      <div class="d-section">
         <span class="eyebrow">Calendario</span>
         <h2>Fechas clave</h2>
         <table class="d-table">
