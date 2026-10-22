@@ -82,37 +82,62 @@ Si vas a firmar ahora, hazlo con un contrato bien redactado y conforme a la norm
   },
   {
     slug: 'decretos-de-vivienda-octubre-2026-explicados',
-    title: 'Los decretos de vivienda de octubre de 2026, explicados punto por punto',
-    excerpt: 'Prórrogas extraordinarias, límite del 2 %, temporada, habitaciones, fiscalidad y desahucios: qué incluye cada decreto y en qué estado está.',
+    title: 'Decreto de vivienda de octubre de 2026 (RDL 29/2026): todo lo que cambia para propietarios, punto por punto',
+    excerpt: 'Subidas, prórrogas, temporada, habitaciones, anuncios, garantías, IRPF, IVA, IBI y desahucios: la guía completa del decreto con el texto del BOE, una explicación de cada medida y calculadoras.',
     audience: 'propietarios',
     category: CAT,
     publishedAt: D,
-    body: `El Consejo de Ministros aprobó el 6 de octubre de 2026 dos decretos de vivienda, publicados en el BOE el día 7. Estas son sus medidas principales, según el resumen oficial del Gobierno.
+    body: `El Consejo de Ministros aprobó el 6 de octubre de 2026 dos reales decretos-leyes de vivienda, publicados en el BOE el día 7. El **Real Decreto-ley 29/2026** está en vigor desde el **8 de octubre**; el **28/2026** solo entraría en vigor si se convalida. Esta es la guía completa para propietarios, con un enlace a la explicación detallada de cada punto.
 
 ${NOTA}
 
-## Decreto 1: medidas urgentes (publicado el 7 de octubre, en vigor desde el 8)
+## Resumen rápido
 
-**Alquiler**
-- **Prórroga extraordinaria**: los contratos que venzan hasta el 31-12-2028 pueden prorrogarse hasta dos años más, por periodos anuales y en las mismas condiciones, si el inquilino lo pide y está al corriente de pago en los ocho meses anteriores.
-- **Subidas**: hasta el 31-12-2027 no se puede subir la renta si supera el índice de referencia. Si está por debajo, la subida máxima es del 2 %, salvo acuerdo.
-- **Temporada**: de más de 31 días y hasta 12 meses, y el propietario debe justificar el motivo temporal. Encadenar más de dos contratos los convierte en contrato de vivienda habitual.
-- **Habitaciones**: alquilar una habitación pasa a ser alquiler de vivienda (habitual o temporal), y la suma de lo que se cobra por las habitaciones no puede superar la renta del piso completo; en zona tensionada, con sus límites.
+| Tema | Qué cambia | Más detalle |
+|---|---|---|
+| Subida de la renta | Hasta el 31-12-2027, sin nuevo acuerdo, como máximo un 2 %; y nada si la renta supera el índice de referencia | [IRAV y calculadora de la subida](/herramientas/subida-alquiler-irav) |
+| Prórroga extraordinaria | Hasta dos años más si el periodo obligatorio o la prórroga tácita termina antes de 2029 y el inquilino lleva ocho meses al día | [Requisitos y excepciones](/blog/prorroga-extraordinaria-alquiler-2026-quien-puede-pedirla) |
+| Temporada | Pasa a ser «vivienda temporal»: causa escrita y probada, más de 31 días y en general hasta 12 meses | [Las nuevas reglas](/blog/alquiler-de-temporada-nuevas-reglas-12-meses) |
+| Habitaciones | Alquilar una habitación es alquiler de vivienda; la suma no puede superar la renta del piso completo | [Habitaciones](/blog/alquiler-por-habitaciones-nuevo-limite) |
+| Anuncios | Deben incluir, cuando proceda, índice de referencia, límite de renta, número de registro y si eres gran tenedor | [Qué debe incluir tu anuncio](/blog/que-debe-incluir-un-anuncio-de-alquiler-decreto-29-2026) |
+| Garantías | Garantía adicional: máximo dos mensualidades (una en temporada); no se puede exigir seguro de impago al inquilino | [Fianza en temporada](/blog/fianza-y-garantia-en-alquiler-de-temporada) |
+| Gastos de gestión | No se pueden repercutir al inquilino de ninguna forma | [Cuánto cobra una inmobiliaria](/blog/cuanto-cuesta-gestion-alquiler-inmobiliaria) |
+| Fin del contrato | Documento de finalización obligatorio; si no se firma, se presume que el piso se entregó bien | [Plantilla](/blog/documento-finalizacion-contrato-alquiler-plantilla) |
+| Gran tenedor | Más de 10 viviendas o 1.500 m² (5 o más en zona tensionada si se declara), con certificado del Registro | [¿Soy gran tenedor?](/blog/como-saber-si-eres-gran-tenedor) |
+| IRPF del propietario | Contratos posteriores al 1-12-2026: reducción del 15 % al 100 % según bajes, mantengas o subas la renta | [Calculadora](/herramientas/reduccion-irpf-alquiler) |
+| IRPF del inquilino | Deducción del 10 % del alquiler, hasta 1.163 € al año, con base imponible inferior a 33.007,20 € | [Requisitos](/blog/deduccion-irpf-10-por-ciento-inquilinos) |
+| IVA de reformas | Desde el 1-12-2026, 10 % en obras de pisos alquilados como vivienda habitual | [Requisitos](/blog/iva-10-reformas-piso-alquilado-diciembre-2026) |
+| IVA turístico | Desde el 1-12-2026, los alquileres de 30 noches o menos tributan al 10 % | [Vivienda turística](/blog/vivienda-turistica-iva-ibi-decreto) |
+| IBI | Recargos posibles para pisos vacíos más de dos años y turísticos en zona tensionada | [Recargo por piso vacío](/blog/pisos-vacios-recargo-ibi-decreto) |
+| Desahucios | Con inquilino vulnerable, la Administración paga o se subroga en la deuda; suspensiones hasta 2030 con excepciones | [Qué dice el decreto](/blog/desahucios-vulnerabilidad-hasta-2030-que-dice-el-decreto) |
 
-**Fiscalidad**
-- Deducción del 10 % del alquiler en el IRPF para inquilinos con base imponible inferior a 33.007,20 € (hasta 1.163 € al año): [requisitos y ejemplos](/blog/deduccion-irpf-10-por-ciento-inquilinos).
-- Deducciones de hasta el 100 % para el casero, si no es gran tenedor, que rebaje la renta más de un 5 % en determinados casos.
-- Posibles recargos de IBI para viviendas turísticas en zona tensionada y para pisos vacíos más de dos años (en zona tensionada, también de quien tenga uno solo).
+## El otro decreto (28/2026): estabilidad de los contratos
 
-**Otras medidas**: suspensión de desahucios de hogares vulnerables hasta 2030 (con excepciones), límites a compras por debajo del 70 % del valor de mercado, la empresa pública Casa 47 y el fondo TU CASA.
+Prevé la renovación automática de los contratos al terminar los 5 o 7 años, un preaviso de 6 meses para el propietario y una indemnización si no se renueva sin causa. **No está en vigor**: solo entraría en vigor el 15 de noviembre si se convalida antes.
 
-## Decreto 2: estabilidad de los contratos (no en vigor)
+## Calendario
 
-Prevé la renovación automática de los contratos al terminar los 5 o 7 años y un preaviso de 6 meses para el propietario. También fija una indemnización si no se renueva sin causa. Solo entraría en vigor el 15 de noviembre si la Diputación Permanente lo convalida antes.
+| Fecha | Qué pasa |
+|---|---|
+| 8 de octubre de 2026 | Entra en vigor el Real Decreto-ley 29/2026 |
+| 12 de noviembre de 2026 | Votación prevista de la convalidación, según la prensa |
+| 29 de noviembre de 2026 | Elecciones generales |
+| 1 de diciembre de 2026 | Nuevo IRPF del alquiler para contratos posteriores y cambios de IVA |
+| 31 de diciembre de 2027 | Fin del límite extraordinario de las subidas |
+| 31 de diciembre de 2030 | Fin de las suspensiones de desahucios del decreto |
 
-## Qué hacer
+Si el decreto no se convalida, decae: [qué pasaría](/blog/si-caen-los-decretos-de-vivienda-que-pasaria).
 
-Revisa el vencimiento de tus contratos y guarda los justificantes de pago. Consulta el BOE o a un profesional antes de negarte a una prórroga.`,
+## Qué hacer ahora
+
+- Revisa cuándo cumple año cada contrato y aplica bien la subida.
+- Si vas a firmar un contrato nuevo, compara la fiscalidad antes y después del 1 de diciembre.
+- Revisa tus anuncios y tu modelo de contrato.
+- ¿Quieres saber cuánto pedir con el índice oficial? [Valoración gratis del alquiler](/valoracion-alquiler).
+
+## Fuentes
+
+- BOE: [Real Decreto-ley 29/2026, de 6 de octubre](https://www.boe.es/buscar/act.php?id=BOE-A-2026-20823). Texto consolidado consultado el 22-10-2026.`,
   },
   {
     slug: 'prorroga-extraordinaria-alquiler-2026-quien-puede-pedirla',
