@@ -184,12 +184,14 @@ Con nuestra plataforma, el inquilino reporta la incidencia con fotos desde la ap
 
 ## Gastos generales (IBI y comunidad)
 
-Según el artículo 20 de la LAU, se puede pactar que el inquilino pague el IBI o la cuota de comunidad, siempre que:
+Según el artículo 20 de la LAU, se puede pactar que el inquilino pague la **cuota de comunidad** (los gastos generales del inmueble), siempre que:
 
 - Conste **por escrito en el contrato**.
 - Se indique el **importe anual** de esos gastos en el momento de firmar.
 
 Si no está pactado así, los paga el propietario.
+
+**El IBI, ya no.** Con el Real Decreto-ley 29/2026 (en vigor desde el 8 de octubre de 2026 y pendiente de convalidación), el artículo 20 dice que **en ningún caso podrán imponerse al inquilino los tributos asociados a la vivienda** (como el IBI), salvo que sea él el obligado tributario. Antes del decreto se podía pactar; los contratos firmados antes se rigen, en general, por lo que se pactó entonces. Tampoco se pueden repercutir los **gastos de gestión inmobiliaria y de formalización** del contrato.
 
 ## Suministros
 
@@ -349,7 +351,7 @@ El motivo más común es el miedo al impago. Por eso proponemos inquilinos verif
 | Gastos | IBI, comunidad y suministros: quién paga y cuánto |
 | Obras | Que el inquilino no pueda hacer obras sin permiso escrito |
 | Mascotas | Si se permiten y con qué condiciones |
-| Desistimiento | Indemnización si el inquilino se va antes (si se pacta) |
+| Desistimiento | En contratos anteriores al 8-10-2026, indemnización si se pactó; en los posteriores, el decreto la elimina |
 | Necesidad del piso | Si vas a necesitarlo para ti o un familiar |
 | Inventario | Como anexo firmado |
 | Notificaciones | Correo electrónico válido para comunicaciones |

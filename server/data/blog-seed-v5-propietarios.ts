@@ -950,7 +950,7 @@ Pide asesoramiento: puede ser necesario acreditar el abandono o acudir al juzgad
 ## Lo que puedes reclamar
 
 - Rentas pendientes.
-- La **indemnización por desistimiento** pactada en el contrato (hasta un mes por año que quedara), si se pactó.
+- La **indemnización por desistimiento** pactada en el contrato (hasta un mes por año que quedara), si se pactó y el contrato es anterior al 8 de octubre de 2026: en los posteriores, el decreto la elimina.
 - Daños más allá del desgaste normal.`,
   },
   {
@@ -1078,25 +1078,34 @@ Más en [cómo elegir un buen inquilino](/blog/como-elegir-un-buen-inquilino).`,
   },
   {
     slug: 'inquilino-quiere-irse-antes-indemnizacion',
-    title: 'Tu inquilino quiere irse antes de tiempo: indemnización y preaviso',
-    excerpt: 'A partir del sexto mes puede desistir con 30 días de aviso. Cuándo puedes cobrar indemnización.',
+    title: 'Tu inquilino quiere irse antes de tiempo: preaviso e indemnización tras el decreto de octubre de 2026',
+    excerpt: 'Puede irse pasados seis meses avisando con 30 días. En los contratos firmados desde el 8 de octubre de 2026 ya no hay indemnización para el propietario; en los anteriores, solo si se pactó.',
     audience: A,
     category: 'Legal',
     publishedAt: D,
     body: `## Lo que dice la LAU (artículo 11)
 
-El inquilino puede **desistir** del contrato de vivienda una vez pasados **seis meses**, avisando con **30 días** de antelación.
+El inquilino de vivienda habitual puede **desistir** del contrato una vez pasados **seis meses**, avisando con **30 días** de antelación. En la **vivienda temporal** (temporada), puede hacerlo pasado **un mes**, avisando con **10 días**.
 
-## La indemnización
+## ¿Y la indemnización?
 
-Solo si **se pactó** en el contrato: como máximo, **una mensualidad por cada año** que quede de contrato (los periodos inferiores, a prorrata).
+| Contrato | Indemnización |
+|---|---|
+| Firmado desde el **8 de octubre de 2026** | **Ninguna**: el decreto de octubre establece que el desistimiento así ejercido no genera indemnización para el propietario |
+| Firmado **antes** del 8 de octubre de 2026 | Solo si **se pactó**: como máximo, una mensualidad por cada año que quede (a prorrata) |
 
-## Ejemplo
+El decreto está pendiente de convalidación: si decae, vuelve la regla anterior.
+
+## Ejemplo (contrato anterior con indemnización pactada)
 
 Quedan 18 meses de contrato y la renta es de 800 €: la indemnización máxima sería de 1.200 €.
 
 ## Consejo práctico
 
-A veces compensa más **facilitar la salida** y alquilar rápido a un nuevo inquilino que discutir la indemnización.`,
+Más que discutir, **facilita la salida** y vuelve a alquilar rápido: cada mes vacío te cuesta una mensualidad entera. Firmad el [documento de finalización](/blog/documento-finalizacion-contrato-alquiler-plantilla) al entregar las llaves y pide una [valoración gratis](/valoracion-alquiler) para volver a alquilar al precio adecuado.
+
+## Fuentes
+
+- BOE: [Real Decreto-ley 29/2026](https://www.boe.es/buscar/act.php?id=BOE-A-2026-20823), artículo 3 (nueva redacción de los artículos 11 y 20 de la LAU). Consultado el 22-10-2026.`,
   },
 ]

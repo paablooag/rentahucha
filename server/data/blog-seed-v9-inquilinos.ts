@@ -88,7 +88,7 @@ ${CTA}`,
 ## Dinero
 
 1. ¿Cuánto es la renta y qué incluye exactamente?
-2. ¿La comunidad y el IBI están incluidos?
+2. ¿La comunidad está incluida? (El IBI, en los contratos firmados desde el 8 de octubre de 2026, no te lo pueden cobrar.)
 3. ¿Cuánto se paga de suministros de media al mes?
 4. ¿Qué te piden al firmar: fianza y garantía adicional?
 5. ¿Cómo y cuándo se actualiza la renta cada año?

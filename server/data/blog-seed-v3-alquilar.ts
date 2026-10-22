@@ -442,7 +442,7 @@ Una referencia habitual es que la renta no supere el **30–35 % de los ingresos
 - Gastos: quién paga cada uno.
 - Inventario y estado de la vivienda.
 - Reparaciones, obras y mascotas.
-- Desistimiento e indemnización pactada.
+- Desistimiento (desde el decreto de octubre de 2026, sin indemnización en los contratos nuevos).
 
 ## Cuándo compensa un profesional
 

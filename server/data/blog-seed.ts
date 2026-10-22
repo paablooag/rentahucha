@@ -461,8 +461,8 @@ La plataforma es **gratis para el inquilino**: no hay comisiones ni gastos de ge
   },
   {
     slug: 'irte-antes-de-tiempo-del-piso-de-alquiler',
-    title: '¿Puedo irme antes de que acabe el contrato de alquiler?',
-    excerpt: 'Cuándo puedes dejar el piso, con cuánto preaviso y cuánto te puede costar si el contrato prevé una indemnización.',
+    title: '¿Puedo irme antes de que acabe el contrato de alquiler? Preaviso e indemnización en 2026',
+    excerpt: 'Puedes irte pasados seis meses avisando con 30 días. Si tu contrato es del 8 de octubre de 2026 o posterior, no hay indemnización; si es anterior, solo si se pactó.',
     audience: 'inquilinos',
     category: 'Derechos',
     publishedAt: '2026-10-15',
@@ -473,17 +473,22 @@ La plataforma es **gratis para el inquilino**: no hay comisiones ni gastos de ge
 - Puedes irte a partir de los **6 meses** de contrato.
 - Tienes que avisar con al menos **30 días** de antelación (LAU, art. 11).
 
-## La posible indemnización
+En un alquiler de **temporada** (vivienda temporal), puedes irte pasado **un mes**, avisando con **10 días**.
 
-Solo si el contrato lo dice expresamente, el propietario puede pedirte una indemnización de **un mes de renta por cada año de contrato que quede por cumplir** (en proporción si es menos de un año).
+## ¿Tengo que pagar indemnización?
 
-| Contrato | Te vas en el mes | Queda por cumplir | Indemnización máxima (si está pactada) |
+| Tu contrato | Indemnización |
+|---|---|
+| Firmado desde el **8 de octubre de 2026** | **No**: con el decreto de octubre (pendiente de convalidación), el desistimiento no da derecho a indemnización al propietario |
+| Firmado **antes** | Solo si el contrato la prevé: como máximo, **un mes de renta por cada año que quede** (en proporción si es menos) |
+
+Ejemplos para un contrato anterior con indemnización pactada:
+
+| Contrato | Te vas en el mes | Queda por cumplir | Indemnización máxima |
 |---|---|---|---|
 | 3 años | 18 | 1,5 años | 1,5 mensualidades |
 | 2 años | 12 | 1 año | 1 mensualidad |
 | 1 año | 8 | 4 meses | Un tercio de la mensualidad |
-
-Si el contrato no menciona la indemnización, no tienes que pagarla.
 
 ## Al final de cada año
 
@@ -492,12 +497,16 @@ Si tu contrato es anual y se va prorrogando, también puedes no renovar al final
 ## Antes de irte
 
 1. Envía el aviso por un medio que deje constancia (burofax o correo con acuse).
-2. Pide una revisión del piso contigo delante y haz fotos.
+2. Revisad juntos el piso y firmad el [documento de finalización](/blog/documento-finalizacion-contrato-alquiler-plantilla) con su estado. Haz fotos.
 3. Deja todo al día: rentas y suministros.
 4. Facilita tu cuenta para la devolución de la fianza.
 
 ## Y tu historial
 
-Si te vas cumpliendo, tu pasaporte de buen inquilino lo refleja y tu hucha se puede trasladar a tu siguiente piso de la red para seguir ahorrando.`,
+Desde el lanzamiento de RentaHucha, si te vas cumpliendo, tu pasaporte de buen inquilino lo reflejará y tu hucha se podrá trasladar a tu siguiente piso de la red.
+
+## Fuentes
+
+- BOE: [Real Decreto-ley 29/2026](https://www.boe.es/buscar/act.php?id=BOE-A-2026-20823), artículo 3 (nueva redacción de los artículos 11 y 20 de la LAU). Consultado el 22-10-2026.`,
   },
 ]

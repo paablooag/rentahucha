@@ -132,7 +132,8 @@ async function migrate(d: Driver) {
 // v42: aviso a Madrid en el artículo de zonas tensionadas.
 // v43: seguro de hogar del propietario ampliado.
 // v44: prórroga extraordinaria desde el punto de vista del propietario.
-const BLOG_SEED_VERSION = 44
+// v45: desistimiento sin indemnización y tributos no repercutibles (RDL 29/2026).
+const BLOG_SEED_VERSION = 45
 
 // v6: artículos «2026» como gancho pasan a «2027». Las URLs cambian; las antiguas redirigen con 301 (nuxt.config).
 const BLOG_SLUG_RENAMES: [string, string][] = [
