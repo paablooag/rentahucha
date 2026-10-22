@@ -109,13 +109,25 @@ const { data: demand } = await useFetch<{ show: boolean; n: number | null }>(`/a
         <ul class="check-list">
           <li><AppIcon name="check" :size="18" /> <span><strong>La renta de un contrato nuevo tiene límite.</strong> En general, no puede superar la del contrato anterior de los últimos cinco años (con su actualización). Si eres gran tenedor, además, el índice de referencia de precios. Hay excepciones, por ejemplo tras ciertas obras de rehabilitación.</span></li>
           <li><AppIcon name="check" :size="18" /> <span><strong>Prórroga extraordinaria.</strong> Al acabar las prórrogas, el inquilino puede pedir una prórroga extra por años hasta un máximo de tres, salvo en los supuestos que prevé la ley.</span></li>
-          <li><AppIcon name="check" :size="18" /> <span><strong>Ventajas en el IRPF.</strong> En contratos nuevos, la reducción del rendimiento puede subir al 90 % si bajas la renta más de un 5 % respecto al contrato anterior, o al 70 % en algunos alquileres a jóvenes.</span></li>
+          <li><AppIcon name="check" :size="18" /> <span><strong>Ventajas en el IRPF.</strong> En los contratos firmados hasta el 1-12-2026, la reducción del rendimiento puede subir al 90 % si bajas la renta más de un 5 %, o al 70 % en algunos primeros alquileres a jóvenes. En los posteriores, con el decreto de octubre, al 90 % o al 95 % (inquilino de 18 a 35 años), o al 100 % si quedas por debajo del índice. <NuxtLink to="/herramientas/reduccion-irpf-alquiler">Calcúlalo</NuxtLink>.</span></li>
         </ul>
       </div>
     </section>
 
     <section class="section">
       <div class="container prose">
+        <h2>Qué cambia con el decreto de vivienda de octubre de 2026 en {{ city.name }}</h2>
+        <p class="small muted">Real Decreto-ley 29/2026, en vigor desde el 8 de octubre y pendiente de convalidación. <NuxtLink to="/blog/decretos-de-vivienda-octubre-2026-explicados">Guía completa</NuxtLink>.</p>
+        <ul class="check-list">
+          <li><AppIcon name="check" :size="18" /> <span><strong>Subida de la renta.</strong> Hasta el 31-12-2027, sin nuevo acuerdo, como máximo un 2 %, y nada si la renta supera el índice de referencia. <NuxtLink to="/herramientas/subida-alquiler-irav">Calcula tu subida</NuxtLink>.</span></li>
+          <li v-if="city.tension"><AppIcon name="check" :size="18" /> <span><strong>Anuncio.</strong> Al ser zona tensionada, el anuncio debe indicar el índice de referencia del precio y, si hay limitación, el límite de renta aplicable. <NuxtLink to="/blog/que-debe-incluir-un-anuncio-de-alquiler-decreto-29-2026">Qué debe incluir</NuxtLink>.</span></li>
+          <li v-else><AppIcon name="check" :size="18" /> <span><strong>Anuncio.</strong> Debe ser veraz e incluir, cuando proceda, el número de registro de la vivienda y si eres gran tenedor. <NuxtLink to="/blog/que-debe-incluir-un-anuncio-de-alquiler-decreto-29-2026">Qué debe incluir</NuxtLink>.</span></li>
+          <li><AppIcon name="check" :size="18" /> <span><strong>IRPF.</strong> En los contratos posteriores al 1-12-2026, la reducción va del 15 % (si subes la renta) al 100 % (si la bajas más de un 5 % y quedas por debajo del índice o renuevas con el mismo inquilino al acabar los cinco años). <NuxtLink to="/herramientas/reduccion-irpf-alquiler">Calculadora</NuxtLink>.</span></li>
+          <li><AppIcon name="check" :size="18" /> <span><strong>Temporada y habitaciones.</strong> La temporada exige una causa escrita y probada, y dura más de 31 días y en general hasta 12 meses; la suma de las habitaciones no puede superar la renta del piso completo. <NuxtLink to="/blog/alquiler-de-temporada-nuevas-reglas-12-meses">Las reglas</NuxtLink>.</span></li>
+          <li><AppIcon name="check" :size="18" /> <span><strong>IBI de pisos vacíos.</strong> {{ city.tension ? `En ${city.name}, al ser zona tensionada, el ayuntamiento puede recargar el IBI de un piso vacío más de dos años sin causa aunque sea el único que tienes.` : `Fuera de zona tensionada, el recargo por piso vacío más de dos años solo puede aplicarse a quien tiene cuatro o más viviendas.` }} <NuxtLink to="/blog/pisos-vacios-recargo-ibi-decreto">Detalle</NuxtLink>.</span></li>
+          <li><AppIcon name="check" :size="18" /> <span><strong>Garantías y final del contrato.</strong> No puedes exigir al inquilino un seguro de impago, y al terminar hay que firmar un documento con el estado de la vivienda. <NuxtLink to="/blog/documento-finalizacion-contrato-alquiler-plantilla">Plantilla</NuxtLink>.</span></li>
+        </ul>
+
         <h2>Cómo alquilar tu piso en {{ city.name }}, paso a paso</h2>
         <ol class="steps">
           <li v-for="s in steps" :key="s.t"><strong>{{ s.t }}.</strong> {{ s.d }}</li>
@@ -126,7 +138,7 @@ const { data: demand } = await useFetch<{ show: boolean; n: number | null }>(`/a
         </ul>
         <div class="note note-green more">
           <strong>Así te ayuda RentaHucha</strong>
-          <p>Verificamos a los inquilinos, preparamos el contrato conforme a la LAU con inventario y te avisamos de cada pago. El inquilino va llenando cada mes una hucha a su nombre, custodiada por una entidad financiera autorizada: si hay un impago comprobado, su saldo pasa a ti. Pagas el 5 % de la renta, solo cuando cobras.</p>
+          <p>Ya puedes publicar tu piso gratis en la beta: lo revisamos y los interesados te escriben por chat sin dar su teléfono. Desde el lanzamiento, verificaremos a los inquilinos, prepararemos el contrato conforme a la LAU con inventario y te avisaremos de cada pago; el inquilino irá llenando cada mes una hucha a su nombre, custodiada por una entidad financiera autorizada, y si hay un impago comprobado su saldo se usará para pagarte. Pagarás el 5 % de la renta, solo cuando cobres.</p>
         </div>
       </div>
     </section>
