@@ -34,7 +34,9 @@ export const BLOG_SEED_V3_REFORMAS: Seed[] = [
 
 ## Regla práctica
 
-Divide el coste de la reforma entre el aumento de renta mensual esperado. Si se recupera en **menos de 3–4 años**, suele merecer la pena. Y recuerda que acortar el tiempo vacío también cuenta como ganancia.`,
+Divide el coste de la reforma entre el aumento de renta mensual esperado. Si se recupera en **menos de 3–4 años**, suele merecer la pena. Y recuerda que acortar el tiempo vacío también cuenta como ganancia.
+
+**Novedad fiscal:** desde el 1 de diciembre de 2026, las obras de renovación y reparación de pisos alquilados como vivienda habitual pueden tributar al IVA del 10 % en lugar del 21 % (si se convalida el decreto de octubre). Requisitos en [reformas con IVA del 10 % en pisos alquilados](/blog/iva-10-reformas-piso-alquilado-diciembre-2026).`,
   },
   {
     slug: 'reformar-cocina-para-alquilar',

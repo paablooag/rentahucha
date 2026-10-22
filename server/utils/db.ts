@@ -110,7 +110,8 @@ async function migrate(d: Driver) {
 // v20: artículos de la convalidación con el IRPF y los anuncios del RDL 29/2026.
 // v21: enlace a la página del IRAV desde el artículo del 2 %.
 // v22: deducción del 10 % para inquilinos con los requisitos exactos del BOE (base imponible, base máxima, 50 km).
-const BLOG_SEED_VERSION = 22
+// v23: IVA del 10 % en reformas de pisos alquilados como vivienda habitual (RDL 29/2026, desde el 1-12-2026).
+const BLOG_SEED_VERSION = 23
 
 // v6: artículos «2026» como gancho pasan a «2027». Las URLs cambian; las antiguas redirigen con 301 (nuxt.config).
 const BLOG_SLUG_RENAMES: [string, string][] = [

@@ -237,4 +237,62 @@ En la beta puedes [publicar tu piso gratis](/cuenta/registro) y hablar con los i
 - Cronoshare: [¿Cuánto cuesta la gestión de alquileres? Precios en 2026](https://www.cronoshare.com/cuanto-cuesta/gestion-alquileres).
 - BOE: [Real Decreto-ley 29/2026](https://www.boe.es/buscar/act.php?id=BOE-A-2026-20823), nueva redacción del artículo 20 de la LAU (gastos de gestión).`,
   },
+  {
+    slug: 'iva-10-reformas-piso-alquilado-diciembre-2026',
+    title: 'Reformas en pisos alquilados con IVA del 10 % desde el 1 de diciembre de 2026: requisitos',
+    excerpt: 'El decreto de octubre extiende el IVA reducido del 10 % a las obras de renovación y reparación de viviendas alquiladas como vivienda habitual, sea cual sea el arrendador. Requisitos, ejemplo y qué pasa con los pisos turísticos.',
+    audience: 'propietarios',
+    category: 'Fiscalidad',
+    publishedAt: '2026-10-22',
+    body: `**Respuesta corta:** desde el **1 de diciembre de 2026**, las obras de **renovación y reparación** de una vivienda que se alquila **como vivienda habitual** tributan al **IVA del 10 %** en lugar del 21 %, **cualquiera que sea la condición del arrendador** (particular, empresa o gran tenedor), si se cumplen unos requisitos. Lo establece el Real Decreto-ley 29/2026, pendiente de convalidación.
+
+> **Actualizado a 22 de octubre de 2026.** El decreto está en vigor, pero esta medida tiene efectos desde el 1 de diciembre de 2026 y depende de la convalidación del decreto (votación prevista el 12 de noviembre, según la prensa).
+
+## Qué cambia
+
+Hasta ahora, el IVA reducido del 10 % en obras de renovación y reparación de viviendas se aplicaba, en general, cuando quien encargaba la obra era un **particular que la usaba para sí mismo** (o una comunidad de propietarios). Si reformabas un piso para alquilarlo, lo normal era pagar el 21 %.
+
+Con la nueva redacción del artículo 91.Uno.2.10.º de la Ley del IVA, también se aplica el 10 % **cuando la vivienda se destina al alquiler como vivienda habitual, cualquiera que sea la condición del arrendador**.
+
+## Requisitos
+
+| Requisito | Qué significa |
+|---|---|
+| Obras de **renovación y reparación** | No obra nueva: arreglos, reformas de baño o cocina, instalaciones, pintura… |
+| Vivienda alquilada **como vivienda habitual** del inquilino | No vale el alquiler turístico ni, en principio, el de temporada |
+| **Pago por medios trazables** | Tarjeta, transferencia, cheque nominativo o ingreso en cuenta. **Si pagas en efectivo, no hay tipo reducido** |
+| Edificio terminado (o rehabilitado) **hace al menos dos años** | Antes de empezar las obras |
+| **Materiales**: si los aporta quien hace la obra, su coste no puede superar el **40 %** de la base imponible | Si los materiales pesan más, se aplica el 21 % |
+
+## Ejemplo
+
+Reforma de baño en un piso alquilado como vivienda habitual, 6.000 € de base (mano de obra 4.000 € y materiales 2.000 €, es decir, un 33 % en materiales), pagada por transferencia:
+
+| | IVA al 21 % | IVA al 10 % |
+|---|---|---|
+| Base | 6.000 € | 6.000 € |
+| IVA | 1.260 € | 600 € |
+| **Total** | **7.260 €** | **6.600 €** |
+
+Ahorro: **660 €**. Además, si es una reparación o conservación, el gasto puede deducirse en el IRPF del alquiler (con los límites de cada caso).
+
+## Consejos
+
+- Si estás pensando reformar antes de alquilar, ten en cuenta la fecha: **desde el 1 de diciembre** se aplica el tipo reducido.
+- Pide la factura detallando mano de obra y materiales, y paga siempre por banco.
+- Guarda el contrato de alquiler (o tenlo firmado al hacer la obra) para acreditar que es vivienda habitual del inquilino.
+- Si la reforma es importante, valora también la reducción del IRPF del 60 % para viviendas rehabilitadas en los dos años anteriores al contrato: [cómo funciona la reducción del IRPF](/herramientas/reduccion-irpf-alquiler).
+
+## ¿Y los pisos turísticos o de corta estancia?
+
+Van en sentido contrario. Desde la misma fecha, el alquiler de viviendas amuebladas por **30 noches o menos** (o con servicios de tipo hotelero, como limpieza o lavandería) deja de estar exento y pasa a tributar al **IVA del 10 %**, salvo que se alquile en la vivienda donde el propio arrendador tiene su residencia habitual. El alquiler de vivienda habitual de larga duración sigue exento de IVA.
+
+¿Vas a reformar para alquilar? Mira qué reformas compensan en [reformas que se pagan solas al alquilar](/blog/reformas-que-se-pagan-solas-al-alquilar) y pide una [valoración gratis del alquiler](/valoracion-alquiler) para saber cuánto podrás pedir después.
+
+*Información general sobre la norma publicada en el BOE. Para tu caso concreto, consulta con un asesor fiscal.*
+
+## Fuentes
+
+- BOE: [Real Decreto-ley 29/2026, de 6 de octubre](https://www.boe.es/buscar/act.php?id=BOE-A-2026-20823), artículo 7 (modificación de los artículos 20.Uno.23.º y 91.Uno.2 de la Ley 37/1992 del IVA), con efectos desde el 1 de diciembre de 2026. Consultado el 22-10-2026.`,
+  },
 ]
