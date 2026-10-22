@@ -25,11 +25,15 @@ function closeFloat() {
   showFloat.value = false
   try { sessionStorage.setItem('rh-cta-closed', '1') } catch {}
 }
-const floatCopy = computed(() => (post.value?.audience === 'inmobiliarias'
-  ? { text: '¿Eres inmobiliaria? Sube tus pisos', to: '/inmobiliarias#formulario' }
-  : post.value?.audience === 'propietarios'
-  ? { text: 'Inquilinos verificados y hucha anti-impago', to: '/apuntate?tipo=propietario#formulario' }
-  : { text: 'Alquila sin aval y ahorra con tu hucha', to: '/apuntate?tipo=inquilino#formulario' }))
+// En los artículos para propietarios e inmobiliarias que hablan del decreto de vivienda, la guía en PDF a cambio del correo.
+const showGuia = computed(() => !!post.value && post.value.audience !== 'inquilinos' && /decreto/i.test(post.value.html))
+const floatCopy = computed(() => (showGuia.value
+  ? { text: 'El decreto de vivienda, en una guía PDF para propietarios', to: '#guia-decreto', label: 'Descárgala' }
+  : post.value?.audience === 'inmobiliarias'
+    ? { text: '¿Eres inmobiliaria? Sube tus pisos gratis', to: '/cuenta/registro?tipo=inmobiliaria', label: 'Crear cuenta' }
+    : post.value?.audience === 'propietarios'
+      ? { text: 'Inquilinos verificados y hucha anti-impago', to: '/apuntate?tipo=propietario#formulario', label: 'Apúntate' }
+      : { text: 'Alquila sin aval y ahorra con tu hucha', to: '/apuntate?tipo=inquilino#formulario', label: 'Apúntate' }))
 
 // Enlaces a las guías por ciudad que menciona el artículo (o a las principales), solo para propietarios e inmobiliarias.
 const cityLinks = computed(() => {
@@ -40,8 +44,6 @@ const cityLinks = computed(() => {
   return (mentioned.length ? mentioned : CITIES.slice(0, 6)).slice(0, 8)
 })
 
-// En los artículos para propietarios e inmobiliarias que hablan del decreto de vivienda, la guía en PDF a cambio del correo.
-const showGuia = computed(() => !!post.value && post.value.audience !== 'inquilinos' && /decreto/i.test(post.value.html))
 // El artículo se parte antes del segundo apartado para intercalar una llamada a la acción (BlogInlineCta).
 const parts = computed(() => {
   const html = post.value?.html ?? ''
@@ -168,7 +170,7 @@ useHead({
       <div v-if="showFloat" class="float-cta" role="complementary" aria-label="Lista de espera">
         <NuxtLink :to="floatCopy.to" class="float-link">
           <span>{{ floatCopy.text }}</span>
-          <strong>Apúntate <AppIcon name="arrow" :size="16" /></strong>
+          <strong>{{ floatCopy.label }} <AppIcon name="arrow" :size="16" /></strong>
         </NuxtLink>
         <button type="button" class="float-close" aria-label="Cerrar" @click="closeFloat">×</button>
       </div>
