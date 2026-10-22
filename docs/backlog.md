@@ -8,6 +8,7 @@ Al terminar una tarea, muévela a «Hecho» con la fecha y una línea de qué se
 
 ## Con fecha
 
+- [ ] 13-11-2026: resultado de la convalidación del RDL 29/2026 → actualizar artículos «pendiente de convalidación», calculadora del IRPF, banners y textos de captación.
 - [ ] **Después del 12-11-2026**: actualizar los artículos sobre la votación de los decretos de vivienda con el resultado (buscar fuente oficial antes de escribir; posición neutral).
 - [ ] **Después del 29-11-2026**: actualizar los artículos sobre las elecciones con los resultados oficiales.
 - [ ] **Cuando se publique en el BOE la resolución de zonas tensionadas del tercer trimestre de 2026** (prevista a finales de octubre): revisar `shared/utils/cities.ts` y `CITIES_CHECKED` con la página del Ministerio (consultar zonas de mercado residencial tensionado).
@@ -25,6 +26,10 @@ Al terminar una tarea, muévela a «Hecho» con la fecha y una línea de qué se
 
 ## Hecho
 
+- 2026-10-22 · Calculadora de la reducción del IRPF por alquiler (/herramientas/reduccion-irpf-alquiler), destacada en portada y propietarios.
+- 2026-10-22 · Reducción del IRPF del RDL 29/2026 (hasta el 100 % desde el 1-12-2026): artículo nuevo y cifras corregidas en 10 sitios.
+- 2026-10-22 · Artículos «¿Es Madrid zona tensionada?» y «¿Cuánto cobra una inmobiliaria por gestionar tu alquiler?»; artículos de la convalidación completados.
+- 2026-10-22 · El despliegue se salta los commits que ya no son el último de main (evita despliegues fuera de orden).
 - 2026-10-21 · Search Console en el panel (Admin → Google): sincronización cada 6 h con cuenta de servicio de solo lectura; oportunidades y páginas sin clics.
 - 2026-10-21 · Datos obligatorios del anuncio (art. 20 RDL 29/2026) en formulario, ficha, panel y generador; 3 artículos sobre las nuevas obligaciones.
 - 2026-10-21 · Revisión del responsive de toda la web (320-1440 px) y del panel; /panel y /pasaporte redirigen a sus demos.
