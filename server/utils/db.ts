@@ -116,7 +116,8 @@ async function migrate(d: Driver) {
 // v26: documento de finalización del arrendamiento (art. 36.7 LAU) con plantilla.
 // v27: formato de la plantilla del documento de finalización.
 // v28: prórroga extraordinaria con los requisitos exactos de la disposición final 5.ª del RDL 29/2026.
-const BLOG_SEED_VERSION = 28
+// v29: gran tenedor (5 o más en zona tensionada, certificación registral, IRPF y anuncios).
+const BLOG_SEED_VERSION = 29
 
 // v6: artículos «2026» como gancho pasan a «2027». Las URLs cambian; las antiguas redirigen con 301 (nuxt.config).
 const BLOG_SLUG_RENAMES: [string, string][] = [

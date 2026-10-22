@@ -291,19 +291,22 @@ Si dudáis entre alquilar o vender, lee [piso heredado: alquilar o vender](/blog
   {
     slug: 'como-saber-si-eres-gran-tenedor',
     title: '¿Soy gran tenedor? Cómo saberlo y qué implica',
-    excerpt: 'Más de 10 viviendas, o más de 5 en zona tensionada si así se declara. Qué cuenta y qué cambia para ti.',
+    excerpt: 'Más de 10 viviendas o más de 1.500 m² residenciales, o 5 o más en zona tensionada si así se declara. Qué cuenta, cómo se acredita y qué cambia para ti (también en el IRPF y en tus anuncios).',
     audience: A,
     category: 'Legal',
     publishedAt: D,
     body: `Según la Ley 12/2023, en general es **gran tenedor** quien es titular de **más de 10 inmuebles urbanos de uso residencial** (sin contar garajes ni trasteros) o de una superficie construida residencial de más de 1.500 m².
 
-En las **zonas tensionadas**, la comunidad autónoma puede bajar el umbral a **más de 5 viviendas** en esa zona.
+En las **zonas tensionadas**, la comunidad autónoma puede bajar el umbral a **5 o más viviendas** en esa zona, si lo motiva en la declaración.
+
+Con el Real Decreto-ley 29/2026 (pendiente de convalidación), la condición se acredita con una **certificación del Registro de la Propiedad** con las propiedades a tu nombre, y si un edificio tiene varias viviendas en una sola finca registral, **cada vivienda cuenta como un inmueble**, aunque no haya división horizontal.
 
 ## Qué cambia
 
 - En zona tensionada, la renta de los contratos nuevos se limita por el **índice de referencia**.
 - En desahucios, la demanda debe indicarlo y hay obligaciones adicionales.
-- Algunas ayudas y deducciones no se aplican.
+- Algunas ayudas y deducciones no se aplican: por ejemplo, en los contratos posteriores al 1 de diciembre de 2026 el gran tenedor no tiene las reducciones del IRPF por bajar la renta ([calculadora](/herramientas/reduccion-irpf-alquiler)).
+- Tus anuncios de alquiler deben indicar que eres gran tenedor ([qué debe incluir el anuncio](/blog/que-debe-incluir-un-anuncio-de-alquiler-decreto-29-2026)).
 
 ## Cómo contar
 

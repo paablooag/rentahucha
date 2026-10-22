@@ -469,7 +469,7 @@ ${CTA_PROP}`,
     body: `La Ley 12/2023 y los decretos de octubre de 2026 distinguen entre **pequeños propietarios** y **grandes tenedores**.
 
 ## Quién es gran tenedor
-En general, quien tiene más de 10 viviendas (o más de 5 en zona tensionada, si así se declara). Lee [¿soy gran tenedor?](/blog/como-saber-si-eres-gran-tenedor).
+En general, quien tiene más de 10 viviendas (o 5 o más en zona tensionada, si así se declara). Lee [¿soy gran tenedor?](/blog/como-saber-si-eres-gran-tenedor).
 
 ## Diferencias principales
 

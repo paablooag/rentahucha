@@ -734,7 +734,7 @@ ${CTA}`,
 
 - [ ] ¿El municipio o barrio está declarado tensionado?
 - [ ] ¿Cuál fue la renta del último contrato en los últimos cinco años?
-- [ ] ¿El propietario es gran tenedor (en general, más de 10 viviendas, o más de 5 en la zona si así se declara)?
+- [ ] ¿El propietario es gran tenedor (en general, más de 10 viviendas, o 5 o más en la zona si así se declara)?
 - [ ] ¿Qué dice el índice de referencia para esa vivienda?
 
 ## Cómo cambia la valoración

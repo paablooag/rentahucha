@@ -725,7 +725,7 @@ Comprueba si tu municipio está declarado y cuál fue la renta del último contr
 1. **Gastos de gestión y formalización**: los paga el propietario, no el inquilino.
 2. **Zonas tensionadas**: las declaran las comunidades y limitan la renta de los contratos nuevos.
 3. **Índice de referencia**: el Sistema Estatal de Referencia de Precios del Alquiler.
-4. **Gran tenedor**: en general, quien tiene más de 10 viviendas, o más de 5 en una zona tensionada si así se declara.
+4. **Gran tenedor**: en general, quien tiene más de 10 viviendas, o 5 o más en una zona tensionada si así se declara.
 5. **Prórroga extraordinaria**: hasta 3 años en zona tensionada, en ciertos casos, al terminar el contrato.
 6. **Actualización de rentas**: límites temporales del 2 % (2023) y del 3 % (2024), y un índice propio desde 2025.
 7. **Incentivos fiscales**: reducciones del IRPF para caseros, de hasta el 100 % en los contratos nuevos desde diciembre de 2026 si se convalida el decreto.
@@ -950,7 +950,7 @@ Pide una [valoración gratis del alquiler](/valoracion-alquiler) para ponerle un
 | **Ley 12/2023** | Ley por el derecho a la vivienda |
 | **Zona tensionada** | Zona con precios altos donde se limitan las rentas de los contratos nuevos |
 | **Índice de referencia** | Rango de precios oficial del alquiler por vivienda y zona (Ministerio de Vivienda) |
-| **Gran tenedor** | En general, quien tiene más de 10 viviendas (o más de 5 en zona tensionada, si se declara) |
+| **Gran tenedor** | En general, quien tiene más de 10 viviendas (o 5 o más en zona tensionada, si se declara) |
 | **Prórroga obligatoria** | Tiempo que el contrato dura si el inquilino quiere: 5 o 7 años |
 | **Prórroga tácita** | Hasta 3 años más si nadie avisa |
 | **Prórroga extraordinaria** | Ampliación excepcional prevista en una ley o decreto |
