@@ -773,7 +773,7 @@ En la práctica, según el plan que tengas:
 | Mantener la renta | En los dos casos, en general, un 50 % |
 | Bajarla más de un 5 % o quedarte por debajo del índice | Después del 1 de diciembre puedes llegar al 70 %-100 % |
 
-Los detalles, con tablas y ejemplos, en [la reducción del IRPF por alquilar desde diciembre de 2026](/blog/reduccion-irpf-alquiler-vivienda-2027-hasta-100). Si el decreto no se convalida, decae y no cambia nada de esto.
+Calcula tu caso con la [calculadora de la reducción del IRPF](/herramientas/reduccion-irpf-alquiler), que compara las dos fechas. Los detalles, con tablas y ejemplos, en [la reducción del IRPF por alquilar desde diciembre de 2026](/blog/reduccion-irpf-alquiler-vivienda-2027-hasta-100). Si el decreto no se convalida, decae y no cambia nada de esto.
 
 ## El coste de esperar
 

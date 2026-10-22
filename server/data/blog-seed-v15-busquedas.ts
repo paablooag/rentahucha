@@ -157,7 +157,7 @@ Rendimiento neto de 7.000 € al año (rentas menos gastos deducibles):
 
 ## Qué significa para fijar el precio
 
-Con este régimen, **subir la renta al cambiar de inquilino tiene un coste fiscal** y bajarla un poco puede compensar. Antes de decidir, haz números con lo que de verdad te queda: la [calculadora de rentabilidad](/herramientas/rentabilidad-alquiler) te ayuda, y si quieres saber dónde está el mercado en tu zona, pide una [valoración gratis del alquiler](/valoracion-alquiler) con el índice oficial.
+Con este régimen, **subir la renta al cambiar de inquilino tiene un coste fiscal** y bajarla un poco puede compensar. Calcula tu caso en un minuto con la [calculadora de la reducción del IRPF](/herramientas/reduccion-irpf-alquiler), que compara firmar antes o después del 1 de diciembre. Antes de decidir, haz números con lo que de verdad te queda: la [calculadora de rentabilidad](/herramientas/rentabilidad-alquiler) te ayuda, y si quieres saber dónde está el mercado en tu zona, pide una [valoración gratis del alquiler](/valoracion-alquiler) con el índice oficial.
 
 Más sobre la declaración: [cómo declarar el alquiler en la renta](/blog/como-declarar-el-alquiler-en-la-renta).
 

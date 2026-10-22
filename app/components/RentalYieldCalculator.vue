@@ -95,7 +95,7 @@ const pct = (x: number) => `${x.toFixed(2).replace('.', ',')} %`
         <strong>Lo que más se come la rentabilidad: meses vacíos e impagos</strong>
         <p>Cada mes vacío o sin cobrar resta una mensualidad entera. Con RentaHucha eliges entre inquilinos verificados y, si hay un impago comprobado, el saldo de su hucha pasa a ti.</p>
       </div>
-      <p class="small muted">Estimación orientativa con tus datos, antes del IRPF. En contratos de vivienda habitual firmados desde mayo de 2023, el rendimiento neto puede reducirse entre un 50 % y un 90 % según el caso. No incluye amortización ni otros gastos deducibles.</p>
+      <p class="small muted">Estimación orientativa con tus datos, antes del IRPF. El rendimiento neto tiene además una reducción en el IRPF de hasta el 100 % según el contrato: <NuxtLink to="/herramientas/reduccion-irpf-alquiler">calcúlala aquí</NuxtLink>. No incluye amortización ni otros gastos deducibles.</p>
     </div>
   </div>
 </template>

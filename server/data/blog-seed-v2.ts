@@ -83,7 +83,7 @@ Si el piso es vivienda habitual del inquilino, el rendimiento neto positivo tien
 | Del 26 de mayo de 2023 al 1 de diciembre de 2026 | Del 50 % al 90 % según el caso (Ley 12/2023): 50 % en general, 60 % si se rehabilitó, 70 % en algunos casos de zona tensionada o jóvenes y 90 % en zona tensionada bajando la renta más de un 5 % |
 | Después del 1 de diciembre de 2026 | Del 15 % al 100 % según si bajas, mantienes o subes la renta (Real Decreto-ley 29/2026, pendiente de convalidación) |
 
-El nuevo régimen lo explicamos con tablas y ejemplos en [la reducción del IRPF por alquilar desde diciembre de 2026](/blog/reduccion-irpf-alquiler-vivienda-2027-hasta-100). Comprueba tu caso en la web de la Agencia Tributaria o con un asesor.
+Calcula tu caso con la [calculadora de la reducción del IRPF](/herramientas/reduccion-irpf-alquiler). El nuevo régimen lo explicamos con tablas y ejemplos en [la reducción del IRPF por alquilar desde diciembre de 2026](/blog/reduccion-irpf-alquiler-vivienda-2027-hasta-100). Comprueba tu caso en la web de la Agencia Tributaria o con un asesor.
 
 ## Un ejemplo sencillo
 
