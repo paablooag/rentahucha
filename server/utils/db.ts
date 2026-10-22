@@ -128,7 +128,8 @@ async function migrate(d: Driver) {
 // v38: fianza, garantía adicional y aval tras el RDL 29/2026.
 // v39: plazos del desahucio con la enervación extraordinaria del RDL 29/2026.
 // v40: inquilinos ante un desahucio con la enervación extraordinaria.
-const BLOG_SEED_VERSION = 40
+// v41: alquiler con opción a compra ampliado.
+const BLOG_SEED_VERSION = 41
 
 // v6: artículos «2026» como gancho pasan a «2027». Las URLs cambian; las antiguas redirigen con 301 (nuxt.config).
 const BLOG_SLUG_RENAMES: [string, string][] = [

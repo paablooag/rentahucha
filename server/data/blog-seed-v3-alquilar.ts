@@ -745,35 +745,69 @@ Plato de ducha a ras, asideros, buena iluminación y suelos antideslizantes. Mir
   },
   {
     slug: 'alquiler-con-opcion-a-compra',
-    title: 'Alquiler con opción a compra: cómo funciona para el propietario',
-    excerpt: 'Prima, precio pactado, plazo y fiscalidad. Cuándo puede interesarte y qué riesgos tiene.',
+    title: 'Alquiler con opción a compra: cómo funciona, ejemplo con números y qué debe decir el contrato',
+    excerpt: 'Prima, precio pactado, plazo, rentas que se descuentan y riesgos. Cómo encaja con la Ley de Arrendamientos Urbanos y el decreto de octubre de 2026, con un ejemplo completo y las cláusulas imprescindibles.',
     audience: 'propietarios',
     category: 'Poner en alquiler',
     publishedAt: D,
-    body: `El alquiler con opción a compra une dos contratos: un **arrendamiento** y una **opción de compra**.
+    body: `El alquiler con opción a compra une dos contratos en uno: un **arrendamiento de vivienda** y una **opción de compra**, que da al inquilino el derecho (no la obligación) de comprar el piso a un precio pactado durante un plazo.
 
-## Elementos clave
+## Cómo funciona
 
-- **Precio de venta**: se fija al firmar.
-- **Plazo de la opción**: por ejemplo, de 2 a 4 años.
-- **Prima de la opción**: un importe inicial que paga el inquilino por el derecho a comprar.
-- **Rentas que se descuentan**: qué parte del alquiler se resta del precio si compra.
+| Elemento | Qué es |
+|---|---|
+| Precio de venta | Se fija al firmar y no cambia durante la opción, salvo que se pacte una actualización |
+| Plazo de la opción | El tiempo durante el que el inquilino puede decidir comprar (a menudo, de 2 a 4 años) |
+| Prima de la opción | Un importe que paga el inquilino por tener ese derecho. Lo normal es que se descuente del precio si compra y que se quede el propietario si no compra |
+| Rentas que se descuentan | Qué parte del alquiler pagado se resta del precio si compra (todo, un porcentaje o nada) |
 
-## Ventajas para el propietario
+Si el inquilino ejerce la opción, se firma la compraventa en las condiciones pactadas. Si no, el alquiler sigue sus propias reglas.
 
-- Inquilino muy comprometido con la vivienda.
-- Precio de venta asegurado si se ejerce la opción.
-- La prima suele quedar para el propietario si no se compra, según lo pactado.
+## Ejemplo con números
 
-## Riesgos
+Piso con precio de venta pactado de 200.000 €, opción de 3 años, prima de 6.000 € y renta de 900 € al mes, de la que se descuenta el 50 % si compra:
 
-- Si el mercado sube, vendes al precio pactado.
-- Inmovilizas el piso durante el plazo de la opción.
-- Fiscalidad más compleja: rentas, prima y posible venta.
+| Concepto | Importe |
+|---|---|
+| Precio pactado | 200.000 € |
+| Prima pagada al firmar | −6.000 € |
+| 50 % de las rentas de 3 años (900 € × 36 × 50 %) | −16.200 € |
+| **Lo que pagaría al comprar** | **177.800 €** |
+
+Si no compra, el propietario se queda la prima (si así se pactó) y ha cobrado las rentas.
+
+## Cómo encaja con la ley de alquiler
+
+- El **arrendamiento** sigue siendo un alquiler de vivienda habitual y se rige por la **LAU**: duración mínima de 5 años (7 si el arrendador es empresa), fianza, garantías y actualización de la renta. Que la opción caduque no acorta esos plazos.
+- Se aplican también las reglas del **decreto de octubre de 2026** (pendiente de convalidación): límite del 2 % a la subida hasta 2027, datos obligatorios en el anuncio, gastos de gestión a cargo del propietario y, en zona tensionada, los límites de renta. Lo resumimos en la [guía del decreto](/blog/decretos-de-vivienda-octubre-2026-explicados).
+- La **opción de compra** es un contrato civil. Puede **inscribirse en el Registro de la Propiedad** para que sea oponible a terceros (por ejemplo, si vendieras a otro o te embargaran el piso); para inscribirla, el Reglamento Hipotecario exige, entre otros requisitos, un precio pactado y un plazo que no supere los cuatro años.
+
+## Cláusulas imprescindibles
+
+1. Precio de venta y si se actualiza.
+2. Plazo y forma de ejercer la opción (por escrito, con qué preaviso).
+3. Importe de la prima y qué pasa con ella si compra o no.
+4. Qué parte de las rentas se descuenta del precio.
+5. Quién paga los gastos de la compraventa y del alquiler.
+6. Qué ocurre si el inquilino deja de pagar el alquiler durante la opción (por ejemplo, que la opción se extinga).
+7. Estado de la vivienda e inventario al inicio.
+
+## Ventajas e inconvenientes para el propietario
+
+| Ventajas | Inconvenientes |
+|---|---|
+| Inquilino muy comprometido con la vivienda | Si el mercado sube, vendes al precio pactado |
+| Ingreso inicial con la prima | El piso queda «reservado» durante la opción |
+| Venta con comprador ya decidido | Fiscalidad más compleja |
+| Rentas mientras tanto | Si no compra, sigues con un alquiler sujeto a la LAU |
+
+## Impuestos, en general
+
+Las rentas del alquiler se declaran en el IRPF como cualquier alquiler de vivienda. La prima y, en su caso, la venta tienen su propio tratamiento fiscal, que depende de si la opción se ejerce o no. Antes de firmar, pide a un asesor que te haga los números de tu caso.
 
 ## Recomendación
 
-Redacta el contrato con un profesional y considera inscribir la opción en el Registro de la Propiedad.`,
+Hazlo con un contrato redactado por un profesional, revisa si te conviene inscribir la opción y pon un precio realista: pide una [valoración gratis del alquiler](/valoracion-alquiler) para saber cuánto podrías cobrar de renta mientras tanto.`,
   },
   {
     slug: 'fin-de-contrato-como-recuperar-el-piso',
