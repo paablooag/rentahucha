@@ -115,7 +115,8 @@ async function migrate(d: Driver) {
 // v25: alquiler de temporada según el RDL 29/2026 (vivienda temporal, causa, garantía de una mensualidad, desistimiento).
 // v26: documento de finalización del arrendamiento (art. 36.7 LAU) con plantilla.
 // v27: formato de la plantilla del documento de finalización.
-const BLOG_SEED_VERSION = 27
+// v28: prórroga extraordinaria con los requisitos exactos de la disposición final 5.ª del RDL 29/2026.
+const BLOG_SEED_VERSION = 28
 
 // v6: artículos «2026» como gancho pasan a «2027». Las URLs cambian; las antiguas redirigen con 301 (nuxt.config).
 const BLOG_SLUG_RENAMES: [string, string][] = [

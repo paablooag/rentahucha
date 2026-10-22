@@ -227,7 +227,7 @@ ${AL_DIA}
 
 | Decreto | Contenido principal | Situación |
 |---|---|---|
-| Medidas urgentes | Prórrogas extraordinarias, límite del 2 % a las subidas, temporada, habitaciones, fiscalidad, desahucios de vulnerables | En vigor desde el 7 de octubre, pendiente de convalidar |
+| Medidas urgentes | Prórrogas extraordinarias, límite del 2 % a las subidas, temporada, habitaciones, fiscalidad, desahucios de vulnerables | En vigor desde el 8 de octubre, pendiente de convalidar |
 | Estabilidad de los contratos | Renovación automática al terminar los 5 o 7 años | Solo entraría en vigor si se convalida |
 
 Detalle en [los decretos explicados punto por punto](/blog/decretos-de-vivienda-octubre-2026-explicados).
@@ -269,7 +269,7 @@ ${AL_DIA}
 
 | Medida | Qué supone |
 |---|---|
-| Prórroga extraordinaria | Contratos que venzan hasta finales de 2028: hasta dos años más en las mismas condiciones, si estás al día |
+| Prórroga extraordinaria | Si tu periodo obligatorio (5 o 7 años) o la prórroga tácita termina antes de 2029: hasta dos años más en las mismas condiciones, si llevas ocho meses al día ([requisitos](/blog/prorroga-extraordinaria-alquiler-2026-quien-puede-pedirla)) |
 | Subidas | Hasta finales de 2027, máximo un 2 %, y nada si la renta supera el índice de referencia |
 | Temporada | Más de 31 días y, en general, hasta 12 meses y con causa justificada |
 | Habitaciones | En zona tensionada, la suma no puede superar la renta del piso entero |

@@ -91,7 +91,7 @@ Si vas a firmar ahora, hazlo con un contrato bien redactado y conforme a la norm
 
 ${NOTA}
 
-## Decreto 1: medidas urgentes (en vigor desde el 7 de octubre)
+## Decreto 1: medidas urgentes (publicado el 7 de octubre, en vigor desde el 8)
 
 **Alquiler**
 - **Prórroga extraordinaria**: los contratos que venzan hasta el 31-12-2028 pueden prorrogarse hasta dos años más, por periodos anuales y en las mismas condiciones, si el inquilino lo pide y está al corriente de pago en los ocho meses anteriores.
@@ -117,19 +117,19 @@ Revisa el vencimiento de tus contratos y guarda los justificantes de pago. Consu
   {
     slug: 'prorroga-extraordinaria-alquiler-2026-quien-puede-pedirla',
     title: 'Prórroga extraordinaria del alquiler: quién puede pedirla y cómo',
-    excerpt: 'Si tu contrato vence antes de 2029, el decreto de octubre te permite pedir hasta dos años más con las mismas condiciones. Requisitos y modelo de solicitud.',
+    excerpt: 'Si el periodo obligatorio de tu contrato termina antes de 2029, el decreto de octubre te permite pedir hasta dos años más con las mismas condiciones. Requisitos exactos, cuándo puede negarse el propietario y cómo pedirla.',
     audience: 'inquilinos',
     category: CAT,
     publishedAt: D,
-    body: `El decreto de vivienda en vigor desde el 7 de octubre de 2026 permite a muchos inquilinos quedarse más tiempo en su piso.
+    body: `El Real Decreto-ley 29/2026, en vigor desde el 8 de octubre de 2026, permite a muchos inquilinos quedarse más tiempo en su piso.
 
 ${NOTA}
 
 ## Quién puede pedirla
 
-- Inquilinos con contrato de **vivienda habitual**.
-- Cuyo contrato venza **hasta el 31 de diciembre de 2028**.
-- Que estén **al corriente de pago** en los ocho meses anteriores.
+- Inquilinos con contrato de **vivienda habitual** que estuviera **vigente el 8 de octubre de 2026**.
+- Cuyo **periodo de prórroga obligatoria** (los 5 años, o 7 si el propietario es una empresa) **termine antes del 31 de diciembre de 2028**, o a los que se les acabe la prórroga tácita (o la tácita reconducción).
+- Que estén **al corriente de pago** y lo hayan estado cada mes durante los **ocho meses anteriores**.
 
 ## Qué consigues
 
@@ -138,8 +138,11 @@ ${NOTA}
 
 ## Cuándo puede negarse el propietario
 
-- Si acordáis otras condiciones.
-- Si acredita que necesita la vivienda (en los casos previstos en la norma).
+- Si acordáis otras condiciones o firmáis un contrato nuevo.
+- Si renováis o firmáis un contrato nuevo con una renta **al menos un 5 % más baja**.
+- Si comunica, en los plazos del artículo 9.3 de la LAU, que **necesita la vivienda para sí o para un familiar**, aunque no lo previera el contrato, siempre que la necesidad sea real y acreditada.
+
+En zona tensionada, si te corresponde la prórroga extraordinaria del artículo 10.3 de la LAU, se aplica esa con preferencia.
 
 ## Cómo pedirla
 
@@ -149,7 +152,9 @@ ${NOTA}
 
 ## Si el decreto no se convalida
 
-Si la Diputación Permanente no lo convalida (la votación está prevista para el 12 de noviembre), la medida decae. Lo que sigue vigente son las prórrogas de la LAU: la obligatoria hasta 5 o 7 años y la tácita de hasta 3 años.`,
+Si la Diputación Permanente no lo convalida (la votación está prevista para el 12 de noviembre), la medida decae. Lo que sigue vigente son las prórrogas de la LAU: la obligatoria hasta 5 o 7 años y la tácita de hasta 3 años.
+
+Fuente: BOE, [Real Decreto-ley 29/2026](https://www.boe.es/buscar/act.php?id=BOE-A-2026-20823), disposición final quinta. Consultado el 22-10-2026.`,
   },
   {
     slug: 'limite-2-por-ciento-subida-alquiler-hasta-2027',
