@@ -387,34 +387,54 @@ Compara ese precio con el valor de mercado vacío para decidir.
 No, si el contrato está en vigor. La venta no es causa para resolverlo.
 
 ### ¿Tengo que avisar al inquilino de que voy a vender?
-Sí, para el derecho de tanteo, salvo que haya renunciado a él en el contrato.
+Sí, por el derecho de tanteo: notifícale la decisión de vender, el precio y las condiciones esenciales. En los contratos firmados desde el 8 de octubre de 2026 no vale una cláusula de renuncia a ese derecho. Lee [cómo notificar el tanteo](/blog/derecho-de-tanteo-y-retracto-como-notificar).
 
 ### ¿Quién se queda con la fianza?
 El comprador se subroga en tus obligaciones, incluida la devolución de la fianza. Transfiérela en la compraventa y comunícalo al organismo de depósito.`,
   },
   {
     slug: 'derecho-de-tanteo-y-retracto-como-notificar',
-    title: 'Derecho de tanteo y retracto: cómo notificarlo al inquilino',
-    excerpt: 'Qué debe incluir la notificación, plazos y qué pasa si no se hace bien.',
+    title: 'Derecho de tanteo y retracto del inquilino: cómo notificarlo si vendes tu piso (tras el decreto de octubre de 2026)',
+    excerpt: 'Si vendes un piso alquilado, el inquilino tiene derecho preferente a comprarlo. Qué debe incluir la notificación, plazos de 30 y 180 días, ventas conjuntas y por qué ya no se puede pactar que renuncie.',
     audience: A,
     category: 'Legal',
     publishedAt: D,
-    body: `## Qué incluir en la notificación
+    body: `Si vendes una vivienda alquilada, el inquilino tiene un **derecho de adquisición preferente**: puede comprarla en las mismas condiciones que el comprador (**tanteo**) o, si no se le avisó bien, quedarse con ella después de la venta (**retracto**). El Real Decreto-ley 29/2026 (en vigor desde el 8 de octubre de 2026 y pendiente de convalidación) da nueva redacción al artículo 25 de la LAU.
 
-- Intención de vender.
-- **Precio** y forma de pago.
-- **Condiciones esenciales** de la venta.
-- Datos del posible comprador.
+## Qué incluir en la notificación
+
+- Tu **decisión de vender**.
+- El **precio** y las **demás condiciones esenciales** de la venta (forma de pago, plazos).
+- Si vendes la vivienda **junto con otros inmuebles** (por ejemplo, un edificio entero o con un local), el **precio que corresponde a la vivienda alquilada** y los **criterios objetivos** usados para calcularlo.
 
 ## Cómo enviarla
 
-Por **burofax** con certificación de contenido o por otro medio fehaciente.
+Por un **medio fehaciente**: burofax con certificación de contenido o requerimiento notarial. Guarda el justificante: el Registro de la Propiedad pedirá que se acredite para inscribir la venta.
 
 ## Plazos
 
-El inquilino tiene **30 días naturales** para ejercer el tanteo. Si no se le notifica o la venta se hace en condiciones distintas, puede ejercer el **retracto** en los 30 días siguientes a conocer la venta.
+| Plazo | Qué pasa |
+|---|---|
+| **30 días naturales** desde la notificación | El inquilino puede ejercer el **tanteo** (comprar en esas condiciones) |
+| **180 días naturales** | Si no vendes en ese plazo, la notificación caduca y tendrás que volver a notificar |
+| **30 días naturales** desde que el comprador le notifique la venta con copia de la escritura | El inquilino puede ejercer el **retracto** si no se le notificó, si faltaban datos o si la venta fue por menos precio o en mejores condiciones |
 
-Más contexto en [vender un piso alquilado](/blog/vender-piso-alquilado-con-inquilino).`,
+## Lo que cambia con el decreto
+
+- **No se puede pactar la renuncia** del inquilino a este derecho: una cláusula de renuncia en un contrato nuevo no vale.
+- En las **ventas conjuntas**, el derecho no decae si la vivienda es jurídicamente individualizable. El precio imputado a la vivienda debe salir de un reparto proporcional con criterios objetivos (preferentemente el valor de referencia del Catastro o una tasación independiente), y no valen los repartos pensados para dificultar el derecho.
+- Si en el edificio solo hay una vivienda, el inquilino también tiene tanteo y retracto.
+- Si la venta incluye también el garaje o trastero alquilados con la vivienda, el inquilino no puede ejercer el derecho solo sobre la vivienda.
+
+## Y si el piso no está alquilado
+
+Para inscribir la venta, el vendedor debe declarar en la escritura que la vivienda no está arrendada.
+
+Más contexto en [vender un piso alquilado](/blog/vender-piso-alquilado-con-inquilino).
+
+## Fuentes
+
+- BOE: [Real Decreto-ley 29/2026](https://www.boe.es/buscar/act.php?id=BOE-A-2026-20823), artículo 3 (nueva redacción del artículo 25 de la LAU). Consultado el 22-10-2026.`,
   },
   {
     slug: 'imputacion-de-rentas-piso-vacio',

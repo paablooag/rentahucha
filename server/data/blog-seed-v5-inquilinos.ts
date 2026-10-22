@@ -108,7 +108,7 @@ Es legal negociar una salida voluntaria. Antes de aceptar:
 - [ ] Datos del nuevo propietario por escrito
 - [ ] Nueva cuenta de pago confirmada
 - [ ] Copia de tu contrato y recibos a mano
-- [ ] Revisar si renunciaste al tanteo y retracto
+- [ ] Revisar tu derecho de tanteo y retracto (en contratos desde el 8-10-2026 no se puede renunciar a él)
 - [ ] Fianza: confirmar que se transfiere al nuevo propietario
 
 ## Preguntas frecuentes
