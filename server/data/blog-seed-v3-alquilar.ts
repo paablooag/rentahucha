@@ -519,33 +519,53 @@ Haz de nuevo lecturas y fotos. Pide las últimas facturas pagadas antes de devol
   },
   {
     slug: 'seguro-de-hogar-del-propietario',
-    title: 'Seguro de hogar para propietarios que alquilan: qué debe cubrir',
-    excerpt: 'Continente, responsabilidad civil, daños por agua y actos vandálicos. Lo que necesitas y lo que no.',
+    title: 'Seguro de hogar si alquilas tu piso: qué asegura el propietario, qué el inquilino y qué debe cubrir',
+    excerpt: 'Continente, contenido, responsabilidad civil, daños por agua y actos vandálicos: quién asegura qué en un piso alquilado, qué pasa si lo alquilas amueblado y en qué se diferencia del seguro de impago.',
     audience: 'propietarios',
     category: 'Poner en alquiler',
     publishedAt: D,
-    body: `El seguro del propietario protege el edificio de tu piso y tu responsabilidad. El del inquilino protege sus cosas y su responsabilidad. Son complementarios.
+    body: `El seguro del propietario protege **el edificio de tu piso y tu responsabilidad** como dueño. El del inquilino protege **sus cosas y su responsabilidad** como ocupante. Son complementarios, no se sustituyen.
 
-## Coberturas clave
+## Quién asegura qué
 
-- **Continente**: paredes, suelos, instalaciones y elementos fijos.
-- **Responsabilidad civil** como propietario: daños a vecinos o terceros.
-- **Daños por agua**: incluida la localización y reparación de la fuga.
-- **Incendio, explosión y fenómenos atmosféricos**.
-- **Actos vandálicos** del inquilino: no todas las pólizas lo cubren. Pregúntalo.
-- **Asistencia** 24 h: fontanería, cerrajería, electricidad.
+| Qué | Lo asegura | Por qué |
+|---|---|---|
+| **Continente** (paredes, suelos, instalaciones, cocina y baños fijos) | Propietario | Es tu inmueble |
+| **Contenido del propietario** (muebles y electrodomésticos si alquilas amueblado) | Propietario | Son tuyos |
+| **Responsabilidad civil del propietario** (daños a vecinos por algo del inmueble, como una tubería) | Propietario | Respondes como dueño |
+| **Contenido del inquilino** (sus muebles, ropa, aparatos) | Inquilino | Son suyos |
+| **Responsabilidad civil del inquilino** (daños por un descuido suyo, como un grifo abierto) | Inquilino | Responde como ocupante |
+| **Zonas comunes del edificio** | Comunidad de propietarios | Las cubre la póliza de la comunidad |
+
+## Coberturas clave para el propietario
+
+- **Continente** con capital suficiente para reconstruir el piso (no el precio de mercado, que incluye el suelo).
+- **Responsabilidad civil** como propietario.
+- **Daños por agua**, con localización y reparación de la fuga: es el siniestro más habitual.
+- **Incendio, explosión y fenómenos atmosféricos.**
+- **Actos vandálicos causados por el inquilino**: no todas las pólizas lo cubren. Pregúntalo.
+- **Asistencia 24 h**: fontanería, cerrajería, electricidad.
+- **Defensa jurídica**, útil para conflictos con el inquilino o los vecinos.
 
 ## Si alquilas amueblado
 
-Asegura también el **contenido** que es tuyo: muebles y electrodomésticos.
+Asegura también el **contenido** que es tuyo y guarda un **inventario con fotos** firmado al inicio del contrato: te servirá con la aseguradora y en el [documento de finalización](/blog/documento-finalizacion-contrato-alquiler-plantilla) al terminar.
+
+## Avisa de que está alquilado
+
+Comunica a la aseguradora que el piso está **alquilado**: algunas pólizas cambian condiciones o coberturas si el asegurado no vive en él. Y si va a estar **vacío** una temporada, pregunta también: hay pólizas que limitan coberturas tras cierto tiempo sin ocupar.
+
+## ¿Y el inquilino?
+
+Es buena idea **recomendarle** que tenga su propio seguro de hogar con responsabilidad civil. Lo que no puedes es exigirle un **seguro de impago** u otras coberturas análogas: lo prohíbe el artículo 36.5 de la LAU tras el decreto de octubre de 2026.
 
 ## Diferencia con el seguro de impago
 
-El seguro de hogar **no** cubre que el inquilino deje de pagar. Para eso existe el **seguro de impago**, que puedes contratar aparte.
+El seguro de hogar **no** cubre que el inquilino deje de pagar. Para eso existe el **seguro de impago**, que contrata y paga el propietario si lo quiere: [cuánto cuesta y qué mirar](/blog/seguro-de-impago-cuanto-cuesta-y-que-mirar).
 
-## Consejo
+## En la declaración de la renta
 
-Avisa a tu aseguradora de que el piso está alquilado: algunas pólizas cambian las condiciones si no lo sabe.`,
+La prima del seguro del piso alquilado es un **gasto deducible** del rendimiento del alquiler: [cómo declarar el alquiler](/blog/como-declarar-el-alquiler-en-la-renta).`,
   },
   {
     slug: 'primer-mes-tras-firmar-el-alquiler-propietario',

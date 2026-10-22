@@ -130,7 +130,8 @@ async function migrate(d: Driver) {
 // v40: inquilinos ante un desahucio con la enervación extraordinaria.
 // v41: alquiler con opción a compra ampliado.
 // v42: aviso a Madrid en el artículo de zonas tensionadas.
-const BLOG_SEED_VERSION = 42
+// v43: seguro de hogar del propietario ampliado.
+const BLOG_SEED_VERSION = 43
 
 // v6: artículos «2026» como gancho pasan a «2027». Las URLs cambian; las antiguas redirigen con 301 (nuxt.config).
 const BLOG_SLUG_RENAMES: [string, string][] = [
