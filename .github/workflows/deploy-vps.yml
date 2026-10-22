@@ -68,22 +68,38 @@ jobs:
       name: produccion
       url: https://rentahucha.es
     steps:
+      # Si GitHub ejecuta los despliegues fuera de orden, uno antiguo no debe pisar a uno más reciente:
+      # solo se despliega si este commit sigue siendo el último de main.
+      - name: Comprobar que es el último commit de main
+        id: latest
+        run: |
+          latest=$(git ls-remote "https://github.com/${{ github.repository }}" refs/heads/main | cut -f1)
+          if [ "${{ github.event_name }}" = push ] && [ "$latest" != "${{ github.sha }}" ]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            echo "Hay un commit más reciente en main ($latest): no se despliega este."
+          fi
       - uses: actions/checkout@v4
+        if: steps.latest.outputs.skip != 'true'
       - uses: actions/setup-node@v4
+        if: steps.latest.outputs.skip != 'true'
         with:
           node-version: 22
           cache: npm
       # `npm install` y no `npm ci`: el lockfile se genera con un npm local más antiguo que el de GitHub.
       - run: npm install --no-audit --no-fund
+        if: steps.latest.outputs.skip != 'true'
       - name: Preparar acceso SSH
+        if: steps.latest.outputs.skip != 'true'
         run: |
           install -m 700 -d ~/.ssh
           printf '%s\n' "${{ secrets.DEPLOY_SSH_KEY }}" > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
           printf '%s\n' "${{ secrets.DEPLOY_KNOWN_HOSTS }}" > ~/.ssh/known_hosts
       - name: Desplegar
+        if: steps.latest.outputs.skip != 'true'
         run: DEPLOY_KEY="$HOME/.ssh/deploy_key" bash scripts/deploy.sh
         env:
           DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
       - name: Comprobar la web
+        if: steps.latest.outputs.skip != 'true'
         run: curl -fsS -o /dev/null -w "rentahucha.es responde %{http_code}\n" https://rentahucha.es/
