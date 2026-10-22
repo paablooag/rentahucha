@@ -100,7 +100,7 @@ ${NOTA}
 - **Habitaciones**: en zonas tensionadas, la suma de lo que se cobra por las habitaciones no puede superar la renta del piso completo.
 
 **Fiscalidad**
-- Deducción del 10 % en el IRPF para inquilinos con ingresos inferiores a 33.007,20 €.
+- Deducción del 10 % del alquiler en el IRPF para inquilinos con base imponible inferior a 33.007,20 € (hasta 1.163 € al año): [requisitos y ejemplos](/blog/deduccion-irpf-10-por-ciento-inquilinos).
 - Deducciones de hasta el 100 % para el casero, si no es gran tenedor, que rebaje la renta más de un 5 % en determinados casos.
 - Posibles recargos de IBI para viviendas turísticas y para pisos vacíos de quien tenga muchos.
 
@@ -342,21 +342,43 @@ Si vas a compartir, lee [cómo repartir gastos y quién firma el contrato](/blog
   },
   {
     slug: 'deduccion-irpf-10-por-ciento-inquilinos',
-    title: 'Nueva deducción del 10 % en el IRPF para inquilinos: requisitos',
-    excerpt: 'Ingresos por debajo de 33.007,20 € y alquiler de vivienda habitual: quién podría aplicarla y qué guardar desde ya.',
+    title: 'Deducción del 10 % del alquiler en el IRPF para inquilinos: requisitos, límites y ejemplos',
+    excerpt: 'Con base imponible inferior a 33.007,20 € puedes deducirte el 10 % de lo que pagas de alquiler, hasta 1.163 € al año. Requisitos exactos del BOE, cómo baja el límite según tu base y ejemplos.',
     audience: 'inquilinos',
     category: CAT,
     publishedAt: D,
-    body: `El decreto de vivienda de octubre de 2026 incluye una **deducción estatal del 10 %** en el IRPF por el alquiler de la vivienda habitual.
+    body: `El Real Decreto-ley 29/2026 añade al IRPF una **deducción estatal por alquiler de la vivienda habitual**: el **10 %** de lo que pagas de alquiler, con un máximo de **1.163 € al año**, si tu base imponible es inferior a **33.007,20 €**.
 
 ${NOTA}
 
-## Requisitos principales
+## Requisitos (artículo 68.6 de la Ley del IRPF)
 
-- Alquiler de tu **vivienda habitual**.
-- Ingresos inferiores a **33.007,20 €**.
+- Que sea el alquiler de tu **vivienda habitual**.
+- **Base imponible inferior a 33.007,20 € al año.** Ojo: es la base imponible de tu declaración, no tu sueldo bruto ni tus ingresos totales.
+- Que, durante al menos la mitad del año, ni tú ni nadie de tu unidad familiar seáis **propietarios (o usufructuarios) de otra vivienda a menos de 50 km** de la que alquilas, salvo que una resolución administrativa o judicial os impida usarla.
 
-Los detalles exactos (base máxima, periodo y forma de declararlo) están en el texto del BOE y se desarrollarán en la campaña de la renta. Consulta la información de la Agencia Tributaria cuando se publique.
+## Cuánto puedes deducir
+
+Se deduce el 10 % de lo pagado, pero sobre una **base máxima** que depende de tu base imponible:
+
+| Tu base imponible | Base máxima de la deducción | Deducción máxima |
+|---|---|---|
+| Hasta 23.007,20 € | 11.630 € al año | 1.163 € |
+| Entre 23.007,20 € y 33.007,20 € | 11.630 € menos 1,163 × (base imponible − 23.007,20 €) | Baja poco a poco hasta 0 € |
+| Desde 33.007,20 € | — | Sin deducción |
+
+## Ejemplos
+
+| Base imponible | Alquiler | Base máxima | Deducción |
+|---|---|---|---|
+| 18.000 € | 800 €/mes (9.600 €/año) | 11.630 € | **960 €** |
+| 26.000 € | 800 €/mes (9.600 €/año) | 8.149,37 € | **814,94 €** |
+| 30.000 € | 900 €/mes (10.800 €/año) | 3.497,37 € | **349,74 €** |
+| 33.500 € | 700 €/mes | 0 € | Sin deducción |
+
+## Desde cuándo
+
+El decreto la introduce con efectos desde su entrada en vigor, el **8 de octubre de 2026**, y depende de que se convalide. Cómo se aplicará exactamente en la declaración (por ejemplo, qué pagos de 2026 cuentan) lo concretará la Agencia Tributaria en la campaña de la renta: consulta su web cuando se publique.
 
 ## Qué guardar desde ya
 
@@ -366,14 +388,20 @@ Los detalles exactos (base máxima, periodo y forma de declararlo) están en el 
 
 ## Compatibilidad con otras ayudas
 
-- Muchas comunidades autónomas tienen **deducciones propias** por alquiler.
+- Muchas comunidades autónomas tienen **deducciones propias** por alquiler, que no dependen de este decreto.
 - Hay ayudas directas, como los programas autonómicos del Plan Estatal de Vivienda.
 
 Revisa las condiciones de compatibilidad de cada una.
 
 ## Si el decreto no se convalida
 
-La deducción estatal decaería. Las deducciones autonómicas no dependen de este decreto.`,
+La deducción estatal decaería. Las deducciones autonómicas seguirían igual.
+
+¿Buscas piso? Mira [cuánto alquiler puedes pagar con tu sueldo](/herramientas/cuanto-alquiler-puedo-pagar) y [pisos revisados en RentaHucha](/pisos), donde escribes al propietario sin dar tu teléfono.
+
+## Fuentes
+
+- BOE: [Real Decreto-ley 29/2026, de 6 de octubre](https://www.boe.es/buscar/act.php?id=BOE-A-2026-20823), artículo 6 (nuevo apartado 6 del artículo 68 de la Ley del IRPF). Consultado el 22-10-2026.`,
   },
   {
     slug: 'bonificaciones-fiscales-caseros-que-bajan-el-alquiler',
