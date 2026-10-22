@@ -613,7 +613,7 @@ Denuncia en la Policía o la Guardia Civil con todas las pruebas, y avisa al por
   {
     slug: 'casero-no-hace-reparaciones-que-hacer',
     title: 'El casero no hace las reparaciones: qué puedes hacer',
-    excerpt: 'Qué reparaciones le corresponden, cómo reclamarlas por escrito y cuándo puedes repararlo tú y pedir el reembolso.',
+    excerpt: 'Qué reparaciones le corresponden, cómo reclamarlas y, desde el decreto de octubre de 2026, cómo puedes repararlo tú y descontarlo de la renta si no responde en 15 días.',
     audience: 'inquilinos',
     category: 'Derechos',
     publishedAt: D,
@@ -633,6 +633,16 @@ Las **pequeñas reparaciones** por el uso diario: una bombilla, un tirador, desa
 2. Si no responde en un plazo razonable, envía un **burofax**.
 3. Guarda todas las comunicaciones.
 
+## Novedad: 15 días para responder (decreto de octubre de 2026)
+
+Con el Real Decreto-ley 29/2026 (en vigor desde el 8 de octubre y pendiente de convalidación), cuando hay daños que afectan a la **habitabilidad, la seguridad o la salubridad** de la vivienda, o hacen falta reparaciones de conservación:
+
+1. El inquilino puede **pedir la reparación por escrito**, adjuntando un **presupuesto razonable**.
+2. El propietario tiene **15 días naturales** para **aceptar** el presupuesto, **proponer otra reparación** o **hacerla directamente**.
+3. Si no responde o se niega sin justificación, el inquilino puede **hacer la obra y descontar su importe de las rentas siguientes**, con un coste razonable y acreditado con facturas.
+
+En la **vivienda temporal** (temporada) es aún más estricto: el propietario también se ocupa de las pequeñas reparaciones por el uso ordinario y debe responder en **5 días hábiles**; si no, el inquilino puede repararlo y pedir el importe o descontarlo de la renta del mes siguiente.
+
 ## Reparaciones urgentes
 
 La LAU permite al inquilino hacer las **reparaciones urgentes** para evitar un daño inminente o una incomodidad grave, y exigir su importe al propietario, **comunicándoselo antes**.
@@ -643,9 +653,11 @@ La LAU permite al inquilino hacer las **reparaciones urgentes** para evitar un d
 - Asociaciones de inquilinos o de consumidores.
 - Como último recurso, la vía judicial.
 
-## No dejes de pagar la renta
+## No dejes de pagar la renta por tu cuenta
 
-Aunque haya una reparación pendiente, dejar de pagar puede justificar un desahucio. Reclama por las vías adecuadas.`,
+Aunque haya una reparación pendiente, **no retengas la renta sin más**: dejar de pagar puede justificar un desahucio. Lo que permite el decreto es **descontar el coste de una reparación ya hecha**, siguiendo el procedimiento (requerimiento por escrito con presupuesto, 15 días sin respuesta o negativa injustificada, coste razonable y facturas).
+
+Fuente: BOE, [Real Decreto-ley 29/2026](https://www.boe.es/buscar/act.php?id=BOE-A-2026-20823), artículo 3 (nuevo apartado 5 del artículo 21 y nuevo artículo 21 bis de la LAU). Consultado el 22-10-2026.`,
   },
   {
     slug: 'checklist-primer-dia-en-tu-piso-de-alquiler',

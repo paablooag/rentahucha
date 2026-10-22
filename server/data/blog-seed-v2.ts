@@ -137,7 +137,7 @@ Hacemos el inventario con fotos en la entrega y lo dejamos firmado digitalmente 
   {
     slug: 'reparaciones-quien-paga-propietario-o-inquilino',
     title: 'Reparaciones: qué paga el propietario y qué paga el inquilino',
-    excerpt: 'La ley distingue entre conservar la vivienda y las pequeñas reparaciones del día a día. Te explicamos el reparto con ejemplos.',
+    excerpt: 'La ley distingue entre conservar la vivienda y las pequeñas reparaciones del día a día. Con ejemplos y la novedad del decreto de octubre de 2026: tienes 15 días para responder o el inquilino puede repararlo y descontarlo de la renta.',
     audience: 'propietarios',
     category: 'Legal',
     publishedAt: D,
@@ -161,6 +161,16 @@ Hacemos el inventario con fotos en la entrega y lo dejamos firmado digitalmente 
 | Desatascar un desagüe por mal uso | Inquilino |
 | Persiana rota por un golpe | Inquilino |
 
+## Novedad: 15 días para responder (decreto de octubre de 2026)
+
+Con el Real Decreto-ley 29/2026 (en vigor desde el 8 de octubre y pendiente de convalidación), cuando hay daños que afectan a la **habitabilidad, la seguridad o la salubridad** de la vivienda, o hacen falta reparaciones de conservación:
+
+1. El inquilino puede **pedir la reparación por escrito**, adjuntando un **presupuesto razonable**.
+2. El propietario tiene **15 días naturales** para **aceptar** el presupuesto, **proponer otra reparación** o **hacerla directamente**.
+3. Si no responde o se niega sin justificación, el inquilino puede **hacer la obra y descontar su importe de las rentas siguientes**, con un coste razonable y acreditado con facturas.
+
+En la **vivienda temporal** (temporada) es aún más estricto: el propietario también se ocupa de las pequeñas reparaciones por el uso ordinario y debe responder en **5 días hábiles**; si no, el inquilino puede repararlo y pedir el importe o descontarlo de la renta del mes siguiente.
+
 ## Cómo comunicarlo
 
 El inquilino debe avisar cuanto antes de cualquier avería que tenga que reparar el propietario. Si es urgente para evitar un daño mayor, puede hacerla él y reclamar después su importe.
@@ -171,7 +181,9 @@ El inquilino debe avisar cuanto antes de cualquier avería que tenga que reparar
 - Pide siempre fotos y factura de cada reparación.
 - Revisa la caldera y el termo de forma periódica: la mayoría de las averías caras se avisan antes.
 
-Con nuestra plataforma, el inquilino reporta la incidencia con fotos desde la app y queda registro de todo el proceso.`,
+Desde el lanzamiento de RentaHucha, el inquilino podrá reportar la incidencia con fotos en el panel y quedará registro de todo el proceso, con las fechas, algo especialmente útil con el nuevo plazo de 15 días.
+
+Fuente: BOE, [Real Decreto-ley 29/2026](https://www.boe.es/buscar/act.php?id=BOE-A-2026-20823), artículo 3 (nuevo apartado 5 del artículo 21 y nuevo artículo 21 bis de la LAU). Consultado el 22-10-2026.`,
   },
   {
     slug: 'ibi-comunidad-y-suministros-quien-los-paga',

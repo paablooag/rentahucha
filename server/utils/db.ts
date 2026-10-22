@@ -135,7 +135,9 @@ async function migrate(d: Driver) {
 // v45: desistimiento sin indemnización y tributos no repercutibles (RDL 29/2026).
 // v46: IBI y desistimiento en la guía del decreto.
 // v47: tanteo y retracto según el nuevo art. 25 LAU (sin renuncia, ventas conjuntas).
-const BLOG_SEED_VERSION = 47
+// v48: venta del piso alquilado en la guía del decreto.
+// v49: reparaciones con el plazo de 15 días y descuento en la renta (art. 21.5 LAU).
+const BLOG_SEED_VERSION = 49
 
 // v6: artículos «2026» como gancho pasan a «2027». Las URLs cambian; las antiguas redirigen con 301 (nuxt.config).
 const BLOG_SLUG_RENAMES: [string, string][] = [

@@ -105,6 +105,8 @@ ${NOTA}
 | IBI y tributos | En los contratos nuevos, no pueden imponerse al inquilino | [Quién paga cada gasto](/blog/ibi-comunidad-y-suministros-quien-los-paga) |
 | Desistimiento | En los contratos nuevos, si el inquilino se va pasados 6 meses (avisando con 30 días), no hay indemnización | [Si tu inquilino se va antes](/blog/inquilino-quiere-irse-antes-indemnizacion) |
 | Fin del contrato | Documento de finalización obligatorio; si no se firma, se presume que el piso se entregó bien | [Plantilla](/blog/documento-finalizacion-contrato-alquiler-plantilla) |
+| Reparaciones | Si hay daños de habitabilidad, tienes 15 días para responder al presupuesto del inquilino; si no, puede repararlo y descontarlo de la renta | [Quién paga qué](/blog/reparaciones-quien-paga-propietario-o-inquilino) |
+| Venta del piso alquilado | El inquilino tiene tanteo y retracto y ya no se puede pactar que renuncie; reglas nuevas en ventas conjuntas | [Cómo notificarlo](/blog/derecho-de-tanteo-y-retracto-como-notificar) |
 | Gran tenedor | Más de 10 viviendas o 1.500 m² (5 o más en zona tensionada si se declara), con certificado del Registro | [¿Soy gran tenedor?](/blog/como-saber-si-eres-gran-tenedor) |
 | IRPF del propietario | Contratos posteriores al 1-12-2026: reducción del 15 % al 100 % según bajes, mantengas o subas la renta | [Calculadora](/herramientas/reduccion-irpf-alquiler) |
 | IRPF del inquilino | Deducción del 10 % del alquiler, hasta 1.163 € al año, con base imponible inferior a 33.007,20 € | [Requisitos](/blog/deduccion-irpf-10-por-ciento-inquilinos) |
