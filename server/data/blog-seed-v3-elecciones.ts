@@ -728,7 +728,7 @@ Los contratos se rigen por la ley **vigente cuando se firmaron**. Las leyes nuev
   {
     slug: 'firmar-alquiler-ahora-o-despues-de-las-elecciones',
     title: '¿Firmar un alquiler ahora o esperar a después de las elecciones?',
-    excerpt: 'Pros y contras objetivos de firmar antes o después del 29-N si tienes un piso para alquilar. Sin predicciones: solo hechos.',
+    excerpt: 'Pros y contras objetivos de firmar antes o después del 29-N si tienes un piso para alquilar, y por qué el 1 de diciembre de 2026 importa para tu IRPF. Sin predicciones: solo hechos.',
     audience: 'propietarios',
     category: CAT,
     publishedAt: D,
@@ -747,6 +747,33 @@ Los contratos se rigen por la ley **vigente cuando se firmaron**. Las leyes nuev
 | Ingresas desde ya | Cada mes vacío es renta que no recuperas |
 | Normas conocidas | Incertidumbre sobre plazos y contenidos |
 | Contrato estable para ambos | Posibles cambios, en cualquier dirección |
+
+## Las fechas que ya están en el calendario
+
+| Fecha | Qué pasa |
+|---|---|
+| 8 de octubre de 2026 | Entra en vigor el Real Decreto-ley 29/2026 (pendiente de convalidación) |
+| 12 de noviembre de 2026 | Votación prevista de la convalidación, según la prensa (sin convocatoria oficial a esta fecha) |
+| 29 de noviembre de 2026 | Elecciones generales |
+| 1 de diciembre de 2026 | Fecha de corte de la nueva reducción del IRPF por alquiler (ver abajo) |
+| 31 de diciembre de 2027 | Fin del límite extraordinario del 2 % a la actualización de rentas |
+
+## Una fecha que sí cambia las cuentas: el 1 de diciembre (IRPF)
+
+Si el decreto se convalida, la reducción del IRPF por alquilar vivienda depende de **cuándo firmes**:
+
+- **Contratos firmados hasta el 1 de diciembre de 2026**: se mantiene el régimen de la Ley 12/2023 (en general, un 50 %; hasta un 90 % en ciertos casos de zona tensionada).
+- **Contratos firmados después**: el nuevo régimen, que premia **bajar la renta** o quedarse por debajo del índice de referencia (hasta el 100 %) y reduce mucho la ventaja si la **subes** respecto al contrato anterior (del 40 % al 15 %).
+
+En la práctica, según el plan que tengas:
+
+| Si vas a… | Te conviene mirar |
+|---|---|
+| Subir la renta respecto al último contrato | Firmar antes del 1 de diciembre mantiene la reducción general del 50 % |
+| Mantener la renta | En los dos casos, en general, un 50 % |
+| Bajarla más de un 5 % o quedarte por debajo del índice | Después del 1 de diciembre puedes llegar al 70 %-100 % |
+
+Los detalles, con tablas y ejemplos, en [la reducción del IRPF por alquilar desde diciembre de 2026](/blog/reduccion-irpf-alquiler-vivienda-2027-hasta-100). Si el decreto no se convalida, decae y no cambia nada de esto.
 
 ## El coste de esperar
 
