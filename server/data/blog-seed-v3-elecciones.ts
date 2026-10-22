@@ -745,7 +745,9 @@ Unas elecciones generales cambian el Gobierno central y las Cortes. Muchas medid
     audience: 'propietarios',
     category: CAT,
     publishedAt: D,
-    body: `La **Ley 12/2023** creó las zonas de mercado residencial tensionado. Las declara cada comunidad autónoma, municipio a municipio o por barrios.
+    body: `> **¿Buscas Madrid?** A octubre de 2026 no hay ninguna zona tensionada declarada en la Comunidad de Madrid: [¿es Madrid zona tensionada?](/blog/madrid-zona-tensionada-alquiler). Para otras ciudades, consulta las [guías por ciudad](/alquilar-mi-piso).
+
+La **Ley 12/2023** creó las zonas de mercado residencial tensionado. Las declara cada comunidad autónoma, municipio a municipio o por barrios.
 
 ## Requisitos para declararlas
 
