@@ -376,4 +376,59 @@ Cópiala y adáptala. Rellenadla juntos el día de la entrega de llaves.
 
 - BOE: [Real Decreto-ley 29/2026, de 6 de octubre](https://www.boe.es/buscar/act.php?id=BOE-A-2026-20823), artículo 3 (nuevo apartado 7 del artículo 36 de la LAU). Consultado el 22-10-2026.`,
   },
+  {
+    slug: 'prorroga-extraordinaria-cuando-puede-negarse-el-propietario',
+    title: '¿Puedo negarme a la prórroga extraordinaria del alquiler? Cuándo sí y cómo hacerlo (propietarios)',
+    excerpt: 'El decreto de octubre de 2026 obliga a aceptar la prórroga extraordinaria de hasta dos años, salvo excepciones: inquilino sin ocho meses al día, nuevo acuerdo o contrato, rebaja de la renta de al menos un 5 % o necesidad de la vivienda para ti o un familiar. Plazos y pasos.',
+    audience: 'propietarios',
+    category: 'Legal',
+    publishedAt: '2026-10-22',
+    body: `**Respuesta corta:** en general, **no**: si el inquilino cumple los requisitos y la pide, el Real Decreto-ley 29/2026 obliga al propietario a aceptar la **prórroga extraordinaria** de hasta dos años. Pero hay **excepciones** concretas, y conviene conocerlas antes de que termine el contrato.
+
+> **Actualizado a 22 de octubre de 2026.** El decreto está en vigor desde el 8 de octubre y pendiente de convalidación por el Congreso. Si no se convalida, la prórroga extraordinaria decae.
+
+## Cuándo puede pedirla el inquilino
+
+- Contrato de **vivienda habitual** vigente el 8 de octubre de 2026.
+- Su **periodo de prórroga obligatoria** (5 años, o 7 si el arrendador es empresa) termina **antes del 31 de diciembre de 2028**, o termina la prórroga tácita.
+- Está **al corriente de pago** y lo ha estado cada mes durante los **ocho meses anteriores**.
+
+Si se cumple, la prórroga es por **años, hasta dos**, en las **mismas condiciones** del contrato.
+
+## Cuándo no tienes que aceptarla
+
+| Situación | Por qué |
+|---|---|
+| El inquilino **no ha pagado** puntualmente los últimos ocho meses | No cumple el requisito |
+| **Acordáis otras condiciones** o firmáis un **contrato nuevo** | La propia norma lo excluye |
+| Renováis o firmáis un contrato nuevo con una renta **al menos un 5 % más baja** | La prórroga extraordinaria no se aplica en ese caso |
+| **Necesitas la vivienda** para ti o un familiar y lo comunicas en plazo | Excepción expresa, aunque no estuviera prevista en el contrato |
+| Ya le corresponde la prórroga de **zona tensionada** (art. 10.3 de la LAU) | Esa se aplica con preferencia |
+
+## Si necesitas la vivienda: cómo hacerlo bien
+
+El decreto remite a los plazos y condiciones del **artículo 9.3 de la LAU**:
+
+1. La necesidad debe ser para vivienda permanente **tuya**, de un **familiar en primer grado** (padres o hijos) o de tu **cónyuge** en caso de separación, divorcio o nulidad.
+2. Comunícalo **por escrito** y con prueba de entrega (burofax), indicando la causa, **al menos dos meses antes** de la fecha en que necesites la vivienda.
+3. La necesidad tiene que ser **real y acreditable**: guarda la documentación.
+4. Si en los **tres meses** siguientes a que el inquilino se vaya no la ocupáis, el inquilino puede pedir **volver** (por un nuevo periodo de hasta cinco años, con los gastos del desalojo) o una **indemnización** de una mensualidad por cada año que faltara hasta cinco, salvo fuerza mayor.
+
+## La opción de bajar la renta
+
+Si prefieres renovar, un contrato nuevo con una **renta al menos un 5 % más baja** excluye la prórroga extraordinaria. Además, si se firma después del 1 de diciembre de 2026, esa rebaja puede darte una **reducción del IRPF del 70 % al 100 %**: [calcula tu caso](/herramientas/reduccion-irpf-alquiler).
+
+## Lo que no debes hacer
+
+- Negarte sin una de estas causas: si el inquilino la pide y cumple los requisitos, la aceptación es obligatoria.
+- Cambiar la cerradura, cortar suministros o presionar al inquilino: puede ser delito.
+- Alegar una necesidad que no es real: te expones a reponer al inquilino o a indemnizarle.
+
+Todas las medidas del decreto, en la [guía para propietarios](/blog/decretos-de-vivienda-octubre-2026-explicados). La versión para inquilinos está en [prórroga extraordinaria: quién puede pedirla](/blog/prorroga-extraordinaria-alquiler-2026-quien-puede-pedirla).
+
+## Fuentes
+
+- BOE: [Real Decreto-ley 29/2026](https://www.boe.es/buscar/act.php?id=BOE-A-2026-20823), disposición final quinta.
+- BOE: [Ley 29/1994, de Arrendamientos Urbanos](https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003), artículo 9.3. Consultados el 22-10-2026.`,
+  },
 ]

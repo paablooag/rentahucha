@@ -167,7 +167,7 @@ ${NOTA}
 - Si renováis o firmáis un contrato nuevo con una renta **al menos un 5 % más baja**.
 - Si comunica, en los plazos del artículo 9.3 de la LAU, que **necesita la vivienda para sí o para un familiar**, aunque no lo previera el contrato, siempre que la necesidad sea real y acreditada.
 
-En zona tensionada, si te corresponde la prórroga extraordinaria del artículo 10.3 de la LAU, se aplica esa con preferencia.
+En zona tensionada, si te corresponde la prórroga extraordinaria del artículo 10.3 de la LAU, se aplica esa con preferencia. (Si eres propietario, lee [cuándo puedes negarte](/blog/prorroga-extraordinaria-cuando-puede-negarse-el-propietario).)
 
 ## Cómo pedirla
 
