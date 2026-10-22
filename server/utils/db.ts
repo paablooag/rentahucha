@@ -113,7 +113,8 @@ async function migrate(d: Driver) {
 // v23: IVA del 10 % en reformas de pisos alquilados como vivienda habitual (RDL 29/2026, desde el 1-12-2026).
 // v24: recargos del IBI (pisos vacíos y turísticos) según el texto del RDL 29/2026.
 // v25: alquiler de temporada según el RDL 29/2026 (vivienda temporal, causa, garantía de una mensualidad, desistimiento).
-const BLOG_SEED_VERSION = 25
+// v26: documento de finalización del arrendamiento (art. 36.7 LAU) con plantilla.
+const BLOG_SEED_VERSION = 26
 
 // v6: artículos «2026» como gancho pasan a «2027». Las URLs cambian; las antiguas redirigen con 301 (nuxt.config).
 const BLOG_SLUG_RENAMES: [string, string][] = [

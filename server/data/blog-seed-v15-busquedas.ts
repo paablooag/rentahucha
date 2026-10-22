@@ -295,4 +295,79 @@ Van en sentido contrario. Desde la misma fecha, el alquiler de viviendas amuebla
 
 - BOE: [Real Decreto-ley 29/2026, de 6 de octubre](https://www.boe.es/buscar/act.php?id=BOE-A-2026-20823), artículo 7 (modificación de los artículos 20.Uno.23.º y 91.Uno.2 de la Ley 37/1992 del IVA), con efectos desde el 1 de diciembre de 2026. Consultado el 22-10-2026.`,
   },
+  {
+    slug: 'documento-finalizacion-contrato-alquiler-plantilla',
+    title: 'Documento de finalización del alquiler: qué es, por qué es obligatorio y plantilla para copiar',
+    excerpt: 'Desde octubre de 2026, al terminar el alquiler propietario e inquilino deben firmar un documento con el estado de la vivienda. Si no se firma, se presume que se entregó bien. Qué debe incluir y una plantilla gratis.',
+    audience: 'propietarios',
+    category: 'Legal',
+    publishedAt: '2026-10-22',
+    body: `**Respuesta corta:** el Real Decreto-ley 29/2026 añade un apartado 7 al artículo 36 de la Ley de Arrendamientos Urbanos: **al terminar el contrato, las partes deben dejar constancia por escrito del estado de la vivienda** en un **documento de finalización del arrendamiento** firmado por ambas. Si no se firma, o si no recoge ningún desperfecto, **se presume que la vivienda se entregó en buen estado**, salvo prueba en contrario.
+
+> **Actualizado a 22 de octubre de 2026.** El decreto está en vigor desde el 8 de octubre y pendiente de convalidación por el Congreso.
+
+## Por qué te importa (seas propietario o inquilino)
+
+- **Propietario:** si hay desperfectos y no los escribes en el documento, después será difícil descontarlos de la fianza: la ley presume que el piso se entregó bien.
+- **Inquilino:** el documento firmado te protege frente a reclamaciones posteriores y agiliza la devolución de la fianza.
+
+## Qué debe incluir
+
+- Identificación de las partes, de la vivienda y del contrato.
+- **Fecha y hora** de entrega de llaves (y cuántas llaves se devuelven).
+- **Lecturas de contadores** (luz, agua, gas).
+- **Estado de cada estancia** y del mobiliario, comparado con el **inventario inicial**.
+- **Desperfectos** concretos, si los hay, distinguiendo el desgaste por el uso normal (que no es un desperfecto).
+- Qué pasa con la **fianza**: si se devuelve entera o qué se descuenta y por qué.
+- **Firmas** de ambas partes. Adjuntad fotos fechadas.
+
+## Plantilla
+
+Cópiala y adáptala. Rellenadla juntos el día de la entrega de llaves.
+
+> **DOCUMENTO DE FINALIZACIÓN DEL ARRENDAMIENTO**
+> (artículo 36.7 de la Ley 29/1994, de Arrendamientos Urbanos)
+>
+> En [ciudad], a [fecha], a las [hora].
+>
+> **Arrendador/a:** [nombre y apellidos], con DNI/NIE [número].
+> **Arrendatario/a:** [nombre y apellidos], con DNI/NIE [número].
+> **Vivienda:** [dirección completa], referencia catastral [número].
+> **Contrato** de fecha [fecha de firma].
+>
+> **1. Entrega de la posesión.** El arrendatario entrega en este acto la posesión de la vivienda y [número] llaves / mandos. El arrendador las recibe.
+>
+> **2. Contadores.** Luz: [lectura]. Agua: [lectura]. Gas: [lectura].
+>
+> **3. Estado de la vivienda**, comparado con el inventario inicial de fecha [fecha]:
+> - Entrada y salón: [estado].
+> - Cocina y electrodomésticos: [estado].
+> - Baño(s): [estado].
+> - Dormitorio(s): [estado].
+> - Mobiliario: [estado].
+> - Otros (terraza, trastero, garaje): [estado].
+>
+> **4. Desperfectos** (excluido el desgaste por el uso normal): [descripción concreta de cada uno, o «Ninguno»].
+>
+> **5. Fianza.** Importe: [importe] €. Se devuelve: [íntegra / [importe] € descontando [concepto e importe justificado]], mediante [transferencia a la cuenta …] en el plazo de [días] (como máximo, un mes desde la entrega de llaves).
+>
+> **6. Anexos.** [número] fotografías fechadas.
+>
+> Firmado por ambas partes:
+>
+> Arrendador/a: ____________________  Arrendatario/a: ____________________
+
+## Consejos
+
+- Haced la revisión **juntos**, con el inventario inicial delante.
+- Si no estáis de acuerdo en algún punto, **escribidlo igualmente** en el documento («el arrendatario no está conforme con…»): es mejor que no dejar constancia.
+- La fianza se devuelve en el plazo de **un mes** desde la entrega de llaves; si no, genera intereses.
+- Prepara el final desde el principio: un buen **inventario con fotos** al firmar el contrato lo facilita todo. Lo tienes en la [checklist para alquilar tu piso](/herramientas/checklist-alquilar-piso).
+
+*Plantilla orientativa. Para situaciones complejas o con desacuerdo, consulta con un profesional.*
+
+## Fuentes
+
+- BOE: [Real Decreto-ley 29/2026, de 6 de octubre](https://www.boe.es/buscar/act.php?id=BOE-A-2026-20823), artículo 3 (nuevo apartado 7 del artículo 36 de la LAU). Consultado el 22-10-2026.`,
+  },
 ]
