@@ -123,6 +123,11 @@ const faqs = [
           <p class="lead">Rentas perdidas, abogado, reparaciones y meses vacío. Ajusta los valores a tu caso.</p>
         </div>
         <ImpagoCalculator />
+        <NuxtLink to="/herramientas/reduccion-irpf-alquiler" class="checklist-banner">
+          <span class="icon-chip chip-green"><AppIcon name="calc" /></span>
+          <span><strong>Nuevo: ¿cuánto IRPF pagarás por tu alquiler desde diciembre?</strong><span class="muted small">Si se convalida el decreto de octubre, la reducción puede llegar al 100 % en los contratos nuevos. Compara firmar antes o después del 1 de diciembre.</span></span>
+          <AppIcon name="arrow" :size="18" />
+        </NuxtLink>
         <NuxtLink to="/valoracion-alquiler" class="checklist-banner">
           <span class="icon-chip chip-green"><AppIcon name="euro" /></span>
           <span><strong>¿Cuánto puedes pedir por tu piso? Valoración gratis</strong><span class="muted small">Te enviamos una horquilla con pisos comparables de tu zona en menos de 48 horas laborables.</span></span>

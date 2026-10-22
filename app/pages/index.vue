@@ -46,6 +46,9 @@ const faqs = [
             <AppIcon name="arrow" class="go" />
           </NuxtLink>
         </div>
+        <NuxtLink to="/herramientas/reduccion-irpf-alquiler" class="news">
+          <span class="news-tag">Nuevo</span> ¿Cuánto IRPF pagarás por tu alquiler desde diciembre? Calcúlalo <AppIcon name="arrow" :size="16" />
+        </NuxtLink>
       </div>
     </section>
 
@@ -154,6 +157,9 @@ const faqs = [
 </template>
 
 <style scoped>
+.news { display: inline-flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 22px; color: #e8e8e8; text-decoration: none; font-size: 0.95rem; }
+.news:hover { color: #fff; text-decoration: underline; }
+.news-tag { background: var(--lime); color: var(--ink); font-size: 0.75rem; font-weight: 700; padding: 3px 9px; border-radius: 999px; text-transform: uppercase; letter-spacing: 0.04em; }
 .hero { min-height: min(100svh, 820px); display: flex; align-items: center; }
 .hero h1 { max-width: 18ch; }
 .hero .lead { max-width: 56ch; }

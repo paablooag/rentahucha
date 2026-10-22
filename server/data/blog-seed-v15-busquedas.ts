@@ -167,4 +167,74 @@ Más sobre la declaración: [cómo declarar el alquiler en la renta](/blog/como-
 
 - BOE: [Real Decreto-ley 29/2026, de 6 de octubre](https://www.boe.es/buscar/act.php?id=BOE-A-2026-20823), artículo 6 (nueva redacción del artículo 23.2 y de la disposición transitoria trigésima octava de la Ley 35/2006 del IRPF), y [texto consolidado de la Ley del IRPF](https://www.boe.es/buscar/act.php?id=BOE-A-2006-20764). Consultados el 22-10-2026.`,
   },
+  {
+    slug: 'cuanto-cuesta-gestion-alquiler-inmobiliaria',
+    title: '¿Cuánto cobra una inmobiliaria por gestionar tu alquiler? Precios habituales y qué incluyen',
+    excerpt: 'Buscar inquilino suele costar una mensualidad y la gestión mensual entre un 8 % y un 12 % de la renta, según el sector. Qué incluye cada servicio, quién lo paga por ley y cuánto supone al año.',
+    audience: 'propietarios',
+    category: 'Gestión',
+    publishedAt: '2026-10-22',
+    body: `Si piensas en dejar tu piso en manos de una agencia, hay **dos servicios distintos** que conviene no mezclar: **buscar inquilino** (se paga una vez) y **gestionar el alquiler** mes a mes (se paga mientras dura el contrato). No hay tarifas oficiales: cada agencia fija las suyas, así que lo que sigue son los rangos que publica el propio sector.
+
+## Los precios habituales, según el sector
+
+| Servicio | Precio habitual | Fuente |
+|---|---|---|
+| Buscar inquilino (intermediación) | Alrededor de **una mensualidad + IVA** | Inmolovers |
+| Gestión continuada (cobros, incidencias, renovaciones) | **8 %-12 % de la renta mensual + IVA** | Inmolovers |
+| Gestión del alquiler | Entre un 8 % y un 10 % de la renta anual, o una mensualidad | Housfy |
+| Tarifa fija de gestión | 25-40 € al mes (precio indicativo) | Cronoshare |
+
+Son rangos orientativos: pide siempre presupuesto por escrito y compara **qué incluye** cada uno.
+
+## Quién paga: siempre el propietario
+
+Desde la Ley 12/2023, los gastos de gestión inmobiliaria y de formalización del contrato son a cargo del arrendador, y el decreto de octubre de 2026 lo refuerza: **no se pueden repercutir al inquilino** «ni directa ni indirectamente». Si una agencia te propone cobrarle «honorarios» al inquilino, desconfía.
+
+## Cuánto supone al año
+
+Con una renta de 900 € al mes:
+
+| Modelo | Coste el primer año | Años siguientes |
+|---|---|---|
+| Solo buscar inquilino (1 mes + 21 % IVA) | 1.089 € | 0 € (hasta el siguiente inquilino) |
+| Gestión al 8 % + IVA | 1.045 € | 1.045 € |
+| Gestión al 12 % + IVA | 1.568 € | 1.568 € |
+| Buscar inquilino + gestión al 10 % + IVA | 2.396 € | 1.307 € |
+
+Los gastos de gestión del alquiler son **deducibles** en el IRPF del propietario.
+
+## Qué debería incluir una buena gestión
+
+- **Selección del inquilino** con solvencia comprobada (no solo nóminas: estabilidad y encaje con la renta).
+- **Contrato** conforme a la LAU vigente, con inventario y fotos.
+- **Depósito de la fianza** en el organismo de tu comunidad.
+- **Cobro y aviso** de cada pago, y **actuación inmediata** si uno falla.
+- **Incidencias**: quién atiende las averías, con qué plazos y con qué presupuesto máximo sin consultarte.
+- **Renovaciones y actualización** de la renta según la ley vigente (ojo al límite del 2 % hasta finales de 2027).
+- **Qué pasa si hay impago**: ¿te adelantan algo, gestionan el requerimiento, te preparan el expediente para el abogado? Muchas «rentas garantizadas» son en realidad un seguro: lee las condiciones.
+
+## Preguntas que conviene hacer antes de firmar con una agencia
+
+1. ¿El porcentaje es sobre la renta cobrada o sobre la pactada (aunque no cobre)?
+2. ¿El IVA está incluido?
+3. ¿Hay permanencia o penalización por cancelar?
+4. ¿Las reparaciones tienen recargo?
+5. ¿Quién es el dueño del contrato y de los datos del inquilino si dejo la agencia?
+
+## ¿Y si lo gestionas tú?
+
+Ahorras la cuota, pero asumes el tiempo: anuncio, visitas, selección, contrato, fianza, cobros e incidencias. Para hacerlo bien tienes la [guía para poner tu piso en alquiler](/blog/como-poner-tu-piso-en-alquiler-paso-a-paso), la [checklist](/herramientas/checklist-alquilar-piso) y el [modelo de contrato](/herramientas/modelo-contrato-alquiler). Para ver cuánto te queda de verdad con y sin gestión, usa la [calculadora de rentabilidad](/herramientas/rentabilidad-alquiler).
+
+## Cómo lo planteamos en RentaHucha
+
+En la beta puedes [publicar tu piso gratis](/cuenta/registro) y hablar con los interesados por chat. Desde el lanzamiento, la cuota será del **5 % de la renta** con un piso (hasta el 3,5 % con varios; precios orientativos de lanzamiento) e incluirá inquilinos verificados, contrato conforme a la LAU, aviso de cada pago, incidencias en un panel y un protocolo de impago con la hucha del inquilino, que custodia una entidad financiera autorizada. No somos una aseguradora: si quieres cubrir más meses de impago, puedes contratar tu propio seguro. Si quieres saber primero cuánto pedir, pide una [valoración gratis del alquiler](/valoracion-alquiler).
+
+## Fuentes
+
+- Inmolovers: [Comisiones de agentes inmobiliarios en España: guía completa (2026)](https://inmolovers.com/guias/comisiones-agente-inmobiliario).
+- Housfy: [¿Quién paga a la inmobiliaria en un alquiler en 2026?](https://housfy.com/blog/comision-inmobiliaria-del-alquiler-quien-la-paga-y-como-se-calcula/).
+- Cronoshare: [¿Cuánto cuesta la gestión de alquileres? Precios en 2026](https://www.cronoshare.com/cuanto-cuesta/gestion-alquileres).
+- BOE: [Real Decreto-ley 29/2026](https://www.boe.es/buscar/act.php?id=BOE-A-2026-20823), nueva redacción del artículo 20 de la LAU (gastos de gestión).`,
+  },
 ]

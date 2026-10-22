@@ -106,7 +106,8 @@ async function migrate(d: Driver) {
 // v16: nueva reducción del IRPF por alquiler (RDL 29/2026, hasta el 100 %) y cifras corregidas en 9 artículos.
 // v17: «¿Firmar ahora o después de las elecciones?» con el calendario y el corte del IRPF del 1-12-2026.
 // v18: enlaces a la calculadora de la reducción del IRPF.
-const BLOG_SEED_VERSION = 18
+// v19: «¿Cuánto cobra una inmobiliaria por gestionar tu alquiler?» (búsqueda de Search Console).
+const BLOG_SEED_VERSION = 19
 
 // v6: artículos «2026» como gancho pasan a «2027». Las URLs cambian; las antiguas redirigen con 301 (nuxt.config).
 const BLOG_SLUG_RENAMES: [string, string][] = [
