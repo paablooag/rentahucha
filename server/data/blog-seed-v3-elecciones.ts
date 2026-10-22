@@ -63,7 +63,7 @@ ${NOTA}
 |---|---|
 | Duración de los contratos | LAU: 5 años (7 si eres empresa) y 3 de prórroga tácita |
 | Subidas de renta | Decreto de octubre: límite del 2 % anual hasta el 31-12-2027, y congelación si superas el índice de referencia |
-| Alquiler de temporada | Decreto de octubre: entre 31 días y 12 meses, con causa justificada |
+| Alquiler de temporada | Decreto de octubre: de más de 31 días y hasta 12 meses, con causa justificada |
 | Zonas tensionadas | Ley 12/2023: las declara cada comunidad autónoma |
 | Fiscalidad | Reducciones del IRPF de la Ley 12/2023, más las nuevas del decreto |
 
@@ -96,7 +96,7 @@ ${NOTA}
 **Alquiler**
 - **Prórroga extraordinaria**: los contratos que venzan hasta el 31-12-2028 pueden prorrogarse hasta dos años más, por periodos anuales y en las mismas condiciones, si el inquilino lo pide y está al corriente de pago en los ocho meses anteriores.
 - **Subidas**: hasta el 31-12-2027 no se puede subir la renta si supera el índice de referencia. Si está por debajo, la subida máxima es del 2 %, salvo acuerdo.
-- **Temporada**: entre 31 días y 12 meses, y el propietario debe justificar el motivo temporal. Encadenar más de dos contratos los convierte en contrato de vivienda habitual.
+- **Temporada**: de más de 31 días y hasta 12 meses, y el propietario debe justificar el motivo temporal. Encadenar más de dos contratos los convierte en contrato de vivienda habitual.
 - **Habitaciones**: en zonas tensionadas, la suma de lo que se cobra por las habitaciones no puede superar la renta del piso completo.
 
 **Fiscalidad**
@@ -271,12 +271,12 @@ Entraría en vigor el **15 de noviembre de 2026** solo si se convalida antes. Ha
   },
   {
     slug: 'alquiler-de-temporada-nuevas-reglas-12-meses',
-    title: 'Alquiler de temporada: nuevas reglas de duración y justificación',
-    excerpt: 'Entre 31 días y 12 meses, con motivo temporal justificado y límite a encadenar contratos. Lo que cambia para quien alquila por temporada.',
+    title: 'Alquiler de temporada con el decreto de octubre de 2026: duración, causa, fianza y qué pasa si falla',
+    excerpt: 'Más de 31 días y, en general, hasta 12 meses; causa real escrita en el contrato y probada por el propietario; garantía adicional de una mensualidad como máximo; y el inquilino puede irse tras un mes. Lo que cambia para quien alquila por temporada.',
     audience: 'propietarios',
     category: CAT,
     publishedAt: D,
-    body: `El alquiler de temporada sirve para necesidades temporales: estudios, trabajo por un tiempo, tratamientos médicos u obras en la vivienda propia. El decreto de octubre de 2026 concreta sus reglas.
+    body: `El alquiler de temporada sirve para necesidades temporales: estudios, un trabajo por un tiempo, tratamientos médicos u obras en la vivienda propia. Con el Real Decreto-ley 29/2026 pasa a llamarse **arrendamiento de vivienda temporal** y se regula dentro de la Ley de Arrendamientos Urbanos como un alquiler de vivienda, con reglas propias.
 
 ${NOTA}
 
@@ -284,24 +284,35 @@ ${NOTA}
 
 | Aspecto | Regla |
 |---|---|
-| Duración | Entre 31 días y 12 meses |
-| Causa | El propietario debe justificar el motivo temporal del inquilino |
-| Encadenar contratos | Más de dos seguidos se convierten en contrato de vivienda habitual (LAU) |
+| Qué es | Cubre la necesidad de vivienda de quien está **temporalmente desplazado de su domicilio habitual** por una causa justificada y acreditable. Incluye habitaciones |
+| Duración | **Más de 31 días** y, como regla general, **hasta 12 meses** (puede prorrogarse por acuerdo si la causa sigue, sin pasar de 12 meses en total salvo que la causa continúe) |
+| Causa | Debe figurar **expresamente en el contrato**, ser real y acreditable, y **la prueba corresponde al propietario** |
+| Si falta la causa | El contrato pasa a ser de **vivienda habitual desde la firma** (con sus plazos y prórrogas) |
+| Encadenar contratos | Más de 12 meses sin justificación, o más de dos contratos seguidos entre las mismas partes en la misma vivienda, convierten el primero en vivienda habitual |
+| Garantía adicional | Como máximo **una mensualidad**, además de la fianza |
+| Seguro de impago | No se puede exigir al inquilino |
+| Desistimiento | El inquilino puede irse pasado **un mes**, avisando con **10 días**, sin indemnización |
+| Fin del contrato | Hay que firmar un **documento de finalización** con el estado de la vivienda |
+
+Además, en zona tensionada la renta de contratos temporales sucesivos en la misma vivienda no puede subir más que el IRAV, y la suma de habitaciones no puede superar la renta del piso entero. Las comunidades autónomas pueden tener reglas propias que se aplican en su territorio.
+
+## ¿Y la fianza?
+
+Los contratos de temporada firmados **antes del 8 de octubre de 2026** siguen con su régimen (uso distinto del de vivienda, fianza legal de dos mensualidades) hasta que terminen, y **no se pueden prorrogar**. En los nuevos, como la temporada pasa a ser un arrendamiento de vivienda, la fianza legal sería la de vivienda (**una mensualidad**, artículo 36.1 de la LAU), más una garantía adicional de como máximo otra. Confirma el importe a depositar con el organismo de tu comunidad.
 
 ## Cómo documentarlo bien
 
-- Indica en el contrato la causa concreta: por ejemplo, un curso académico, un contrato de trabajo temporal o una obra en la vivienda propia.
-- Adjunta un documento que la acredite: matrícula, carta de la empresa, licencia de obra…
-- Fija fechas de entrada y salida coherentes con esa causa.
-
-## Lo que no cambia
-
-- La fianza en temporada sigue siendo de **dos mensualidades** (uso distinto de vivienda).
-- Si el inquilino usa el piso como vivienda habitual, el contrato puede considerarse de vivienda, se llame como se llame.
+- Escribe en el contrato la causa concreta: un curso académico, un contrato de trabajo temporal en otra ciudad, una obra en la vivienda habitual del inquilino…
+- Guarda un documento que la acredite (matrícula, carta de la empresa, licencia de obra): la carga de la prueba es tuya.
+- Fija fechas coherentes con esa causa.
 
 ## Si dudas
 
-Si la necesidad del inquilino no es claramente temporal, lo más seguro es firmar un contrato de vivienda habitual.`,
+Si la necesidad del inquilino no es claramente temporal, lo más seguro es firmar un contrato de **vivienda habitual**. Te lo explicamos en la [guía para poner tu piso en alquiler](/blog/como-poner-tu-piso-en-alquiler-paso-a-paso).
+
+## Fuentes
+
+- BOE: [Real Decreto-ley 29/2026, de 6 de octubre](https://www.boe.es/buscar/act.php?id=BOE-A-2026-20823), artículo 3 (nuevos artículos 2.3, 7, 9 bis, 11.2 y 36.5 y 36.7 de la LAU, y disposición transitoria octava). Consultado el 22-10-2026.`,
   },
   {
     slug: 'alquiler-por-habitaciones-nuevo-limite',
@@ -849,7 +860,7 @@ Fuente: BOE: [Real Decreto-ley 29/2026, de 6 de octubre](https://www.boe.es/busc
 
 - Mantenerlo, con los nuevos costes.
 - Pasarlo a **alquiler de vivienda habitual**, con reducciones del IRPF de hasta el 100 % según el caso.
-- Alquilarlo por **temporada**, cumpliendo las nuevas reglas de 31 días a 12 meses con causa.
+- Alquilarlo por **temporada**, cumpliendo las nuevas reglas de más de 31 días a 12 meses con causa.
 
 Haz números con tu asesor antes de decidir.`,
   },
@@ -938,7 +949,7 @@ Pide una [valoración gratis del alquiler](/valoracion-alquiler) para ponerle un
 | **Prórroga obligatoria** | Tiempo que el contrato dura si el inquilino quiere: 5 o 7 años |
 | **Prórroga tácita** | Hasta 3 años más si nadie avisa |
 | **Prórroga extraordinaria** | Ampliación excepcional prevista en una ley o decreto |
-| **Fianza** | Un mes de renta (dos en temporada), depositada en tu comunidad |
+| **Fianza** | Un mes de renta en vivienda, depositada en tu comunidad (en temporada, ver las reglas del decreto de octubre) |
 | **Garantía adicional** | Hasta dos meses más en vivienda habitual |
 | **VPO / vivienda protegida** | Vivienda con precio limitado y requisitos de acceso |
 | **SOCIMI** | Sociedad cotizada que invierte en inmuebles en alquiler |

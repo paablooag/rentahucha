@@ -46,7 +46,7 @@ export const BLOG_SEED_V9_PROPIETARIOS: Seed[] = [
 - [ ] 18. Cláusula de necesidad, si puedes necesitar el piso
 - [ ] 19. Actualización de renta conforme a los límites legales
 - [ ] 20. Reparto de gastos claro
-- [ ] 21. Fianza de un mes (dos en temporada) y, si quieres, garantía adicional dentro del límite
+- [ ] 21. Fianza de un mes y, si quieres, garantía adicional dentro del límite (dos meses en vivienda habitual, uno en temporada)
 - [ ] 22. Inventario con fotos, firmado
 - [ ] 23. Lecturas de contadores
 - [ ] 24. Entrega de llaves documentada
@@ -369,26 +369,46 @@ ${CTA}`,
   },
   {
     slug: 'fianza-y-garantia-en-alquiler-de-temporada',
-    title: 'Fianza y garantías en el alquiler de temporada: cómo calcularlas',
-    excerpt: 'Dos mensualidades de fianza legal y qué garantías adicionales son razonables en un alquiler de temporada.',
+    title: 'Fianza y garantía en el alquiler de temporada tras el decreto de octubre de 2026',
+    excerpt: 'Garantía adicional de una mensualidad como máximo, sin poder exigir seguro de impago, y qué fianza corresponde según la fecha del contrato. Con ejemplo.',
     audience: A,
     category: 'Legal',
     publishedAt: D,
-    body: `## Fianza legal
-En el alquiler de temporada (uso distinto de vivienda), la fianza es de **dos mensualidades** de renta. Debe depositarse en el organismo de tu comunidad si así lo exige.
+    body: `> **Actualizado a 22 de octubre de 2026.** El Real Decreto-ley 29/2026 (en vigor desde el 8 de octubre y pendiente de convalidación) cambia las reglas de la temporada, que pasa a ser **arrendamiento de vivienda temporal**.
 
-## Garantía adicional
-En temporada no se aplica el límite de dos mensualidades de la vivienda habitual, pero conviene que sea **proporcionada**: una garantía excesiva espanta a los buenos candidatos.
+## Según la fecha del contrato
 
-## Ejemplo
+| | Contratos firmados antes del 8-10-2026 | Contratos nuevos |
+|---|---|---|
+| Naturaleza | Uso distinto del de vivienda | Arrendamiento de vivienda temporal |
+| Fianza legal | Dos mensualidades | La de vivienda: una mensualidad (artículo 36.1 de la LAU) |
+| Garantía adicional | Sin el límite de la vivienda habitual | **Como máximo una mensualidad** |
+| Seguro de impago | — | **No se puede exigir al inquilino** |
+| Prórroga | No se pueden prorrogar al terminar | Hasta 12 meses en total como regla general |
+
+Los contratos anteriores mantienen su régimen hasta que terminan; si se renuevan, pasan a las reglas nuevas. Confirma con el organismo de tu comunidad el importe a depositar.
+
+## Ejemplo (contrato nuevo)
+
 Renta de 1.200 € al mes durante 6 meses:
-- Fianza legal: 2.400 €.
-- Garantía adicional razonable: según el riesgo y el mobiliario.
+
+- Fianza legal: **1.200 €** (una mensualidad), depositada si tu comunidad lo exige.
+- Garantía adicional: como máximo **1.200 €**.
+- Total como máximo al firmar, además de la primera renta: 2.400 €.
+
+## Al terminar
+
+Hay que firmar un **documento de finalización** con el estado de la vivienda. Si no se firma, o no recoge desperfectos, se presume que la vivienda se entregó en buen estado: hazlo siempre, con fotos.
 
 ## Recuerda
-- Causa temporal justificada y documentada.
-- Número de registro si lo anuncias en plataformas.
-- Con las reglas de octubre de 2026 (si se mantienen), duración de 31 días a 12 meses.
+
+- La causa temporal tiene que estar escrita en el contrato y la prueba es tuya.
+- Duración de más de 31 días y, en general, hasta 12 meses.
+- Todas las reglas, en [el alquiler de temporada con el decreto de octubre](/blog/alquiler-de-temporada-nuevas-reglas-12-meses).
+
+## Fuentes
+
+- BOE: [Real Decreto-ley 29/2026, de 6 de octubre](https://www.boe.es/buscar/act.php?id=BOE-A-2026-20823), artículo 3 (nuevos artículos 2.3, 7, 9 bis, 11.2 y 36.5 y 36.7 de la LAU, y disposición transitoria octava). Consultado el 22-10-2026.
 
 ${CTA}`,
   },

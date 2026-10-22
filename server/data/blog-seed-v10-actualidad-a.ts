@@ -271,7 +271,7 @@ ${AL_DIA}
 |---|---|
 | Prórroga extraordinaria | Contratos que venzan hasta finales de 2028: hasta dos años más en las mismas condiciones, si estás al día |
 | Subidas | Hasta finales de 2027, máximo un 2 %, y nada si la renta supera el índice de referencia |
-| Temporada | De 31 días a 12 meses y con causa justificada |
+| Temporada | Más de 31 días y, en general, hasta 12 meses y con causa justificada |
 | Habitaciones | En zona tensionada, la suma no puede superar la renta del piso entero |
 | Deducción en el IRPF | Del 10 % para ingresos bajos |
 | Renovación automática (segundo decreto) | Al terminar los 5 o 7 años, salvo excepciones |

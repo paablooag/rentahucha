@@ -461,7 +461,7 @@ Las normas cambian. Si usas siempre tu modelo, actualízalo cada año.`,
     audience: 'propietarios',
     category: 'Poner en alquiler',
     publishedAt: D,
-    body: `La LAU obliga a exigir la fianza en metálico: **un mes** en vivienda y **dos** en uso distinto, como la temporada. La mayoría de comunidades autónomas obligan además a **depositarla** en un organismo público.
+    body: `La LAU obliga a exigir la fianza en metálico: **un mes** en vivienda y **dos** en uso distinto del de vivienda. Con el decreto de octubre de 2026, la temporada pasa a regularse como vivienda temporal ([qué cambia](/blog/fianza-y-garantia-en-alquiler-de-temporada)). La mayoría de comunidades autónomas obligan además a **depositarla** en un organismo público.
 
 ## Cómo funciona
 
@@ -659,7 +659,7 @@ En RentaHucha, por un **5 %** seleccionamos al inquilino, gestionamos cobros e i
 
 - **Contrato de temporada** (uso distinto de vivienda): no aplica la prórroga obligatoria de 5 o 7 años.
 - **Fianza de dos meses**.
-- Con el decreto de octubre de 2026 (pendiente de convalidación): de **31 días a 12 meses**, con causa justificada y como mucho dos contratos encadenados.
+- Con el decreto de octubre de 2026 (pendiente de convalidación): de **más de 31 días y, en general, hasta 12 meses**, con la causa escrita en el contrato y como mucho dos contratos encadenados.
 
 ## Cómo hacerlo bien
 

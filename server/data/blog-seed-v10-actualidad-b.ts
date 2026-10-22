@@ -317,7 +317,7 @@ ${CTA_INQ}`,
 |---|---|---|
 | Hotel | Servicios y flexibilidad | Precio por noche alto en temporada |
 | Apartahotel | Cocina y servicios | Precio intermedio o alto |
-| Alquiler de temporada | Más espacio y precio mensual | Fianza de dos meses y contrato |
+| Alquiler de temporada | Más espacio y precio mensual | Contrato con causa temporal y garantías limitadas |
 | Habitación | Lo más económico | Convivencia |
 
 ## Cuándo compensa el alquiler de temporada
@@ -715,7 +715,7 @@ ${CTA_INMO}`,
 | Requisito | Por qué |
 |---|---|
 | Causa temporal documentada | Evita que se recalifique como vivienda habitual |
-| Duración de 31 días a 12 meses | Regla del decreto de octubre de 2026, si se mantiene |
+| Duración de más de 31 días a 12 meses | Regla del decreto de octubre de 2026, si se mantiene |
 | Licencia o registro autonómico de vivienda turística | Necesario para anunciarlo (el registro único estatal fue anulado en 2026) |
 | Fianza de dos meses | Uso distinto de vivienda |
 | Inventario detallado | Suelen ser pisos amueblados |

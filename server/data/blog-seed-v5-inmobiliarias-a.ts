@@ -777,7 +777,7 @@ ${CTA}`,
 ## Las novedades
 
 - **Registro único de arrendamientos**: anulado por el Tribunal Supremo en 2026. Revisa si tu comunidad tiene un registro propio: [qué queda del registro único](/blog/registro-unico-de-arrendamientos-quien-debe-registrarse).
-- **Decreto de octubre de 2026** (pendiente de convalidación): de 31 días a 12 meses, causa justificada por el propietario y no más de dos contratos encadenados. Detalle en [las nuevas reglas de la temporada](/blog/alquiler-de-temporada-nuevas-reglas-12-meses).
+- **Decreto de octubre de 2026** (pendiente de convalidación): de más de 31 días a 12 meses, causa justificada por el propietario y no más de dos contratos encadenados. Detalle en [las nuevas reglas de la temporada](/blog/alquiler-de-temporada-nuevas-reglas-12-meses).
 
 ## Checklist por operación
 

@@ -276,7 +276,7 @@ Una subida moderada que mantiene a un buen inquilino suele ser más rentable que
 
 ## Qué contrato usar
 
-Si vienen solo para el curso y mantienen su residencia familiar, encaja un **contrato de temporada** que indique el motivo (estudios) y las fechas. La fianza legal en ese caso es de **dos mensualidades**.
+Si vienen solo para el curso y mantienen su residencia familiar, encaja un **contrato de temporada** que indique el motivo (estudios) y las fechas. Con el decreto de octubre de 2026, la temporada pasa a ser «vivienda temporal»: garantía adicional de una mensualidad como máximo y la causa por escrito. Detalle en [el alquiler de temporada con el decreto](/blog/alquiler-de-temporada-nuevas-reglas-12-meses).
 
 ## Varios estudiantes en el mismo piso
 

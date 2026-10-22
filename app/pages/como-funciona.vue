@@ -9,7 +9,7 @@ useSeoMeta({
 const legal = [
   { topic: 'Impago', yes: 'Requerir el pago, intentar el acuerdo y demandar con el expediente preparado.', no: 'Cambiar cerraduras, cortar suministros o presionar. Solo un juez decide un desalojo.' },
   { topic: 'Seguros', yes: 'Explicarte que puedes contratar un seguro de impago por tu cuenta, con la compañía que elijas.', no: 'Vender, gestionar ni intermediar seguros. No somos una aseguradora ni pagamos rentas con nuestro dinero.' },
-  { topic: 'Garantías', yes: 'En vivienda habitual, fianza legal de un mes y hasta dos mensualidades de garantía adicional (tres en total). En alquiler de temporada, fianza de dos mensualidades.', no: 'Pedir más de lo que permite la ley o exigir más de un mes de renta por adelantado.' },
+  { topic: 'Garantías', yes: 'En vivienda habitual, fianza legal de un mes y hasta dos mensualidades de garantía adicional (tres en total). En alquiler de temporada (vivienda temporal desde el decreto de octubre de 2026), garantía adicional de una mensualidad como máximo.', no: 'Pedir más de lo que permite la ley o exigir más de un mes de renta por adelantado.' },
   { topic: 'Gastos de gestión', yes: 'Los paga el propietario.', no: 'Repercutirlos al inquilino.' },
   { topic: 'Dinero de terceros', yes: 'Lo custodia una entidad financiera autorizada, en una cuenta a nombre de cada inquilino.', no: 'Que pase por cuentas de la plataforma.' },
   { topic: 'Hucha', yes: 'Moverla solo con las condiciones firmadas al inicio: impago de renta comprobado, o acuerdo de ambas partes o resolución si hay desperfectos.', no: 'Decidir por nuestra cuenta qué hacer con ella.' },

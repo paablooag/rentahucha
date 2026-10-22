@@ -49,7 +49,7 @@ export const CHECKLIST: ChecklistSection[] = [
       { id: 'escrito', title: 'Contrato por escrito y conforme a la LAU', text: 'Partes, piso, renta, forma de pago, duración, gastos y anexos. Firmado por todos los inquilinos.' },
       { id: 'duracion', title: 'Duración y prórrogas claras', text: 'El inquilino puede prorrogar hasta 5 años (7 si el arrendador es empresa) y luego hay prórroga tácita de hasta 3 años más. Si podrías necesitar el piso para ti o un familiar, ponlo expresamente en el contrato.' },
       { id: 'fianza', title: 'Fianza de una mensualidad', text: 'Es obligatoria en vivienda habitual. En la mayoría de comunidades hay que depositarla en el organismo autonómico en un plazo: compruébalo.' },
-      { id: 'garantia', title: 'Garantía adicional con tope', text: 'Además de la fianza, como máximo dos mensualidades en contratos de hasta 5 o 7 años.' },
+      { id: 'garantia', title: 'Garantía adicional con tope', text: 'Además de la fianza, como máximo dos mensualidades en contratos de hasta 5 o 7 años (una en temporada). No puedes exigir al inquilino un seguro de impago.' },
       { id: 'honorarios', title: 'Honorarios de agencia, a cargo del propietario', text: 'Desde la Ley de Vivienda de 2023, los gastos de gestión y formalización no se pueden cobrar al inquilino.' },
       { id: 'actualizacion', title: 'Actualización de la renta pactada', text: 'Solo se actualiza si el contrato lo dice. Para contratos desde mayo de 2023, el límite es el índice que publica el INE.' },
       { id: 'inventario', title: 'Inventario con fotos firmado', text: 'Estado de cada estancia y de los muebles, con fecha. Es tu mejor prueba al terminar el contrato.' },
@@ -72,7 +72,7 @@ export const CHECKLIST: ChecklistSection[] = [
     when: 'Fin del contrato',
     items: [
       { id: 'preaviso', title: 'Preavisos', text: 'El inquilino puede irse a partir de los 6 meses avisando con 30 días. Para no renovar al final de las prórrogas, tú debes avisar con 4 meses (él, con 2).' },
-      { id: 'revision-final', title: 'Revisión con el inventario', text: 'Comparad el piso con el inventario inicial. El desgaste por el uso normal no es un desperfecto.' },
+      { id: 'revision-final', title: 'Documento de finalización firmado', text: 'Comparad el piso con el inventario inicial y firmad el documento de finalización con su estado (obligatorio desde octubre de 2026): si no se firma o no recoge desperfectos, se presume que se entregó bien. El desgaste normal no es un desperfecto.' },
       { id: 'devolucion', title: 'Devolución de la fianza', text: 'Tienes un mes desde la entrega de llaves; después genera intereses. Descuenta solo lo justificado.' },
     ],
   },

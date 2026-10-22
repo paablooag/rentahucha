@@ -587,7 +587,7 @@ ${CTA}`,
 
 ## Diferencias clave
 
-- **Temporada**: necesidad temporal real, fianza de dos meses, sin prórroga obligatoria. Con las reglas de octubre de 2026 (si se mantienen), como máximo 12 meses.
+- **Temporada**: necesidad temporal real y escrita en el contrato, sin prórroga obligatoria. Con las reglas de octubre de 2026 (si se mantienen): más de 31 días y, en general, hasta 12 meses, garantía adicional de una mensualidad como máximo y puedes irte tras un mes avisando con 10 días.
 - **Vivienda habitual**: hasta 5 años de prórroga (7 si el casero es empresa), fianza de un mes, más derechos.
 
 ## Ojo
