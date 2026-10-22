@@ -104,7 +104,7 @@ Puedes hacer tu propio cálculo con nuestra [calculadora del coste de un impago]
   {
     slug: 'fianza-garantia-adicional-y-aval-que-puedes-pedir',
     title: 'Fianza, garantía adicional y aval: qué puedes pedir legalmente',
-    excerpt: 'Los límites exactos de la Ley de Arrendamientos Urbanos: cuántos meses puedes pedir, cuáles no y qué pasa con el pago adelantado.',
+    excerpt: 'Los límites de la Ley de Arrendamientos Urbanos tras el decreto de octubre de 2026: cuántos meses puedes pedir en vivienda habitual y en temporada, el aval, el pago adelantado y por qué ya no puedes exigir un seguro de impago.',
     audience: 'propietarios',
     category: 'Legal',
     publishedAt: '2026-10-15',
@@ -115,18 +115,23 @@ Puedes hacer tu propio cálculo con nuestra [calculadora del coste de un impago]
 | Concepto | Límite | Base legal |
 |---|---|---|
 | Fianza legal | 1 mensualidad (obligatoria) | LAU, art. 36.1 |
-| Garantía adicional | Hasta 2 mensualidades | LAU, art. 36.5 |
+| Garantía adicional | Hasta 2 mensualidades (en contratos de hasta 5 años, o 7 si el arrendador es empresa) | LAU, art. 36.5 |
 | **Total de garantías** | **3 mensualidades** | |
 | Renta por adelantado | No puedes exigir más de 1 mes | LAU, art. 17.2 |
 
 La garantía adicional puede ser un depósito en metálico o un **aval bancario**. La fianza legal, en cambio, se deposita en el organismo de vivienda de tu comunidad autónoma.
 
-## Alquiler de temporada y otros usos
+## Lo que no puedes exigir
 
-Si el contrato no es de vivienda habitual (por ejemplo, un alquiler de temporada por estudios o trabajo):
+Desde el Real Decreto-ley 29/2026 (en vigor desde el 8 de octubre de 2026 y pendiente de convalidación), el artículo 36.5 de la LAU dice que **en ningún caso puede exigirse al inquilino que contrate un seguro de impago** u otras coberturas análogas. Si quieres ese seguro, lo contratas y lo pagas tú: [cuánto cuesta](/blog/seguro-de-impago-cuanto-cuesta-y-que-mirar).
 
-- La fianza legal es de **2 mensualidades**.
-- La ley **no fija un tope** para la garantía adicional.
+## Alquiler de temporada
+
+Con el mismo decreto, la temporada pasa a ser «vivienda temporal» y la **garantía adicional no puede superar una mensualidad**. Los contratos de temporada firmados antes del 8 de octubre de 2026 mantienen su régimen anterior (uso distinto del de vivienda, fianza legal de dos mensualidades) hasta que terminan. Detalle en [fianza y garantía en temporada](/blog/fianza-y-garantia-en-alquiler-de-temporada).
+
+## Otros usos (locales, oficinas)
+
+Fianza legal de **2 mensualidades** y garantía adicional sin el tope de la vivienda.
 
 ## Ejemplo con un piso de 850 €
 
@@ -145,7 +150,7 @@ Si el contrato no es de vivienda habitual (por ejemplo, un alquiler de temporada
 
 ## Y la hucha, ¿cuenta?
 
-La hucha del inquilino está bloqueada a favor del contrato, así que en vivienda habitual cuenta dentro del máximo de dos mensualidades de garantía adicional. Si pides las dos al firmar, la hucha sigue llenándose, pero como ahorro del inquilino.`,
+Desde el lanzamiento, la hucha del inquilino estará bloqueada a favor del contrato, así que en vivienda habitual contará dentro del máximo de dos mensualidades de garantía adicional (en temporada, el máximo legal es una). Si pides las dos al firmar, la hucha seguirá llenándose, pero como ahorro del inquilino.`,
   },
   {
     slug: 'como-elegir-un-buen-inquilino',
