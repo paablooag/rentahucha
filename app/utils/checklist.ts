@@ -50,7 +50,7 @@ export const CHECKLIST: ChecklistSection[] = [
       { id: 'duracion', title: 'Duración y prórrogas claras', text: 'El inquilino puede prorrogar hasta 5 años (7 si el arrendador es empresa) y luego hay prórroga tácita de hasta 3 años más. Si podrías necesitar el piso para ti o un familiar, ponlo expresamente en el contrato.' },
       { id: 'fianza', title: 'Fianza de una mensualidad', text: 'Es obligatoria en vivienda habitual. En la mayoría de comunidades hay que depositarla en el organismo autonómico en un plazo: compruébalo.' },
       { id: 'garantia', title: 'Garantía adicional con tope', text: 'Además de la fianza, como máximo dos mensualidades en contratos de hasta 5 o 7 años (una en temporada). No puedes exigir al inquilino un seguro de impago.' },
-      { id: 'honorarios', title: 'Honorarios de agencia, a cargo del propietario', text: 'Desde la Ley de Vivienda de 2023, los gastos de gestión y formalización no se pueden cobrar al inquilino.' },
+      { id: 'honorarios', title: 'Honorarios de agencia, a cargo del propietario', text: 'Los gastos de gestión y formalización no se pueden cobrar al inquilino. Con el decreto de octubre de 2026, en los contratos nuevos tampoco el IBI.' },
       { id: 'actualizacion', title: 'Actualización de la renta pactada', text: 'Solo se actualiza si el contrato lo dice. Para contratos desde mayo de 2023, el límite es el índice que publica el INE.' },
       { id: 'inventario', title: 'Inventario con fotos firmado', text: 'Estado de cada estancia y de los muebles, con fecha. Es tu mejor prueba al terminar el contrato.' },
     ],
@@ -63,7 +63,7 @@ export const CHECKLIST: ChecklistSection[] = [
       { id: 'cobro', title: 'Cobro por transferencia o domiciliación', text: 'Deja rastro de cada pago. Si falla, habla pronto: muchos retrasos son baches puntuales.' },
       { id: 'reparar', title: 'Reparaciones necesarias, a tu cargo', text: 'Las de conservación son del propietario; las pequeñas por el uso diario, del inquilino. Atiende rápido: evita que crezcan.' },
       { id: 'impago', title: 'Si hay impago, por la vía legal', text: 'Requerimiento fehaciente, intento de acuerdo y demanda. Nunca cambies la cerradura ni cortes suministros.' },
-      { id: 'irpf', title: 'Declara las rentas en el IRPF', text: 'Puedes deducir IBI, comunidad, seguro, intereses, reparaciones y amortización. En contratos desde mayo de 2023, la reducción va del 50 % al 90 % según el caso.' },
+      { id: 'irpf', title: 'Declara las rentas en el IRPF', text: 'Puedes deducir IBI, comunidad, seguro, intereses, reparaciones y amortización. La reducción va del 50 % al 90 % en contratos de mayo de 2023 al 1-12-2026 y del 15 % al 100 % en los posteriores (si se convalida el decreto de octubre).' },
     ],
   },
   {
