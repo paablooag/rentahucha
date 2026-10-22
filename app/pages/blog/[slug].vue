@@ -138,7 +138,7 @@ useHead({
             </ol>
           </details>
           <article class="prose" v-html="parts[0]" />
-          <BlogInlineCta v-if="parts[1]" :audience="post.audience" :slug="post.slug" />
+          <BlogInlineCta v-if="parts[1]" :audience="post.audience" :slug="post.slug" :guia="showGuia" />
           <article v-if="parts[1]" class="prose" v-html="parts[1]" />
           <GuiaDecretoDownload v-if="showGuia" />
         </div>
