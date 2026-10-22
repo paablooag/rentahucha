@@ -121,7 +121,8 @@ async function migrate(d: Driver) {
 // v31: desahucios de personas vulnerables según el texto del RDL 29/2026 (enervación extraordinaria, subrogación, excepciones).
 // v32: impagos con la enervación extraordinaria del RDL 29/2026.
 // v33: guía central del RDL 29/2026 para propietarios con enlaces a cada medida.
-const BLOG_SEED_VERSION = 33
+// v34: enlace a la guía del decreto en el aviso de convalidación.
+const BLOG_SEED_VERSION = 34
 
 // v6: artículos «2026» como gancho pasan a «2027». Las URLs cambian; las antiguas redirigen con 301 (nuxt.config).
 const BLOG_SLUG_RENAMES: [string, string][] = [
