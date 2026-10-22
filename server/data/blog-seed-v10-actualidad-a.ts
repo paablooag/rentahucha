@@ -461,10 +461,12 @@ Lee la documentación del juzgado y apunta los **plazos**: suelen ser cortos.
 Si tus ingresos no superan los límites legales, puedes tener **abogado y procurador gratuitos**. Pídelo en el colegio de abogados o en el propio juzgado.
 
 ## 3. Acude a los servicios sociales
-Pueden valorar tu situación de **vulnerabilidad** y buscar alternativas habitacionales. Desde la Ley 12/2023 hay más coordinación con los juzgados, y los decretos de octubre de 2026 prevén suspensiones para hogares vulnerables, si se mantienen.
+Pueden valorar tu situación de **vulnerabilidad** y buscar alternativas habitacionales. Desde la Ley 12/2023 hay más coordinación con los juzgados.
+
+**Novedad del decreto de octubre de 2026** (en vigor desde el 8 de octubre y pendiente de convalidación): si el desahucio es **por impago** y acreditas **vulnerabilidad económica**, el juzgado avisa a la Administración, que tiene **dos meses** para ofrecerte otra vivienda o pagar al propietario lo que debes y las costas. Mientras tanto, el procedimiento se suspende. Si paga, el procedimiento termina y tu contrato sigue; si no hace ninguna de las dos cosas, pasa a ser ella la deudora y no hay lanzamiento mientras dure tu vulnerabilidad. Ojo: si el propietario es una persona física con dos viviendas o menos, otras suspensiones por vulnerabilidad económica no se aplican. Más detalle en [desahucios de hogares vulnerables](/blog/desahucios-de-vulnerables-hasta-2030-para-inquilinos).
 
 ## 4. Valora pagar o negociar
-En los desahucios por impago, a veces se puede **parar el proceso pagando** lo debido (enervación), salvo excepciones. Negociar un plan de pago con el propietario también puede evitar el juicio.
+En los desahucios por impago, a veces se puede **parar el proceso pagando** lo debido (enervación), salvo excepciones. La vía de la Administración para hogares vulnerables es independiente y no cuenta como esa enervación. Negociar un plan de pago con el propietario también puede evitar el juicio.
 
 ## 5. Documenta tu situación
 Ingresos, cargas familiares, informes sociales y comunicaciones con el propietario.

@@ -127,7 +127,8 @@ async function migrate(d: Driver) {
 // v37: alquilar a jóvenes y bonificaciones fiscales con el nuevo régimen del IRPF.
 // v38: fianza, garantía adicional y aval tras el RDL 29/2026.
 // v39: plazos del desahucio con la enervación extraordinaria del RDL 29/2026.
-const BLOG_SEED_VERSION = 39
+// v40: inquilinos ante un desahucio con la enervación extraordinaria.
+const BLOG_SEED_VERSION = 40
 
 // v6: artículos «2026» como gancho pasan a «2027». Las URLs cambian; las antiguas redirigen con 301 (nuxt.config).
 const BLOG_SLUG_RENAMES: [string, string][] = [
