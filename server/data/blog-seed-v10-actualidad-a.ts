@@ -275,6 +275,9 @@ ${AL_DIA}
 | Habitaciones | En zona tensionada, la suma no puede superar la renta del piso entero |
 | Deducción en el IRPF | Del 10 % para ingresos bajos |
 | Renovación automática (segundo decreto) | Al terminar los 5 o 7 años, salvo excepciones |
+| Anuncios | Deben indicar, cuando proceda, el índice de referencia, el límite de renta, el número de registro y si el arrendador es gran tenedor |
+
+**Si eres propietario**, además cambiaría la reducción del IRPF de los contratos firmados después del 1 de diciembre de 2026: hasta el 100 % si bajas la renta o quedas por debajo del índice, y mucho menos si la subes. Calcúlalo con la [calculadora de la reducción del IRPF](/herramientas/reduccion-irpf-alquiler).
 
 ## Si no se convalidan
 
@@ -311,6 +314,17 @@ ${AL_DIA}
 | LAU | Duraciones, prórrogas, fianza y garantías |
 | Ley 12/2023 | Zonas tensionadas, gastos de gestión del propietario, reducciones del IRPF |
 | IRAV | Límite de actualización de los contratos posteriores a la Ley 12/2023 |
+
+## Qué dejaría de aplicarse (Real Decreto-ley 29/2026)
+
+| Medida | Si decae |
+|---|---|
+| Nueva reducción del IRPF (contratos posteriores al 1-12-2026, del 15 % al 100 %) | Se mantendría el régimen de la Ley 12/2023 (del 50 % al 90 %) |
+| Límite extraordinario del 2 % a la actualización de rentas hasta 2027 | Volvería la regla general (lo pactado, con el tope del IRAV) |
+| Datos obligatorios en los anuncios (artículo 20) | Dejarían de ser exigibles por esta norma |
+| Prórroga extraordinaria de hasta dos años | Dejaría de poder pedirse |
+
+Si tienes que decidir la renta de un contrato nuevo, compara los dos escenarios con la [calculadora de la reducción del IRPF](/herramientas/reduccion-irpf-alquiler).
 
 ## Qué conviene hacer
 

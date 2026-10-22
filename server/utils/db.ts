@@ -107,7 +107,8 @@ async function migrate(d: Driver) {
 // v17: «¿Firmar ahora o después de las elecciones?» con el calendario y el corte del IRPF del 1-12-2026.
 // v18: enlaces a la calculadora de la reducción del IRPF.
 // v19: «¿Cuánto cobra una inmobiliaria por gestionar tu alquiler?» (búsqueda de Search Console).
-const BLOG_SEED_VERSION = 19
+// v20: artículos de la convalidación con el IRPF y los anuncios del RDL 29/2026.
+const BLOG_SEED_VERSION = 20
 
 // v6: artículos «2026» como gancho pasan a «2027». Las URLs cambian; las antiguas redirigen con 301 (nuxt.config).
 const BLOG_SLUG_RENAMES: [string, string][] = [
