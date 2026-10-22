@@ -108,7 +108,8 @@ async function migrate(d: Driver) {
 // v18: enlaces a la calculadora de la reducción del IRPF.
 // v19: «¿Cuánto cobra una inmobiliaria por gestionar tu alquiler?» (búsqueda de Search Console).
 // v20: artículos de la convalidación con el IRPF y los anuncios del RDL 29/2026.
-const BLOG_SEED_VERSION = 20
+// v21: enlace a la página del IRAV desde el artículo del 2 %.
+const BLOG_SEED_VERSION = 21
 
 // v6: artículos «2026» como gancho pasan a «2027». Las URLs cambian; las antiguas redirigen con 301 (nuxt.config).
 const BLOG_SLUG_RENAMES: [string, string][] = [

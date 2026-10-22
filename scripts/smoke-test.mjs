@@ -35,7 +35,7 @@ const anon = client()
 
 // 1. Páginas públicas
 for (const p of ['/', '/propietarios', '/inquilinos', '/inmobiliarias', '/pisos', '/alquiler', '/alquiler/madrid', '/alquilar-mi-piso/valencia',
-  '/valoracion-alquiler', '/encuesta-alquiler', '/herramientas', '/herramientas/modelo-contrato-alquiler', '/herramientas/reduccion-irpf-alquiler', '/blog', '/cuenta/registro', '/sitemap.xml', '/robots.txt']) {
+  '/valoracion-alquiler', '/encuesta-alquiler', '/herramientas', '/herramientas/modelo-contrato-alquiler', '/herramientas/reduccion-irpf-alquiler', '/herramientas/subida-alquiler-irav', '/blog', '/cuenta/registro', '/sitemap.xml', '/robots.txt']) {
   const r = await anon(p)
   check(r.status === 200, `GET ${p} → ${r.status}`)
 }

@@ -43,6 +43,8 @@ export default defineNuxtConfig({
     '/inquilinos': { prerender: true },
     '/inmobiliarias': { prerender: true },
     '/herramientas/**': { prerender: true },
+    // El IRAV cambia cada mes: esta página se genera en el servidor con el último dato del INE.
+    '/herramientas/subida-alquiler-irav': { prerender: false },
     '/alquilar-mi-piso': { prerender: true },
     '/alquilar-mi-piso/**': { prerender: true },
     '/dossier/propietarios': { prerender: true },

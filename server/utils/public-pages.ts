@@ -16,6 +16,7 @@ export const PUBLIC_PAGES: { path: string; priority: string; changefreq: string 
   { path: '/herramientas/carta-inquilino', priority: '0.8', changefreq: 'monthly' },
   { path: '/herramientas/rentabilidad-alquiler', priority: '0.8', changefreq: 'monthly' },
   { path: '/herramientas/reduccion-irpf-alquiler', priority: '0.9', changefreq: 'monthly' },
+  { path: '/herramientas/subida-alquiler-irav', priority: '0.9', changefreq: 'weekly' },
   { path: '/herramientas/coste-impago', priority: '0.7', changefreq: 'monthly' },
   { path: '/herramientas/simulador-hucha', priority: '0.7', changefreq: 'monthly' },
   { path: '/herramientas/cuanto-alquiler-puedo-pagar', priority: '0.8', changefreq: 'monthly' },

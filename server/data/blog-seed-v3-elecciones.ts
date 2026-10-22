@@ -203,7 +203,7 @@ Por eso, una cláusula «se actualizará según el IPC» no basta para subir lo 
 - No apliques una subida automática por IPC sin comprobar antes el límite vigente.
 - Si el decreto no se convalidara, decaería y se volvería a la regla general de la LAU y, en zonas tensionadas, de la Ley 12/2023.
 
-¿Quieres saber si tu renta está bien ajustada? Pide una [valoración gratis del alquiler](/valoracion-alquiler) con pisos comparables de tu zona y el índice oficial.
+Consulta el último IRAV y calcula tu subida en [IRAV y subida del alquiler](/herramientas/subida-alquiler-irav). ¿Quieres saber si tu renta está bien ajustada? Pide una [valoración gratis del alquiler](/valoracion-alquiler) con pisos comparables de tu zona y el índice oficial.
 
 ## Fuentes
 
