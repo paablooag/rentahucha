@@ -114,7 +114,8 @@ async function migrate(d: Driver) {
 // v24: recargos del IBI (pisos vacíos y turísticos) según el texto del RDL 29/2026.
 // v25: alquiler de temporada según el RDL 29/2026 (vivienda temporal, causa, garantía de una mensualidad, desistimiento).
 // v26: documento de finalización del arrendamiento (art. 36.7 LAU) con plantilla.
-const BLOG_SEED_VERSION = 26
+// v27: formato de la plantilla del documento de finalización.
+const BLOG_SEED_VERSION = 27
 
 // v6: artículos «2026» como gancho pasan a «2027». Las URLs cambian; las antiguas redirigen con 301 (nuxt.config).
 const BLOG_SLUG_RENAMES: [string, string][] = [

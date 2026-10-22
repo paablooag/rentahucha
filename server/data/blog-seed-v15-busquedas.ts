@@ -326,13 +326,17 @@ Van en sentido contrario. Desde la misma fecha, el alquiler de viviendas amuebla
 Cópiala y adáptala. Rellenadla juntos el día de la entrega de llaves.
 
 > **DOCUMENTO DE FINALIZACIÓN DEL ARRENDAMIENTO**
+>
 > (artículo 36.7 de la Ley 29/1994, de Arrendamientos Urbanos)
 >
 > En [ciudad], a [fecha], a las [hora].
 >
 > **Arrendador/a:** [nombre y apellidos], con DNI/NIE [número].
+>
 > **Arrendatario/a:** [nombre y apellidos], con DNI/NIE [número].
+>
 > **Vivienda:** [dirección completa], referencia catastral [número].
+>
 > **Contrato** de fecha [fecha de firma].
 >
 > **1. Entrega de la posesión.** El arrendatario entrega en este acto la posesión de la vivienda y [número] llaves / mandos. El arrendador las recibe.
@@ -355,7 +359,9 @@ Cópiala y adáptala. Rellenadla juntos el día de la entrega de llaves.
 >
 > Firmado por ambas partes:
 >
-> Arrendador/a: ____________________  Arrendatario/a: ____________________
+> Arrendador/a: ____________________
+>
+> Arrendatario/a: ____________________
 
 ## Consejos
 
