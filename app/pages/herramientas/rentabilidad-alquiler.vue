@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const title = 'Calculadora de rentabilidad del alquiler: bruta y neta'
+const title = 'Calculadora de rentabilidad del alquiler 2026: bruta, neta y con el nuevo IRPF'
 const description = 'Calcula cuánto te deja de verdad alquilar tu piso: rentabilidad bruta y neta, con IBI, comunidad, seguro, mantenimiento, meses vacíos y gestión. Gratis y sin registro.'
 useSeoMeta({ title, description, ogTitle: title, ogDescription: description })
 
@@ -29,6 +29,32 @@ useHead({
       </div>
     </section>
 
+    <section class="section">
+      <div class="container prose-block">
+        <h2>Un ejemplo completo</h2>
+        <p>Piso valorado en 180.000 €, alquilado a 850 € al mes, con IBI de 400 € al año, comunidad de 60 € al mes, seguro de 250 €, medio mes vacío al año y gestionándolo tú:</p>
+        <div class="table-wrap">
+          <table class="table">
+            <tbody>
+              <tr><td>Rentas cobradas (11,5 meses)</td><td class="num">9.775 €</td></tr>
+              <tr><td>IBI, comunidad y seguro</td><td class="num">−1.370 €</td></tr>
+              <tr><td>Mantenimiento (5 % de lo cobrado)</td><td class="num">−489 €</td></tr>
+              <tr><td><strong>Rendimiento neto antes de impuestos</strong></td><td class="num"><strong>7.916 €</strong></td></tr>
+              <tr><td>Rentabilidad bruta (10.200 € / 180.000 €)</td><td class="num">5,67 %</td></tr>
+              <tr><td>Rentabilidad neta (7.916 € / 180.000 €)</td><td class="num">4,40 %</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h2>Lo que cambia con el decreto de octubre de 2026</h2>
+        <ul>
+          <li><strong>Subidas limitadas:</strong> hasta el 31-12-2027, sin nuevo acuerdo, la renta no puede subir más de un 2 % al año. Ten en cuenta ese tope al proyectar ingresos: <NuxtLink to="/herramientas/subida-alquiler-irav">IRAV y subida del alquiler</NuxtLink>.</li>
+          <li><strong>IRPF:</strong> en los contratos posteriores al 1-12-2026, la reducción del rendimiento va del 15 % al 100 % según bajes, mantengas o subas la renta. Puede pesar más que muchos gastos: <NuxtLink to="/herramientas/reduccion-irpf-alquiler">calcula tu reducción</NuxtLink>.</li>
+          <li><strong>Reformas:</strong> desde el 1-12-2026, las obras en pisos alquilados como vivienda habitual pueden tributar al IVA del 10 %: <NuxtLink to="/blog/iva-10-reformas-piso-alquilado-diciembre-2026">requisitos</NuxtLink>.</li>
+        </ul>
+        <p class="small muted">El decreto está pendiente de convalidación. Todas las medidas en la <NuxtLink to="/blog/decretos-de-vivienda-octubre-2026-explicados">guía del decreto</NuxtLink>.</p>
+      </div>
+    </section>
+
     <section class="section section-alt">
       <div class="container">
         <div class="section-head center">
@@ -47,5 +73,10 @@ useHead({
 
 <style scoped>
 .back { display: inline-block; margin-bottom: 16px; font-size: 0.9rem; text-decoration: none; }
+.prose-block { max-width: 820px; }
+.prose-block h2 { margin: 0 0 12px; }
+.prose-block h2:not(:first-child) { margin-top: 36px; }
+.prose-block ul { display: grid; gap: 10px; padding-left: 20px; }
+.table-wrap { max-width: 520px; }
 .cta { margin-top: 32px; display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
 </style>
