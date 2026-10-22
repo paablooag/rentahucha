@@ -40,6 +40,8 @@ const cityLinks = computed(() => {
   return (mentioned.length ? mentioned : CITIES.slice(0, 6)).slice(0, 8)
 })
 
+// En los artículos para propietarios e inmobiliarias que hablan del decreto de vivienda, la guía en PDF a cambio del correo.
+const showGuia = computed(() => !!post.value && post.value.audience !== 'inquilinos' && /decreto/i.test(post.value.html))
 // El artículo se parte antes del segundo apartado para intercalar una llamada a la acción (BlogInlineCta).
 const parts = computed(() => {
   const html = post.value?.html ?? ''
@@ -138,6 +140,7 @@ useHead({
           <article class="prose" v-html="parts[0]" />
           <BlogInlineCta v-if="parts[1]" :audience="post.audience" :slug="post.slug" />
           <article v-if="parts[1]" class="prose" v-html="parts[1]" />
+          <GuiaDecretoDownload v-if="showGuia" />
         </div>
         <aside class="side">
           <BlogCta :audience="post.audience" compact />

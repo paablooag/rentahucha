@@ -50,6 +50,7 @@ export default defineNuxtConfig({
     '/dossier/propietarios': { prerender: true },
     '/dossier/inquilinos': { prerender: true },
     '/dossier/checklist-propietarios': { prerender: true },
+    '/dossier/guia-decreto': { prerender: true },
     // El panel solo se pinta en el navegador y nunca se indexa.
     // URLs de artículos renombradas (2026 → 2027): redirección permanente para no perder enlaces ni posicionamiento.
     '/blog/como-buscar-piso-de-alquiler-en-2026': { redirect: { to: '/blog/como-buscar-piso-de-alquiler-en-2027', statusCode: 301 } },

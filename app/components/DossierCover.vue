@@ -12,7 +12,7 @@ const month = new Intl.DateTimeFormat('es-ES', { month: 'long', year: 'numeric' 
     </div>
 
     <div class="d-cover-main">
-      <span class="eyebrow">Próximamente en {{ brand.area }}</span>
+      <span class="eyebrow">Beta abierta en {{ brand.area }}</span>
       <h1>{{ title }} <span class="hl">{{ highlight }}</span></h1>
       <p class="d-lead">{{ lead }}</p>
 

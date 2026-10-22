@@ -97,6 +97,8 @@ r = await anon('/api/alertas', { method: 'POST', body: { email: `alerta${stamp}@
 check(r.status === 200, `alerta de pisos → ${r.status}`)
 r = await anon('/api/newsletter', { method: 'POST', body: { email: `news${stamp}@example.com`, consent: true } })
 check(r.status === 200, `newsletter → ${r.status}`)
+r = await anon('/api/newsletter', { method: 'POST', body: { email: `guia${stamp}@example.com`, consent: true, source: 'guia-decreto' } })
+check(r.status === 200, `guía del decreto a cambio del correo → ${r.status}`)
 
 // 5b. Cuenta de inmobiliaria
 const agency = client()
