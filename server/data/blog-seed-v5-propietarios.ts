@@ -791,32 +791,52 @@ Pacta en el contrato visitas razonables con preaviso para reparaciones y para en
   },
   {
     slug: 'contrato-alquiler-por-habitaciones-como-hacerlo',
-    title: 'Alquiler por habitaciones: cómo hacer el contrato',
-    excerpt: 'Qué norma se aplica, qué incluir y el nuevo límite de precio en zonas tensionadas.',
+    title: 'Contrato de alquiler por habitaciones en 2026: qué ley se aplica ahora y qué incluir',
+    excerpt: 'Con el decreto de octubre de 2026, alquilar una habitación es arrendamiento de vivienda (habitual o temporal) y la suma de habitaciones no puede superar la renta del piso completo. Qué incluir en el contrato.',
     audience: A,
     category: 'Legal',
     publishedAt: D,
-    body: `## Qué norma se aplica
+    body: `> **Actualizado a 22 de octubre de 2026.** El Real Decreto-ley 29/2026 (en vigor desde el 8 de octubre y pendiente de convalidación) cambia la regulación del alquiler por habitaciones.
 
-El alquiler de una habitación suele regirse por el **Código Civil** y lo pactado, no por la LAU de vivienda, porque no se alquila una vivienda completa. La situación puede variar según cada caso: consulta con un profesional.
+## Qué norma se aplica ahora
 
-## Qué incluir
+Hasta el decreto, el alquiler de una habitación solía regirse por el Código Civil y lo pactado. Ahora la **Ley de Arrendamientos Urbanos** incluye expresamente el **arrendamiento parcial de una habitación o estancia**:
+
+| Si la habitación es… | Tipo de contrato | Lo esencial |
+|---|---|---|
+| La vivienda habitual del inquilino | **Arrendamiento de vivienda habitual** | Plazos y prórrogas de la LAU, fianza de una mensualidad, garantía adicional de como máximo dos |
+| Para una necesidad temporal (estudios, trabajo por un tiempo) | **Arrendamiento de vivienda temporal** | Causa escrita y acreditable, más de 31 días y en general hasta 12 meses, garantía adicional de una mensualidad como máximo |
+
+Quedan fuera las cesiones sin ánimo de lucro de entidades del tercer sector en programas de acogida. Y las comunidades autónomas pueden tener normas propias.
+
+## El límite de precio
+
+- La **suma de las rentas** de las habitaciones alquiladas a la vez en una vivienda **no puede superar la renta del contrato del piso completo**.
+- En **zona tensionada**, esa renta debe respetar además los límites de la zona (en general, la del contrato anterior; para grandes tenedores, el índice).
+
+## Qué incluir en el contrato
 
 | Bloque | Contenido |
 |---|---|
+| Tipo de contrato | Vivienda habitual o vivienda temporal (y, si es temporal, **la causa**, que tendrás que poder probar) |
 | Objeto | Habitación concreta y zonas comunes de uso compartido |
-| Duración y preaviso | Plazos claros |
+| Duración y preaviso | Según el tipo de contrato |
 | Renta y gastos | Qué incluye (suministros, internet, limpieza) |
 | Normas de convivencia | Visitas, ruido, limpieza |
-| Fianza | La pactada |
+| Fianza y garantías | Fianza legal y garantía adicional dentro de los límites; no puedes exigir seguro de impago |
+| Inventario | Estado de la habitación y del mobiliario, con fotos |
 
-## Límite de precio
+Al terminar, firmad el [documento de finalización](/blog/documento-finalizacion-contrato-alquiler-plantilla) con el estado de la habitación.
 
-El decreto de octubre de 2026 (si se convalida) establece que, en zonas tensionadas, la suma de las habitaciones no puede superar la renta del piso completo. Más en [alquiler por habitaciones](/blog/alquiler-por-habitaciones-nuevo-limite).
+## Anuncio
 
-## Registro
+Si anuncias las habitaciones, recuerda los datos que exige ahora el anuncio: [qué debe incluir tu anuncio](/blog/que-debe-incluir-un-anuncio-de-alquiler-decreto-29-2026).
 
-Si es de corta duración, revisa la licencia o el registro de tu comunidad: el registro único estatal fue anulado en 2026 ([qué queda del registro único](/blog/registro-unico-de-arrendamientos-quien-debe-registrarse)).`,
+## Fuentes
+
+- BOE: [Real Decreto-ley 29/2026, de 6 de octubre](https://www.boe.es/buscar/act.php?id=BOE-A-2026-20823), artículo 3 (nuevos artículos 2, 5.f) y 17.9 de la LAU). Consultado el 22-10-2026.
+
+¿Vas a alquilar habitaciones? [Publícalas gratis en RentaHucha](/cuenta/registro) y pide una [valoración del alquiler](/valoracion-alquiler).`,
   },
   {
     slug: 'alquilar-a-empresas-para-sus-trabajadores',

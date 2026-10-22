@@ -97,7 +97,7 @@ ${NOTA}
 - **Prórroga extraordinaria**: los contratos que venzan hasta el 31-12-2028 pueden prorrogarse hasta dos años más, por periodos anuales y en las mismas condiciones, si el inquilino lo pide y está al corriente de pago en los ocho meses anteriores.
 - **Subidas**: hasta el 31-12-2027 no se puede subir la renta si supera el índice de referencia. Si está por debajo, la subida máxima es del 2 %, salvo acuerdo.
 - **Temporada**: de más de 31 días y hasta 12 meses, y el propietario debe justificar el motivo temporal. Encadenar más de dos contratos los convierte en contrato de vivienda habitual.
-- **Habitaciones**: en zonas tensionadas, la suma de lo que se cobra por las habitaciones no puede superar la renta del piso completo.
+- **Habitaciones**: alquilar una habitación pasa a ser alquiler de vivienda (habitual o temporal), y la suma de lo que se cobra por las habitaciones no puede superar la renta del piso completo; en zona tensionada, con sus límites.
 
 **Fiscalidad**
 - Deducción del 10 % del alquiler en el IRPF para inquilinos con base imponible inferior a 33.007,20 € (hasta 1.163 € al año): [requisitos y ejemplos](/blog/deduccion-irpf-10-por-ciento-inquilinos).
@@ -321,40 +321,53 @@ Si la necesidad del inquilino no es claramente temporal, lo más seguro es firma
   },
   {
     slug: 'alquiler-por-habitaciones-nuevo-limite',
-    title: 'Alquiler por habitaciones: el nuevo límite de precio, explicado',
-    excerpt: 'En zonas tensionadas, la suma de las habitaciones no puede superar la renta del piso completo. Qué significa si compartes piso.',
+    title: 'Alquiler por habitaciones con el decreto de octubre de 2026: el límite de precio y tus derechos',
+    excerpt: 'La suma de las habitaciones no puede superar la renta del piso completo, en cualquier municipio. Y alquilar una habitación pasa a ser alquiler de vivienda, con las protecciones de la LAU. Qué cambia si compartes piso.',
     audience: 'inquilinos',
     category: CAT,
     publishedAt: D,
-    body: `Compartir piso es la opción de muchas personas jóvenes y trabajadoras desplazadas. El decreto de octubre de 2026 introduce una regla nueva para estos alquileres.
+    body: `Compartir piso es la opción de muchas personas jóvenes y trabajadoras desplazadas. El Real Decreto-ley 29/2026 cambia dos cosas importantes para estos alquileres.
 
 ${NOTA}
 
-## La regla
+## 1. Una habitación ya es «alquiler de vivienda»
 
-En **zonas de mercado residencial tensionado**, la suma de las rentas de todas las habitaciones **no puede superar** la renta que tendría el piso alquilado completo.
+La Ley de Arrendamientos Urbanos incluye ahora expresamente el **arrendamiento parcial de una habitación o estancia**:
+
+- Si la habitación es **tu vivienda habitual**, es un arrendamiento de vivienda habitual, con las reglas de la LAU (duración, prórrogas, fianza de una mensualidad, límites de garantías…).
+- Si estás **temporalmente desplazado** (estudios, trabajo por un tiempo), es un arrendamiento de vivienda temporal, con causa escrita en el contrato y, en general, hasta 12 meses: [las reglas de la temporada](/blog/alquiler-de-temporada-nuevas-reglas-12-meses).
+
+## 2. El límite de precio
+
+En **cualquier municipio**, la suma de las rentas de los contratos de habitaciones vigentes a la vez en una vivienda **no puede superar la renta del contrato de alquiler de la vivienda completa**.
+
+En **zonas de mercado residencial tensionado**, además, esa renta (la del piso completo o, si no existe, la suma de las habitaciones) debe respetar los límites de renta de esas zonas.
 
 ## Ejemplo
 
 | Piso de 4 habitaciones | Renta |
 |---|---|
-| Renta máxima del piso completo | 1.200 € |
-| Suma máxima de las habitaciones | 1.200 € (por ejemplo, 4 × 300 €) |
+| Renta del alquiler del piso completo | 1.200 € |
+| Suma máxima de las habitaciones alquiladas a la vez | 1.200 € (por ejemplo, 4 × 300 €) |
 
 ## Cómo comprobarlo
 
-1. Averigua si tu municipio está declarado zona tensionada: lo publica tu comunidad autónoma y el Ministerio de Vivienda.
-2. Pregunta cuánto se paga en total por todas las habitaciones.
-3. Compara con el índice de referencia del piso entero.
+1. Pregunta cuánto se paga en total por todas las habitaciones.
+2. Compáralo con la renta del piso completo (y, en zona tensionada, con la renta del contrato anterior o el índice de referencia).
+3. Mira si tu municipio es zona tensionada en las [guías por ciudad](/alquiler).
 
 ## Si crees que se supera
 
 - Pide información por escrito al propietario.
 - Consulta la oficina de vivienda de tu ayuntamiento o comunidad, o una asociación de consumidores.
 
-## Además
+Las comunidades autónomas pueden tener normas propias sobre habitaciones, que se aplican en su territorio.
 
-Si vas a compartir, lee [cómo repartir gastos y quién firma el contrato](/blog/compartir-piso-gastos-y-contrato).`,
+Si vas a compartir, lee [cómo repartir gastos y quién firma el contrato](/blog/compartir-piso-gastos-y-contrato).
+
+## Fuentes
+
+- BOE: [Real Decreto-ley 29/2026, de 6 de octubre](https://www.boe.es/buscar/act.php?id=BOE-A-2026-20823), artículo 3 (nuevos artículos 2, 5.f) y 17.9 de la LAU). Consultado el 22-10-2026.`,
   },
   {
     slug: 'deduccion-irpf-10-por-ciento-inquilinos',

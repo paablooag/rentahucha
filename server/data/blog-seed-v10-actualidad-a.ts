@@ -272,7 +272,7 @@ ${AL_DIA}
 | Prórroga extraordinaria | Si tu periodo obligatorio (5 o 7 años) o la prórroga tácita termina antes de 2029: hasta dos años más en las mismas condiciones, si llevas ocho meses al día ([requisitos](/blog/prorroga-extraordinaria-alquiler-2026-quien-puede-pedirla)) |
 | Subidas | Hasta finales de 2027, máximo un 2 %, y nada si la renta supera el índice de referencia |
 | Temporada | Más de 31 días y, en general, hasta 12 meses y con causa justificada |
-| Habitaciones | En zona tensionada, la suma no puede superar la renta del piso entero |
+| Habitaciones | La suma no puede superar la renta del piso entero (y en zona tensionada, sus límites); la habitación pasa a ser alquiler de vivienda |
 | Deducción en el IRPF | Del 10 % para ingresos bajos |
 | Renovación automática (segundo decreto) | Al terminar los 5 o 7 años, salvo excepciones |
 | Anuncios | Deben indicar, cuando proceda, el índice de referencia, el límite de renta, el número de registro y si el arrendador es gran tenedor |

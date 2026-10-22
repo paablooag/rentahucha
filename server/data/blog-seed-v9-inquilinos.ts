@@ -440,7 +440,7 @@ ${CTA}`,
 - Vives en pareja o con familia.
 
 ## Nuevo límite de precio
-En zonas tensionadas, si se mantiene el decreto de octubre de 2026, la suma de las habitaciones no puede superar la renta del piso completo. Lee [alquiler por habitaciones](/blog/alquiler-por-habitaciones-nuevo-limite).
+Si se mantiene el decreto de octubre de 2026, la suma de las habitaciones no puede superar la renta del piso completo (y en zona tensionada debe respetar además sus límites). Lee [alquiler por habitaciones](/blog/alquiler-por-habitaciones-nuevo-limite).
 
 ${CTA}`,
   },
