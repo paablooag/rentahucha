@@ -27,6 +27,8 @@ function closeFloat() {
 }
 // En los artículos para propietarios e inmobiliarias que hablan del decreto de vivienda, la guía en PDF a cambio del correo.
 const showGuia = computed(() => !!post.value && post.value.audience !== 'inquilinos' && /decreto/i.test(post.value.html))
+// Artículos para propietarios que hablan del IRAV: alta en el aviso mensual del IRAV.
+const showIrav = computed(() => !!post.value && post.value.audience !== 'inquilinos' && /IRAV/.test(post.value.html))
 const floatCopy = computed(() => (showGuia.value
   ? { text: 'El decreto de vivienda, en una guía PDF para propietarios', to: '#guia-decreto', label: 'Descárgala' }
   : post.value?.audience === 'inmobiliarias'
@@ -150,6 +152,7 @@ useHead({
           <article class="prose" v-html="parts[0]" />
           <BlogInlineCta v-if="parts[1]" :audience="post.audience" :slug="post.slug" :guia="showGuia" />
           <article v-if="parts[1]" class="prose" v-html="parts[1]" />
+          <IravAlertSignup v-if="showIrav" />
           <GuiaDecretoDownload v-if="showGuia" />
         </div>
         <aside class="side">

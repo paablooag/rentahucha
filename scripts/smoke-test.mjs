@@ -97,6 +97,10 @@ r = await anon('/api/alertas', { method: 'POST', body: { email: `alerta${stamp}@
 check(r.status === 200, `alerta de pisos → ${r.status}`)
 r = await anon('/api/newsletter', { method: 'POST', body: { email: `news${stamp}@example.com`, consent: true } })
 check(r.status === 200, `newsletter → ${r.status}`)
+r = await anon('/api/newsletter', { method: 'POST', body: { email: `irav${stamp}@example.com`, consent: true, source: 'irav' } })
+check(r.status === 200, `aviso del IRAV → ${r.status}`)
+r = await anon('/api/baja', { method: 'POST', body: { token: 'no-existe' } })
+check(r.status === 404, `baja con token falso → ${r.status}`)
 r = await anon('/api/newsletter', { method: 'POST', body: { email: `guia${stamp}@example.com`, consent: true, source: 'guia-decreto' } })
 check(r.status === 200, `guía del decreto a cambio del correo → ${r.status}`)
 

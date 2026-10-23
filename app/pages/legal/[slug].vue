@@ -61,6 +61,7 @@ const pages: Record<string, { title: string; updated: string; blocks: Block[] }>
           'En ambos casos, opcionalmente, qué te interesa del servicio y tus comentarios. No pedimos DNI, ingresos, nóminas ni documentos.',
           'Los usamos para avisarte del lanzamiento, darte prioridad para dar de alta tu piso o crear tu pasaporte de inquilino, y analizar de forma agregada el interés en el servicio (cuánta gente lo quiere, en qué ciudades y qué le importa).',
           'Newsletter: tu correo electrónico, para enviarte novedades del servicio y consejos sobre alquiler. Solo si marcas esa casilla.',
+          'Aviso del IRAV: tu correo, para enviarte cada mes el índice que publica el INE y cuánto puede subir el alquiler, y novedades del servicio. Cada correo trae un enlace para darte de baja, y al hacerlo se borra.',
           'Valoración del alquiler: tu nombre, correo, teléfono si lo das y los datos del piso que nos cuentas, para enviarte la valoración y hablar contigo sobre ella.',
           'Alertas de pisos: tu correo y tu búsqueda (ciudad, renta máxima, habitaciones), para avisarte de los pisos nuevos que encajan, como mucho una vez al día. Cada correo trae un enlace para cancelar la alerta, y se borra al cancelarla.',
           'Encuesta: tus respuestas, que se guardan sin nombre y se muestran solo de forma agregada. Si dejas tu correo y marcas la casilla, lo usamos para enviarte el informe y novedades.',

@@ -447,4 +447,14 @@ export const MIGRATIONS: { id: number; name: string; sql: string }[] = [
       CREATE INDEX gsc_queries_day_idx ON gsc_queries (day);
     `,
   },
+  {
+    id: 20,
+    name: 'aviso mensual del IRAV y baja en un clic de la newsletter',
+    sql: `
+      -- token: enlace de baja de cada correo (/baja?token=…). irav_period: último IRAV enviado (AAAA-MM);
+      -- si no es nulo, la persona recibe el aviso mensual del IRAV (server/utils/irav.ts).
+      ALTER TABLE newsletter_subscribers ADD COLUMN token text UNIQUE;
+      ALTER TABLE newsletter_subscribers ADD COLUMN irav_period text;
+    `,
+  },
 ]

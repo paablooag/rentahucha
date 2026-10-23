@@ -6,6 +6,13 @@ export default defineEventHandler(async (event) => {
   const result = validateNewsletter(body ?? {})
   if (!result.ok) throw createError({ statusCode: 422, statusMessage: result.error })
 
+  // Aviso mensual del IRAV: alta propia, con enlace de baja y el último dato (server/utils/irav.ts).
+  if (body?.source === 'irav') {
+    const { activated } = await subscribeIrav(result.email)
+    if (activated) notifyTeam('Nuevo aviso del IRAV', [`${result.email} se ha apuntado al aviso mensual del IRAV (y a las novedades).`])
+    return { ok: true }
+  }
+
   // Origen del alta: el pie de la web, la checklist o la guía del decreto (a cambio del PDF) o el test del propietario.
   const source = body?.source === 'checklist' || body?.source === 'test' || body?.source === 'guia-decreto' ? body.source : 'pie'
   const inserted = await query('INSERT INTO newsletter_subscribers (email, source) VALUES ($1, $2) ON CONFLICT (email) DO NOTHING RETURNING email', [result.email, source])

@@ -47,6 +47,11 @@ export default defineEventHandler(async (event) => {
     },
   }
   const tipo = getRouterParam(event, 'tipo') ?? ''
+  // Aviso mensual del IRAV, con el último dato real.
+  if (tipo === 'irav') {
+    setHeader(event, 'Content-Type', 'text/html; charset=utf-8')
+    return iravMail((await getIrav()).months[0]!, 'ejemplo', false).html
+  }
   const sample = samples[tipo]
   if (!sample) throw createError({ statusCode: 404, statusMessage: `Plantillas: ${Object.keys(samples).join(', ')}` })
   setHeader(event, 'Content-Type', 'text/html; charset=utf-8')

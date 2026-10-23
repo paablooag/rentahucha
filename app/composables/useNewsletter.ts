@@ -2,7 +2,7 @@ export function useNewsletter() {
   const pending = ref(false)
   const error = ref<string | null>(null)
 
-  async function subscribe(email: string, source?: 'checklist' | 'test' | 'guia-decreto'): Promise<boolean> {
+  async function subscribe(email: string, source?: 'checklist' | 'test' | 'guia-decreto' | 'irav'): Promise<boolean> {
     pending.value = true
     error.value = null
     try {

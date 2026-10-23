@@ -43,6 +43,7 @@ useHead(() => ({ script: [{ type: 'application/ld+json', innerHTML: JSON.stringi
         </div>
 
         <IravCalculator :irav="latest.value" />
+        <IravAlertSignup />
 
         <h2 class="h-table">El IRAV, mes a mes</h2>
         <div class="table-wrap">
