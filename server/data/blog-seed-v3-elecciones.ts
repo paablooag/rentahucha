@@ -91,6 +91,8 @@ Si vas a firmar ahora, hazlo con un contrato bien redactado y conforme a la norm
 
 ${NOTA}
 
+> **¿Qué se aplica a tu contrato?** Compruébalo en un minuto con el [comprobador del decreto](/herramientas/decreto-vivienda-mi-contrato).
+
 ## Resumen rápido
 
 | Tema | Qué cambia | Más detalle |

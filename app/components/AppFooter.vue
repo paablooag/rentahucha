@@ -44,6 +44,7 @@ const dossiers = [
         <NuxtLink to="/herramientas/rentabilidad-alquiler">Rentabilidad del alquiler</NuxtLink>
         <NuxtLink to="/herramientas/reduccion-irpf-alquiler">IRPF del alquiler</NuxtLink>
         <NuxtLink to="/herramientas/subida-alquiler-irav">IRAV y subida del alquiler</NuxtLink>
+        <NuxtLink to="/herramientas/decreto-vivienda-mi-contrato">El decreto y tu contrato</NuxtLink>
         <NuxtLink to="/herramientas/coste-impago">Coste de un impago</NuxtLink>
         <NuxtLink to="/panel/propietario">Demo del panel</NuxtLink>
       </div>
