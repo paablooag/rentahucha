@@ -138,7 +138,8 @@ async function migrate(d: Driver) {
 // v48: venta del piso alquilado en la guía del decreto.
 // v49: reparaciones con el plazo de 15 días y descuento en la renta (art. 21.5 LAU).
 // v50: enlace al comprobador del decreto desde la guía.
-const BLOG_SEED_VERSION = 50
+// v51: ranking de la subida del alquiler por ciudad (IPVA del INE).
+const BLOG_SEED_VERSION = 51
 
 // v6: artículos «2026» como gancho pasan a «2027». Las URLs cambian; las antiguas redirigen con 301 (nuxt.config).
 const BLOG_SLUG_RENAMES: [string, string][] = [

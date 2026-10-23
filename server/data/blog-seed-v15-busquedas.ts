@@ -431,4 +431,98 @@ Todas las medidas del decreto, en la [guía para propietarios](/blog/decretos-de
 - BOE: [Real Decreto-ley 29/2026](https://www.boe.es/buscar/act.php?id=BOE-A-2026-20823), disposición final quinta.
 - BOE: [Ley 29/1994, de Arrendamientos Urbanos](https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003), artículo 9.3. Consultados el 22-10-2026.`,
   },
+  {
+    slug: 'cuanto-ha-subido-el-alquiler-en-tu-ciudad-ranking-ine',
+    title: '¿Cuánto ha subido el alquiler en tu ciudad? Ranking de 57 ciudades según el INE',
+    excerpt: 'Valencia, Málaga y Alicante, a la cabeza: así subió el alquiler en 2024 y desde 2015 en 57 ciudades, según el Índice de Precios de Vivienda en Alquiler del INE. Tabla completa y qué significa para ti.',
+    audience: 'propietarios',
+    category: 'Mercado',
+    publishedAt: '2026-10-23',
+    body: `**Respuesta corta:** según el **Índice de Precios de Vivienda en Alquiler (IPVA) del INE**, el alquiler subió de media un **+3,5 % en España en 2024** (+22,9 % desde 2015). Entre las 57 ciudades que analizamos, las mayores subidas fueron las de Valencia (+5,9 %), Málaga (+5,2 %), Alicante (+5,1 %), Elche (+5,0 %), Marbella (+4,5 %), y las menores, las de Cádiz (+2,5 %), Avilés (+2,5 %), Córdoba (+2,4 %).
+
+> **Datos de 2024**, los últimos publicados por el INE, consultados el 23 de octubre de 2026. Actualizaremos el ranking cuando se publique el año siguiente.
+
+## Qué mide este índice
+
+- El IPVA lo elabora el **INE** con datos de la **Agencia Tributaria**: refleja la evolución de las rentas de los alquileres de vivienda **declarados**, no los precios que se piden en los portales.
+- Por eso suele subir menos que los anuncios: incluye contratos que llevan años firmados. De hecho, en 2024 los **contratos nuevos subieron un 8,8 %**, mientras que los **existentes, un 2,8 %**, según el INE.
+- **No cubre el País Vasco ni Navarra**, que tienen hacienda foral: Bilbao, Vitoria-Gasteiz, Donostia, Pamplona y otras ciudades de esas comunidades no aparecen.
+
+## Las que más han subido desde 2015
+
+Si se mira el acumulado desde 2015, destacan Valencia (+36,4 %), Málaga (+32,7 %), Palma (+31,3 %).
+
+## El ranking completo
+
+| # | Ciudad | 2024 | 2023 | Desde 2015 |
+|---|---|---|---|---|
+| 1 | [Valencia](/alquilar-mi-piso/valencia) | +5,9 % | +4,5 % | +36,4 % |
+| 2 | [Málaga](/alquilar-mi-piso/malaga) | +5,2 % | +3,9 % | +32,7 % |
+| 3 | [Alicante](/alquilar-mi-piso/alicante) | +5,1 % | +3,4 % | +27,5 % |
+| 4 | [Elche](/alquilar-mi-piso/elche) | +5,0 % | +2,8 % | +26,4 % |
+| 5 | [Marbella](/alquilar-mi-piso/marbella) | +4,5 % | +3,3 % | +27,9 % |
+| 6 | [Santa Cruz de Tenerife](/alquilar-mi-piso/santa-cruz-de-tenerife) | +4,4 % | +2,9 % | +26,3 % |
+| 7 | [Castellón de la Plana](/alquilar-mi-piso/castellon-de-la-plana) | +4,3 % | +3,3 % | +26,3 % |
+| 8 | [Palma](/alquilar-mi-piso/palma) | +4,2 % | +3,4 % | +31,3 % |
+| 9 | [Lugo](/alquilar-mi-piso/lugo) | +4,2 % | +2,8 % | +18,3 % |
+| 10 | [Granada](/alquilar-mi-piso/granada) | +4,1 % | +3,0 % | +23,9 % |
+| 11 | [Santiago de Compostela](/alquilar-mi-piso/santiago-de-compostela) | +4,0 % | +3,2 % | +19,9 % |
+| 12 | [Cáceres](/alquilar-mi-piso/caceres) | +4,0 % | +2,4 % | +18,7 % |
+| 13 | [Benidorm](/alquilar-mi-piso/benidorm) | +3,9 % | +3,2 % | +19,9 % |
+| 14 | [Toledo](/alquilar-mi-piso/toledo) | +3,8 % | +3,0 % | +25,6 % |
+| 15 | [Almería](/alquilar-mi-piso/almeria) | +3,8 % | +2,7 % | +21,7 % |
+| 16 | [Girona](/alquilar-mi-piso/girona) | +3,7 % | +3,5 % | +28,1 % |
+| 17 | [Murcia](/alquilar-mi-piso/murcia) | +3,7 % | +2,8 % | +25,4 % |
+| 18 | [A Coruña](/alquilar-mi-piso/a-coruna) | +3,7 % | +2,7 % | +19,9 % |
+| 19 | [Madrid](/alquilar-mi-piso/madrid) | +3,6 % | +2,7 % | +22,6 % |
+| 20 | [Jerez de la Frontera](/alquilar-mi-piso/jerez-de-la-frontera) | +3,6 % | +2,3 % | +22,3 % |
+| 21 | [Sevilla](/alquilar-mi-piso/sevilla) | +3,5 % | +2,2 % | +22,1 % |
+| 22 | [Huelva](/alquilar-mi-piso/huelva) | +3,4 % | +2,4 % | +22,5 % |
+| 23 | [Tarragona](/alquilar-mi-piso/tarragona) | +3,4 % | +2,6 % | +22,1 % |
+| 24 | [Sant Cugat del Vallès](/alquilar-mi-piso/sant-cugat-del-valles) | +3,3 % | +2,6 % | +27,9 % |
+| 25 | [Barcelona](/alquilar-mi-piso/barcelona) | +3,3 % | +3,1 % | +24,6 % |
+| 26 | [Alcalá de Henares](/alquilar-mi-piso/alcala-de-henares) | +3,3 % | +2,2 % | +21,8 % |
+| 27 | [Reus](/alquilar-mi-piso/reus) | +3,3 % | +2,4 % | +21,3 % |
+| 28 | [Lleida](/alquilar-mi-piso/lleida) | +3,3 % | +2,7 % | +20,7 % |
+| 29 | [Logroño](/alquilar-mi-piso/logrono) | +3,3 % | +2,5 % | +20,5 % |
+| 30 | [Pontevedra](/alquilar-mi-piso/pontevedra) | +3,3 % | +2,5 % | +20,3 % |
+| 31 | [Las Palmas de Gran Canaria](/alquilar-mi-piso/las-palmas-de-gran-canaria) | +3,3 % | +2,2 % | +19,5 % |
+| 32 | [Santander](/alquilar-mi-piso/santander) | +3,3 % | +2,5 % | +19,1 % |
+| 33 | [Getafe](/alquilar-mi-piso/getafe) | +3,2 % | +1,9 % | +23,6 % |
+| 34 | [Móstoles](/alquilar-mi-piso/mostoles) | +3,2 % | +2,0 % | +20,7 % |
+| 35 | [Zaragoza](/alquilar-mi-piso/zaragoza) | +3,2 % | +2,4 % | +19,8 % |
+| 36 | [Albacete](/alquilar-mi-piso/albacete) | +3,2 % | +2,4 % | +19,7 % |
+| 37 | [Salamanca](/alquilar-mi-piso/salamanca) | +3,2 % | +2,0 % | +16,6 % |
+| 38 | [Mataró](/alquilar-mi-piso/mataro) | +3,1 % | +2,2 % | +23,1 % |
+| 39 | [Terrassa](/alquilar-mi-piso/terrassa) | +3,0 % | +2,7 % | +28,7 % |
+| 40 | [Sabadell](/alquilar-mi-piso/sabadell) | +3,0 % | +2,5 % | +26,6 % |
+| 41 | [Fuenlabrada](/alquilar-mi-piso/fuenlabrada) | +3,0 % | +2,3 % | +21,4 % |
+| 42 | [Vigo](/alquilar-mi-piso/vigo) | +3,0 % | +2,4 % | +18,9 % |
+| 43 | [Badajoz](/alquilar-mi-piso/badajoz) | +3,0 % | +2,3 % | +18,8 % |
+| 44 | [Valladolid](/alquilar-mi-piso/valladolid) | +3,0 % | +2,0 % | +18,1 % |
+| 45 | [Burgos](/alquilar-mi-piso/burgos) | +3,0 % | +2,3 % | +17,5 % |
+| 46 | [Leganés](/alquilar-mi-piso/leganes) | +2,9 % | +2,2 % | +21,4 % |
+| 47 | [Alcorcón](/alquilar-mi-piso/alcorcon) | +2,9 % | +2,1 % | +20,6 % |
+| 48 | [Jaén](/alquilar-mi-piso/jaen) | +2,9 % | +1,5 % | +16,9 % |
+| 49 | [Oviedo](/alquilar-mi-piso/oviedo) | +2,9 % | +1,8 % | +15,7 % |
+| 50 | [León](/alquilar-mi-piso/leon) | +2,9 % | +1,9 % | +14,5 % |
+| 51 | [L'Hospitalet de Llobregat](/alquilar-mi-piso/lhospitalet-de-llobregat) | +2,8 % | +2,6 % | +26,0 % |
+| 52 | [Badalona](/alquilar-mi-piso/badalona) | +2,8 % | +2,0 % | +20,8 % |
+| 53 | [Gijón](/alquilar-mi-piso/gijon) | +2,6 % | +2,1 % | +15,8 % |
+| 54 | [Ourense](/alquilar-mi-piso/ourense) | +2,6 % | +1,9 % | +15,7 % |
+| 55 | [Cádiz](/alquilar-mi-piso/cadiz) | +2,5 % | +1,6 % | +14,6 % |
+| 56 | [Avilés](/alquilar-mi-piso/aviles) | +2,5 % | +1,7 % | +12,8 % |
+| 57 | [Córdoba](/alquilar-mi-piso/cordoba) | +2,4 % | +1,5 % | +14,4 % |
+
+Pulsa en cada ciudad para ver su guía: si es zona tensionada, dónde se deposita la fianza y qué cambia con el decreto de octubre de 2026.
+
+## Qué significa para ti
+
+- **Si alquilas tu piso:** estos datos son una media de la ciudad; el precio de tu piso depende de tu barrio y de cómo es la vivienda. Además, hasta finales de 2027 la subida anual de un contrato en vigor está limitada (2 % sin nuevo acuerdo). Pide una [valoración gratis](/valoracion-alquiler) con pisos comparables de tu zona y calcula [cuánto puedes subir este año](/herramientas/subida-alquiler-irav).
+- **Si buscas piso:** comprueba [cuánto alquiler puedes pagar con tu sueldo](/herramientas/cuanto-alquiler-puedo-pagar) y mira los [pisos revisados en RentaHucha](/pisos).
+
+## Fuentes
+
+- INE: [Índice de Precios de Vivienda en Alquiler, año 2024 (nota de prensa)](https://www.ine.es/dyngs/Prensa/IPVA2024.htm) y [metodología](https://ine.es/experimental/ipva/experimental_precios_vivienda_alquiler.htm). Datos por municipio (de más de 10.000 habitantes) obtenidos de la API del INE el 23-10-2026.`,
+  },
 ]
