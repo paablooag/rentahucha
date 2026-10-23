@@ -4,11 +4,17 @@ const city = cityBySlug(String(route.params.ciudad))
 if (!city) throw createError({ statusCode: 404, statusMessage: 'Ciudad no encontrada', fatal: true })
 
 const region = REGIONS[city.region]
+const ipva = IPVA[city.slug] ?? null
+const pctSigned = (v: number) => `${v > 0 ? '+' : ''}${v.toFixed(1).replace('.', ',')} %`
 const title = `Alquilar mi piso en ${city.name} en 2027: guía para propietarios`
 const description = `Cómo alquilar tu piso en ${city.name}: ${city.tension ? 'zona tensionada y límites de renta' : 'renta, contrato LAU'}, dónde va la fianza en ${region.name}, cómo elegir inquilino y qué hacer si no paga.`
 useSeoMeta({ title, description, ogTitle: title, ogDescription: description, ogImage: 'https://rentahucha.es/og/ciudades.png' })
 
 const faqs = computed(() => [
+  ...(ipva ? [{
+    q: `¿Cuánto ha subido el alquiler en ${city.name}?`,
+    a: `Según el Índice de Precios de Vivienda en Alquiler del INE, el alquiler en ${city.name} subió un ${pctSigned(ipva.var2024).replace('+', '')} en ${IPVA_YEAR}${ipva.var2023 !== null ? ` (un ${pctSigned(ipva.var2023).replace('+', '')} en ${IPVA_YEAR - 1})` : ''} y acumula un ${pctSigned(ipva.since2015).replace('+', '')} desde 2015. Es el último dato publicado. Para tu piso concreto, compara con pisos parecidos de tu barrio o pide una valoración.`,
+  }] : []),
   {
     q: `¿${city.name} es zona tensionada?`,
     a: city.tension
@@ -80,6 +86,17 @@ const { data: demand } = await useFetch<{ show: boolean; n: number | null }>(`/a
         </div>
 
         <div class="facts">
+          <div class="fact">
+            <span class="label">Alquiler en {{ city.name }} (INE)</span>
+            <template v-if="ipva">
+              <strong>{{ pctSigned(ipva.var2024) }} en {{ IPVA_YEAR }}</strong>
+              <p>{{ pctSigned(ipva.since2015) }} desde 2015, según el Índice de Precios de Vivienda en Alquiler.</p>
+            </template>
+            <template v-else>
+              <strong>Sin dato del INE</strong>
+              <p>El índice del INE no cubre el País Vasco ni Navarra, que tienen hacienda foral.</p>
+            </template>
+          </div>
           <div class="fact" :class="{ warn: city.tension }">
             <span class="label">Zona tensionada</span>
             <strong>{{ city.tension ? 'Sí' : 'No declarada' }}</strong>
@@ -99,7 +116,7 @@ const { data: demand } = await useFetch<{ show: boolean; n: number | null }>(`/a
           </div>
         </div>
         <p v-if="demand.show" class="demand"><strong>{{ demand.n }} personas</strong> buscan piso en {{ city.name }} en RentaHucha ahora mismo.</p>
-        <p class="checked small muted">Datos del Ministerio de Vivienda y Agenda Urbana consultados el {{ CITIES_CHECKED }}. Las zonas tensionadas se actualizan cada trimestre.</p>
+        <p class="checked small muted">Datos del Ministerio de Vivienda y Agenda Urbana consultados el {{ CITIES_CHECKED }}; las zonas tensionadas se actualizan cada trimestre. Evolución del alquiler: Instituto Nacional de Estadística, IPVA {{ IPVA_YEAR }} (consultado el {{ IPVA_CHECKED }}).</p>
       </div>
     </section>
 
@@ -186,7 +203,8 @@ const { data: demand } = await useFetch<{ show: boolean; n: number | null }>(`/a
 .crumbs a { color: var(--muted); }
 .hero-cta { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
 .facts { display: grid; gap: 14px; }
-@media (min-width: 800px) { .facts { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 640px) { .facts { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1100px) { .facts { grid-template-columns: repeat(4, 1fr); } }
 .fact { border: 1px solid var(--line); border-radius: 16px; padding: 18px; background: #fff; display: grid; gap: 4px; align-content: start; }
 .fact.warn { background: var(--lime-soft); border-color: transparent; }
 .fact .label { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }

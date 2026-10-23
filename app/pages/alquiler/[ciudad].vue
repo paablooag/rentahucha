@@ -5,6 +5,8 @@ const route = useRoute()
 const city = cityBySlug(String(route.params.ciudad))
 if (!city) throw createError({ statusCode: 404, statusMessage: 'Ciudad no encontrada', fatal: true })
 const region = REGIONS[city.region] as Region
+const ipva = IPVA[city.slug] ?? null
+const pctSigned = (v: number) => `${v > 0 ? '+' : ''}${v.toFixed(1).replace('.', ',')} %`
 
 const { data } = await useFetch<{ items: PublicProperty[] }>('/api/pisos', { query: { ciudad: city.name }, default: () => ({ items: [] }) })
 const pisos = computed(() => data.value.items.filter(p => p.city.toLowerCase() === city.name.toLowerCase()).slice(0, 9))
@@ -85,6 +87,11 @@ const others = CITIES.filter(c => c.region !== city.region).slice(0, 18)
         </div>
 
         <div class="facts">
+          <div v-if="ipva" class="fact">
+            <span class="label">Alquiler en {{ city.name }} (INE)</span>
+            <strong>{{ pctSigned(ipva.var2024) }} en {{ IPVA_YEAR }}</strong>
+            <p>{{ pctSigned(ipva.since2015) }} desde 2015, según el Índice de Precios de Vivienda en Alquiler.</p>
+          </div>
           <div class="fact" :class="{ warn: city.tension }">
             <span class="label">Zona tensionada</span>
             <strong>{{ city.tension ? 'Sí' : 'No declarada' }}</strong>
@@ -102,7 +109,7 @@ const others = CITIES.filter(c => c.region !== city.region).slice(0, 18)
             <p>Desde la Ley de Vivienda de 2023, los paga el propietario.</p>
           </div>
         </div>
-        <p class="checked small muted">Datos del Ministerio de Vivienda y Agenda Urbana consultados el {{ CITIES_CHECKED }}.</p>
+        <p class="checked small muted">Datos del Ministerio de Vivienda y Agenda Urbana consultados el {{ CITIES_CHECKED }}<template v-if="ipva">; evolución del alquiler: INE, IPVA {{ IPVA_YEAR }}</template>.</p>
       </div>
     </section>
 
@@ -173,7 +180,8 @@ const others = CITIES.filter(c => c.region !== city.region).slice(0, 18)
 .empty { display: grid; gap: 6px; justify-items: start; margin-bottom: 24px; }
 .empty p { margin: 0 0 6px; }
 .facts { display: grid; gap: 14px; }
-@media (min-width: 800px) { .facts { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 640px) { .facts { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1100px) { .facts { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); } }
 .fact { border: 1px solid var(--line); border-radius: 16px; padding: 18px; background: #fff; display: grid; gap: 4px; align-content: start; }
 .fact.warn { background: var(--lime-soft); border-color: transparent; }
 .fact .label { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
