@@ -30,7 +30,7 @@ const CLAUSES = [
 
 const faqs = [
   { q: '¿El modelo del Ministerio es obligatorio?', a: 'No. Es un modelo orientativo: puedes usar cualquier contrato siempre que respete la Ley de Arrendamientos Urbanos. Tiene la ventaja de estar redactado por la Administración y de incluir ejemplos de cláusulas.' },
-  { q: '¿Hay que registrar el contrato de alquiler?', a: 'No es obligatorio inscribirlo en el Registro de la Propiedad para vivienda habitual. Lo que sí suele ser obligatorio en muchas comunidades es depositar la fianza en el organismo autonómico. Si es alquiler de temporada o turístico, desde julio de 2025 necesitas el número del Registro Único de Arrendamientos para anunciarlo.' },
+  { q: '¿Hay que registrar el contrato de alquiler?', a: 'No es obligatorio inscribirlo en el Registro de la Propiedad para vivienda habitual. Lo que sí suele ser obligatorio en muchas comunidades es depositar la fianza en el organismo autonómico. Si es alquiler turístico, necesitas la licencia o el registro que exijan tu comunidad y tu ayuntamiento (el registro único estatal lo anuló el Tribunal Supremo en 2026).' },
   { q: '¿Se puede firmar el contrato online?', a: 'Sí. La firma electrónica tiene la misma validez que la manuscrita.' },
   { q: '¿Qué pasa si una cláusula va contra la ley?', a: 'Las cláusulas que modifiquen en perjuicio del inquilino lo que dice la LAU para la vivienda habitual son nulas y se tienen por no puestas, aunque el contrato las incluya.' },
 ]

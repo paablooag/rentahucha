@@ -140,7 +140,8 @@ async function migrate(d: Driver) {
 // v50: enlace al comprobador del decreto desde la guía.
 // v51: ranking de la subida del alquiler por ciudad (IPVA del INE).
 // v52: huelga del 11-N, registro y reivindicaciones de los convocantes.
-const BLOG_SEED_VERSION = 52
+// v53: checklist de Airbnb sin el registro único estatal anulado.
+const BLOG_SEED_VERSION = 53
 
 // v6: artículos «2026» como gancho pasan a «2027». Las URLs cambian; las antiguas redirigen con 301 (nuxt.config).
 const BLOG_SLUG_RENAMES: [string, string][] = [

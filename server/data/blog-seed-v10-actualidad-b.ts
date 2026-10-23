@@ -153,7 +153,7 @@ ${CTA_PROP}`,
 - [ ] **Licencia o autorización** de vivienda de uso turístico de tu comunidad o ayuntamiento
 - [ ] **Zona permitida** según el planeamiento municipal (muchas ciudades limitan por barrios)
 - [ ] **Aprobación de la comunidad** de propietarios para nuevos pisos turísticos (desde 2025)
-- [ ] **Número del Registro Único** en el anuncio
+- [ ] **Número de la licencia o registro autonómico** en el anuncio (el registro único estatal lo anuló el Tribunal Supremo en 2026)
 - [ ] **Registro de viajeros** ante las autoridades
 - [ ] **Impuestos**: IRPF y, en su caso, IVA; revisa los cambios del decreto de octubre de 2026
 - [ ] **Seguro** adecuado al uso turístico

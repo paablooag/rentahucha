@@ -40,7 +40,7 @@ export interface City {
   tips: string[]
 }
 
-const SHORT_STAY = 'Si piensas en alquiler de temporada o turístico, desde julio de 2025 necesitas el número del Registro Único de Arrendamientos para anunciarlo. Para vivienda habitual con contrato LAU no hace falta.'
+const SHORT_STAY = 'Si piensas en alquiler turístico, necesitas la licencia o el registro de tu comunidad autónoma y tu ayuntamiento, y su código en el anuncio (el registro único estatal lo anuló el Tribunal Supremo en 2026). Desde el decreto de octubre de 2026, el de temporada pasa a ser «vivienda temporal», con causa escrita en el contrato y en general hasta 12 meses.'
 const STUDENTS = 'Si alquilas a estudiantes por curso, el contrato es de temporada (no de vivienda habitual) y debe reflejar de verdad esa causa. Si el inquilino va a vivir allí de forma estable, es vivienda habitual aunque sea joven.'
 const OWN_RULES_CAT = "Además de la normativa estatal, Cataluña tiene regulación propia de vivienda. Antes de fijar la renta, consulta la Agència de l'Habitatge de Catalunya."
 
