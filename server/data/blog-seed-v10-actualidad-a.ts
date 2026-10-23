@@ -115,12 +115,23 @@ ${AL_DIA}
 
 ## Quién la convoca
 
-Según la información publicada, la convocan la Confederación de Sindicatos de Inquilinas, **CCOO** y **UGT**, con el apoyo de otras organizaciones como CGT, ELA, LAB, CIG, Cobas o Solidaridad Obrera. CSIF ha anunciado que no la secundará.
+Según la información publicada, la convocan la Confederación de Sindicatos de Inquilinas, **CCOO** y **UGT**, con el apoyo de otras organizaciones como CGT, ELA, LAB, CIG, Cobas o Solidaridad Obrera. CSIF ha anunciado que no la secundará. Los convocantes la **registraron en el Ministerio de Trabajo el 19 de octubre** ([Qué!](https://que.es/2026/10/20/huelga-general-vivienda-11-n)).
+
+## Qué piden los convocantes
+
+Según la información publicada sobre la convocatoria, sus reivindicaciones incluyen:
+
+- Un **tope al precio del alquiler** y **un millón de viviendas** a precios asequibles, con un parque público de vivienda.
+- La expropiación de viviendas en manos de fondos que, según los convocantes, especulan con ellas.
+- Una subida del **7 % del salario mínimo** y aumentos salariales de entre el 4 % y el 7 %.
+- La reducción de la jornada laboral, la revalorización de las pensiones y la protección de los servicios públicos.
+
+Son propuestas de las organizaciones convocantes, no medidas aprobadas. Lo que sí está en vigor sobre el alquiler lo resumimos en [los decretos de vivienda de octubre de 2026, explicados](/blog/decretos-de-vivienda-octubre-2026-explicados).
 
 ## Por qué es noticia
 
 - Sería la primera huelga general de jornada completa en España desde 2012.
-- Cae **18 días antes** de las elecciones generales del 29 de noviembre.
+- Cae **18 días antes** de las elecciones generales del 29 de noviembre, poco antes del inicio de la campaña electoral.
 - Según la prensa, la patronal CEOE cuestiona su legalidad y estudia un recurso. El Gobierno debe fijar los **servicios mínimos**.
 
 ## Si trabajas por cuenta ajena
