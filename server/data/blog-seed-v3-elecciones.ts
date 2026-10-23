@@ -189,7 +189,7 @@ Fuente: BOE, [Real Decreto-ley 29/2026](https://www.boe.es/buscar/act.php?id=BOE
   },
   {
     slug: 'limite-2-por-ciento-subida-alquiler-hasta-2027',
-    title: '¿Cuánto puede subir el alquiler en 2026 y 2027? El límite del 2 %, explicado',
+    title: '¿Cuánto puedo subir el alquiler en 2026 y 2027? Límite del 2 %, con calculadora',
     excerpt: 'Hasta el 31 de diciembre de 2027, si no hay un nuevo acuerdo la subida anual no puede pasar del 2 %, y si la renta supera el índice de referencia no puede subir nada. Con ejemplos y el texto del BOE.',
     audience: 'propietarios',
     category: CAT,

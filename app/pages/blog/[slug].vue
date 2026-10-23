@@ -27,6 +27,9 @@ function closeFloat() {
 }
 // En los artículos para propietarios e inmobiliarias que hablan del decreto de vivienda, la guía en PDF a cambio del correo.
 const showGuia = computed(() => !!post.value && post.value.audience !== 'inquilinos' && /decreto/i.test(post.value.html))
+// Artículos sobre la subida del alquiler: calculadora del IRAV dentro del artículo.
+const IRAV_CALC = new Set(['limite-2-por-ciento-subida-alquiler-hasta-2027', 'actualizacion-de-la-renta-cuanto-puedes-subir', 'actualizar-renta-alquiler-irav-como-calcularlo', 'cuanto-te-pueden-subir-el-alquiler', 'que-es-el-irav-subida-del-alquiler'])
+const showIravCalc = computed(() => !!post.value && IRAV_CALC.has(post.value.slug))
 // Artículos para propietarios que hablan del IRAV: alta en el aviso mensual del IRAV.
 const showIrav = computed(() => !!post.value && post.value.audience !== 'inquilinos' && /IRAV/.test(post.value.html))
 const floatCopy = computed(() => (showGuia.value
@@ -150,6 +153,7 @@ useHead({
             </ol>
           </details>
           <article class="prose" v-html="parts[0]" />
+          <IravCalculatorLive v-if="showIravCalc" />
           <BlogInlineCta v-if="parts[1]" :audience="post.audience" :slug="post.slug" :guia="showGuia" />
           <article v-if="parts[1]" class="prose" v-html="parts[1]" />
           <IravAlertSignup v-if="showIrav" />
