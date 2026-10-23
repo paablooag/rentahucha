@@ -157,6 +157,7 @@ const { data: demand } = await useFetch<{ show: boolean; n: number | null }>(`/a
           <strong>Así te ayuda RentaHucha</strong>
           <p>Ya puedes publicar tu piso gratis en la beta: lo revisamos y los interesados te escriben por chat sin dar su teléfono. Desde el lanzamiento, verificaremos a los inquilinos, prepararemos el contrato conforme a la LAU con inventario y te avisaremos de cada pago; el inquilino irá llenando cada mes una hucha a su nombre, custodiada por una entidad financiera autorizada, y si hay un impago comprobado su saldo se usará para pagarte. Pagarás el 5 % de la renta, solo cuando cobres.</p>
         </div>
+        <IravAlertSignup />
       </div>
     </section>
 
