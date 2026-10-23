@@ -57,6 +57,13 @@ const { brand } = useAppConfig()
 const site = `https://${brand.domain}`
 const url = computed(() => `${site}/blog/${post.value?.slug ?? ''}`)
 
+// Imagen para redes de los artículos con una propia (public/og/, plantilla /dossier/og).
+const OG_BY_SLUG: Record<string, string> = {
+  'cuanto-ha-subido-el-alquiler-en-tu-ciudad-ranking-ine': 'ranking',
+  'reduccion-irpf-alquiler-vivienda-2027-hasta-100': 'irpf',
+  'decretos-de-vivienda-octubre-2026-explicados': 'decreto',
+  'limite-2-por-ciento-subida-alquiler-hasta-2027': 'irav',
+}
 useSeoMeta({
   title: () => post.value?.title ?? '',
   description: () => post.value?.excerpt ?? '',
@@ -67,7 +74,8 @@ useSeoMeta({
   articlePublishedTime: () => post.value?.publishedAt ?? '',
   articleModifiedTime: () => post.value?.updatedAt ?? '',
   articleSection: () => post.value?.category ?? '',
-  twitterCard: 'summary',
+  ogImage: () => `https://rentahucha.es/og/${OG_BY_SLUG[post.value?.slug ?? ''] ?? (post.value?.audience === 'propietarios' ? 'propietarios' : 'default')}.png`,
+  twitterCard: 'summary_large_image',
   twitterTitle: () => post.value?.title ?? '',
   twitterDescription: () => post.value?.excerpt ?? '',
 })

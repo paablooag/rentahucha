@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const title = 'Calculadora de la reducción del IRPF por alquiler de vivienda (2026-2027)'
 const description = '¿Cuánto IRPF pagas por alquilar tu piso? Calcula la reducción del rendimiento neto según la fecha del contrato: del 50 % al 90 % con la Ley 12/2023 y hasta el 100 % en los contratos posteriores al 1 de diciembre de 2026. Gratis y sin registro.'
-useSeoMeta({ title, description, ogTitle: title, ogDescription: description, ogImage: 'https://rentahucha.es/og/propietarios.png' })
+useSeoMeta({ title, description, ogTitle: title, ogDescription: description, ogImage: 'https://rentahucha.es/og/irpf.png' })
 
 const faqs = [
   { q: '¿Qué reducción del IRPF tiene el alquiler de vivienda?', a: 'Depende de cuándo se firmó el contrato. Antes del 26 de mayo de 2023, un 60 %. Entre esa fecha y el 1 de diciembre de 2026, del 50 % al 90 % según el caso (Ley 12/2023). En los contratos posteriores al 1 de diciembre de 2026, del 15 % al 100 % según el Real Decreto-ley 29/2026, pendiente de convalidación.' },

@@ -3,7 +3,7 @@ import type { DecretoInput } from '#shared/utils/decreto'
 
 const title = '¿Qué cambia en mi contrato con el decreto de vivienda? Comprobador gratis (RDL 29/2026)'
 const description = 'Responde 6 preguntas sobre tu contrato de alquiler y mira qué medidas del decreto de octubre de 2026 se te aplican: subida máxima, prórroga extraordinaria, IRPF, IBI, desistimiento, temporada, anuncio y reparaciones.'
-useSeoMeta({ title, description, ogTitle: title, ogDescription: description, ogImage: 'https://rentahucha.es/og/propietarios.png' })
+useSeoMeta({ title, description, ogTitle: title, ogDescription: description, ogImage: 'https://rentahucha.es/og/decreto.png' })
 
 const f = reactive<DecretoInput>({ signedOn: '', kind: 'habitual', tensionZone: false, termEnds: '', hasUpdateClause: true, aboveIndex: 'nose', bigHolder: false })
 const items = computed(() => decretoChecks({ ...f }))

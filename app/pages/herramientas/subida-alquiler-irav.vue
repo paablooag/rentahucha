@@ -9,7 +9,7 @@ const pct = (v: number) => `${v.toFixed(2).replace('.', ',')} %`
 
 const title = computed(() => `IRAV de ${label(latest.value)}: ${pct(latest.value.value)}. ¿Cuánto puedes subir el alquiler?`)
 const description = computed(() => `El IRAV de ${label(latest.value)} es del ${pct(latest.value.value)} (INE). Calcula la subida máxima de tu alquiler: con el decreto de octubre de 2026, sin nuevo acuerdo, no puede pasar del 2 % hasta finales de 2027.`)
-useSeoMeta({ title, description, ogTitle: title, ogDescription: description, ogImage: 'https://rentahucha.es/og/propietarios.png' })
+useSeoMeta({ title, description, ogTitle: title, ogDescription: description, ogImage: 'https://rentahucha.es/og/irav.png' })
 
 // Calculadora
 const rent = ref<number | null>(900)
