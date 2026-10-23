@@ -90,7 +90,7 @@ const others = CITIES.filter(c => c.region !== city.region).slice(0, 18)
           <div v-if="ipva" class="fact">
             <span class="label">Alquiler en {{ city.name }} (INE)</span>
             <strong>{{ pctSigned(ipva.var2024) }} en {{ IPVA_YEAR }}</strong>
-            <p>{{ pctSigned(ipva.since2015) }} desde 2015, según el Índice de Precios de Vivienda en Alquiler.</p>
+            <p>{{ pctSigned(ipva.since2015) }} desde 2015, según el Índice de Precios de Vivienda en Alquiler. <NuxtLink to="/blog/cuanto-ha-subido-el-alquiler-en-tu-ciudad-ranking-ine">Ver el ranking</NuxtLink>.</p>
           </div>
           <div class="fact" :class="{ warn: city.tension }">
             <span class="label">Zona tensionada</span>

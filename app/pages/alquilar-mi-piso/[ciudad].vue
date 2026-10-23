@@ -90,7 +90,7 @@ const { data: demand } = await useFetch<{ show: boolean; n: number | null }>(`/a
             <span class="label">Alquiler en {{ city.name }} (INE)</span>
             <template v-if="ipva">
               <strong>{{ pctSigned(ipva.var2024) }} en {{ IPVA_YEAR }}</strong>
-              <p>{{ pctSigned(ipva.since2015) }} desde 2015, según el Índice de Precios de Vivienda en Alquiler.</p>
+              <p>{{ pctSigned(ipva.since2015) }} desde 2015, según el Índice de Precios de Vivienda en Alquiler. <NuxtLink to="/blog/cuanto-ha-subido-el-alquiler-en-tu-ciudad-ranking-ine">Ver el ranking</NuxtLink>.</p>
             </template>
             <template v-else>
               <strong>Sin dato del INE</strong>
