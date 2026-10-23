@@ -27,6 +27,7 @@ export default defineEventHandler(async (event) => {
       footer: 'Recibes este correo porque has pedido esta descarga en rentahucha.es y aceptado recibir nuestras novedades. Para darte de baja, responde a este correo con la palabra BAJA.',
     })
     sendMailLater({ to: result.email, subject: `Tu descarga: ${pdf.name}`, ...mail })
+    notifyTeam(`Nueva descarga: ${pdf.name}`, [`${result.email} ha descargado ${pdf.name} y acepta recibir novedades.`])
   }
   return { ok: true }
 })
