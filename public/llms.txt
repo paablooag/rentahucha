@@ -1,0 +1,35 @@
+# RentaHucha
+
+> Plataforma de alquiler de vivienda en toda España, en beta. Ya se pueden crear cuentas, publicar pisos (con revisión previa), buscarlos y hablar por chat. La hucha del inquilino, la firma del contrato y los cobros se activarán en el lanzamiento.
+
+- Inquilinos: gratis. Cada mes aportarán un pequeño porcentaje de la renta (en torno al 4 %) a una hucha a su nombre, con tope de dos mensualidades en vivienda habitual. Se devuelve íntegra con un 10 % de bonus si el alquiler termina sin incidencias. Es una alternativa a pedir aval bancario.
+- Propietarios: inquilinos verificados, contrato conforme a la LAU, aviso de cada pago, panel de incidencias y protocolo de impago. Cuota del 5 % de la renta (hasta el 3,5 % con varios pisos).
+- La hucha la custodiará una entidad financiera autorizada; RentaHucha no guarda el dinero. Si hay un impago comprobado, el saldo se usa para pagar lo pendiente al propietario.
+- RentaHucha no es una aseguradora ni garantiza el cobro de la renta. La fianza legal y la garantía adicional van aparte y son del propietario.
+
+## Para inquilinos
+
+- [Alquilar con RentaHucha](https://rentahucha.es/inquilinos): cómo funciona la hucha y cómo alquilar sin aval bancario.
+- [Buscar piso](https://rentahucha.es/pisos): pisos publicados y revisados.
+- [Alquilar sin aval](https://rentahucha.es/blog/alquilar-sin-aval): opciones reales.
+- [Cuánto alquiler puedo pagar](https://rentahucha.es/herramientas/cuanto-alquiler-puedo-pagar): calculadora.
+- [Carta de presentación de inquilino](https://rentahucha.es/herramientas/carta-inquilino): generador gratis.
+
+## Para propietarios
+
+- [Alquilar tu piso con RentaHucha](https://rentahucha.es/propietarios)
+- [Valoración del alquiler gratis](https://rentahucha.es/valoracion-alquiler): cuánto pedir, con pisos comparables y el índice oficial.
+- [Subida del alquiler con el IRAV](https://rentahucha.es/herramientas/subida-alquiler-irav): último dato del INE y límite del 2 % hasta finales de 2027.
+- [Reducción del IRPF por alquiler](https://rentahucha.es/herramientas/reduccion-irpf-alquiler): calculadora según la fecha del contrato.
+- [¿Qué cambia en mi contrato con el decreto de vivienda?](https://rentahucha.es/herramientas/decreto-vivienda-mi-contrato): comprobador del Real Decreto-ley 29/2026.
+- [Modelo de contrato de alquiler](https://rentahucha.es/herramientas/modelo-contrato-alquiler): cláusulas explicadas.
+- [Guías por ciudad](https://rentahucha.es/alquilar-mi-piso): fianza, zona tensionada y evolución del alquiler según el INE.
+
+## Normativa y actualidad
+
+- [Los decretos de vivienda de octubre de 2026, explicados](https://rentahucha.es/blog/decretos-de-vivienda-octubre-2026-explicados)
+- [Blog](https://rentahucha.es/blog): artículos sobre alquiler, con fuentes oficiales (BOE, INE).
+
+## Contacto
+
+- hola@rentahucha.es
