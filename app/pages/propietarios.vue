@@ -14,7 +14,7 @@ const steps = [
 ]
 
 const faqs = [
-  { q: '¿Qué pasa si el inquilino no paga?', a: 'Le avisamos el mismo día y buscamos una solución si es un bache puntual. Si el impago se comprueba, se te paga la cantidad pendiente con el saldo de la hucha del inquilino, sin esperar a un juicio, y te entregamos el expediente completo para reclamar el resto. No pagamos rentas de nuestro bolsillo: la hucha cubre hasta lo que haya ahorrado el inquilino, y crece cada mes de contrato.' },
+  { q: '¿Qué pasa si el inquilino no paga?', a: 'Desde el lanzamiento, le avisaremos el mismo día y buscaremos una solución si es un bache puntual. Si el impago se comprueba, se te pagará la cantidad pendiente con el saldo de la hucha del inquilino, sin esperar a un juicio, y te entregaremos el expediente completo para reclamar el resto. No pagamos rentas de nuestro bolsillo: la hucha cubre hasta lo que haya ahorrado el inquilino, y crece cada mes de contrato.' },
   { q: '¿Tenéis un seguro de impago?', a: 'No. RentaHucha no es una aseguradora ni vende seguros. Nuestra protección es la selección del inquilino y su hucha, que pasa a ti si hay un impago. Si quieres un seguro de impago, puedes contratarlo con la compañía que elijas y combinarlo con nosotros.' },
   { q: '¿Puedo elegir al inquilino?', a: 'Sí. Te presentamos candidatos verificados y tú decides.' },
   DURATION_FAQ.owner,
@@ -56,6 +56,7 @@ const faqs = [
         <div class="section-head">
           <span class="eyebrow">Cómo funciona</span>
           <h2>De piso vacío a renta cobrada, sin perseguir a nadie</h2>
+          <p class="lead">Así funcionará desde el lanzamiento. Hoy, en la beta, ya puedes <NuxtLink to="/cuenta/registro?tipo=propietario">publicar tu piso gratis</NuxtLink> y hablar con los interesados por chat.</p>
         </div>
         <ol class="steps">
           <li v-for="(s, i) in steps" :key="s.title">

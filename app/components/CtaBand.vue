@@ -4,7 +4,7 @@
       <div class="panel">
         <div>
           <h2>Alquilar te cuesta. Aquí, pagar bien te suma.</h2>
-          <p>Apúntate antes de que abramos: los primeros propietarios e inquilinos de la lista entran con condiciones de lanzamiento.</p>
+          <p>La beta ya está abierta: publica tu piso gratis o apúntate a la lista. Los primeros propietarios e inquilinos entran con condiciones de lanzamiento.</p>
         </div>
         <div class="actions">
           <NuxtLink to="/apuntate?tipo=propietario#formulario" class="btn btn-dark">Soy propietario <AppIcon name="arrow" :size="18" /></NuxtLink>

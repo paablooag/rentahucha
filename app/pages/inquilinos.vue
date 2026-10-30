@@ -15,7 +15,7 @@ const faqs = [
   { q: '¿Cómo me doy de alta?', a: 'En unos 5 minutos y desde la web: te identificas con una foto del DNI y un selfie, firmas electrónicamente y domicilias la renta con la aportación a tu hucha. Sin ir al banco y sin descargar otra app.' },
   GUARANTEE_FAQ.tenant,
   DURATION_FAQ.tenant,
-  { q: '¿Qué pasa si un mes me retraso?', a: 'Te avisamos antes del cobro y, si falla, te contactamos el mismo día para buscar una solución. Si es un bache puntual, se puede pactar un plan de pago corto.' },
+  { q: '¿Qué pasa si un mes me retraso?', a: 'Desde el lanzamiento, te avisaremos antes del cobro y, si falla, te contactaremos el mismo día para buscar una solución. Si es un bache puntual, se puede pactar un plan de pago corto.' },
   { q: '¿Quién ve mis nóminas y extractos?', a: 'Nadie más que el sistema de verificación. Al propietario solo le mostramos un resumen («ingresos suficientes para X €/mes») y solo si tú decides compartir tu pasaporte.' },
   { q: '¿Me cobráis algo?', a: 'No. Para el inquilino es gratis. Los gastos de gestión los paga el propietario, como marca la ley.' },
 ]

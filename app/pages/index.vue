@@ -10,10 +10,11 @@ const faqs = [
   { q: '¿Qué es la hucha de garantía-ahorro?', a: 'Es una cuenta a nombre del inquilino que se llena poco a poco, con una pequeña parte de la renta cada mes (por ejemplo, el 4 %), y queda bloqueada a favor del contrato. Si hay un impago comprobado, se paga al propietario la cantidad pendiente con su saldo; si el inquilino termina el contrato sin incidencias, la recupera íntegra con un bonus por buen pagador. La fianza legal va aparte, como en cualquier alquiler.' },
   { q: '¿El dinero de la hucha lo tenéis vosotros?', a: 'No. La hucha es una cuenta a nombre del inquilino, abierta y custodiada por una entidad financiera autorizada. El dinero es suyo en todo momento: puede verlo, pero queda bloqueado mientras dura el alquiler. RentaHucha nunca guarda el dinero: nosotros gestionamos las reglas y la entidad lo custodia.' },
   { q: '¿Cuándo se puede mover la hucha?', a: 'Solo según las condiciones que propietario e inquilino firman al inicio. Si el alquiler termina sin incidencias, se devuelve íntegra con el bonus. Si hay un impago de renta comprobado, se paga al propietario la cantidad pendiente. Si hay desperfectos u otras reclamaciones, solo se mueve con un acuerdo firmado por ambas partes o una resolución. Nadie decide por capricho.' },
-  { q: '¿Qué pasa si el inquilino deja de pagar?', a: 'Le avisamos el mismo día y, si es un bache puntual, proponemos un plan corto. Si no se resuelve, el saldo de la hucha del inquilino pasa al propietario y le entregamos el expediente completo para reclamar. RentaHucha no es una aseguradora ni vende seguros: si el propietario quiere cubrir más meses, puede contratar su propio seguro de impago.' },
+  { q: '¿Qué pasa si el inquilino deja de pagar?', a: 'Desde el lanzamiento, le avisaremos el mismo día y, si es un bache puntual, propondremos un plan corto. Si no se resuelve, el saldo de la hucha del inquilino pasará al propietario y le entregaremos el expediente completo para reclamar. RentaHucha no es una aseguradora ni vende seguros: si el propietario quiere cubrir más meses, puede contratar su propio seguro de impago.' },
   { q: '¿Garantizáis que el inquilino saldrá en pocos días?', a: 'No, y desconfía de quien lo prometa. Los plazos de desahucio los decide un juzgado. Lo que sí hacemos es que la hucha pase al propietario y que no se pierda ni un día en preparar la reclamación.' },
   { q: '¿Cuánto cuesta?', a: 'Para el propietario, un 5 % de la renta mensual (menos si tiene varios pisos). Para el inquilino es gratis: no le cobramos gastos de gestión y su hucha es suya.' },
-  { q: '¿Dónde funciona?', a: 'En toda España. Todo se hace online (verificación, contrato, cobros e incidencias), así que da igual en qué ciudad esté el piso. Nos encargamos de depositar la fianza en el organismo de cada comunidad autónoma.' },
+  { q: '¿Dónde funciona?', a: 'En toda España. En la beta ya puedes publicar tu piso gratis y buscar pisos en cualquier ciudad. Con el lanzamiento, todo se hará online (verificación, contrato, cobros e incidencias), y nos encargaremos de depositar la fianza en el organismo de cada comunidad autónoma.' },
+  { q: '¿Qué puedo hacer ya en la beta?', a: 'Crear tu cuenta, publicar tu piso gratis (lo revisamos antes de publicarlo), buscar pisos y hablar por chat sin dar tu teléfono. La verificación de inquilinos, la hucha, la firma del contrato y los cobros se activan con el lanzamiento.' },
 ]
 </script>
 
@@ -54,6 +55,42 @@ const faqs = [
 
     <FactsMarquee />
 
+    <!-- Qué funciona ya y qué llega con el lanzamiento -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head center">
+          <span class="eyebrow">Beta abierta</span>
+          <h2>Qué puedes hacer hoy y qué llega con el lanzamiento</h2>
+        </div>
+        <div class="grid grid-2 now">
+          <div class="card card-shadow">
+            <span class="badge">Ya disponible</span>
+            <ul class="check-list">
+              <li><AppIcon name="check" :size="18" /> <span><strong>Publicar tu piso gratis.</strong> Lo revisamos antes de publicarlo.</span></li>
+              <li><AppIcon name="check" :size="18" /> <span><strong>Buscar piso</strong> y crear alertas de los nuevos que encajen.</span></li>
+              <li><AppIcon name="check" :size="18" /> <span><strong>Hablar por chat</strong> propietario e inquilino, sin dar el teléfono.</span></li>
+              <li><AppIcon name="check" :size="18" /> <span><strong>Herramientas gratis:</strong> valoración del alquiler, IRAV, IRPF y modelo de contrato.</span></li>
+            </ul>
+            <div class="now-cta">
+              <NuxtLink to="/cuenta/registro?tipo=propietario" class="btn btn-primary">Publicar mi piso gratis</NuxtLink>
+              <NuxtLink to="/pisos" class="btn btn-ghost">Ver pisos</NuxtLink>
+            </div>
+          </div>
+          <div class="card">
+            <span class="badge badge-muted">Con el lanzamiento</span>
+            <ul class="check-list muted">
+              <li><AppIcon name="check" :size="18" /> <span>Verificación de los inquilinos antes de firmar.</span></li>
+              <li><AppIcon name="check" :size="18" /> <span>Contrato conforme a la LAU, con firma online e inventario.</span></li>
+              <li><AppIcon name="check" :size="18" /> <span>Cobro de la renta y aviso de cada pago.</span></li>
+              <li><AppIcon name="check" :size="18" /> <span>La hucha del inquilino, custodiada por una entidad financiera autorizada.</span></li>
+              <li><AppIcon name="check" :size="18" /> <span>Pasaporte del buen inquilino.</span></li>
+            </ul>
+            <p class="small muted">Quien publique o se apunte ahora entra con condiciones de lanzamiento.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Problema -->
     <section class="section">
       <div class="container">
@@ -90,7 +127,7 @@ const faqs = [
         <div class="section-head">
           <span class="eyebrow">La solución</span>
           <h2>Tres piezas que nadie más junta en pisos de cualquier propietario</h2>
-          <p class="lead">Los seguros de impago protegen al propietario del inquilino. Nosotros alineamos a los dos.</p>
+          <p class="lead">Los seguros de impago protegen al propietario del inquilino. Nosotros alineamos a los dos. Así funcionará desde el lanzamiento.</p>
         </div>
         <div class="grid grid-3">
           <div class="card">
@@ -131,7 +168,7 @@ const faqs = [
         <div class="section-head">
           <span class="eyebrow">Para que el impago sea raro</span>
           <h2>Cinco capas antiimpago</h2>
-          <p class="lead">Cada una hace menos probable que se llegue a la siguiente.</p>
+          <p class="lead">Así funcionará desde el lanzamiento: cada capa hace menos probable que se llegue a la siguiente.</p>
         </div>
         <AntiImpagoLayers />
         <div class="note note-green promise">
@@ -183,4 +220,8 @@ const faqs = [
 .more { margin: 28px 0 0; }
 .more a { display: inline-flex; gap: 6px; align-items: center; font-weight: 500; }
 .promise { margin-top: 28px; }
+.now .badge { margin-bottom: 14px; }
+.now .check-list { margin: 0 0 16px; }
+.now .check-list li::before { content: none; }
+.now-cta { display: flex; gap: 10px; flex-wrap: wrap; }
 </style>
