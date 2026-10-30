@@ -132,7 +132,12 @@ Son propuestas de las organizaciones convocantes, no medidas aprobadas. Lo que s
 
 - Sería la primera huelga general de jornada completa en España desde 2012.
 - Cae **18 días antes** de las elecciones generales del 29 de noviembre, poco antes del inicio de la campaña electoral.
-- Según la prensa, la patronal CEOE cuestiona su legalidad y estudia un recurso. El Gobierno debe fijar los **servicios mínimos**.
+- La patronal CEOE la considera de carácter electoral y anunció que la impugnaría, pero finalmente no la recurrirá antes del 11 de noviembre, aunque se reserva acciones legales ([Demócrata, 22-10-2026](https://www.democrata.es/economia/ceoe-renuncia-a-recurrir-por-adelantado-la-huelga-general-del-11-de-noviembre/)).
+- La autoridad laboral debe fijar los **servicios mínimos** de cada sector; a 30 de octubre todavía no se han publicado.
+
+## Manifestaciones
+
+CCOO ha anunciado manifestaciones en todo el país el mismo 11 de noviembre ([CCOO](https://huelga.ccoo.es/)). En Barcelona, la manifestación central está convocada a las 17:30 desde los Jardinets de Gràcia ([Qué!](https://que.es/2026/10/20/huelga-general-vivienda-11-n)). Consulta la convocatoria de tu ciudad en las webs de los sindicatos.
 
 ## Si trabajas por cuenta ajena
 

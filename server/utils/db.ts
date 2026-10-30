@@ -142,7 +142,8 @@ async function migrate(d: Driver) {
 // v52: huelga del 11-N, registro y reivindicaciones de los convocantes.
 // v53: checklist de Airbnb sin el registro único estatal anulado.
 // v54: título del artículo del límite del 2 % (con calculadora).
-const BLOG_SEED_VERSION = 54
+// v55: huelga del 11-N, postura de la CEOE, servicios mínimos y manifestaciones.
+const BLOG_SEED_VERSION = 55
 
 // v6: artículos «2026» como gancho pasan a «2027». Las URLs cambian; las antiguas redirigen con 301 (nuxt.config).
 const BLOG_SLUG_RENAMES: [string, string][] = [
