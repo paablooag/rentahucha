@@ -15,7 +15,7 @@ export default defineEventHandler(async (event) => {
   const { updated } = await upsertLead(result.data)
   const d = result.data
   if (!updated) {
-    // Confirmación al interesado y, si es propietario o inmobiliaria, aviso al equipo.
+    // Confirmación al interesado y aviso al equipo.
     const first = d.name.split(' ')[0]
     const body = d.role === 'inquilino'
       ? ['Te avisaremos antes del lanzamiento para crear tu pasaporte de inquilino. Mientras tanto, ya puedes ver pisos y escribir a sus propietarios en la web.']
@@ -31,9 +31,7 @@ export default defineEventHandler(async (event) => {
       button: d.role === 'propietario' ? { label: 'Publicar mi piso', url: siteUrl('/cuenta/registro?tipo=propietario') } : d.role === 'inquilino' ? { label: 'Ver pisos', url: siteUrl('/pisos') } : undefined,
     })
     sendMailLater({ to: d.email, subject: 'Ya estás en la lista de RentaHucha', ...mail })
-    if (d.role !== 'inquilino') {
-      notifyTeam(`Nuevo ${d.role}: ${d.name} (${d.city})`, [`${d.name} · ${d.email}${d.phone ? ` · ${d.phone}` : ''}`, `Plazo: ${d.timing}`], siteUrl('/admin/interesados'))
-    }
+    notifyTeam(`Nuevo ${d.role}: ${d.name} (${d.city})`, [`${d.name} · ${d.email}${d.phone ? ` · ${d.phone}` : ''}`, `Plazo: ${d.timing}`], siteUrl('/admin/interesados'))
   }
   return { ok: true, updated }
 })
